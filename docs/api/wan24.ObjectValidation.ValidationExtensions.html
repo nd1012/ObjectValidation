@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ValidationExtensions
+   | ObjectValidation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ValidationExtensions
+   | ObjectValidation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.ObjectValidation.ValidationExtensions">
+  
+  
+  <h1 id="wan24_ObjectValidation_ValidationExtensions" data-uid="wan24.ObjectValidation.ValidationExtensions" class="text-break">Class ValidationExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Validation extensions</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ValidationExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.ObjectValidation.html">wan24.ObjectValidation</a></h6>
+  <h6><strong>Assembly</strong>: ObjectValidation.dll</h6>
+  <h5 id="wan24_ObjectValidation_ValidationExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ValidationExtensions</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_VALIDATION_EXCEPTION_PREFIX" data-uid="wan24.ObjectValidation.ValidationExtensions.VALIDATION_EXCEPTION_PREFIX">VALIDATION_EXCEPTION_PREFIX</h4>
+  <div class="markdown level1 summary"><p>Validation exception prefix string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string VALIDATION_EXCEPTION_PREFIX = &quot;Object validation exception: &quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_MaxDepth_" data-uid="wan24.ObjectValidation.ValidationExtensions.MaxDepth*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_MaxDepth" data-uid="wan24.ObjectValidation.ValidationExtensions.MaxDepth">MaxDepth</h4>
+  <div class="markdown level1 summary"><p>Maximum recursion depth (zero for no limit)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int MaxDepth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_MaxErrors_" data-uid="wan24.ObjectValidation.ValidationExtensions.MaxErrors*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_MaxErrors" data-uid="wan24.ObjectValidation.ValidationExtensions.MaxErrors">MaxErrors</h4>
+  <div class="markdown level1 summary"><p>Maximum number of errors (zero for no limit)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int MaxErrors { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_HasValidationException_" data-uid="wan24.ObjectValidation.ValidationExtensions.HasValidationException*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_HasValidationException_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult__" data-uid="wan24.ObjectValidation.ValidationExtensions.HasValidationException(IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult})">HasValidationException(IEnumerable&lt;ValidationResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determine if validation results contain a validation exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasValidationException(this IEnumerable&lt;ValidationResult&gt; results)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.ComponentModel.DataAnnotations.ValidationResult</span>&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td><p>Results</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Contains a validation exception?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_TryValidateObject_" data-uid="wan24.ObjectValidation.ValidationExtensions.TryValidateObject*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_TryValidateObject_System_Object_List_System_ComponentModel_DataAnnotations_ValidationResult___System_String_System_Boolean_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__" data-uid="wan24.ObjectValidation.ValidationExtensions.TryValidateObject(System.Object,List{System.ComponentModel.DataAnnotations.ValidationResult}@,System.String,System.Boolean,System.Nullable{IEnumerable{System.String}},System.Nullable{IServiceProvider})">TryValidateObject(Object, out List&lt;ValidationResult&gt;, String, Boolean, Nullable&lt;IEnumerable&lt;String&gt;&gt;, Nullable&lt;IServiceProvider&gt;)</h4>
+  <div class="markdown level1 summary"><p>Validate an object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryValidateObject(this object obj, out List&lt;ValidationResult&gt; results, string member = null, bool throwOnError = false, IEnumerable&lt;string&gt;? members = null, IServiceProvider? serviceProvider = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.ComponentModel.DataAnnotations.ValidationResult</span>&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td><p>Results</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">member</span></td>
+        <td><p>Member name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">throwOnError</span></td>
+        <td><p>Throw a <a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a> on any error?</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td><p>Member names to validate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>Service provider</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Valid?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></td>
+        <td><p>Thrown on error during an object validation (won't be thrown, if <code data-dev-comment-type="paramref" class="paramref">throwOnError</code> is <span class="xref">false</span>, which is the default)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_TryValidateObject_" data-uid="wan24.ObjectValidation.ValidationExtensions.TryValidateObject*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_TryValidateObject_System_Object_System_Nullable_List_System_ComponentModel_DataAnnotations_ValidationResult___System_String_System_Boolean_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__" data-uid="wan24.ObjectValidation.ValidationExtensions.TryValidateObject(System.Object,System.Nullable{List{System.ComponentModel.DataAnnotations.ValidationResult}},System.String,System.Boolean,System.Nullable{IEnumerable{System.String}},System.Nullable{IServiceProvider})">TryValidateObject(Object, Nullable&lt;List&lt;ValidationResult&gt;&gt;, String, Boolean, Nullable&lt;IEnumerable&lt;String&gt;&gt;, Nullable&lt;IServiceProvider&gt;)</h4>
+  <div class="markdown level1 summary"><p>Validate an object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryValidateObject(this object obj, List&lt;ValidationResult&gt;? results = null, string member = null, bool throwOnError = false, IEnumerable&lt;string&gt;? members = null, IServiceProvider? serviceProvider = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">List</span>&lt;<span class="xref">System.ComponentModel.DataAnnotations.ValidationResult</span>&gt;&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td><p>Results</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">member</span></td>
+        <td><p>Member name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">throwOnError</span></td>
+        <td><p>Throw a <a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a> on any error?</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td><p>Member names to validate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>Service provider</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Valid?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></td>
+        <td><p>Thrown on error during an object validation (won't be thrown, if <code data-dev-comment-type="paramref" class="paramref">throwOnError</code> is <span class="xref">false</span>, which is the default)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_ValidateObject_" data-uid="wan24.ObjectValidation.ValidationExtensions.ValidateObject*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_ValidateObject__1___0_List_System_ComponentModel_DataAnnotations_ValidationResult__System_String_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__" data-uid="wan24.ObjectValidation.ValidationExtensions.ValidateObject``1(``0,List{System.ComponentModel.DataAnnotations.ValidationResult},System.String,System.Nullable{IEnumerable{System.String}},System.Nullable{IServiceProvider})">ValidateObject&lt;T&gt;(T, List&lt;ValidationResult&gt;, String, Nullable&lt;IEnumerable&lt;String&gt;&gt;, Nullable&lt;IServiceProvider&gt;)</h4>
+  <div class="markdown level1 summary"><p>Validate an object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ValidateObject&lt;T&gt;(this T obj, List&lt;ValidationResult&gt; results, string member = null, IEnumerable&lt;string&gt;? members = null, IServiceProvider? serviceProvider = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.ComponentModel.DataAnnotations.ValidationResult</span>&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td><p>Results</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">member</span></td>
+        <td><p>Member name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td><p>Member names to validate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>Service provider</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></td>
+        <td><p>Thrown on error during an object validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_ObjectValidation_ValidationExtensions_ValidateObject_" data-uid="wan24.ObjectValidation.ValidationExtensions.ValidateObject*"></a>
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_ValidateObject__1___0_List_System_ComponentModel_DataAnnotations_ValidationResult___System_String_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__" data-uid="wan24.ObjectValidation.ValidationExtensions.ValidateObject``1(``0,List{System.ComponentModel.DataAnnotations.ValidationResult}@,System.String,System.Nullable{IEnumerable{System.String}},System.Nullable{IServiceProvider})">ValidateObject&lt;T&gt;(T, out List&lt;ValidationResult&gt;, String, Nullable&lt;IEnumerable&lt;String&gt;&gt;, Nullable&lt;IServiceProvider&gt;)</h4>
+  <div class="markdown level1 summary"><p>Validate an object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ValidateObject&lt;T&gt;(this T obj, out List&lt;ValidationResult&gt; results, string member = null, IEnumerable&lt;string&gt;? members = null, IServiceProvider? serviceProvider = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.ComponentModel.DataAnnotations.ValidationResult</span>&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td><p>Results</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">member</span></td>
+        <td><p>Member name</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">members</span></td>
+        <td><p>Member names to validate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
+        <td><span class="parametername">serviceProvider</span></td>
+        <td><p>Service provider</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></td>
+        <td><p>Thrown on error during an object validation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_OnObjectPropertyValidation" data-uid="wan24.ObjectValidation.ValidationExtensions.OnObjectPropertyValidation">OnObjectPropertyValidation</h4>
+  <div class="markdown level1 summary"><p>Raised on object property validation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event ValidationExtensions.ObjectValidation_Delegate OnObjectPropertyValidation</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_OnObjectPropertyValidationFailed" data-uid="wan24.ObjectValidation.ValidationExtensions.OnObjectPropertyValidationFailed">OnObjectPropertyValidationFailed</h4>
+  <div class="markdown level1 summary"><p>Raised on a failed object property validation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event ValidationExtensions.ObjectValidation_Delegate OnObjectPropertyValidationFailed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_OnObjectValidation" data-uid="wan24.ObjectValidation.ValidationExtensions.OnObjectValidation">OnObjectValidation</h4>
+  <div class="markdown level1 summary"><p>Raised on object validation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event ValidationExtensions.ObjectValidation_Delegate OnObjectValidation</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="wan24_ObjectValidation_ValidationExtensions_OnObjectValidationFailed" data-uid="wan24.ObjectValidation.ValidationExtensions.OnObjectValidationFailed">OnObjectValidationFailed</h4>
+  <div class="markdown level1 summary"><p>Raised on a failed object validation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event ValidationExtensions.ObjectValidation_Delegate OnObjectValidationFailed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

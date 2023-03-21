@@ -1,0 +1,812 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/P/ObjectValidation/src/ObjectValidation Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "QNzUC/AA893h8dhkDYUqdB2hpV3zSg8dyx6GEwZ9izc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "KYkPeXyyRQX3KM1YQLyNb7kwxLzECj7MiC6jnIGBS0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.BicAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.BicAttribute.html",
+          "hash": "tE13uGe7TCKelw3eknwGcszUpfe3X8EXoxt1fuuceLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CountLimitAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CountLimitAttribute.html",
+          "hash": "2ZiPAgIYAn2Jo1BIjX2hg//eK+8aJJeLmV4q66nqdAE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CountryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CountryAttribute.html",
+          "hash": "Y+BT+fS7vhL6nJBJKGhD+SE8A23n7wUL5ktfx/t+qLI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CountryCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CountryCodes.html",
+          "hash": "2XCRUL4ZAAzxb7H5cZOr1u5Pa5IaLUriq6bIr8+zOsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CurrencyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CurrencyAttribute.html",
+          "hash": "ddHgQvupLSEGQqTZBLn9n7ESgYRL+qkc4N8ElcvWKL8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CurrencyCodes.Currency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CurrencyCodes.Currency.html",
+          "hash": "+EFUsRzbTBqiMlpIlMkZIJfbkI0oP5oLeVZ3awJVFMY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CurrencyCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CurrencyCodes.html",
+          "hash": "fUVux2tF57u1t5JD7Muzs6HhnHitvxPSrfHGeNEyrE0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.CurrencyFormats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.CurrencyFormats.html",
+          "hash": "Q8QVb5vPj7HUHbhHAWuXTcNON7mtFco9sSGjX4bC1sU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.EuVatId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.EuVatId.html",
+          "hash": "Yb4NTQ8biwelWw+cNfSMXJGveAH9nIQcUAURF7rH5jo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.EuVatIdAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.EuVatIdAttribute.html",
+          "hash": "/3nfCveS0593lZv6TPxh8Xnz9BdHOePhS1/Mg96NS3I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ICountable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ICountable.html",
+          "hash": "yOKxSEYlzLZ4GMdP6LHPCu8ip/8godC6djs1ZRcfbbY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.IItemValidationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.IItemValidationAttribute.html",
+          "hash": "Ee0/2xTFjcnRr/wmfDeaNPcYv/Uqhbx+0jEZvaQVCDk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ILongCountable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ILongCountable.html",
+          "hash": "YEsu8iXIIHYqOWvRF7sUNTQIzdNI7UfhDs7wdU9mWkg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.IbanAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.IbanAttribute.html",
+          "hash": "uWN24D/7ltpkgBI/ymmPWNCt51sG9VwMFoYfLEm08eg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.IpAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.IpAttribute.html",
+          "hash": "srGRKp6+Mq52CRYE8M86/wlsi3itqAEpuaahgO8DoS8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemBicAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemBicAttribute.html",
+          "hash": "oiXaTECN8DbTU9dwQr+I30vtCtfW5Rb3lhfky1n2t0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCompanyTINAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCompanyTINAttribute.html",
+          "hash": "71c9BEjVh0sVJBCVWwhI+X+xwb7lyCWAY/GWd6yKJmI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCompareAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCompareAttribute.html",
+          "hash": "U1Srk6KS0Fj/qNH5N3IqwZfbpKqZjWdWH4Fwabk3RZk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCountLimitAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCountLimitAttribute.html",
+          "hash": "Y3lU8Dkzu2gZQeW+V+pfegTGQtLfwHbAOdO/uNE8mJ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCountryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCountryAttribute.html",
+          "hash": "tDVIZlXpwjiUmavyRFgxapCWlQBKlWbDEInAm9WfPBE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCreditCardAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCreditCardAttribute.html",
+          "hash": "dL38TojhyjNuzQKrqBpI49il8iVWRJkOIJ5k0a6OKdA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCurrencyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCurrencyAttribute.html",
+          "hash": "MG6LNSRw3l4CrunevzAIjp1WMcgzsy7+OuouKbCTQxI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemEmailAddressAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemEmailAddressAttribute.html",
+          "hash": "MzrJyVthV5TiNq1MAjdnAYSQZOnzDJLHwfDKNMAxEqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemEuVatIdAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemEuVatIdAttribute.html",
+          "hash": "iO6fwXOimHPeKZZ3dWjcgJCF81wH5kmk3c23P0xbfSQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemIbanAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemIbanAttribute.html",
+          "hash": "SVdRAG4KZI4uyq+TI9W6lwXaRHxENHKsEdGP2LM58k4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemIpAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemIpAttribute.html",
+          "hash": "gnz5nyM55WJLXuaGwavZVREBq35lbZNYDN+T7g4IjQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.html",
+          "hash": "DLL1N/iYQBTDb8TBWrZJvqLtJ9oq3b9gBTM3tTURiNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemMaxLengthAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemMaxLengthAttribute.html",
+          "hash": "EaP4isj05cX2+jj82APxDK/l3Caj/cBVKKmBjmhn964="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemMinLengthAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemMinLengthAttribute.html",
+          "hash": "t1bXTd16JyawsX2yHIU1VNcoTdkAlTo9fjqtA2KOUSM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemNoValidationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemNoValidationAttribute.html",
+          "hash": "QyN9srS8n7lrve1cIFIBB7zDkXlCy30Ve3qfa6dQAcY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemNullableAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemNullableAttribute.html",
+          "hash": "YL9pC/0XpWNpi1F7eI2joB99WKOFz+S3VCHRArQs9tA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemPersonTINAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemPersonTINAttribute.html",
+          "hash": "NtB5IoRFzBle2d2JAb93ZiA6V26KuUGDbvdSzFKx3mg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemPhoneAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemPhoneAttribute.html",
+          "hash": "7Zmxf0C02JlnV/ptjXFi2Ya7vrQhVqEtG6uBZa8do7k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemRangeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemRangeAttribute.html",
+          "hash": "e6dR6MWX8HPQNl1VMPXsk9Fhfq5ogVJG8SLenbq1DpU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemRegularExpressionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemRegularExpressionAttribute.html",
+          "hash": "Hne9o0uUfwsAq/9XloZCUKxKppGhpgCSbadwZnzJIko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemRequiredAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemRequiredAttribute.html",
+          "hash": "jFfiDrbJsoMgR1WrGBphE3ViHB9rMT9OdI61Bkp56Vs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemSSNAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemSSNAttribute.html",
+          "hash": "cMBBl1rG1E/wQouvOQluM88aJVbmMqcBfx8KNFAfkvw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemStringLengthAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemStringLengthAttribute.html",
+          "hash": "+TU2lyFPtEBfNlbPm9+YI9u0TXWshpQRSjVokolokg8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemUrlAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemUrlAttribute.html",
+          "hash": "an9c4x6pxM9XHZ+eCuI6N+YtZt5TKUSx/znkYpmR5bU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemVATAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemVATAttribute.html",
+          "hash": "ZEeGNKxhjdgnbc9hMKRE6IIAJGI16y+gqk4mY/IhnEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemValidationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemValidationAttribute.html",
+          "hash": "8hvDQHylFUTSHE16sOzD4llBDT9JS0LCiDO4+PO5ANk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemValidationTargets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemValidationTargets.html",
+          "hash": "fvFsw1a2yUTsGidE2FYC7mV5l+gaImkwu8TjjpRcA0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html",
+          "hash": "0woAsY0LokYtpwodInZr62ke5LRtuC4ffXWQYWsDNYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemZipCodeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemZipCodeAttribute.html",
+          "hash": "CqIRZ0OfDEHLKbY5ZG6PZo01pR1cLEBRWCrwcsaMfOo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.LuhnChecksum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.LuhnChecksum.html",
+          "hash": "+xEXcuhIuEnmnHsU5sn+n8HIum74gK9jSTtxToJGOKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.LuhnChecksumAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.LuhnChecksumAttribute.html",
+          "hash": "FAPUyiiQJRUI7dmjh3na/O2oyB76Klu7zLOXY8hOwzI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.NoValidationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.NoValidationAttribute.html",
+          "hash": "wcL7TW1N8y2ZufB4qJvTpsyY28r7+1e4oE3dtg1AIao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ObjectValidationEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ObjectValidationEventArgs.html",
+          "hash": "yuYj1zN9R+vHiT1izqA54uJqyHtqv8fk7ojNtbXozCQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ObjectValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ObjectValidationException.html",
+          "hash": "IX3x5bFVbaelajA1bQEDuKyl+P2jkkcVEA/LqGCrI4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.SwiftValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.SwiftValidation.html",
+          "hash": "Skun3KXrC9+OLmtGRjDecLrGGkvgdvD9xcuwQ3ZW6ec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidatableObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidatableObject.html",
+          "hash": "cCugUVNf93z5QllyHzbSE2dwN9YILFF40UQFXC81VxQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidateObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidateObject.html",
+          "hash": "vQISNOkwJgR/tubIxHrSAIIq+dDbJtk4a5CZayrrMGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html",
+          "hash": "qj49CzcvF4ZAX9Vr/fkydeIbkiEA1GWF6O9fagoHquE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidationExtensions.html",
+          "hash": "GHMaBSnX37bUF42XOmSiswbyJ0jR9idEMD1EChipUFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.XRechnungRouteAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.XRechnungRouteAttribute.html",
+          "hash": "F1v0zMmELljxxncOVczfEdamM3ewUkhzz+XFkoSb/i0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.XRechnungRouting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.XRechnungRouting.html",
+          "hash": "h7TwQPT2q0MDObPuXgXybVMgsMp07ZlcJ/ZSf8gpLFU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.html",
+          "hash": "pKpi5ASUHw2k4xeuwCnynYQYnj5X0kOvHNx8EkOrx9o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "yjQBkov0WfgSy4L9iqlPJ3n/AdNueIVbOgdP6GDR2wo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "peojLmvQgycWa6SoXtL+g+Qb4i44ShAGKheHtSH35xE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "s+UecGKJLe11K3w4+MJjx6QoiqktkO8teeQG06lk8L0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 57,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

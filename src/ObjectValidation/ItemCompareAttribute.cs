@@ -1,0 +1,45 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection;
+
+namespace wan24.ObjectValidation
+{
+    /// <summary>
+    /// Item property compare attribute
+    /// </summary>
+    public class ItemCompareAttribute : ItemValidationAttribute
+    {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="ownProperty">Own property name</param>
+        /// <param name="otherProperty">Other property name</param>
+        /// <param name="target">Validation target</param>
+        public ItemCompareAttribute(string ownProperty, string otherProperty, ItemValidationTargets target = ItemValidationTargets.Item)
+            : base(target, new CompareAttribute(otherProperty))
+            => OwnProperty = ownProperty;
+
+        /// <summary>
+        /// Own property name
+        /// </summary>
+        public string OwnProperty { get; }
+
+        /// <inheritdoc/>
+        public override ValidationResult? GetValidationResult(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider)
+        {
+            if (value == null) return null;
+            PropertyInfo? ownProperty = value.GetType().GetProperty(nameof(OwnProperty), BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+            if (ownProperty == null) throw new ValidationException($"Property {value.GetType()}.{OwnProperty} not found");
+            try
+            {
+                return base.GetValidationResult(ownProperty.GetValue(value), new(value, serviceProvider, items: null) { MemberName = OwnProperty }, serviceProvider);
+            }
+            catch(Exception ex)
+            {
+                throw new ValidationException(
+                    $"Exception while comparing {value.GetType()}.{OwnProperty} with {((CompareAttribute)ValidationAttribute).OtherProperty}",
+                    ex
+                    );
+            }
+        }
+    }
+}

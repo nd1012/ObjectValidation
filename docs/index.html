@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ObjectValidation (BETA) | ObjectValidation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ObjectValidation (BETA) | ObjectValidation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="objectvalidation-beta">ObjectValidation (BETA)</h1>
+
+<p>This library contains some object validation helper:</p>
+<ul>
+<li><code>(Try)ValidateObject</code> extension for validating any object type</li>
+<li><code>NoValidationAttribute</code> for excluding types or properties from validation</li>
+<li><code>ObjectValidationException</code> for handling validation errors</li>
+<li>Validation events</li>
+<li><code>CountLimitAttribute</code> for limiting dictionary, list, array, collection and
+enumerable lengths</li>
+<li><code>ValidatableObject</code> for implementing automatic validated types</li>
+<li>Deep dictionary and list key/value validation</li>
+<li><code>ICountable</code> and <code>ILongCountable</code> interfaces for count limitation</li>
+<li><code>ItemNullableAttribute</code> for (non-)nullable dictionary or list item validation</li>
+<li>SWIFT validation attributes for ISO 13616 IBAN and ISO 9362 BIC (SWIFT codes)</li>
+<li>IP address validation attribute for IPv4 and IPv6</li>
+<li>Country ISO 3166-1 alpha-2 code validation</li>
+<li>Currency ISO 4217 code validation</li>
+<li>Luhn checksum validation</li>
+<li>XRechnung routing validation</li>
+<li>European VAT ID validation</li>
+</ul>
+<p>It has been developed with the goal to offer an automatted deep object
+validation with support for deep dictionaries and lists contents, too.</p>
+<p>All public instance properties with a public getter method will be validated,
+unless there's a <code>NoValidationAttribute</code> present. You can use any
+<code>ValidationAttribute</code> to define property value constraints.</p>
+<p>Also the <code>IValidatableObject</code> interface is supported by using the
+<code>Validator.TryValidateObject</code> method with the <code>validateAllProperties</code>
+parameter having the value <code>true</code> (the <code>IValidationObject</code> validation method
+will be called in a second round). Using this interface you can implement some
+more advanced custom validations, if required.</p>
+<p><strong>NOTE</strong>: The ObjectValidation doesn't replace the classic built in .NET
+object validation - it extends the existing routines with deep validation and
+more. Btw. you don't need to use the ObjectValidation methods, if you only
+want to profit from the included general validation attributes for SWIFT etc.</p>
+<h2 id="additional-validations">Additional validations</h2>
+<ul>
+<li>Nullable types (<code>null</code> values in non-nullable properties will fail)</li>
+<li>Dictionary list and enumerable count limit using <code>CountLimitAttribute</code></li>
+<li>Validations by event handlers</li>
+<li>Dictionary and list key/value validation (including validating (non-)null
+items using <code>ItemNullableAttribute</code>)</li>
+<li>ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using
+<code>IbanAttribute</code> and <code>BicAttribute</code></li>
+<li>IP address validation using <code>IpAttribute</code></li>
+<li>Country ISO 3166-1 alpha-2 code validation using <code>CountryAttribute</code></li>
+<li>Currency ISO 4217 code validation using <code>CurrencyAttribute</code></li>
+<li>Luhn checksum validation using <code>LuhnChecksumAttribute</code></li>
+<li>XRechnung routing validation using <code>XRechnungRouteAttribute</code></li>
+<li>European VAT ID validation using <code>EuVatIdAttribute</code></li>
+</ul>
+<h2 id="deep-object-validation">Deep object validation</h2>
+<p>Nested property object value validation is supported for:</p>
+<ul>
+<li>Dictionaries</li>
+<li>Lists</li>
+<li>Arrays</li>
+<li>Collections</li>
+<li>Enumerables</li>
+<li>Any non-value types</li>
+</ul>
+<h2 id="lengthcount-validation">Length/count validation</h2>
+<p>The length/count of dictionaries, lists, arrays and enumerables can be
+validated using the <code>CountLimitAttribute</code> (which may not work for enumerables,
+if not used trough ObjectValidation methods!).</p>
+<h3 id="limiting-countables">Limiting countables</h3>
+<p>By implementing the <code>ICountable</code> or <code>ILongCountable</code> interfaces you can use
+the <code>CountLimitAttribute</code> for limiting the minimum/maximum count of an object.</p>
+<h2 id="null-values"><code>null</code> values</h2>
+<p>The object validation will generate an error, if a non-null property has a
+<code>null</code> value (or any non-null-expected value is <code>null</code>).</p>
+<pre><code class="lang-cs">public string StringProperty { get; set; } = null!// This will generate an error
+</code></pre>
+<p>If a non-null property was initialized with <code>null</code>, and the code forgot to set
+another value, the ObjectValidation will create an error for this property.</p>
+<p>Another feature is the validation of (non-)null dictionary or list items:</p>
+<pre><code class="lang-cs">[ItemNullable]
+public List&lt;string?&gt; NullableList { get; set; } = new() { null };// Ok
+
+[ItemNullable]
+public List&lt;string&gt; NonNullList { get; set; } = new() { null };// Ok
+
+public List&lt;string?&gt; NullableList2 { get; set; } = new() { null };// This will generate an error
+
+public List&lt;string&gt; NonNullList2 { get; set; } = new() { null! };// This will generate an error
+</code></pre>
+<p>Using the <code>ItemNullableAttribute</code> you can define, if the dictionary value or
+the list item may be <code>null</code>.</p>
+<h2 id="general-examples">General examples</h2>
+<pre><code class="lang-cs">// Only determine if valid/invalid
+if(!anyObject1.TryValidateObject())
+{
+    // Object invalid
+}
+
+// Get validation messages in a new list
+if(!anyObject2.TryValidateObject(out List&lt;ValidationResult&gt; results))
+{
+    // Object invalid
+}
+
+// Get validation messages in an existing list
+results.Clear();
+if(!anyObject3.TryValidateObject(results)) 
+{
+    // Object invalid
+}
+
+// Check for exceptions during validation
+if(results.HasValidationException())
+{
+    Console.WriteLine(results.First(r =&gt; r.ErrorMessage?.StartsWith(ValidationExtensions.VALIDATION_EXCEPTION_PREFIX)).ErrorMessage);
+}
+
+// Fluent syntax without the &quot;Try&quot; method name prefix (will throw a ObjectValidationException on error)
+return anyObject4.ValidateObject();
+</code></pre>
+<p><strong>NOTE</strong>: Any <code>ValidationResult</code> will let the validation fail in total!</p>
+<p>In case you want to forward error messages to a peer, you may want to exclude
+exceptions and their stack trace. You can use the <code>HasValidationException</code>
+method and a LINQ expression like the one from the example to filter out any
+exception in the results.</p>
+<p><code>ValidatableObject</code> types may be validated automatic (depending on the app
+context), because they implement the <code>IValidatableObject</code> interface. The
+<code>ValidatableObject</code> executes the ObjectValidation method internal. For using
+the <code>ValidatableObject</code> base class, simply extend from it, and call the base
+constructor from your constructor methods.</p>
+<p><strong>TIP</strong>: You should use the <code>ValidatableObject</code> base type, if possible! By
+only implementing the <code>IValidatableObject</code> interface your type may be
+validated automatic, but not by the ObjectValidation library!</p>
+<h2 id="dictionary-and-list-keyvalue-validation">Dictionary and list key/value validation</h2>
+<p>By implementing the <code>IItemValidationAttribute</code> interface, you can define
+validation attributes that are going to be applied on each key/value of a
+dictionary or a list. There's an almost generic <code>ItemValidationAttribute</code>
+which allows to construct with any <code>ValidationAttribute</code>. For the .NET built
+in validation attributes (most of them) there are adapting attributes, which
+start with <code>Item</code> and continue with the original attribute name. By setting a
+<code>target</code> in the <code>ItemValidationAttribute</code> constructor, you can define, if a
+validation should only be applied to a dictionary key. Examples:</p>
+<pre><code class="lang-cs">[CountLimit(1, 10)]// Dictionary object validation
+[ItemRequired(ItemValidationTarget.Key), ItemStringLength(100, ItemValidationTarget.Key)]// Key validation
+[ItemRequired, ItemStringLength(255)]// Value validation
+public Dictionary&lt;string, string&gt; Dict { get; }
+
+[CountLimit(1, 10)]// List object validation
+[ItemRequired, ItemStringLength(255]// Item validation
+public List&lt;string&gt; List { get; }
+</code></pre>
+<p>The dictionary needs to have at last one, maximum 10 key/value pairs, where
+the key length needs to be between 1-100 characters, and the value length
+needs to be 1-255 characters.</p>
+<p>The list needs to have at last one, maximum 10 items, where each item length
+is limited to 1-255 characters.</p>
+<p>Using the <code>ItemNoValidationAttribute</code> you can disable key/value validation for
+a property. In case of an enumerable value, the enumeration needs to be
+executed in case there's a <code>CountLimitAttribute</code> present.</p>
+<p>These item validation adapters exist:</p>
+<ul>
+<li><code>ValidationAttribute</code> -&gt; <code>ItemValidationAttribute</code></li>
+<li><code>CountLimitAttribute</code> -&gt; <code>ItemCountLimitAttribute</code></li>
+<li><code>RequiredAttribute</code> -&gt; <code>ItemRequiredAttribute</code></li>
+<li><code>CompareAttribute</code> -&gt; <code>ItemCompareAttribute</code></li>
+<li><code>CreditCardAttribute</code> -&gt; <code>ItemCreditCardAttribute</code></li>
+<li><code>EmailAddressAttribute</code> -&gt; <code>ItemEmailAddressAttribute</code></li>
+<li><code>MaxLengthAttribute</code> -&gt; <code>ItemMaxLengthAttribute</code></li>
+<li><code>MinLengthAttribute</code> -&gt; <code>ItemMinLengthAttribute</code></li>
+<li><code>NoValidationAttribute</code> -&gt; <code>ItemNoValidationAttribute</code></li>
+<li><code>PhoneAttribute</code> -&gt; <code>ItemPhoneAttribute</code></li>
+<li><code>RangeAttribute</code> -&gt; <code>ItemRangeAttribute</code></li>
+<li><code>RegularExpressionAttribute</code> -&gt; <code>ItemRegularExpressionAttribute</code></li>
+<li><code>StringLengthAttribute</code> -&gt; <code>ItemStringLengthAttribute</code></li>
+<li><code>UrlAttribute</code> -&gt; <code>ItemUrlAttribute</code></li>
+<li><code>IbanAttribute</code> -&gt; <code>ItemIbanAttribute</code></li>
+<li><code>BicAttribute</code> -&gt; <code>ItemBicAttribute</code></li>
+<li><code>IpAttribute</code> -&gt; <code>ItemIpAttribute</code></li>
+<li><code>CountryAttribute</code> -&gt; <code>ItemCountryAttribute</code></li>
+<li><code>CurrencyAttribute</code> -&gt; <code>ItemCurrencyAttribute</code></li>
+<li><code>LuhnChecksumAttribute</code> -&gt; <code>ItemLuhnChecksumAttribute</code></li>
+<li><code>XRechnungRouteAttribute</code> -&gt; <code>ItemXRechnungRouteAttribute</code></li>
+<li><code>EuVatIdAttribute</code> -&gt; <code>ItemEuVatIdAttribute</code></li>
+</ul>
+<p>You can use the <code>ItemNoValidationAttribute</code> at the class level to prevent from
+validating and dictionary or list contents.</p>
+<p><strong>NOTE</strong>: By setting the <code>ArrayLevel</code> (starts with zero) of an
+<code>ItemValidationAttribute</code>, you can specify to use the item for the desired
+array level only. This enables array of array etc. item validations. Entering
+a deeper array level counts as recursion. The array level can be set for
+dictionary keys, too, if they're a dictionary or a list.</p>
+<p>Use the <code>ItemNullableAttribute</code>, if the dictionary value or list item may be
+<code>null</code> (even if you wrote <code>T?</code> in your code, because the nullability
+information my not be available during validation!).</p>
+<h2 id="force-to-fail-with-an-exception">Force to fail with an exception</h2>
+<p>If you set the parameter <code>throwOnError</code> value to <code>true</code>, the validation will
+throw a <code>ObjectValidationException</code>, as soon as an object was invalidated.</p>
+<h2 id="validation-of-a-property-group">Validation of a property group</h2>
+<p>By giving a list of member names to validate as <code>members</code> parameter, you can
+avoid validating all properties which could be validated (f.e. you could
+validate only a property group).</p>
+<h2 id="handling-validation-events">Handling validation events</h2>
+<ul>
+<li><code>OnObjectValidation</code>: You can perform validations before any other
+validations have been executed. When the event was cancelled, there won't be
+any following validation, and the produced result will be used.</li>
+<li><code>OnObjectValidationFailed</code>: Raised, if the object validation failed. You may
+add additional error messages, before the validation method returns.</li>
+<li><code>OnObjectPropertyValidation</code>: You can perform validations before any other
+validations have been executed for the property. When the event was cancelled,
+there won't be any following validation, and the produced result will be used
+for the current property. The validation will then continue with the next
+property.</li>
+<li><code>OnObjectPropertyValidationFailed</code>: Raised, if the object validation failed.
+You may add additional error messages, before the validation method continues
+with the next property. When the event was cancelled, the following property
+validations will be skipped.</li>
+</ul>
+<p>If the event arguments don't offer a <code>PropertyInfo</code> in the <code>Property</code>
+property, the event was raised for the validated object.</p>
+<p>An event handler can set a failed state by setting the <code>Result</code> property of
+the event arguments to <code>false</code>.</p>
+<p><strong>WARNING</strong>: Do not set the value <code>true</code> to the <code>Result</code> property! An already
+failed state can't be deleted, unless the original result <code>OriginalResult</code> was
+<code>true</code>.</p>
+<p>The object validation will fail, if there was any validation result, or the
+overall result is <code>false</code>.</p>
+<h2 id="found-a-bug">Found a bug?</h2>
+<p>If the object validation doesn't work for you as expected, please open an
+issue - I'd be glad to help and make ObjectValidation become even better! Push
+requests are welcome :)</p>
+<h2 id="good-to-know">Good to know</h2>
+<h3 id="recursion-protection">Recursion protection</h3>
+<p>The object validation implements a recursion detection and won't end up in an
+endless loop, unless you produce an endless loop within your custom
+<code>IValidatableObject</code> validation implementation or the event handling.</p>
+<p>You can define a maximum recursion depth in the
+<code>ValidationExtensions.MaxDepth</code> property (the default is 32). If the depth
+would be exceeded during an object validation, this would result in a
+<code>ObjectValidationException</code>, which would be catched as a validation error
+result, when not setting <code>throwOnError</code> to <code>true</code>.</p>
+<p><strong>WARNING</strong>: If you disable the maximum recursion depth validation, this may
+end up in a <code>StackOverflowException</code>, which will crash your application.</p>
+<h3 id="maximum-number-of-error-messages">Maximum number of error messages</h3>
+<p>You can limit the maximum number of returned error messages in the
+<code>ValidationExtensions.MaxErrors</code> property (the default is 200). The object
+validation would stop, once it was detected that the number of errors exceeds
+this limit. Your validation result list will never contain more error messages
+than defined in this limit.</p>
+<p><strong>WARNING</strong>: Disabling the maximum number of error messages may end up in huge
+object lists, which could lead to memory usage problems and finally a crash of
+your application!</p>
+<h3 id="aspnet">ASP.NET</h3>
+<p>ASP.NET (7) automatic validates <code>IValidatableObject</code> objects when
+unserializing for an API controller call. The ObjectValidation library will be
+used automatic, if you've used the <code>ValidatableObject</code> base class for your
+types, which you want to be validated automatic. Simply use it as base class
+for your DTO objects, and you don't need to care about validation anymore.</p>
+<p>You should also understand the difference between <code>NoValidateAttribute</code> and
+<code>NeverValidateAttribute</code>: <code>NoValidateAttribute</code> affects the ObjectValidation
+validation, while <code>NeverValidateAttribute</code> affects all validations. So you can
+use the <code>NoValidateAttribute</code> to skip double validation by the
+ObjectValidation methods, if required.</p>
+<h3 id="nullability">Nullability</h3>
+<p>The nullability of properties can be determined using reflections, even if one
+returns a generic type. But if f.e. the return type is a
+<code>YourType : Dictionary&lt;string, string?&gt;</code>, the object validation isn't able to
+determine the nullability of the second generic type argument of the base
+type, because the nullability information will be discarded during your code
+compilation. For the dictionary item validation please specify the
+<code>ItemNullableAttribute</code> in that case. The same is valid for deep array
+validations.</p>
+<h3 id="more-validations">More validations</h3>
+<p>Have a look at the
+<a href="https://github.com/anghelvalentin/CountryValidator">CountryValidator</a>
+project for more validations like</p>
+<ul>
+<li>Social Security Numbers</li>
+<li>Personal Identity Numbers</li>
+<li>More VAT IDs</li>
+<li>Tax IDs for individuals</li>
+<li>Tax IDs for companies</li>
+<li>ZIP codes</li>
+</ul>
+<p>for many countries.</p>
+<p>The <code>ObjectValidation.CountryValidator</code> packet includes references to this
+packet, and exports item validation attributes:</p>
+<ul>
+<li><code>ItemCompanyTINAttribute</code></li>
+<li><code>ItemPersonTINAttribute</code></li>
+<li><code>ItemSSNAttribute</code></li>
+<li><code>ItemVATAttribute</code></li>
+<li><code>ItemZipCodeAttribute</code></li>
+</ul>
+<p><strong>NOTE</strong>: The main ObjectValidation library includes validation for European
+VAT IDs only. By using this packet, you can use VAT ID validation for many
+countries around the world.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
