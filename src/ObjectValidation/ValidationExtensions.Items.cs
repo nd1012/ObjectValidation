@@ -20,6 +20,7 @@ namespace wan24.ObjectValidation
         /// <param name="validationResults">Validation results</param>
         /// <param name="serviceProvider">Service provider</param>
         /// <param name="throwOnError">Throw an exception on error?</param>
+        /// <param name="member">Member name</param>
         /// <returns>Overall result</returns>
         internal static bool ValidateDictionary(
             ValidationInfo info,
@@ -31,7 +32,8 @@ namespace wan24.ObjectValidation
             NullabilityInfo? nullabilityInfo,
             List<ValidationResult> validationResults,
             IServiceProvider? serviceProvider,
-            bool throwOnError
+            bool throwOnError,
+            string? member = null
             )
         {
             bool res = true;// Overall result
@@ -49,9 +51,9 @@ namespace wan24.ObjectValidation
                 count++;
                 // Key validations
                 if (keyValidations != null)
-                    res &= ValidateItem(info, pi, $"{pi.Name}[key#{count}]", key, keyValidations, serviceProvider, validationResults, throwOnError);
+                    res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, ItemValidationTargets.Key, isDict: true), key, keyValidations, serviceProvider, validationResults, throwOnError);
                 if (!keyType!.IsValueType)
-                    res &= ValidateObject(info, key, validationResults, $"{pi.Name}[key#{count}]", throwOnError);
+                    res &= ValidateObject(info, key, validationResults, GetMemberName(info, pi, count, member, ItemValidationTargets.Key, isDict: true), throwOnError);
                 // Value validations
                 val = dict[key];
                 if (val == null)
@@ -60,20 +62,20 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {pi.Name}[value#{count}] value is NULL, but the value type {itemType} isn't nullable (a non-null value is required)",
-                            new string[] { $"{pi.Name}[value#{count}]" }
+                            $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (a non-null value is required)",
+                            new string[] { GetMemberName(info, pi, count, member, isDict: true) }
                             ));
                     }
                     else if (valueValidations != null)
                     {
-                        res &= ValidateItem(info, pi, $"{pi.Name}[value#{count}]", val, valueValidations, serviceProvider, validationResults, throwOnError);
+                        res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, isDict: true), val, valueValidations, serviceProvider, validationResults, throwOnError);
                     }
                     continue;
                 }
                 if (valueValidations != null)
-                    res &= ValidateItem(info, pi, $"{pi.Name}[value#{count}]", val, valueValidations, serviceProvider, validationResults, throwOnError);
+                    res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, isDict: true), val, valueValidations, serviceProvider, validationResults, throwOnError);
                 if (!itemType!.IsValueType)
-                    res &= ValidateObject(info, val, validationResults, $"{pi.Name}[value#{count}]", throwOnError, serviceProvider: serviceProvider);
+                    res &= ValidateObject(info, val, validationResults, GetMemberName(info, pi, count, member, isDict: true), throwOnError, serviceProvider: serviceProvider);
             }
             return res;
         }
@@ -90,6 +92,7 @@ namespace wan24.ObjectValidation
         /// <param name="validationResults">Validation results</param>
         /// <param name="serviceProvider">Service provider</param>
         /// <param name="throwOnError">Throw an exception on error?</param>
+        /// <param name="member">Member name</param>
         /// <returns>Overall result</returns>
         internal static bool ValidateList(
             ValidationInfo info,
@@ -100,7 +103,8 @@ namespace wan24.ObjectValidation
             NullabilityInfo? nullabilityInfo,
             List<ValidationResult> validationResults,
             IServiceProvider? serviceProvider,
-            bool throwOnError
+            bool throwOnError,
+            string? member = null
             )
         {
             bool res = true;// Overall result
@@ -119,19 +123,19 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {pi.Name}[{count}] value is NULL, but the item type {itemType} isn't nullable (a non-null value is required)",
-                            new string[] { $"{pi.Name}[{count}]" }
+                            $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (a non-null value is required)",
+                            new string[] { GetMemberName(info, pi, count, member) }
                             ));
                     }
                     else
                     {
-                        res &= ValidateItem(info, pi, $"{pi.Name}[{count}]", val, itemValidations, serviceProvider, validationResults, throwOnError);
+                        res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
                     }
                     continue;
                 }
-                res &= ValidateItem(info, pi, $"{pi.Name}[{count}]", val, itemValidations, serviceProvider, validationResults, throwOnError);
+                res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
                 if (!(itemType ?? val.GetType()).IsValueType)
-                    res &= ValidateObject(info, val, validationResults, $"{pi.Name}[{count}]", throwOnError, serviceProvider: serviceProvider);
+                    res &= ValidateObject(info, val, validationResults, GetMemberName(info, pi, count, member), throwOnError, serviceProvider: serviceProvider);
             }
             return res;
         }
@@ -149,12 +153,12 @@ namespace wan24.ObjectValidation
         /// <param name="throwOnError">Throw an exception on error?</param>
         /// <returns>Valid?</returns>
         internal static bool ValidateItem(
-            ValidationInfo info, 
-            PropertyInfo pi, 
-            string member, 
-            object? value, 
-            IItemValidationAttribute[] attrs, 
-            IServiceProvider? serviceProvider, 
+            ValidationInfo info,
+            PropertyInfo pi,
+            string member,
+            object? value,
+            IItemValidationAttribute[] attrs,
+            IServiceProvider? serviceProvider,
             List<ValidationResult> validationResults,
             bool throwOnError
             )
@@ -177,30 +181,76 @@ namespace wan24.ObjectValidation
                 Type valueType = value.GetType();// Value type
                 Type? keyType,// Dictionary key type
                     itemType;// Item type
+                int seenIndex = 0;// Seen index
                 if (AsDictionary(value, out keyType, out itemType) is IDictionary dict)
                 {
-                    nestedInfo.CurrentDepth++;
-                    res &= ValidateDictionary(nestedInfo, pi, dict, valueType, keyType!, itemType!, nullabilityInfo: null, validationResults, serviceProvider, throwOnError);
+                    seenIndex = info.Seen.Count;
+                    info.Seen.Add(dict);
+                    try
+                    {
+                        nestedInfo.CurrentDepth++;
+                        res &= ValidateDictionary(nestedInfo, pi, dict, valueType, keyType!, itemType!, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                    }
+                    finally
+                    {
+                        info.Seen.RemoveAt(seenIndex);
+                    }
                 }
                 else if (value is Array arr && valueType.IsArray && valueType.GetElementType() != null)
                 {
-                    nestedInfo.CurrentDepth++;
-                    res &= ValidateList(nestedInfo, pi, arr, valueType, valueType.GetElementType(), nullabilityInfo: null, validationResults, serviceProvider, throwOnError);
+                    seenIndex = info.Seen.Count;
+                    info.Seen.Add(arr);
+                    try
+                    {
+                        nestedInfo.CurrentDepth++;
+                        res &= ValidateList(nestedInfo, pi, arr, valueType, valueType.GetElementType(), nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                    }
+                    finally
+                    {
+                        info.Seen.RemoveAt(seenIndex);
+                    }
                 }
                 else if (AsList(value, out itemType) is IList list)
                 {
-                    nestedInfo.CurrentDepth++;
-                    res &= ValidateList(nestedInfo, pi, list, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError);
+                    seenIndex = info.Seen.Count;
+                    info.Seen.Add(list);
+                    try
+                    {
+                        nestedInfo.CurrentDepth++;
+                        res &= ValidateList(nestedInfo, pi, list, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                    }
+                    finally
+                    {
+                        info.Seen.RemoveAt(seenIndex);
+                    }
                 }
                 else if (value is ICollection col)
                 {
-                    nestedInfo.CurrentDepth++;
-                    res &= ValidateList(nestedInfo, pi, col, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError);
+                    seenIndex = info.Seen.Count;
+                    info.Seen.Add(col);
+                    try
+                    {
+                        nestedInfo.CurrentDepth++;
+                        res &= ValidateList(nestedInfo, pi, col, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                    }
+                    finally
+                    {
+                        info.Seen.RemoveAt(seenIndex);
+                    }
                 }
                 else if (value is IEnumerable enumerable)
                 {
-                    nestedInfo.CurrentDepth++;
-                    res &= ValidateList(nestedInfo, pi, enumerable, valueType, itemType: null, nullabilityInfo: null, validationResults, serviceProvider, throwOnError);
+                    seenIndex = info.Seen.Count;
+                    info.Seen.Add(enumerable);
+                    try
+                    {
+                        nestedInfo.CurrentDepth++;
+                        res &= ValidateList(nestedInfo, pi, enumerable, valueType, itemType: null, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                    }
+                    finally
+                    {
+                        info.Seen.RemoveAt(seenIndex);
+                    }
                 }
             }
             return res;
@@ -216,7 +266,7 @@ namespace wan24.ObjectValidation
         internal static IItemValidationAttribute[] GetItemValidations(PropertyInfo pi, int arrayLevel, ItemValidationTargets target = ItemValidationTargets.Item)
             => (from a in pi.GetCustomAttributes(inherit: true)
                 where a is IItemValidationAttribute iva &&
-                    iva.ValidationTarget == target && 
+                    iva.ValidationTarget == target &&
                     iva.ArrayLevel == arrayLevel
                 select a as IItemValidationAttribute)
                 .ToArray();
@@ -227,5 +277,26 @@ namespace wan24.ObjectValidation
         /// <param name="attrs">Attributes</param>
         /// <returns>Item validation is disabled?</returns>
         internal static bool IsNoItemValidation(IItemValidationAttribute[] attrs) => attrs.Any(a => a is ItemNoValidationAttribute);
+
+        /// <summary>
+        /// Get a member name
+        /// </summary>
+        /// <param name="info">Validation information</param>
+        /// <param name="pi">Property info</param>
+        /// <param name="item">Item number</param>
+        /// <param name="member">Member name</param>
+        /// <param name="target">Validation target</param>
+        /// <param name="isDict">Is a dictionary?</param>
+        /// <returns>Member name</returns>
+        internal static string GetMemberName(ValidationInfo info, PropertyInfo pi, long item, string? member, ItemValidationTargets target = ItemValidationTargets.Item, bool isDict = false)
+            => info.ArrayLevel switch
+            {
+                0 => isDict
+                        ? $"{pi.Name}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
+                        : $"{pi.Name}[{item}]",
+                _ => isDict
+                        ? $"{member ?? throw new ArgumentNullException(nameof(member))}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
+                        : $"{member ?? throw new ArgumentNullException(nameof(member))}[{item}]"
+            };
     }
 }

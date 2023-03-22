@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "QNzUC/AA893h8dhkDYUqdB2hpV3zSg8dyx6GEwZ9izc="
+          "hash": "SZPUK3O0OLoZJqcW6OBB98WbALMGrW1kIorqft/ytI4="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,19 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KYkPeXyyRQX3KM1YQLyNb7kwxLzECj7MiC6jnIGBS0c="
+          "hash": "lBFl07GogJeRgEn8GsQHTr5/1x3bvX4L72eDGXJA0g8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.AmountAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.AmountAttribute.html",
+          "hash": "rJt6c2x1N5laNLOgD8ZXbOWmVqBXYy+QaOKFu2xzZKc="
         }
       },
       "is_incremental": false,
@@ -33,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.BicAttribute.html",
-          "hash": "tE13uGe7TCKelw3eknwGcszUpfe3X8EXoxt1fuuceLY="
+          "hash": "dxE4eY4qq8+2MYbK9rR4a1tnUIc0J5e0bq1cgByl/DI="
         }
       },
       "is_incremental": false,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CountLimitAttribute.html",
-          "hash": "2ZiPAgIYAn2Jo1BIjX2hg//eK+8aJJeLmV4q66nqdAE="
+          "hash": "M4MliR3jQzxRFb2+wRF4Lw40+q35R7omab096bUE3NU="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CountryAttribute.html",
-          "hash": "Y+BT+fS7vhL6nJBJKGhD+SE8A23n7wUL5ktfx/t+qLI="
+          "hash": "3M2y75MHL82hBg0+sND7AFR4rvoC4aXXDcoQrlhgoow="
         }
       },
       "is_incremental": false,
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CountryCodes.html",
-          "hash": "2XCRUL4ZAAzxb7H5cZOr1u5Pa5IaLUriq6bIr8+zOsI="
+          "hash": "iadnARfPWrJHkyTSMPZgjI+/rU0b6inamNUnbQ9L68s="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CurrencyAttribute.html",
-          "hash": "ddHgQvupLSEGQqTZBLn9n7ESgYRL+qkc4N8ElcvWKL8="
+          "hash": "O7hbkBYqBfO4VugFKetBnThwMwUm5/qVs/GVyRocYuY="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CurrencyCodes.Currency.html",
-          "hash": "+EFUsRzbTBqiMlpIlMkZIJfbkI0oP5oLeVZ3awJVFMY="
+          "hash": "S8RBYb20TU1Vf0T5L1nmfWNVd7HnzzePB8I9mIAIYHQ="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CurrencyCodes.html",
-          "hash": "fUVux2tF57u1t5JD7Muzs6HhnHitvxPSrfHGeNEyrE0="
+          "hash": "0WR+aCGN3Djy2cdBC+6i8+bKx4HD6obUngnK1u6/3mg="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.CurrencyFormats.html",
-          "hash": "Q8QVb5vPj7HUHbhHAWuXTcNON7mtFco9sSGjX4bC1sU="
+          "hash": "3ErD8bbuqHu7633PSlD/xaZakTeuY7ZZo7KoXz8m1Uo="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.EuVatId.html",
-          "hash": "Yb4NTQ8biwelWw+cNfSMXJGveAH9nIQcUAURF7rH5jo="
+          "hash": "29KCDnCxw+QxEuo7qaxOzxG9i9BbDK3bIUPpqcAxFhU="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.EuVatIdAttribute.html",
-          "hash": "/3nfCveS0593lZv6TPxh8Xnz9BdHOePhS1/Mg96NS3I="
+          "hash": "GoDF93hoDRRHTLQn9J/0cpREqiKtwx4G9ReeGG3MkYs="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ICountable.html",
-          "hash": "yOKxSEYlzLZ4GMdP6LHPCu8ip/8godC6djs1ZRcfbbY="
+          "hash": "sesu/9DBvSAzphqguqA/VUGytstwJBrse8QqKWDcLn8="
         }
       },
       "is_incremental": false,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.IItemValidationAttribute.html",
-          "hash": "Ee0/2xTFjcnRr/wmfDeaNPcYv/Uqhbx+0jEZvaQVCDk="
+          "hash": "+o1a+cUn6gTjE8GB28qSbnIBUe7HL3Gpwjc44CdKcnA="
         }
       },
       "is_incremental": false,
@@ -177,7 +189,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ILongCountable.html",
-          "hash": "YEsu8iXIIHYqOWvRF7sUNTQIzdNI7UfhDs7wdU9mWkg="
+          "hash": "ts74i1rg/xOWY4kzaCmbP+GpNGr20IO2uL2D57V+19M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.IValidationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.IValidationInfo.html",
+          "hash": "1/rmuios8E0pxPbU92EssBsLKEKJVCcmNwvyrztmCwQ="
         }
       },
       "is_incremental": false,
@@ -189,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.IbanAttribute.html",
-          "hash": "uWN24D/7ltpkgBI/ymmPWNCt51sG9VwMFoYfLEm08eg="
+          "hash": "cU0elMqXdlZLGJl+sC4DDFVHWXRQ1k2cuaR6ZVzD6Rc="
         }
       },
       "is_incremental": false,
@@ -201,7 +225,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.IpAttribute.html",
-          "hash": "srGRKp6+Mq52CRYE8M86/wlsi3itqAEpuaahgO8DoS8="
+          "hash": "BZ1xk86OxNu9QFvdueraV88bm1FJbO1ZlSYv9ujhde4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemAmountAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemAmountAttribute.html",
+          "hash": "80Fashrhsld9Z8k6TpqOF7MkwMjJ4ZB1cwweLe5robo="
         }
       },
       "is_incremental": false,
@@ -213,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemBicAttribute.html",
-          "hash": "oiXaTECN8DbTU9dwQr+I30vtCtfW5Rb3lhfky1n2t0I="
+          "hash": "b4b5za8x9HYyi+iRrdly/K60ocFt048pWH3S7V00e7Y="
         }
       },
       "is_incremental": false,
@@ -225,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCompanyTINAttribute.html",
-          "hash": "71c9BEjVh0sVJBCVWwhI+X+xwb7lyCWAY/GWd6yKJmI="
+          "hash": "khZiMX35xt3x0u+l2UMbVX7VLIoud8zZ6Ej2zcFecSU="
         }
       },
       "is_incremental": false,
@@ -237,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCompareAttribute.html",
-          "hash": "U1Srk6KS0Fj/qNH5N3IqwZfbpKqZjWdWH4Fwabk3RZk="
+          "hash": "JnzBWWK2X7K8x7mWk+nWOp79O7/XIh3oZMxqDUmgQ/g="
         }
       },
       "is_incremental": false,
@@ -249,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCountLimitAttribute.html",
-          "hash": "Y3lU8Dkzu2gZQeW+V+pfegTGQtLfwHbAOdO/uNE8mJ0="
+          "hash": "pBdwhnWTz9jA384JwrRq4iSh06/36rdT8zrptc7yvUk="
         }
       },
       "is_incremental": false,
@@ -261,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCountryAttribute.html",
-          "hash": "tDVIZlXpwjiUmavyRFgxapCWlQBKlWbDEInAm9WfPBE="
+          "hash": "1Ce0g3X3a2E4qO3NvFSYnz22mPyUTtqwJUnKnj2npyo="
         }
       },
       "is_incremental": false,
@@ -273,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCreditCardAttribute.html",
-          "hash": "dL38TojhyjNuzQKrqBpI49il8iVWRJkOIJ5k0a6OKdA="
+          "hash": "UQDzV3kT+09sePQ3a8p51o7iO1A4ejpHRfMKhiQfe14="
         }
       },
       "is_incremental": false,
@@ -285,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCurrencyAttribute.html",
-          "hash": "MG6LNSRw3l4CrunevzAIjp1WMcgzsy7+OuouKbCTQxI="
+          "hash": "M8f70blcJf7hUGa+A+YlK1ocebylMGnZcIccFREjbFw="
         }
       },
       "is_incremental": false,
@@ -297,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemEmailAddressAttribute.html",
-          "hash": "MzrJyVthV5TiNq1MAjdnAYSQZOnzDJLHwfDKNMAxEqA="
+          "hash": "AG9jQUv3G+ttixbrcFEujvo83VHWfvIE617xnWsXu2M="
         }
       },
       "is_incremental": false,
@@ -309,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemEuVatIdAttribute.html",
-          "hash": "iO6fwXOimHPeKZZ3dWjcgJCF81wH5kmk3c23P0xbfSQ="
+          "hash": "EGmiq5BbzwyM++0CafA0QqV7B/BBoERpIOm1xq8QgGo="
         }
       },
       "is_incremental": false,
@@ -321,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemIbanAttribute.html",
-          "hash": "SVdRAG4KZI4uyq+TI9W6lwXaRHxENHKsEdGP2LM58k4="
+          "hash": "DaG7pEVrBjZOcuKsy9G9R86vwAyQojEuFWzAFKJxZH8="
         }
       },
       "is_incremental": false,
@@ -333,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemIpAttribute.html",
-          "hash": "gnz5nyM55WJLXuaGwavZVREBq35lbZNYDN+T7g4IjQw="
+          "hash": "au8UIgHFWsOST+JbZrBbbzeF/mSsyaRsqB8VFa0rg5I="
         }
       },
       "is_incremental": false,
@@ -345,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.html",
-          "hash": "DLL1N/iYQBTDb8TBWrZJvqLtJ9oq3b9gBTM3tTURiNs="
+          "hash": "lnVx6kiW0K7q/O4GKDX0ZAHj98V49v9b4/UhRYyRUtE="
         }
       },
       "is_incremental": false,
@@ -357,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemMaxLengthAttribute.html",
-          "hash": "EaP4isj05cX2+jj82APxDK/l3Caj/cBVKKmBjmhn964="
+          "hash": "9v0kuZjYDh8PpfpclgZmFGOk/T3mZxGWNywHge+R/tE="
         }
       },
       "is_incremental": false,
@@ -369,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemMinLengthAttribute.html",
-          "hash": "t1bXTd16JyawsX2yHIU1VNcoTdkAlTo9fjqtA2KOUSM="
+          "hash": "u8oqIn68E8XlbzxZyArwoDQLzYhLwlNVlvRd3NbvjpM="
         }
       },
       "is_incremental": false,
@@ -381,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemNoValidationAttribute.html",
-          "hash": "QyN9srS8n7lrve1cIFIBB7zDkXlCy30Ve3qfa6dQAcY="
+          "hash": "zQ3hJhKi7e2n9uFeXLbBQmZH27X0SqVSSrRjYgERL8A="
         }
       },
       "is_incremental": false,
@@ -393,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemNullableAttribute.html",
-          "hash": "YL9pC/0XpWNpi1F7eI2joB99WKOFz+S3VCHRArQs9tA="
+          "hash": "elY9bBxcIH1v3o8GbhEce6fgkGS9mw3QfGgDGejov3M="
         }
       },
       "is_incremental": false,
@@ -405,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemPersonTINAttribute.html",
-          "hash": "NtB5IoRFzBle2d2JAb93ZiA6V26KuUGDbvdSzFKx3mg="
+          "hash": "+J6cqYbCpQ40LziNBC2p7w5fv7Pcxsjge4tP9yRsBpQ="
         }
       },
       "is_incremental": false,
@@ -417,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemPhoneAttribute.html",
-          "hash": "7Zmxf0C02JlnV/ptjXFi2Ya7vrQhVqEtG6uBZa8do7k="
+          "hash": "pBLnNGsjSB4An2R1Mm2Q9b4fBzKMlpIg9w79sldy6io="
         }
       },
       "is_incremental": false,
@@ -429,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemRangeAttribute.html",
-          "hash": "e6dR6MWX8HPQNl1VMPXsk9Fhfq5ogVJG8SLenbq1DpU="
+          "hash": "UEXtqJLgGbnJVFpKak+/o2xtmJAgSU8EVKFDQJO9aTg="
         }
       },
       "is_incremental": false,
@@ -441,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemRegularExpressionAttribute.html",
-          "hash": "Hne9o0uUfwsAq/9XloZCUKxKppGhpgCSbadwZnzJIko="
+          "hash": "QUTgNzEOjjzuP33p83p0836invXAIUYLLDPVpmP3Ndc="
         }
       },
       "is_incremental": false,
@@ -453,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemRequiredAttribute.html",
-          "hash": "jFfiDrbJsoMgR1WrGBphE3ViHB9rMT9OdI61Bkp56Vs="
+          "hash": "WvbDfAwf3lDZEdFCoqmx33JzGCCI12kx2AwM0nuFokc="
         }
       },
       "is_incremental": false,
@@ -465,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemSSNAttribute.html",
-          "hash": "cMBBl1rG1E/wQouvOQluM88aJVbmMqcBfx8KNFAfkvw="
+          "hash": "i/HXldLEun4H1VA90dyuu2fphtoQ5cne7wpdh2FiIBU="
         }
       },
       "is_incremental": false,
@@ -477,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemStringLengthAttribute.html",
-          "hash": "+TU2lyFPtEBfNlbPm9+YI9u0TXWshpQRSjVokolokg8="
+          "hash": "H9wcSu+IZHv1FPIRnI3l/6K6bj21vA7Zo2isZLngHR8="
         }
       },
       "is_incremental": false,
@@ -489,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemUrlAttribute.html",
-          "hash": "an9c4x6pxM9XHZ+eCuI6N+YtZt5TKUSx/znkYpmR5bU="
+          "hash": "UzNixC8V7eqg6vV+rSNO9VWQxmdE0IY9JCGnUtyVRm8="
         }
       },
       "is_incremental": false,
@@ -501,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemVATAttribute.html",
-          "hash": "ZEeGNKxhjdgnbc9hMKRE6IIAJGI16y+gqk4mY/IhnEo="
+          "hash": "wkvnxZsrOM7fgNKu6XWed+jGEOyIH+UNNFlNvnPriEo="
         }
       },
       "is_incremental": false,
@@ -513,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemValidationAttribute.html",
-          "hash": "8hvDQHylFUTSHE16sOzD4llBDT9JS0LCiDO4+PO5ANk="
+          "hash": "v7Z1KP9pKbWFMQIcGx4fLp7+eZE5GYDi2JMbRsaGq+0="
         }
       },
       "is_incremental": false,
@@ -525,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemValidationTargets.html",
-          "hash": "fvFsw1a2yUTsGidE2FYC7mV5l+gaImkwu8TjjpRcA0U="
+          "hash": "2FnNX9nM4B3HnsOY40Gd6OZYdkZ9hnwRR2GAVP3wYs0="
         }
       },
       "is_incremental": false,
@@ -537,7 +573,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html",
-          "hash": "0woAsY0LokYtpwodInZr62ke5LRtuC4ffXWQYWsDNYM="
+          "hash": "yNXGXT4tefW6YEM6Jinfli7V9l519DksPshtV8NrpnE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemXmlAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemXmlAttribute.html",
+          "hash": "7cXWyJQpq4i3tKuiBjp+ZTMPzjNTERiZSjqADteUAY8="
         }
       },
       "is_incremental": false,
@@ -549,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemZipCodeAttribute.html",
-          "hash": "CqIRZ0OfDEHLKbY5ZG6PZo01pR1cLEBRWCrwcsaMfOo="
+          "hash": "4pUEf99OJ1exPSAo/tbi+9GO5W7/gK6ABnIRoMfO5nU="
         }
       },
       "is_incremental": false,
@@ -561,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.LuhnChecksum.html",
-          "hash": "+xEXcuhIuEnmnHsU5sn+n8HIum74gK9jSTtxToJGOKU="
+          "hash": "W2OkrpMAvzqAmRKnaOIiMWjn+pqfPSAkqbO6XvSsjKc="
         }
       },
       "is_incremental": false,
@@ -573,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.LuhnChecksumAttribute.html",
-          "hash": "FAPUyiiQJRUI7dmjh3na/O2oyB76Klu7zLOXY8hOwzI="
+          "hash": "bDyWjA2G8ECCB82zJxre2xIH4NsH5eme0PMLus8KVrY="
         }
       },
       "is_incremental": false,
@@ -585,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.NoValidationAttribute.html",
-          "hash": "wcL7TW1N8y2ZufB4qJvTpsyY28r7+1e4oE3dtg1AIao="
+          "hash": "vOqwSdVtQ8W6owuzF4W7wRubET/YcVXgoMsljQkVzmw="
         }
       },
       "is_incremental": false,
@@ -597,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ObjectValidationEventArgs.html",
-          "hash": "yuYj1zN9R+vHiT1izqA54uJqyHtqv8fk7ojNtbXozCQ="
+          "hash": "fEIhPXTFasFqoLQKfSYKPCO6VYWNwqamQIkUypTK2ao="
         }
       },
       "is_incremental": false,
@@ -609,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ObjectValidationException.html",
-          "hash": "IX3x5bFVbaelajA1bQEDuKyl+P2jkkcVEA/LqGCrI4M="
+          "hash": "3GFeBP2O81m+JcWTxRmT8Fq1MZ2s21oAacMuZEqbZlk="
         }
       },
       "is_incremental": false,
@@ -621,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.SwiftValidation.html",
-          "hash": "Skun3KXrC9+OLmtGRjDecLrGGkvgdvD9xcuwQ3ZW6ec="
+          "hash": "yUkX1+mq8UClwMfZGm+s2zyZiqC45OlWkcu5c1iKWSE="
         }
       },
       "is_incremental": false,
@@ -633,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidatableObject.html",
-          "hash": "cCugUVNf93z5QllyHzbSE2dwN9YILFF40UQFXC81VxQ="
+          "hash": "QJ58S4gmS1BW/4ATuL7RJaPjX1mbh+LAyk5uuYeJDLI="
         }
       },
       "is_incremental": false,
@@ -645,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidateObject.html",
-          "hash": "vQISNOkwJgR/tubIxHrSAIIq+dDbJtk4a5CZayrrMGE="
+          "hash": "mvCOD91uXXboWqxye2GCP9XY4xqSwFi9JCR7JsDkhN4="
         }
       },
       "is_incremental": false,
@@ -657,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html",
-          "hash": "qj49CzcvF4ZAX9Vr/fkydeIbkiEA1GWF6O9fagoHquE="
+          "hash": "BA5D42p8TEBUFHQhKymJ4YRYO7SLVrAJ/QeV/t7iNY8="
         }
       },
       "is_incremental": false,
@@ -669,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidationExtensions.html",
-          "hash": "GHMaBSnX37bUF42XOmSiswbyJ0jR9idEMD1EChipUFo="
+          "hash": "YR4YjM1SimmqkdFQOTEiZ6vDvteVqmebMllaC+OpygY="
         }
       },
       "is_incremental": false,
@@ -681,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.XRechnungRouteAttribute.html",
-          "hash": "F1v0zMmELljxxncOVczfEdamM3ewUkhzz+XFkoSb/i0="
+          "hash": "ijNItlUc/Md0RZekOeX1+z9KD0fVT3B+EmKyiGyKpEI="
         }
       },
       "is_incremental": false,
@@ -693,7 +741,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.XRechnungRouting.html",
-          "hash": "h7TwQPT2q0MDObPuXgXybVMgsMp07ZlcJ/ZSf8gpLFU="
+          "hash": "QhmZgJ+yN8LW7dvgZLggLQ4vpe2hDvibIWoBHeKgXLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.XmlAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.XmlAttribute.html",
+          "hash": "EuokZMeKGCixxWQeURUW/pbN/NHwbN+C40jCzyuloSM="
         }
       },
       "is_incremental": false,
@@ -705,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "pKpi5ASUHw2k4xeuwCnynYQYnj5X0kOvHNx8EkOrx9o="
+          "hash": "y8ReEORWbDO2m0QTqsCkbNw+8QHcp+pXn02SMY6Ogp0="
         }
       },
       "is_incremental": false,
@@ -717,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "yjQBkov0WfgSy4L9iqlPJ3n/AdNueIVbOgdP6GDR2wo="
+          "hash": "Pwtc9aLGy+E0pqvj0ZRB4ESDGIIMYBuMM32apgOfvO0="
         }
       },
       "is_incremental": false,
@@ -741,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "peojLmvQgycWa6SoXtL+g+Qb4i44ShAGKheHtSH35xE="
+          "hash": "YjUW3ykayccnuHe/2u9Va1bNvW1VPN9sxVbzCb6oud4="
         }
       },
       "is_incremental": false,
@@ -780,7 +840,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 62,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

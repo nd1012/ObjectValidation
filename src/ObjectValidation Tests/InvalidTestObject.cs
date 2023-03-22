@@ -28,6 +28,8 @@
             ArrProperty2[1] = "test123";
             EnumerableProperty2 = new string[] { null!, "test123" }.AsEnumerable();
             ItemIgnoredProperty = null!;
+            DeepArrProperty[0][1] = "test123";
+            DeepArrProperty[1][0] = null!;
         }
     }
 }

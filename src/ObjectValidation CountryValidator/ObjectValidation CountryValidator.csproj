@@ -7,6 +7,21 @@
     <Nullable>enable</Nullable>
     <AssemblyName>OVCountryValidator</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageId>ObjectValidation-CountryValidator</PackageId>
+    <Title>ObjectValidation-CountryValidator</Title>
+    <Version>1.0.0</Version>
+    <Authors>nd1012</Authors>
+    <Company>Andreas Zimmermann, wan24.de</Company>
+    <Product>ObjectValidation</Product>
+    <Description>ObjectValidator item validation attributes for CountryValidator.DataAnnotations</Description>
+    <Copyright>(c)2023 Andreas Zimmermann, wan24.de</Copyright>
+    <PackageProjectUrl>https://github.com/nd1012/ObjectValidation</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nd1012/ObjectValidation.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>swift;validation;ip-address;vat-number;iban;xml-validation;dto;luhn;bic;iso-4217;xrechnung;iso-3166-1-alpha-2;object-validator;iso-9362;iso-13616</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,5 +32,21 @@
   <ItemGroup>
     <ProjectReference Include="..\ObjectValidation\ObjectValidation.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy /Y &quot;$(ProjectDir)..\..\README.md&quot; &quot;$(ProjectDir)README.md&quot;&#xD;&#xA;" />
+  </Target>
 
 </Project>

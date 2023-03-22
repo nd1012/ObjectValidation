@@ -16,9 +16,11 @@ enumerable lengths
 - IP address validation attribute for IPv4 and IPv6
 - Country ISO 3166-1 alpha-2 code validation
 - Currency ISO 4217 code validation
+- Money amount validation
 - Luhn checksum validation
 - XRechnung routing validation
 - European VAT ID validation
+- XML validation
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -50,9 +52,11 @@ items using `ItemNullableAttribute`)
 - IP address validation using `IpAttribute`
 - Country ISO 3166-1 alpha-2 code validation using `CountryAttribute`
 - Currency ISO 4217 code validation using `CurrencyAttribute`
+- Money amount validation using `AmountAttribute`
 - Luhn checksum validation using `LuhnChecksumAttribute`
 - XRechnung routing validation using `XRechnungRouteAttribute`
 - European VAT ID validation using `EuVatIdAttribute`
+- XML validation using `XmlAttribute`
 
 ## Deep object validation
 
@@ -208,6 +212,7 @@ These item validation adapters exist:
 - `IpAttribute` -> `ItemIpAttribute`
 - `CountryAttribute` -> `ItemCountryAttribute`
 - `CurrencyAttribute` -> `ItemCurrencyAttribute`
+- `AmountAttribute` -> `ItemAmountAttribute`
 - `LuhnChecksumAttribute` -> `ItemLuhnChecksumAttribute`
 - `XRechnungRouteAttribute` -> `ItemXRechnungRouteAttribute`
 - `EuVatIdAttribute` -> `ItemEuVatIdAttribute`

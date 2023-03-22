@@ -41,13 +41,16 @@ namespace wan24.ObjectValidation
                 info.ArrayLevel = 0;
             }
             info.CurrentDepth++;
+            int seenIndex = 0;
             try
             {
-                // Skip object that disabled the validation
+                // Skip object that disabled the validation or which has a not supported type
                 Type type = obj.GetType();// Given object type
-                if (type.GetCustomAttribute<NoValidationAttribute>(inherit: true) != null || type == typeof(string) || type == typeof(object)) return true;
+                if (type.IsValueType || type.IsArray || type.IsEnum || type == typeof(string) || type == typeof(object) || type.GetCustomAttribute<NoValidationAttribute>(inherit: true) != null)
+                    return true;
                 // Avoid an endless recursion
                 if (info.Seen.Contains(obj)) return true;
+                seenIndex = info.Seen.Count;
                 info.Seen.Add(obj);
                 // Prepare the results
                 List<ValidationResult> validationResults = new(),// Single validation results (will be added to all validation results after a validation)
@@ -216,6 +219,7 @@ namespace wan24.ObjectValidation
             finally
             {
                 info.CurrentDepth--;
+                if (seenIndex > 0) info.Seen.RemoveAt(seenIndex);
             }
         }
 

@@ -107,6 +107,15 @@ namespace ObjectValidation_Tests
             null!
         };
 
+        [CountLimit(2, 3)]
+        [ItemCountLimit(2, 3)]
+        [ItemStringLength(5, ArrayLevel = 1)]
+        public string[][] DeepArrProperty { get; set; } = new string[][]
+        {
+            new string[] { "test", "test2"},
+            new string[] { "test", "test2"},
+        };
+
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             List<ValidationResult> results = new();

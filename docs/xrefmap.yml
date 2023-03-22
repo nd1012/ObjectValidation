@@ -7,6 +7,51 @@ references:
   commentId: N:wan24.ObjectValidation
   fullName: wan24.ObjectValidation
   nameWithType: wan24.ObjectValidation
+- uid: wan24.ObjectValidation.AmountAttribute
+  name: AmountAttribute
+  href: api/wan24.ObjectValidation.AmountAttribute.html
+  commentId: T:wan24.ObjectValidation.AmountAttribute
+  fullName: wan24.ObjectValidation.AmountAttribute
+  nameWithType: AmountAttribute
+- uid: wan24.ObjectValidation.AmountAttribute.#ctor(System.String)
+  name: AmountAttribute(String)
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute__ctor_System_String_
+  commentId: M:wan24.ObjectValidation.AmountAttribute.#ctor(System.String)
+  fullName: wan24.ObjectValidation.AmountAttribute.AmountAttribute(System.String)
+  nameWithType: AmountAttribute.AmountAttribute(String)
+- uid: wan24.ObjectValidation.AmountAttribute.#ctor*
+  name: AmountAttribute
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.AmountAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AmountAttribute.AmountAttribute
+  nameWithType: AmountAttribute.AmountAttribute
+- uid: wan24.ObjectValidation.AmountAttribute.Currency
+  name: Currency
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_Currency
+  commentId: P:wan24.ObjectValidation.AmountAttribute.Currency
+  fullName: wan24.ObjectValidation.AmountAttribute.Currency
+  nameWithType: AmountAttribute.Currency
+- uid: wan24.ObjectValidation.AmountAttribute.Currency*
+  name: Currency
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_Currency_
+  commentId: Overload:wan24.ObjectValidation.AmountAttribute.Currency
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AmountAttribute.Currency
+  nameWithType: AmountAttribute.Currency
+- uid: wan24.ObjectValidation.AmountAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.AmountAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.AmountAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: AmountAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.AmountAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.AmountAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AmountAttribute.IsValid
+  nameWithType: AmountAttribute.IsValid
 - uid: wan24.ObjectValidation.BicAttribute
   name: BicAttribute
   href: api/wan24.ObjectValidation.BicAttribute.html
@@ -233,12 +278,12 @@ references:
   commentId: T:wan24.ObjectValidation.CurrencyCodes.Currency
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency
   nameWithType: CurrencyCodes.Currency
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String)
-  name: Currency(String, String, String)
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__ctor_System_String_System_String_System_String_
-  commentId: M:wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String)
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Currency(System.String, System.String, System.String)
-  nameWithType: CurrencyCodes.Currency.Currency(String, String, String)
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String,System.Int32)
+  name: Currency(String, String, String, Int32)
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__ctor_System_String_System_String_System_String_System_Int32_
+  commentId: M:wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String,System.Int32)
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Currency(System.String, System.String, System.String, System.Int32)
+  nameWithType: CurrencyCodes.Currency.Currency(String, String, String, Int32)
 - uid: wan24.ObjectValidation.CurrencyCodes.Currency.#ctor*
   name: Currency
   href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__ctor_
@@ -246,6 +291,12 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Currency
   nameWithType: CurrencyCodes.Currency.Currency
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency._Factor
+  name: _Factor
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__Factor
+  commentId: F:wan24.ObjectValidation.CurrencyCodes.Currency._Factor
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency._Factor
+  nameWithType: CurrencyCodes.Currency._Factor
 - uid: wan24.ObjectValidation.CurrencyCodes.Currency.Code
   name: Code
   href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Code
@@ -259,6 +310,32 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Code
   nameWithType: CurrencyCodes.Currency.Code
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  name: Factor
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Factor
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  nameWithType: CurrencyCodes.Currency.Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Factor*
+  name: Factor
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Factor_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  nameWithType: CurrencyCodes.Currency.Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
+  name: MinorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_MinorUnit
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
+  nameWithType: CurrencyCodes.Currency.MinorUnit
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit*
+  name: MinorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_MinorUnit_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
+  nameWithType: CurrencyCodes.Currency.MinorUnit
 - uid: wan24.ObjectValidation.CurrencyCodes.Currency.Name
   name: Name
   href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Name
@@ -285,6 +362,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
   nameWithType: CurrencyCodes.Currency.NumericCode
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
+  name: Validate(Decimal)
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Validate_System_Decimal_
+  commentId: M:wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
+  nameWithType: CurrencyCodes.Currency.Validate(Decimal)
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Validate*
+  name: Validate
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Validate_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Validate
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Validate
+  nameWithType: CurrencyCodes.Currency.Validate
 - uid: wan24.ObjectValidation.CurrencyCodes.Known
   name: Known
   href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Known
@@ -562,6 +652,25 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.IpAttribute.IsValid
   nameWithType: IpAttribute.IsValid
+- uid: wan24.ObjectValidation.ItemAmountAttribute
+  name: ItemAmountAttribute
+  href: api/wan24.ObjectValidation.ItemAmountAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemAmountAttribute
+  fullName: wan24.ObjectValidation.ItemAmountAttribute
+  nameWithType: ItemAmountAttribute
+- uid: wan24.ObjectValidation.ItemAmountAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemAmountAttribute(String, ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemAmountAttribute.html#wan24_ObjectValidation_ItemAmountAttribute__ctor_System_String_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemAmountAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemAmountAttribute.ItemAmountAttribute(System.String, wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemAmountAttribute.ItemAmountAttribute(String, ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemAmountAttribute.#ctor*
+  name: ItemAmountAttribute
+  href: api/wan24.ObjectValidation.ItemAmountAttribute.html#wan24_ObjectValidation_ItemAmountAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemAmountAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemAmountAttribute.ItemAmountAttribute
+  nameWithType: ItemAmountAttribute.ItemAmountAttribute
 - uid: wan24.ObjectValidation.ItemBicAttribute
   name: ItemBicAttribute
   href: api/wan24.ObjectValidation.ItemBicAttribute.html
@@ -1213,6 +1322,25 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemVATAttribute.ItemVATAttribute
   nameWithType: ItemVATAttribute.ItemVATAttribute
+- uid: wan24.ObjectValidation.ItemXmlAttribute
+  name: ItemXmlAttribute
+  href: api/wan24.ObjectValidation.ItemXmlAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemXmlAttribute
+  fullName: wan24.ObjectValidation.ItemXmlAttribute
+  nameWithType: ItemXmlAttribute
+- uid: wan24.ObjectValidation.ItemXmlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemXmlAttribute(ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemXmlAttribute.html#wan24_ObjectValidation_ItemXmlAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemXmlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemXmlAttribute.ItemXmlAttribute(wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemXmlAttribute.ItemXmlAttribute(ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemXmlAttribute.#ctor*
+  name: ItemXmlAttribute
+  href: api/wan24.ObjectValidation.ItemXmlAttribute.html#wan24_ObjectValidation_ItemXmlAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemXmlAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemXmlAttribute.ItemXmlAttribute
+  nameWithType: ItemXmlAttribute.ItemXmlAttribute
 - uid: wan24.ObjectValidation.ItemXRechnungRouteAttribute
   name: ItemXRechnungRouteAttribute
   href: api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html
@@ -1251,6 +1379,64 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemZipCodeAttribute.ItemZipCodeAttribute
   nameWithType: ItemZipCodeAttribute.ItemZipCodeAttribute
+- uid: wan24.ObjectValidation.IValidationInfo
+  name: IValidationInfo
+  href: api/wan24.ObjectValidation.IValidationInfo.html
+  commentId: T:wan24.ObjectValidation.IValidationInfo
+  fullName: wan24.ObjectValidation.IValidationInfo
+  nameWithType: IValidationInfo
+- uid: wan24.ObjectValidation.IValidationInfo.ArrayLevel
+  name: ArrayLevel
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_ArrayLevel
+  commentId: P:wan24.ObjectValidation.IValidationInfo.ArrayLevel
+  fullName: wan24.ObjectValidation.IValidationInfo.ArrayLevel
+  nameWithType: IValidationInfo.ArrayLevel
+- uid: wan24.ObjectValidation.IValidationInfo.ArrayLevel*
+  name: ArrayLevel
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_ArrayLevel_
+  commentId: Overload:wan24.ObjectValidation.IValidationInfo.ArrayLevel
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.IValidationInfo.ArrayLevel
+  nameWithType: IValidationInfo.ArrayLevel
+- uid: wan24.ObjectValidation.IValidationInfo.CurrentDepth
+  name: CurrentDepth
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_CurrentDepth
+  commentId: P:wan24.ObjectValidation.IValidationInfo.CurrentDepth
+  fullName: wan24.ObjectValidation.IValidationInfo.CurrentDepth
+  nameWithType: IValidationInfo.CurrentDepth
+- uid: wan24.ObjectValidation.IValidationInfo.CurrentDepth*
+  name: CurrentDepth
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_CurrentDepth_
+  commentId: Overload:wan24.ObjectValidation.IValidationInfo.CurrentDepth
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.IValidationInfo.CurrentDepth
+  nameWithType: IValidationInfo.CurrentDepth
+- uid: wan24.ObjectValidation.IValidationInfo.GetClone
+  name: GetClone()
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_GetClone
+  commentId: M:wan24.ObjectValidation.IValidationInfo.GetClone
+  fullName: wan24.ObjectValidation.IValidationInfo.GetClone()
+  nameWithType: IValidationInfo.GetClone()
+- uid: wan24.ObjectValidation.IValidationInfo.GetClone*
+  name: GetClone
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_GetClone_
+  commentId: Overload:wan24.ObjectValidation.IValidationInfo.GetClone
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.IValidationInfo.GetClone
+  nameWithType: IValidationInfo.GetClone
+- uid: wan24.ObjectValidation.IValidationInfo.Seen
+  name: Seen
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_Seen
+  commentId: P:wan24.ObjectValidation.IValidationInfo.Seen
+  fullName: wan24.ObjectValidation.IValidationInfo.Seen
+  nameWithType: IValidationInfo.Seen
+- uid: wan24.ObjectValidation.IValidationInfo.Seen*
+  name: Seen
+  href: api/wan24.ObjectValidation.IValidationInfo.html#wan24_ObjectValidation_IValidationInfo_Seen_
+  commentId: Overload:wan24.ObjectValidation.IValidationInfo.Seen
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.IValidationInfo.Seen
+  nameWithType: IValidationInfo.Seen
 - uid: wan24.ObjectValidation.LuhnChecksum
   name: LuhnChecksum
   href: api/wan24.ObjectValidation.LuhnChecksum.html
@@ -1866,6 +2052,38 @@ references:
   commentId: F:wan24.ObjectValidation.ValidationExtensions.VALIDATION_EXCEPTION_PREFIX
   fullName: wan24.ObjectValidation.ValidationExtensions.VALIDATION_EXCEPTION_PREFIX
   nameWithType: ValidationExtensions.VALIDATION_EXCEPTION_PREFIX
+- uid: wan24.ObjectValidation.XmlAttribute
+  name: XmlAttribute
+  href: api/wan24.ObjectValidation.XmlAttribute.html
+  commentId: T:wan24.ObjectValidation.XmlAttribute
+  fullName: wan24.ObjectValidation.XmlAttribute
+  nameWithType: XmlAttribute
+- uid: wan24.ObjectValidation.XmlAttribute.#ctor
+  name: XmlAttribute()
+  href: api/wan24.ObjectValidation.XmlAttribute.html#wan24_ObjectValidation_XmlAttribute__ctor
+  commentId: M:wan24.ObjectValidation.XmlAttribute.#ctor
+  fullName: wan24.ObjectValidation.XmlAttribute.XmlAttribute()
+  nameWithType: XmlAttribute.XmlAttribute()
+- uid: wan24.ObjectValidation.XmlAttribute.#ctor*
+  name: XmlAttribute
+  href: api/wan24.ObjectValidation.XmlAttribute.html#wan24_ObjectValidation_XmlAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.XmlAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.XmlAttribute.XmlAttribute
+  nameWithType: XmlAttribute.XmlAttribute
+- uid: wan24.ObjectValidation.XmlAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.XmlAttribute.html#wan24_ObjectValidation_XmlAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.XmlAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.XmlAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: XmlAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.XmlAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.XmlAttribute.html#wan24_ObjectValidation_XmlAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.XmlAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.XmlAttribute.IsValid
+  nameWithType: XmlAttribute.IsValid
 - uid: wan24.ObjectValidation.XRechnungRouteAttribute
   name: XRechnungRouteAttribute
   href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html

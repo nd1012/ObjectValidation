@@ -78,9 +78,11 @@ enumerable lengths</li>
 <li>IP address validation attribute for IPv4 and IPv6</li>
 <li>Country ISO 3166-1 alpha-2 code validation</li>
 <li>Currency ISO 4217 code validation</li>
+<li>Money amount validation</li>
 <li>Luhn checksum validation</li>
 <li>XRechnung routing validation</li>
 <li>European VAT ID validation</li>
+<li>XML validation</li>
 </ul>
 <p>It has been developed with the goal to offer an automatted deep object
 validation with support for deep dictionaries and lists contents, too.</p>
@@ -108,9 +110,11 @@ items using <code>ItemNullableAttribute</code>)</li>
 <li>IP address validation using <code>IpAttribute</code></li>
 <li>Country ISO 3166-1 alpha-2 code validation using <code>CountryAttribute</code></li>
 <li>Currency ISO 4217 code validation using <code>CurrencyAttribute</code></li>
+<li>Money amount validation using <code>AmountAttribute</code></li>
 <li>Luhn checksum validation using <code>LuhnChecksumAttribute</code></li>
 <li>XRechnung routing validation using <code>XRechnungRouteAttribute</code></li>
 <li>European VAT ID validation using <code>EuVatIdAttribute</code></li>
+<li>XML validation using <code>XmlAttribute</code></li>
 </ul>
 <h2 id="deep-object-validation">Deep object validation</h2>
 <p>Nested property object value validation is supported for:</p>
@@ -238,6 +242,7 @@ executed in case there's a <code>CountLimitAttribute</code> present.</p>
 <li><code>IpAttribute</code> -&gt; <code>ItemIpAttribute</code></li>
 <li><code>CountryAttribute</code> -&gt; <code>ItemCountryAttribute</code></li>
 <li><code>CurrencyAttribute</code> -&gt; <code>ItemCurrencyAttribute</code></li>
+<li><code>AmountAttribute</code> -&gt; <code>ItemAmountAttribute</code></li>
 <li><code>LuhnChecksumAttribute</code> -&gt; <code>ItemLuhnChecksumAttribute</code></li>
 <li><code>XRechnungRouteAttribute</code> -&gt; <code>ItemXRechnungRouteAttribute</code></li>
 <li><code>EuVatIdAttribute</code> -&gt; <code>ItemEuVatIdAttribute</code></li>
@@ -362,6 +367,9 @@ countries around the world.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

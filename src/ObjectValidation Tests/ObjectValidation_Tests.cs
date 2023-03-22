@@ -52,7 +52,9 @@ namespace ObjectValidation_Tests
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ItemIgnoredProperty)}"));
             Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.ItemIgnoredProperty)}[1]"));
             Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.ItemIgnoredProperty)}[2]"));
-            Assert.AreEqual(31, results.Count);
+            Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.DeepArrProperty)}[1][1]"));
+            Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.DeepArrProperty)}[2][0]"));
+            Assert.AreEqual(33, results.Count);
 
             // Validation exception
             Assert.IsFalse(results.HasValidationException());

@@ -7,6 +7,37 @@
     <AssemblyName>ObjectValidation</AssemblyName>
     <RootNamespace>wan24.ObjectValidation</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageId>ObjectValidation</PackageId>
+    <Title>ObjectValidation</Title>
+    <Authors>nd1012</Authors>
+    <Company>Andreas Zimmermann, wan24.de</Company>
+    <Product>ObjectValidation</Product>
+    <Description>Deep object validation library for .NET.</Description>
+    <Copyright>(c)2023 Andreas Zimmermann, wan24.de</Copyright>
+    <PackageProjectUrl>https://github.com/nd1012/ObjectValidation</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nd1012/ObjectValidation</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>swift;validation;ip-address;vat-number;iban;xml-validation;dto;luhn;bic;iso-4217;xrechnung;iso-3166-1-alpha-2;object-validator;iso-9362;iso-13616</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy /Y &quot;$(ProjectDir)..\..\README.md&quot; &quot;$(ProjectDir)README.md&quot;&#xD;&#xA;" />
+  </Target>
 
 </Project>
