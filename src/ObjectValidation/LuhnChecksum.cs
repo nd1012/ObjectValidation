@@ -10,7 +10,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[^\d]", RegexOptions.Compiled);
+        private static readonly Regex Normalizing = new(@"[^\d]", RegexOptions.Singleline | RegexOptions.Compiled);
 
         /// <summary>
         /// Validate the Luhn checksum of a value

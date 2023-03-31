@@ -19,19 +19,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[\d|A-Z]", RegexOptions.Compiled);
+        private static readonly Regex Normalizing = new(@"[\d|A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// IBAN syntax regular expression (<c>$1</c> is the country, <c>$2</c> the checksum, <c>$3</c> the bank ID and <c>$4</c> the account ID)
         /// </summary>
-        private static readonly Regex IbanSyntax = new(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Compiled);
+        private static readonly Regex IbanSyntax = new(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// IBAN checksum calculation regular expression
         /// </summary>
-        private static readonly Regex IbanChecksum = new(@"[A-Z]", RegexOptions.Compiled);
+        private static readonly Regex IbanChecksum = new(@"[A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// BIC syntax regular expression
         /// </summary>
-        private static readonly Regex BicSyntax = new(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Compiled);
+        private static readonly Regex BicSyntax = new(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Singleline | RegexOptions.Compiled);
 
         /// <summary>
         /// Split an IBAN (ISO 13616) into country, checksum, bank ID and account ID

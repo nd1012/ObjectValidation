@@ -15,19 +15,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[^\d|A-Z|-]", RegexOptions.Compiled);
+        private static readonly Regex Normalizing = new(@"[^\d|A-Z|-]", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// Syntax regular expression
         /// </summary>
-        private static readonly Regex Syntax = new(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Compiled);
+        private static readonly Regex Syntax = new(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// Checksum calculation regular expression
         /// </summary>
-        private static readonly Regex ChecksumCalculation = new(@"[A-Z]", RegexOptions.Compiled);
+        private static readonly Regex ChecksumCalculation = new(@"[A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
         /// <summary>
         /// Checksum normalizing regular expression
         /// </summary>
-        private static readonly Regex ChecksumNormalizing = new(@"[^\d|A-Z]", RegexOptions.Compiled);
+        private static readonly Regex ChecksumNormalizing = new(@"[^\d|A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
 
         /// <summary>
         /// Validate a XRechnung route

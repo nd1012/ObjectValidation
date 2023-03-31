@@ -13,6 +13,7 @@ enumerable lengths
 - `ICountable` and `ILongCountable` interfaces for count limitation
 - `ItemNullableAttribute` for (non-)nullable dictionary or list item validation
 - SWIFT validation attributes for ISO 13616 IBAN and ISO 9362 BIC (SWIFT codes)
+- ABA RTN validation attributes (MICR and fraction formats are supported)
 - IP address validation attribute for IPv4 and IPv6
 - Country ISO 3166-1 alpha-2 code validation
 - Currency ISO 4217 code validation
@@ -49,6 +50,7 @@ want to profit from the included general validation attributes for SWIFT etc.
 items using `ItemNullableAttribute`)
 - ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using 
 `IbanAttribute` and `BicAttribute`
+- ABA RTN validation (MICR/fraction) validation using the `AbaRtnAttribute`
 - IP address validation using `IpAttribute`
 - Country ISO 3166-1 alpha-2 code validation using `CountryAttribute`
 - Currency ISO 4217 code validation using `CurrencyAttribute`
@@ -209,6 +211,7 @@ These item validation adapters exist:
 - `UrlAttribute` -> `ItemUrlAttribute`
 - `IbanAttribute` -> `ItemIbanAttribute`
 - `BicAttribute` -> `ItemBicAttribute`
+- `AbaRtnAttribute` -> `ItemAbaRtnAttribute`
 - `IpAttribute` -> `ItemIpAttribute`
 - `CountryAttribute` -> `ItemCountryAttribute`
 - `CurrencyAttribute` -> `ItemCurrencyAttribute`
@@ -273,9 +276,9 @@ overall result is `false`.
 
 ## Found a bug?
 
-If the object validation doesn't work for you as expected, please open an 
-issue - I'd be glad to help and make ObjectValidation become even better! Push 
-requests are welcome :)
+If the object validation doesn't work for you as expected, or you have any 
+idea for improvements, please open an issue - I'd be glad to help and make 
+ObjectValidation become even better! Push requests are welcome, too :)
 
 ## Good to know
 
