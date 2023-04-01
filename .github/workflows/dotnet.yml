@@ -21,8 +21,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ./src/ObjectValidation.sln
-    - name: Build
-      run: dotnet build ./src/ObjectValidation.sln --no-restore
+      run: dotnet restore ./src/ObjectValidation.sln --ignore-failed-sources
+    - name: Build lib
+      run: dotnet build ./src/ObjectValidation/ObjectValidation.csproj --no-restore
+    - name: Build tests
+      run: dotnet build "./src/ObjectValidation Tests/ObjectValidation Tests.csproj" --no-restore
     - name: Test
       run: dotnet test ./src/ObjectValidation.sln --no-build --verbosity normal
