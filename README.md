@@ -41,6 +41,13 @@ object validation - it extends the existing routines with deep validation and
 more. Btw. you don't need to use the ObjectValidation methods, if you only 
 want to profit from the included general validation attributes for SWIFT etc.
 
+## How to get it
+
+The libraries are available as NuGet packages:
+
+- (ObjectValidation)[https://www.nuget.org/packages/ObjectValidation/]
+- (ObjectValidation-CountryValidator)[https://www.nuget.org/packages/ObjectValidation-CountryValidator/]
+
 ## Additional validations
 
 - Nullable types (`null` values in non-nullable properties will fail)
