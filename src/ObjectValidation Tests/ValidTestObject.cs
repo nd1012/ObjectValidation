@@ -116,6 +116,11 @@ namespace ObjectValidation_Tests
             new string[] { "test", "test2"},
         };
 
+        public bool RequiredIfConditional { get; set; }
+
+        [RequiredIf(nameof(RequiredIfConditional), true)]
+        public string? ConditionalProperty { get; set; }
+
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             List<ValidationResult> results = new();

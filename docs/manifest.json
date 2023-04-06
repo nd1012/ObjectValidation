@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "SZPUK3O0OLoZJqcW6OBB98WbALMGrW1kIorqft/ytI4="
+          "hash": "Z7wOd/oq36dRKnqQkGBknoegHY7Ec4nKZ8gw2/PjdS8="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,43 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lBFl07GogJeRgEn8GsQHTr5/1x3bvX4L72eDGXJA0g8="
+          "hash": "aSR+AD7Vlz8fnXN6+Xg7iIC7cwGcm4xWdlGIcGE1a2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.AbaFormats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.AbaFormats.html",
+          "hash": "LImFab6w3oTQTAUZ7fkqKwjMxKxj+KRfnWaTpFz3rKw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.AbaRtnAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.AbaRtnAttribute.html",
+          "hash": "Yj/2OjaUcCdiU+Z36qQp+/O8Uw4jgGUmH0HnVEBnGoQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.AbaValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.AbaValidation.html",
+          "hash": "WjtSaYN8R5CfBus0Pl+M8ZpIRoIbW/k6HJMFunFKWmw="
         }
       },
       "is_incremental": false,
@@ -233,6 +269,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemAbaRtnAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemAbaRtnAttribute.html",
+          "hash": "cQy/3DNB7nKJOku6TxHSBwF24ELsypeBMcFeKmDR7+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.ItemAmountAttribute.yml",
       "output": {
         ".html": {
@@ -261,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCompanyTINAttribute.html",
-          "hash": "khZiMX35xt3x0u+l2UMbVX7VLIoud8zZ6Ej2zcFecSU="
+          "hash": "W88SmZgfVATm7d9DgQgPMpkNOfXT98o0WrPOv8Gs/pM="
         }
       },
       "is_incremental": false,
@@ -322,6 +370,18 @@
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCurrencyAttribute.html",
           "hash": "M8f70blcJf7hUGa+A+YlK1ocebylMGnZcIccFREjbFw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemDataTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemDataTypeAttribute.html",
+          "hash": "g5NSIlZg9oqMcpntSNWa40dp9Ax7XUAAHAnpn73Wkq4="
         }
       },
       "is_incremental": false,
@@ -441,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemPersonTINAttribute.html",
-          "hash": "+J6cqYbCpQ40LziNBC2p7w5fv7Pcxsjge4tP9yRsBpQ="
+          "hash": "8mEb6oabfy17MB5QZu218oOX63UOdp3waUBokRLaKSg="
         }
       },
       "is_incremental": false,
@@ -501,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemSSNAttribute.html",
-          "hash": "i/HXldLEun4H1VA90dyuu2fphtoQ5cne7wpdh2FiIBU="
+          "hash": "2pXCWhEr9BXILOVm8xy+bK+G6UyraFOEtQhdbFE0F4Q="
         }
       },
       "is_incremental": false,
@@ -537,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemVATAttribute.html",
-          "hash": "wkvnxZsrOM7fgNKu6XWed+jGEOyIH+UNNFlNvnPriEo="
+          "hash": "YRISs2FObLUcBQP6gx9TCeE5b4pAvgA+tcNuZOEPJ24="
         }
       },
       "is_incremental": false,
@@ -549,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemValidationAttribute.html",
-          "hash": "v7Z1KP9pKbWFMQIcGx4fLp7+eZE5GYDi2JMbRsaGq+0="
+          "hash": "iYzXBpiv0f9yhfyQAABdl9kI3nsO/G0y20jikQGs6KA="
         }
       },
       "is_incremental": false,
@@ -597,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemZipCodeAttribute.html",
-          "hash": "4pUEf99OJ1exPSAo/tbi+9GO5W7/gK6ABnIRoMfO5nU="
+          "hash": "DibMls4T6RiDK7mogaspIdCwzMmDslpjTv3lvIakN48="
         }
       },
       "is_incremental": false,
@@ -665,6 +725,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.RequiredIfAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.RequiredIfAttribute.html",
+          "hash": "X+CGMqxjV2Yb2/BPkhkjdKN27fwvzkk8hKBFD49cr4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.SwiftValidation.yml",
       "output": {
         ".html": {
@@ -693,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidateObject.html",
-          "hash": "mvCOD91uXXboWqxye2GCP9XY4xqSwFi9JCR7JsDkhN4="
+          "hash": "5H0oZiX9OblPWg9VQauYecBgmD61yPElE3IMV67P4jA="
         }
       },
       "is_incremental": false,
@@ -765,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "y8ReEORWbDO2m0QTqsCkbNw+8QHcp+pXn02SMY6Ogp0="
+          "hash": "eb9wvB7rcrxXkVW+luTTwSO5qBaIVJa6VtWBsEnkpOs="
         }
       },
       "is_incremental": false,
@@ -801,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "YjUW3ykayccnuHe/2u9Va1bNvW1VPN9sxVbzCb6oud4="
+          "hash": "smJZrLZonlLNfEjG5a5q+7iLK0YhGzqtnCimgrr8ghg="
         }
       },
       "is_incremental": false,
@@ -840,7 +912,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 62,
+          "total_file_count": 68,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -7,6 +7,139 @@ references:
   commentId: N:wan24.ObjectValidation
   fullName: wan24.ObjectValidation
   nameWithType: wan24.ObjectValidation
+- uid: wan24.ObjectValidation.AbaFormats
+  name: AbaFormats
+  href: api/wan24.ObjectValidation.AbaFormats.html
+  commentId: T:wan24.ObjectValidation.AbaFormats
+  fullName: wan24.ObjectValidation.AbaFormats
+  nameWithType: AbaFormats
+- uid: wan24.ObjectValidation.AbaFormats.All
+  name: All
+  href: api/wan24.ObjectValidation.AbaFormats.html#wan24_ObjectValidation_AbaFormats_All
+  commentId: F:wan24.ObjectValidation.AbaFormats.All
+  fullName: wan24.ObjectValidation.AbaFormats.All
+  nameWithType: AbaFormats.All
+- uid: wan24.ObjectValidation.AbaFormats.Fraction
+  name: Fraction
+  href: api/wan24.ObjectValidation.AbaFormats.html#wan24_ObjectValidation_AbaFormats_Fraction
+  commentId: F:wan24.ObjectValidation.AbaFormats.Fraction
+  fullName: wan24.ObjectValidation.AbaFormats.Fraction
+  nameWithType: AbaFormats.Fraction
+- uid: wan24.ObjectValidation.AbaFormats.MICR
+  name: MICR
+  href: api/wan24.ObjectValidation.AbaFormats.html#wan24_ObjectValidation_AbaFormats_MICR
+  commentId: F:wan24.ObjectValidation.AbaFormats.MICR
+  fullName: wan24.ObjectValidation.AbaFormats.MICR
+  nameWithType: AbaFormats.MICR
+- uid: wan24.ObjectValidation.AbaFormats.None
+  name: None
+  href: api/wan24.ObjectValidation.AbaFormats.html#wan24_ObjectValidation_AbaFormats_None
+  commentId: F:wan24.ObjectValidation.AbaFormats.None
+  fullName: wan24.ObjectValidation.AbaFormats.None
+  nameWithType: AbaFormats.None
+- uid: wan24.ObjectValidation.AbaRtnAttribute
+  name: AbaRtnAttribute
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html
+  commentId: T:wan24.ObjectValidation.AbaRtnAttribute
+  fullName: wan24.ObjectValidation.AbaRtnAttribute
+  nameWithType: AbaRtnAttribute
+- uid: wan24.ObjectValidation.AbaRtnAttribute.#ctor(System.Boolean)
+  name: AbaRtnAttribute(Boolean)
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute__ctor_System_Boolean_
+  commentId: M:wan24.ObjectValidation.AbaRtnAttribute.#ctor(System.Boolean)
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.AbaRtnAttribute(System.Boolean)
+  nameWithType: AbaRtnAttribute.AbaRtnAttribute(Boolean)
+- uid: wan24.ObjectValidation.AbaRtnAttribute.#ctor*
+  name: AbaRtnAttribute
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.AbaRtnAttribute
+  nameWithType: AbaRtnAttribute.AbaRtnAttribute
+- uid: wan24.ObjectValidation.AbaRtnAttribute.Format
+  name: Format
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Format
+  commentId: P:wan24.ObjectValidation.AbaRtnAttribute.Format
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.Format
+  nameWithType: AbaRtnAttribute.Format
+- uid: wan24.ObjectValidation.AbaRtnAttribute.Format*
+  name: Format
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Format_
+  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.Format
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.Format
+  nameWithType: AbaRtnAttribute.Format
+- uid: wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: AbaRtnAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.AbaRtnAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.IsValid
+  nameWithType: AbaRtnAttribute.IsValid
+- uid: wan24.ObjectValidation.AbaRtnAttribute.Normalize
+  name: Normalize
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Normalize
+  commentId: P:wan24.ObjectValidation.AbaRtnAttribute.Normalize
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.Normalize
+  nameWithType: AbaRtnAttribute.Normalize
+- uid: wan24.ObjectValidation.AbaRtnAttribute.Normalize*
+  name: Normalize
+  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Normalize_
+  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.Normalize
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaRtnAttribute.Normalize
+  nameWithType: AbaRtnAttribute.Normalize
+- uid: wan24.ObjectValidation.AbaValidation
+  name: AbaValidation
+  href: api/wan24.ObjectValidation.AbaValidation.html
+  commentId: T:wan24.ObjectValidation.AbaValidation
+  fullName: wan24.ObjectValidation.AbaValidation
+  nameWithType: AbaValidation
+- uid: wan24.ObjectValidation.AbaValidation.GetAbaFormat(System.String)
+  name: GetAbaFormat(String)
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_GetAbaFormat_System_String_
+  commentId: M:wan24.ObjectValidation.AbaValidation.GetAbaFormat(System.String)
+  fullName: wan24.ObjectValidation.AbaValidation.GetAbaFormat(System.String)
+  nameWithType: AbaValidation.GetAbaFormat(String)
+- uid: wan24.ObjectValidation.AbaValidation.GetAbaFormat*
+  name: GetAbaFormat
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_GetAbaFormat_
+  commentId: Overload:wan24.ObjectValidation.AbaValidation.GetAbaFormat
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaValidation.GetAbaFormat
+  nameWithType: AbaValidation.GetAbaFormat
+- uid: wan24.ObjectValidation.AbaValidation.Normalize(System.String,wan24.ObjectValidation.AbaFormats)
+  name: Normalize(String, AbaFormats)
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_Normalize_System_String_wan24_ObjectValidation_AbaFormats_
+  commentId: M:wan24.ObjectValidation.AbaValidation.Normalize(System.String,wan24.ObjectValidation.AbaFormats)
+  fullName: wan24.ObjectValidation.AbaValidation.Normalize(System.String, wan24.ObjectValidation.AbaFormats)
+  nameWithType: AbaValidation.Normalize(String, AbaFormats)
+- uid: wan24.ObjectValidation.AbaValidation.Normalize*
+  name: Normalize
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_Normalize_
+  commentId: Overload:wan24.ObjectValidation.AbaValidation.Normalize
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaValidation.Normalize
+  nameWithType: AbaValidation.Normalize
+- uid: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn(System.String,wan24.ObjectValidation.AbaFormats)
+  name: ValidateAbaRtn(String, AbaFormats)
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_ValidateAbaRtn_System_String_wan24_ObjectValidation_AbaFormats_
+  commentId: M:wan24.ObjectValidation.AbaValidation.ValidateAbaRtn(System.String,wan24.ObjectValidation.AbaFormats)
+  fullName: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn(System.String, wan24.ObjectValidation.AbaFormats)
+  nameWithType: AbaValidation.ValidateAbaRtn(String, AbaFormats)
+- uid: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn*
+  name: ValidateAbaRtn
+  href: api/wan24.ObjectValidation.AbaValidation.html#wan24_ObjectValidation_AbaValidation_ValidateAbaRtn_
+  commentId: Overload:wan24.ObjectValidation.AbaValidation.ValidateAbaRtn
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn
+  nameWithType: AbaValidation.ValidateAbaRtn
 - uid: wan24.ObjectValidation.AmountAttribute
   name: AmountAttribute
   href: api/wan24.ObjectValidation.AmountAttribute.html
@@ -652,6 +785,38 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.IpAttribute.IsValid
   nameWithType: IpAttribute.IsValid
+- uid: wan24.ObjectValidation.ItemAbaRtnAttribute
+  name: ItemAbaRtnAttribute
+  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemAbaRtnAttribute
+  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute
+  nameWithType: ItemAbaRtnAttribute
+- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemAbaRtnAttribute(Boolean, ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.ItemAbaRtnAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemAbaRtnAttribute.ItemAbaRtnAttribute(Boolean, ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor*
+  name: ItemAbaRtnAttribute
+  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.ItemAbaRtnAttribute
+  nameWithType: ItemAbaRtnAttribute.ItemAbaRtnAttribute
+- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
+  name: Format
+  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute_Format
+  commentId: P:wan24.ObjectValidation.ItemAbaRtnAttribute.Format
+  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
+  nameWithType: ItemAbaRtnAttribute.Format
+- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.Format*
+  name: Format
+  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute_Format_
+  commentId: Overload:wan24.ObjectValidation.ItemAbaRtnAttribute.Format
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
+  nameWithType: ItemAbaRtnAttribute.Format
 - uid: wan24.ObjectValidation.ItemAmountAttribute
   name: ItemAmountAttribute
   href: api/wan24.ObjectValidation.ItemAmountAttribute.html
@@ -839,6 +1004,25 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemCurrencyAttribute.ItemCurrencyAttribute
   nameWithType: ItemCurrencyAttribute.ItemCurrencyAttribute
+- uid: wan24.ObjectValidation.ItemDataTypeAttribute
+  name: ItemDataTypeAttribute
+  href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemDataTypeAttribute
+  fullName: wan24.ObjectValidation.ItemDataTypeAttribute
+  nameWithType: ItemDataTypeAttribute
+- uid: wan24.ObjectValidation.ItemDataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
+  name: ItemDataTypeAttribute(DataType)
+  href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html#wan24_ObjectValidation_ItemDataTypeAttribute__ctor_System_ComponentModel_DataAnnotations_DataType_
+  commentId: M:wan24.ObjectValidation.ItemDataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
+  fullName: wan24.ObjectValidation.ItemDataTypeAttribute.ItemDataTypeAttribute(System.ComponentModel.DataAnnotations.DataType)
+  nameWithType: ItemDataTypeAttribute.ItemDataTypeAttribute(DataType)
+- uid: wan24.ObjectValidation.ItemDataTypeAttribute.#ctor*
+  name: ItemDataTypeAttribute
+  href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html#wan24_ObjectValidation_ItemDataTypeAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemDataTypeAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemDataTypeAttribute.ItemDataTypeAttribute
+  nameWithType: ItemDataTypeAttribute.ItemDataTypeAttribute
 - uid: wan24.ObjectValidation.ItemEmailAddressAttribute
   name: ItemEmailAddressAttribute
   href: api/wan24.ObjectValidation.ItemEmailAddressAttribute.html
@@ -1772,6 +1956,93 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ObjectValidationException.Results
   nameWithType: ObjectValidationException.Results
+- uid: wan24.ObjectValidation.RequiredIfAttribute
+  name: RequiredIfAttribute
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html
+  commentId: T:wan24.ObjectValidation.RequiredIfAttribute
+  fullName: wan24.ObjectValidation.RequiredIfAttribute
+  nameWithType: RequiredIfAttribute
+- uid: wan24.ObjectValidation.RequiredIfAttribute.#ctor(System.String,System.Object[])
+  name: RequiredIfAttribute(String, Object[])
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute__ctor_System_String_System_Object___
+  commentId: M:wan24.ObjectValidation.RequiredIfAttribute.#ctor(System.String,System.Object[])
+  name.vb: RequiredIfAttribute(String, Object())
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute(System.String, System.Object[])
+  fullName.vb: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute(System.String, System.Object())
+  nameWithType: RequiredIfAttribute.RequiredIfAttribute(String, Object[])
+  nameWithType.vb: RequiredIfAttribute.RequiredIfAttribute(String, Object())
+- uid: wan24.ObjectValidation.RequiredIfAttribute.#ctor*
+  name: RequiredIfAttribute
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute
+  nameWithType: RequiredIfAttribute.RequiredIfAttribute
+- uid: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
+  name: IfNotInValues
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IfNotInValues
+  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
+  nameWithType: RequiredIfAttribute.IfNotInValues
+- uid: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues*
+  name: IfNotInValues
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IfNotInValues_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
+  nameWithType: RequiredIfAttribute.IfNotInValues
+- uid: wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: RequiredIfAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.RequiredIfAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.IsValid
+  nameWithType: RequiredIfAttribute.IsValid
+- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
+  name: PropertyName
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyName
+  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.PropertyName
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
+  nameWithType: RequiredIfAttribute.PropertyName
+- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyName*
+  name: PropertyName
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyName_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.PropertyName
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
+  nameWithType: RequiredIfAttribute.PropertyName
+- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+  name: RequiredIfNoValue
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNoValue
+  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+  nameWithType: RequiredIfAttribute.RequiredIfNoValue
+- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue*
+  name: RequiredIfNoValue
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNoValue_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+  nameWithType: RequiredIfAttribute.RequiredIfNoValue
+- uid: wan24.ObjectValidation.RequiredIfAttribute.Values
+  name: Values
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Values
+  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.Values
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.Values
+  nameWithType: RequiredIfAttribute.Values
+- uid: wan24.ObjectValidation.RequiredIfAttribute.Values*
+  name: Values
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Values_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.Values
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.Values
+  nameWithType: RequiredIfAttribute.Values
 - uid: wan24.ObjectValidation.SwiftValidation
   name: SwiftValidation
   href: api/wan24.ObjectValidation.SwiftValidation.html

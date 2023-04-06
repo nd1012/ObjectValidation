@@ -75,6 +75,7 @@ enumerable lengths</li>
 <li><code>ICountable</code> and <code>ILongCountable</code> interfaces for count limitation</li>
 <li><code>ItemNullableAttribute</code> for (non-)nullable dictionary or list item validation</li>
 <li>SWIFT validation attributes for ISO 13616 IBAN and ISO 9362 BIC (SWIFT codes)</li>
+<li>ABA RTN validation attributes (MICR and fraction formats are supported)</li>
 <li>IP address validation attribute for IPv4 and IPv6</li>
 <li>Country ISO 3166-1 alpha-2 code validation</li>
 <li>Currency ISO 4217 code validation</li>
@@ -83,6 +84,7 @@ enumerable lengths</li>
 <li>XRechnung routing validation</li>
 <li>European VAT ID validation</li>
 <li>XML validation</li>
+<li>Conditional value requirement</li>
 </ul>
 <p>It has been developed with the goal to offer an automatted deep object
 validation with support for deep dictionaries and lists contents, too.</p>
@@ -98,6 +100,16 @@ more advanced custom validations, if required.</p>
 object validation - it extends the existing routines with deep validation and
 more. Btw. you don't need to use the ObjectValidation methods, if you only
 want to profit from the included general validation attributes for SWIFT etc.</p>
+<h2 id="how-to-get-it">How to get it</h2>
+<p>The libraries are available as NuGet packages:</p>
+<ul>
+<li>(ObjectValidation)[https://www.nuget.org/packages/ObjectValidation/]</li>
+<li>(ObjectValidation-CountryValidator)[https://www.nuget.org/packages/ObjectValidation-CountryValidator/]</li>
+</ul>
+<h2 id="license">License</h2>
+<p>The ObjectValidation is licensed using the <strong>MIT license</strong>.</p>
+<p>The ObjectValidation-CountryValidator extension is licensed using the
+<strong>Apache-2.0 license</strong>.</p>
 <h2 id="additional-validations">Additional validations</h2>
 <ul>
 <li>Nullable types (<code>null</code> values in non-nullable properties will fail)</li>
@@ -107,6 +119,7 @@ want to profit from the included general validation attributes for SWIFT etc.</p
 items using <code>ItemNullableAttribute</code>)</li>
 <li>ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using
 <code>IbanAttribute</code> and <code>BicAttribute</code></li>
+<li>ABA RTN validation (MICR/fraction) validation using the <code>AbaRtnAttribute</code></li>
 <li>IP address validation using <code>IpAttribute</code></li>
 <li>Country ISO 3166-1 alpha-2 code validation using <code>CountryAttribute</code></li>
 <li>Currency ISO 4217 code validation using <code>CurrencyAttribute</code></li>
@@ -115,6 +128,7 @@ items using <code>ItemNullableAttribute</code>)</li>
 <li>XRechnung routing validation using <code>XRechnungRouteAttribute</code></li>
 <li>European VAT ID validation using <code>EuVatIdAttribute</code></li>
 <li>XML validation using <code>XmlAttribute</code></li>
+<li>Conditional value requirement using <code>RequiredIfAttribute</code></li>
 </ul>
 <h2 id="deep-object-validation">Deep object validation</h2>
 <p>Nested property object value validation is supported for:</p>
@@ -133,6 +147,41 @@ if not used trough ObjectValidation methods!).</p>
 <h3 id="limiting-countables">Limiting countables</h3>
 <p>By implementing the <code>ICountable</code> or <code>ILongCountable</code> interfaces you can use
 the <code>CountLimitAttribute</code> for limiting the minimum/maximum count of an object.</p>
+<h2 id="conditional-value-requirement">Conditional value requirement</h2>
+<p>If a property value is required in case another property has a specified value:</p>
+<pre><code class="lang-cs">[Bic]
+public string BIC { get; set; }
+
+[Iban, RequiredIf(&quot;ABA&quot;, RequiredIfNoValue = true)]
+public string? IBAN { get; set; }
+
+[AbaRtn, RequiredIf(&quot;IBAN&quot;, RequiredIfNoValue = true)]
+public string? ABA { get; set; }
+</code></pre>
+<p>In this example, a BIC is required in combination with an IBAN or an ABA RTN.
+The <code>RequiredIfAttribute.RequiredIfNoValue</code> is set to <code>true</code> to check for IBAN
+and ABA, if the other property has no value: In case ABA is <code>null</code>, IBAN is
+required. In case IBAN is <code>null</code>, ABA is required.</p>
+<p>Another example:</p>
+<pre><code class="lang-cs">public bool DeliveryAddress { get; set; }
+
+[RequiredIf(&quot;DeliveryAddress&quot;, true)]
+public string? DeliveryName { get; set; }
+
+[RequiredIf(&quot;DeliveryAddress&quot;, true)]
+public string? DeliveryStreet { get; set; }
+
+[RequiredIf(&quot;DeliveryAddress&quot;, true)]
+public string? DeliveryZip { get; set; }
+
+[RequiredIf(&quot;DeliveryAddress&quot;, true)]
+public string? DeliveryCity { get; set; }
+
+[RequiredIf(&quot;DeliveryAddress&quot;, true), Country]
+public string? DeliveryCountry { get; set; }
+</code></pre>
+<p>In case the value of <code>DeliveryAddress</code> is <code>true</code>, all delivery address
+properties are required.</p>
 <h2 id="null-values"><code>null</code> values</h2>
 <p>The object validation will generate an error, if a non-null property has a
 <code>null</code> value (or any non-null-expected value is <code>null</code>).</p>
@@ -237,8 +286,10 @@ executed in case there's a <code>CountLimitAttribute</code> present.</p>
 <li><code>RegularExpressionAttribute</code> -&gt; <code>ItemRegularExpressionAttribute</code></li>
 <li><code>StringLengthAttribute</code> -&gt; <code>ItemStringLengthAttribute</code></li>
 <li><code>UrlAttribute</code> -&gt; <code>ItemUrlAttribute</code></li>
+<li><code>DataTypeAttribute</code> -&gt; <code>ItemDataTypeAttribute</code></li>
 <li><code>IbanAttribute</code> -&gt; <code>ItemIbanAttribute</code></li>
 <li><code>BicAttribute</code> -&gt; <code>ItemBicAttribute</code></li>
+<li><code>AbaRtnAttribute</code> -&gt; <code>ItemAbaRtnAttribute</code></li>
 <li><code>IpAttribute</code> -&gt; <code>ItemIpAttribute</code></li>
 <li><code>CountryAttribute</code> -&gt; <code>ItemCountryAttribute</code></li>
 <li><code>CurrencyAttribute</code> -&gt; <code>ItemCurrencyAttribute</code></li>
@@ -291,9 +342,9 @@ failed state can't be deleted, unless the original result <code>OriginalResult</
 <p>The object validation will fail, if there was any validation result, or the
 overall result is <code>false</code>.</p>
 <h2 id="found-a-bug">Found a bug?</h2>
-<p>If the object validation doesn't work for you as expected, please open an
-issue - I'd be glad to help and make ObjectValidation become even better! Push
-requests are welcome :)</p>
+<p>If the object validation doesn't work for you as expected, or you have any
+idea for improvements, please open an issue - I'd be glad to help and make
+ObjectValidation become even better! Push requests are welcome, too :)</p>
 <h2 id="good-to-know">Good to know</h2>
 <h3 id="recursion-protection">Recursion protection</h3>
 <p>The object validation implements a recursion detection and won't end up in an
@@ -348,7 +399,7 @@ project for more validations like</p>
 <li>ZIP codes</li>
 </ul>
 <p>for many countries.</p>
-<p>The <code>ObjectValidation.CountryValidator</code> packet includes references to this
+<p>The <code>ObjectValidation-CountryValidator</code> packet includes references to this
 packet, and exports item validation attributes:</p>
 <ul>
 <li><code>ItemCompanyTINAttribute</code></li>
@@ -360,6 +411,31 @@ packet, and exports item validation attributes:</p>
 <p><strong>NOTE</strong>: The main ObjectValidation library includes validation for European
 VAT IDs only. By using this packet, you can use VAT ID validation for many
 countries around the world.</p>
+<p><strong>CAUTION</strong>: Since the CountryValidator is licensed under Apache-2.0 license,
+I decided to license the <code>ObjectValidation-CountryValidator</code> under the same
+license:</p>
+<p>Copyright 2023 Andreas Zimmermann, wan24.de</p>
+<p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<h3 id="internal-validation-information-object">Internal validation information object</h3>
+<p>An event handler can access the list of seen objects, which is used to prevent
+an endless recursion. The first object of that list is an <code>IValidationInfo</code>
+object, which contains some validation context information:</p>
+<ul>
+<li><code>Seen</code>: Seen objects list</li>
+<li><code>CurrentDepth</code>: Current recursion depth</li>
+<li><code>ArrayLevel</code>: Current array level</li>
+</ul>
+<p><strong>CAUTION</strong>: Please DO NOT remove or exchange this object!</p>
+<p>Since array item validations don't call event handlers, the <code>ArrayLevel</code>
+property will alwys be <code>0</code>.</p>
 </article>
           </div>
           

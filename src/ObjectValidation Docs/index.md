@@ -13,6 +13,7 @@ enumerable lengths
 - `ICountable` and `ILongCountable` interfaces for count limitation
 - `ItemNullableAttribute` for (non-)nullable dictionary or list item validation
 - SWIFT validation attributes for ISO 13616 IBAN and ISO 9362 BIC (SWIFT codes)
+- ABA RTN validation attributes (MICR and fraction formats are supported)
 - IP address validation attribute for IPv4 and IPv6
 - Country ISO 3166-1 alpha-2 code validation
 - Currency ISO 4217 code validation
@@ -21,6 +22,7 @@ enumerable lengths
 - XRechnung routing validation
 - European VAT ID validation
 - XML validation
+- Conditional value requirement
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -40,6 +42,20 @@ object validation - it extends the existing routines with deep validation and
 more. Btw. you don't need to use the ObjectValidation methods, if you only 
 want to profit from the included general validation attributes for SWIFT etc.
 
+## How to get it
+
+The libraries are available as NuGet packages:
+
+- (ObjectValidation)[https://www.nuget.org/packages/ObjectValidation/]
+- (ObjectValidation-CountryValidator)[https://www.nuget.org/packages/ObjectValidation-CountryValidator/]
+
+## License
+
+The ObjectValidation is licensed using the **MIT license**.
+
+The ObjectValidation-CountryValidator extension is licensed using the 
+**Apache-2.0 license**.
+
 ## Additional validations
 
 - Nullable types (`null` values in non-nullable properties will fail)
@@ -49,6 +65,7 @@ want to profit from the included general validation attributes for SWIFT etc.
 items using `ItemNullableAttribute`)
 - ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using 
 `IbanAttribute` and `BicAttribute`
+- ABA RTN validation (MICR/fraction) validation using the `AbaRtnAttribute`
 - IP address validation using `IpAttribute`
 - Country ISO 3166-1 alpha-2 code validation using `CountryAttribute`
 - Currency ISO 4217 code validation using `CurrencyAttribute`
@@ -57,6 +74,7 @@ items using `ItemNullableAttribute`)
 - XRechnung routing validation using `XRechnungRouteAttribute`
 - European VAT ID validation using `EuVatIdAttribute`
 - XML validation using `XmlAttribute`
+- Conditional value requirement using `RequiredIfAttribute`
 
 ## Deep object validation
 
@@ -79,6 +97,50 @@ if not used trough ObjectValidation methods!).
 
 By implementing the `ICountable` or `ILongCountable` interfaces you can use 
 the `CountLimitAttribute` for limiting the minimum/maximum count of an object.
+
+## Conditional value requirement
+
+If a property value is required in case another property has a specified value:
+
+```cs
+[Bic]
+public string BIC { get; set; }
+
+[Iban, RequiredIf("ABA", RequiredIfNoValue = true)]
+public string? IBAN { get; set; }
+
+[AbaRtn, RequiredIf("IBAN", RequiredIfNoValue = true)]
+public string? ABA { get; set; }
+```
+
+In this example, a BIC is required in combination with an IBAN or an ABA RTN. 
+The `RequiredIfAttribute.RequiredIfNoValue` is set to `true` to check for IBAN 
+and ABA, if the other property has no value: In case ABA is `null`, IBAN is 
+required. In case IBAN is `null`, ABA is required.
+
+Another example:
+
+```cs
+public bool DeliveryAddress { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryName { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryStreet { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryZip { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryCity { get; set; }
+
+[RequiredIf("DeliveryAddress", true), Country]
+public string? DeliveryCountry { get; set; }
+```
+
+In case the value of `DeliveryAddress` is `true`, all delivery address 
+properties are required.
 
 ## `null` values
 
@@ -207,8 +269,10 @@ These item validation adapters exist:
 - `RegularExpressionAttribute` -> `ItemRegularExpressionAttribute`
 - `StringLengthAttribute` -> `ItemStringLengthAttribute`
 - `UrlAttribute` -> `ItemUrlAttribute`
+- `DataTypeAttribute` -> `ItemDataTypeAttribute`
 - `IbanAttribute` -> `ItemIbanAttribute`
 - `BicAttribute` -> `ItemBicAttribute`
+- `AbaRtnAttribute` -> `ItemAbaRtnAttribute`
 - `IpAttribute` -> `ItemIpAttribute`
 - `CountryAttribute` -> `ItemCountryAttribute`
 - `CurrencyAttribute` -> `ItemCurrencyAttribute`
@@ -273,9 +337,9 @@ overall result is `false`.
 
 ## Found a bug?
 
-If the object validation doesn't work for you as expected, please open an 
-issue - I'd be glad to help and make ObjectValidation become even better! Push 
-requests are welcome :)
+If the object validation doesn't work for you as expected, or you have any 
+idea for improvements, please open an issue - I'd be glad to help and make 
+ObjectValidation become even better! Push requests are welcome, too :)
 
 ## Good to know
 
@@ -346,7 +410,7 @@ project for more validations like
 
 for many countries.
 
-The `ObjectValidation.CountryValidator` packet includes references to this 
+The `ObjectValidation-CountryValidator` packet includes references to this 
 packet, and exports item validation attributes:
 
 - `ItemCompanyTINAttribute`
@@ -358,3 +422,36 @@ packet, and exports item validation attributes:
 **NOTE**: The main ObjectValidation library includes validation for European 
 VAT IDs only. By using this packet, you can use VAT ID validation for many 
 countries around the world.
+
+**CAUTION**: Since the CountryValidator is licensed under Apache-2.0 license, 
+I decided to license the `ObjectValidation-CountryValidator` under the same 
+license:
+
+Copyright 2023 Andreas Zimmermann, wan24.de
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Internal validation information object
+
+An event handler can access the list of seen objects, which is used to prevent 
+an endless recursion. The first object of that list is an `IValidationInfo` 
+object, which contains some validation context information:
+
+- `Seen`: Seen objects list
+- `CurrentDepth`: Current recursion depth
+- `ArrayLevel`: Current array level
+
+**CAUTION**: Please DO NOT remove or exchange this object!
+
+Since array item validations don't call event handlers, the `ArrayLevel` 
+property will alwys be `0`.
