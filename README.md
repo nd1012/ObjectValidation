@@ -51,9 +51,9 @@ The libraries are available as NuGet packages:
 
 ## License
 
-The ObjectValidation is licensed using the **MIT license**.
+The **ObjectValidation** is licensed using the **MIT license**.
 
-The ObjectValidation-CountryValidator extension is licensed using the 
+The **ObjectValidation-CountryValidator** extension is licensed using the 
 **Apache-2.0 license**.
 
 ## Additional validations
@@ -97,50 +97,6 @@ if not used trough ObjectValidation methods!).
 
 By implementing the `ICountable` or `ILongCountable` interfaces you can use 
 the `CountLimitAttribute` for limiting the minimum/maximum count of an object.
-
-## Conditional value requirement
-
-If a property value is required in case another property has a specified value:
-
-```cs
-[Bic]
-public string BIC { get; set; }
-
-[Iban, RequiredIf("ABA", RequiredIfNoValue = true)]
-public string? IBAN { get; set; }
-
-[AbaRtn, RequiredIf("IBAN", RequiredIfNoValue = true)]
-public string? ABA { get; set; }
-```
-
-In this example, a BIC is required in combination with an IBAN or an ABA RTN. 
-The `RequiredIfAttribute.RequiredIfNoValue` is set to `true` to check for IBAN 
-and ABA, if the other property has no value: In case ABA is `null`, IBAN is 
-required. In case IBAN is `null`, ABA is required.
-
-Another example:
-
-```cs
-public bool DeliveryAddress { get; set; }
-
-[RequiredIf("DeliveryAddress", true)]
-public string? DeliveryName { get; set; }
-
-[RequiredIf("DeliveryAddress", true)]
-public string? DeliveryStreet { get; set; }
-
-[RequiredIf("DeliveryAddress", true)]
-public string? DeliveryZip { get; set; }
-
-[RequiredIf("DeliveryAddress", true)]
-public string? DeliveryCity { get; set; }
-
-[RequiredIf("DeliveryAddress", true), Country]
-public string? DeliveryCountry { get; set; }
-```
-
-In case the value of `DeliveryAddress` is `true`, all delivery address 
-properties are required.
 
 ## `null` values
 
@@ -219,6 +175,50 @@ constructor from your constructor methods.
 **TIP**: You should use the `ValidatableObject` base type, if possible! By 
 only implementing the `IValidatableObject` interface your type may be 
 validated automatic, but not by the ObjectValidation library!
+
+## Conditional value requirement
+
+If a property value is required in case another property has a specified value:
+
+```cs
+[Bic]
+public string BIC { get; set; }
+
+[Iban, RequiredIf("ABA", RequiredIfNoValue = true)]
+public string? IBAN { get; set; }
+
+[AbaRtn, RequiredIf("IBAN", RequiredIfNoValue = true)]
+public string? ABA { get; set; }
+```
+
+In this example, a BIC is required in combination with an IBAN or an ABA RTN. 
+The `RequiredIfAttribute.RequiredIfNoValue` is set to `true` to check for IBAN 
+and ABA, if the other property has no value: In case ABA is `null`, IBAN is 
+required. In case IBAN is `null`, ABA is required.
+
+Another example:
+
+```cs
+public bool DeliveryAddress { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryName { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryStreet { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryZip { get; set; }
+
+[RequiredIf("DeliveryAddress", true)]
+public string? DeliveryCity { get; set; }
+
+[RequiredIf("DeliveryAddress", true), Country]
+public string? DeliveryCountry { get; set; }
+```
+
+In case the value of `DeliveryAddress` is `true`, all delivery address 
+properties are required.
 
 ## Dictionary and list key/value validation
 
