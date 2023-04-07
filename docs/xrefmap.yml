@@ -140,6 +140,54 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn
   nameWithType: AbaValidation.ValidateAbaRtn
+- uid: wan24.ObjectValidation.AllowedValuesAttribute
+  name: AllowedValuesAttribute
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html
+  commentId: T:wan24.ObjectValidation.AllowedValuesAttribute
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute
+  nameWithType: AllowedValuesAttribute
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.#ctor(System.Object[])
+  name: AllowedValuesAttribute(Object[])
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute__ctor_System_Object___
+  commentId: M:wan24.ObjectValidation.AllowedValuesAttribute.#ctor(System.Object[])
+  name.vb: AllowedValuesAttribute(Object())
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute(System.Object[])
+  fullName.vb: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute(System.Object())
+  nameWithType: AllowedValuesAttribute.AllowedValuesAttribute(Object[])
+  nameWithType.vb: AllowedValuesAttribute.AllowedValuesAttribute(Object())
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.#ctor*
+  name: AllowedValuesAttribute
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute
+  nameWithType: AllowedValuesAttribute.AllowedValuesAttribute
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
+  name: AllowedValues
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_AllowedValues
+  commentId: P:wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
+  nameWithType: AllowedValuesAttribute.AllowedValues
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues*
+  name: AllowedValues
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_AllowedValues_
+  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
+  nameWithType: AllowedValuesAttribute.AllowedValues
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: AllowedValuesAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.AllowedValuesAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.AllowedValuesAttribute.IsValid
+  nameWithType: AllowedValuesAttribute.IsValid
 - uid: wan24.ObjectValidation.AmountAttribute
   name: AmountAttribute
   href: api/wan24.ObjectValidation.AmountAttribute.html
@@ -532,6 +580,54 @@ references:
   commentId: F:wan24.ObjectValidation.CurrencyFormats.NumericCode
   fullName: wan24.ObjectValidation.CurrencyFormats.NumericCode
   nameWithType: CurrencyFormats.NumericCode
+- uid: wan24.ObjectValidation.DeniedValuesAttribute
+  name: DeniedValuesAttribute
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html
+  commentId: T:wan24.ObjectValidation.DeniedValuesAttribute
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute
+  nameWithType: DeniedValuesAttribute
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.#ctor(System.Object[])
+  name: DeniedValuesAttribute(Object[])
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute__ctor_System_Object___
+  commentId: M:wan24.ObjectValidation.DeniedValuesAttribute.#ctor(System.Object[])
+  name.vb: DeniedValuesAttribute(Object())
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute(System.Object[])
+  fullName.vb: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute(System.Object())
+  nameWithType: DeniedValuesAttribute.DeniedValuesAttribute(Object[])
+  nameWithType.vb: DeniedValuesAttribute.DeniedValuesAttribute(Object())
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.#ctor*
+  name: DeniedValuesAttribute
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute
+  nameWithType: DeniedValuesAttribute.DeniedValuesAttribute
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
+  name: DeniedValues
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_DeniedValues
+  commentId: P:wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
+  nameWithType: DeniedValuesAttribute.DeniedValues
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues*
+  name: DeniedValues
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_DeniedValues_
+  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
+  nameWithType: DeniedValuesAttribute.DeniedValues
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(Object, ValidationContext)
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: DeniedValuesAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.DeniedValuesAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.DeniedValuesAttribute.IsValid
+  nameWithType: DeniedValuesAttribute.IsValid
 - uid: wan24.ObjectValidation.EuVatId
   name: EuVatId
   href: api/wan24.ObjectValidation.EuVatId.html
@@ -817,6 +913,37 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
   nameWithType: ItemAbaRtnAttribute.Format
+- uid: wan24.ObjectValidation.ItemAllowedValuesAttribute
+  name: ItemAllowedValuesAttribute
+  href: api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemAllowedValuesAttribute
+  fullName: wan24.ObjectValidation.ItemAllowedValuesAttribute
+  nameWithType: ItemAllowedValuesAttribute
+- uid: wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor(System.Object[])
+  name: ItemAllowedValuesAttribute(Object[])
+  href: api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html#wan24_ObjectValidation_ItemAllowedValuesAttribute__ctor_System_Object___
+  commentId: M:wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor(System.Object[])
+  name.vb: ItemAllowedValuesAttribute(Object())
+  fullName: wan24.ObjectValidation.ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(System.Object[])
+  fullName.vb: wan24.ObjectValidation.ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(System.Object())
+  nameWithType: ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(Object[])
+  nameWithType.vb: ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(Object())
+- uid: wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets,System.Object[])
+  name: ItemAllowedValuesAttribute(ItemValidationTargets, Object[])
+  href: api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html#wan24_ObjectValidation_ItemAllowedValuesAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_System_Object___
+  commentId: M:wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets,System.Object[])
+  name.vb: ItemAllowedValuesAttribute(ItemValidationTargets, Object())
+  fullName: wan24.ObjectValidation.ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(wan24.ObjectValidation.ItemValidationTargets, System.Object[])
+  fullName.vb: wan24.ObjectValidation.ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(wan24.ObjectValidation.ItemValidationTargets, System.Object())
+  nameWithType: ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(ItemValidationTargets, Object[])
+  nameWithType.vb: ItemAllowedValuesAttribute.ItemAllowedValuesAttribute(ItemValidationTargets, Object())
+- uid: wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor*
+  name: ItemAllowedValuesAttribute
+  href: api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html#wan24_ObjectValidation_ItemAllowedValuesAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemAllowedValuesAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemAllowedValuesAttribute.ItemAllowedValuesAttribute
+  nameWithType: ItemAllowedValuesAttribute.ItemAllowedValuesAttribute
 - uid: wan24.ObjectValidation.ItemAmountAttribute
   name: ItemAmountAttribute
   href: api/wan24.ObjectValidation.ItemAmountAttribute.html
@@ -1004,6 +1131,25 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemCurrencyAttribute.ItemCurrencyAttribute
   nameWithType: ItemCurrencyAttribute.ItemCurrencyAttribute
+- uid: wan24.ObjectValidation.ItemCustomValidationAttribute
+  name: ItemCustomValidationAttribute
+  href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemCustomValidationAttribute
+  fullName: wan24.ObjectValidation.ItemCustomValidationAttribute
+  nameWithType: ItemCustomValidationAttribute
+- uid: wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor(Type,System.String,wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemCustomValidationAttribute(Type, String, ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html#wan24_ObjectValidation_ItemCustomValidationAttribute__ctor_Type_System_String_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor(Type,System.String,wan24.ObjectValidation.ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemCustomValidationAttribute.ItemCustomValidationAttribute(Type, System.String, wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemCustomValidationAttribute.ItemCustomValidationAttribute(Type, String, ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor*
+  name: ItemCustomValidationAttribute
+  href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html#wan24_ObjectValidation_ItemCustomValidationAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemCustomValidationAttribute.ItemCustomValidationAttribute
+  nameWithType: ItemCustomValidationAttribute.ItemCustomValidationAttribute
 - uid: wan24.ObjectValidation.ItemDataTypeAttribute
   name: ItemDataTypeAttribute
   href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html
@@ -1023,6 +1169,37 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemDataTypeAttribute.ItemDataTypeAttribute
   nameWithType: ItemDataTypeAttribute.ItemDataTypeAttribute
+- uid: wan24.ObjectValidation.ItemDeniedValuesAttribute
+  name: ItemDeniedValuesAttribute
+  href: api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemDeniedValuesAttribute
+  fullName: wan24.ObjectValidation.ItemDeniedValuesAttribute
+  nameWithType: ItemDeniedValuesAttribute
+- uid: wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor(System.Object[])
+  name: ItemDeniedValuesAttribute(Object[])
+  href: api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html#wan24_ObjectValidation_ItemDeniedValuesAttribute__ctor_System_Object___
+  commentId: M:wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor(System.Object[])
+  name.vb: ItemDeniedValuesAttribute(Object())
+  fullName: wan24.ObjectValidation.ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(System.Object[])
+  fullName.vb: wan24.ObjectValidation.ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(System.Object())
+  nameWithType: ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(Object[])
+  nameWithType.vb: ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(Object())
+- uid: wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets,System.Object[])
+  name: ItemDeniedValuesAttribute(ItemValidationTargets, Object[])
+  href: api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html#wan24_ObjectValidation_ItemDeniedValuesAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_System_Object___
+  commentId: M:wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets,System.Object[])
+  name.vb: ItemDeniedValuesAttribute(ItemValidationTargets, Object())
+  fullName: wan24.ObjectValidation.ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(wan24.ObjectValidation.ItemValidationTargets, System.Object[])
+  fullName.vb: wan24.ObjectValidation.ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(wan24.ObjectValidation.ItemValidationTargets, System.Object())
+  nameWithType: ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(ItemValidationTargets, Object[])
+  nameWithType.vb: ItemDeniedValuesAttribute.ItemDeniedValuesAttribute(ItemValidationTargets, Object())
+- uid: wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor*
+  name: ItemDeniedValuesAttribute
+  href: api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html#wan24_ObjectValidation_ItemDeniedValuesAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemDeniedValuesAttribute.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemDeniedValuesAttribute.ItemDeniedValuesAttribute
+  nameWithType: ItemDeniedValuesAttribute.ItemDeniedValuesAttribute
 - uid: wan24.ObjectValidation.ItemEmailAddressAttribute
   name: ItemEmailAddressAttribute
   href: api/wan24.ObjectValidation.ItemEmailAddressAttribute.html
@@ -2017,19 +2194,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
   nameWithType: RequiredIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
-  name: RequiredIfNoValue
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNoValue
-  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
-  nameWithType: RequiredIfAttribute.RequiredIfNoValue
-- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue*
-  name: RequiredIfNoValue
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNoValue_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
+- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
+  name: RequiredIfNull
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNull
+  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
+  nameWithType: RequiredIfAttribute.RequiredIfNull
+- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull*
+  name: RequiredIfNull
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNull_
+  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
   isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNoValue
-  nameWithType: RequiredIfAttribute.RequiredIfNoValue
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
+  nameWithType: RequiredIfAttribute.RequiredIfNull
 - uid: wan24.ObjectValidation.RequiredIfAttribute.Values
   name: Values
   href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Values

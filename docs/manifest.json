@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "aSR+AD7Vlz8fnXN6+Xg7iIC7cwGcm4xWdlGIcGE1a2g="
+          "hash": "1j9WrFAa+S7NdJtsEOZ+vm+rAo71v66KhcBU8wn2VD0="
         }
       },
       "is_incremental": false,
@@ -58,6 +58,18 @@
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.AbaValidation.html",
           "hash": "WjtSaYN8R5CfBus0Pl+M8ZpIRoIbW/k6HJMFunFKWmw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.AllowedValuesAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.AllowedValuesAttribute.html",
+          "hash": "HAN6vSfg0+gjW2Jqp/cDgOgoqy2WHYI4ZPWk3NVCioA="
         }
       },
       "is_incremental": false,
@@ -173,6 +185,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.DeniedValuesAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.DeniedValuesAttribute.html",
+          "hash": "9AofXSYA8WNFD0e3xHFilM9HS9TzEVSqlH8lESfFBXI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.EuVatId.yml",
       "output": {
         ".html": {
@@ -281,6 +305,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemAllowedValuesAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html",
+          "hash": "pA4NOe2sYEnr2jnqpN4ulTwfISV9JUmFJFuPJ3g/iiU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.ItemAmountAttribute.yml",
       "output": {
         ".html": {
@@ -377,11 +413,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemCustomValidationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemCustomValidationAttribute.html",
+          "hash": "KoScb+YxqGutlDWa6Sb65A0lLeWTAvDO4WMUbxj5LyU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.ItemDataTypeAttribute.yml",
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemDataTypeAttribute.html",
           "hash": "g5NSIlZg9oqMcpntSNWa40dp9Ax7XUAAHAnpn73Wkq4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ItemDeniedValuesAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html",
+          "hash": "aJMhBdMcxM89ofktCWmhJnVZ2Iik26XGRVUlLGSYQns="
         }
       },
       "is_incremental": false,
@@ -609,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemValidationAttribute.html",
-          "hash": "iYzXBpiv0f9yhfyQAABdl9kI3nsO/G0y20jikQGs6KA="
+          "hash": "2lOM4YazVPp6sNpjGZXChn8mSuTld2dngKUGaY89gb0="
         }
       },
       "is_incremental": false,
@@ -729,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.RequiredIfAttribute.html",
-          "hash": "X+CGMqxjV2Yb2/BPkhkjdKN27fwvzkk8hKBFD49cr4s="
+          "hash": "VvLolWMcF23kYYu0jnFr3qCWsVCjCCQJZVthMhHCYUU="
         }
       },
       "is_incremental": false,
@@ -837,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "eb9wvB7rcrxXkVW+luTTwSO5qBaIVJa6VtWBsEnkpOs="
+          "hash": "cjkMOxKI+J5ihNQ6rN/9/mkoJIg1Jeuv8TqXqj/xKRQ="
         }
       },
       "is_incremental": false,
@@ -873,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "smJZrLZonlLNfEjG5a5q+7iLK0YhGzqtnCimgrr8ghg="
+          "hash": "G3miIPyzDFKaQ3MOoVNr/LZPRd804HXd0G0KIawwlXw="
         }
       },
       "is_incremental": false,
@@ -912,7 +972,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 68,
+          "total_file_count": 73,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
