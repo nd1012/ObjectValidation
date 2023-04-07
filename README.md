@@ -319,20 +319,10 @@ validate only a property group).
 
 | Event | Description |
 | --- | --- |
-| `OnObjectValidation` | You can perform validations before any other 
-validations have been executed. When the event was cancelled, there won't be 
-any following validation, and the produced result will be used. |
-| `OnObjectValidationFailed` | Raised, if the object validation failed. You may 
-add additional error messages, before the validation method returns. |
-| `OnObjectPropertyValidation` | You can perform validations before any other 
-validations have been executed for the property. When the event was cancelled, 
-there won't be any following validation, and the produced result will be used 
-for the current property. The validation will then continue with the next 
-property. |
-| `OnObjectPropertyValidationFailed` | Raised, if the object validation failed. 
-You may add additional error messages, before the validation method continues 
-with the next property. When the event was cancelled, the following property 
-validations will be skipped. |
+| `OnObjectValidation` | You can perform validations before any other validations have been executed. When the event was cancelled, there won't be any following validation, and the produced result will be used. |
+| `OnObjectValidationFailed` | Raised, if the object validation failed. You may add additional error messages, before the validation method returns. |
+| `OnObjectPropertyValidation` | You can perform validations before any other validations have been executed for the property. When the event was cancelled, there won't be any following validation, and the produced result will be used for the current property. The validation will then continue with the next property. |
+| `OnObjectPropertyValidationFailed` | Raised, if the object validation failed. You may add additional error messages, before the validation method continues with the next property. When the event was cancelled, the following property validations will be skipped. |
 
 If the event arguments don't offer a `PropertyInfo` in the `Property` 
 property, the event was raised for the validated object.
