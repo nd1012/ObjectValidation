@@ -55,7 +55,8 @@ namespace ObjectValidation_Tests
             Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.DeepArrProperty)}[1][1]"));
             Assert.IsFalse(failedMembers.Contains($"{nameof(ValidTestObject.DeepArrProperty)}[2][0]"));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.RequiredProperty)));
-            Assert.AreEqual(34, results.Count);
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.EnumProperty)));
+            Assert.AreEqual(36, results.Count);
 
             // Validation exception
             Assert.IsFalse(results.HasValidationException());

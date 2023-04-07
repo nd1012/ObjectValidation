@@ -22,7 +22,7 @@ enumerable lengths
 - XRechnung routing validation
 - European VAT ID validation
 - XML validation
-- Conditional value requirement
+- Conditional value requirements
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -46,8 +46,8 @@ want to profit from the included general validation attributes for SWIFT etc.
 
 The libraries are available as NuGet packages:
 
-- (ObjectValidation)[https://www.nuget.org/packages/ObjectValidation/]
-- (ObjectValidation-CountryValidator)[https://www.nuget.org/packages/ObjectValidation-CountryValidator/]
+- [ObjectValidation](https://www.nuget.org/packages/ObjectValidation/)
+- [ObjectValidation-CountryValidator](https://www.nuget.org/packages/ObjectValidation-CountryValidator/)
 
 ## License
 
@@ -75,6 +75,8 @@ items using `ItemNullableAttribute`)
 - European VAT ID validation using `EuVatIdAttribute`
 - XML validation using `XmlAttribute`
 - Conditional value requirement using `RequiredIfAttribute`
+- Allowed/denied values using `AllowedValuesAttribute` and 
+`DeniedValuesAttribute`
 
 ## Deep object validation
 
@@ -184,16 +186,16 @@ If a property value is required in case another property has a specified value:
 [Bic]
 public string BIC { get; set; }
 
-[Iban, RequiredIf("ABA", RequiredIfNoValue = true)]
+[Iban, RequiredIf(nameof(ABA), RequiredIfNull = true)]
 public string? IBAN { get; set; }
 
-[AbaRtn, RequiredIf("IBAN", RequiredIfNoValue = true)]
+[AbaRtn, RequiredIf(nameof(IBAN), RequiredIfNull = true)]
 public string? ABA { get; set; }
 ```
 
 In this example, a BIC is required in combination with an IBAN or an ABA RTN. 
-The `RequiredIfAttribute.RequiredIfNoValue` is set to `true` to check for IBAN 
-and ABA, if the other property has no value: In case ABA is `null`, IBAN is 
+The `RequiredIfAttribute.RequiredIfNull` is set to `true` to check for IBAN 
+and ABA, if the other property value is `null`: In case ABA is `null`, IBAN is 
 required. In case IBAN is `null`, ABA is required.
 
 Another example:
@@ -201,24 +203,28 @@ Another example:
 ```cs
 public bool DeliveryAddress { get; set; }
 
-[RequiredIf("DeliveryAddress", true)]
+[RequiredIf(nameof(DeliveryAddress), true)]
 public string? DeliveryName { get; set; }
 
-[RequiredIf("DeliveryAddress", true)]
+[RequiredIf(nameof(DeliveryAddress), true)]
 public string? DeliveryStreet { get; set; }
 
-[RequiredIf("DeliveryAddress", true)]
+[RequiredIf(nameof(DeliveryAddress), true)]
 public string? DeliveryZip { get; set; }
 
-[RequiredIf("DeliveryAddress", true)]
+[RequiredIf(nameof(DeliveryAddress), true)]
 public string? DeliveryCity { get; set; }
 
-[RequiredIf("DeliveryAddress", true), Country]
+[RequiredIf(nameof(DeliveryAddress), true), Country]
 public string? DeliveryCountry { get; set; }
 ```
 
 In case the value of `DeliveryAddress` is `true`, all delivery address 
-properties are required.
+properties are required to have a value.
+
+**NOTE**: Because the validation attribute needs to access the validated 
+object properties, it's required to work with valid vlaidation contexts, which 
+contain the validated object instance.
 
 ## Dictionary and list key/value validation
 
@@ -280,6 +286,9 @@ These item validation adapters exist:
 - `LuhnChecksumAttribute` -> `ItemLuhnChecksumAttribute`
 - `XRechnungRouteAttribute` -> `ItemXRechnungRouteAttribute`
 - `EuVatIdAttribute` -> `ItemEuVatIdAttribute`
+- `AllowedValuesAttribute` -> `ItemAllowedValuesAttribute`
+- `DeniedValuesAttribute` -> `ItemDeniedValuesAttribute`
+- `CustomValidationAttribute` -> `ItemCustomValidationAttribute`
 
 You can use the `ItemNoValidationAttribute` at the class level to prevent from 
 validating and dictionary or list contents.
@@ -433,7 +442,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

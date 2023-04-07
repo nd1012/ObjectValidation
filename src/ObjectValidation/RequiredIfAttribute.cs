@@ -39,7 +39,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Invert the checked property value requirement, if no values were given (this property is required, if the checked property value IS <see langword="null"/>)
         /// </summary>
-        public bool RequiredIfNoValue { get; set; }
+        public bool RequiredIfNull { get; set; }
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
@@ -48,7 +48,7 @@ namespace wan24.ObjectValidation
                 ?? throw new InvalidDataException($"Property {PropertyName} not found in validated type {validationContext.ObjectInstance.GetType()}");
             if (!(pi.GetMethod?.IsPublic ?? false)) throw new InvalidDataException($"Property {validationContext.ObjectInstance.GetType()}.{pi.Name} requires a public getter");
             object? v = pi.GetValue(validationContext.ObjectInstance);
-            return (Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && RequiredIfNoValue == (v == null))
+            return (Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && RequiredIfNull == (v == null))
                 ? base.IsValid(value, validationContext)
                 : null;
         }

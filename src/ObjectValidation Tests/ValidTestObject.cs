@@ -121,6 +121,9 @@ namespace ObjectValidation_Tests
         [RequiredIf(nameof(RequiredIfConditional), true)]
         public string? ConditionalProperty { get; set; }
 
+        [AllowedValues(TestEnum.Valid), DeniedValues(TestEnum.Invalid)]
+        public TestEnum EnumProperty { get; set; } = TestEnum.Valid;
+
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             List<ValidationResult> results = new();
