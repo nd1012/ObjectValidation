@@ -1,4 +1,4 @@
-# ObjectValidation (BETA)
+# ObjectValidation
 
 This library contains some object validation helper:
 
@@ -459,3 +459,9 @@ object, which contains some validation context information:
 
 Since array item validations don't call event handlers, the `ArrayLevel` 
 property will alwys be `0`.
+
+# Upcoming changes with .NET 8
+
+Some object validations which I've implemented in the ObjectValidation library 
+are now part of the .NET 8 preview. I won't remove them in v1.x, but in v2.x, 
+which will target .NET 8.
