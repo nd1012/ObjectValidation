@@ -177,6 +177,20 @@ constructor from your constructor methods.
 only implementing the `IValidatableObject` interface your type may be 
 validated automatic, but not by the ObjectValidation library!
 
+In case you can't extend from `ValidatableObject`, you can implement the 
+`IValidatableObject` and `IObjectValidatable` interfaces like this:
+
+```cs
+public class YourType : AnyBaseType, IObjectValidatable
+{
+    ...
+
+    // Implement IValidatableObject
+    IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext context)
+        => ValidatableObject.ObjectValidatable(this);
+}
+```
+
 ## Conditional value requirement
 
 If a property value is required in case another property has a specified value:
