@@ -32,6 +32,7 @@
             DeepArrProperty[1][0] = null!;
             RequiredIfConditional = true;
             EnumProperty = TestEnum.Invalid;
+            Enum2Property = (TestEnum)3;
         }
     }
 }
