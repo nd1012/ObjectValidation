@@ -1,4 +1,4 @@
-# ObjectValidation (BETA)
+# ObjectValidation
 
 This library contains some object validation helper:
 
@@ -320,6 +320,16 @@ Use the `ItemNullableAttribute`, if the dictionary value or list item may be
 `null` (even if you wrote `T?` in your code, because the nullability 
 information my not be available during validation!).
 
+## Enumeration value validation
+
+An enumeration can be a value list or combined flags. Both variants are 
+validated by checking if
+
+- the value contains undefined flags
+- the value is an undefined enumeration value
+
+This ensures, that only defined enumeration (flag) values can be used.
+
 ## Force to fail with an exception
 
 If you set the parameter `throwOnError` value to `true`, the validation will 
@@ -475,3 +485,9 @@ object, which contains some validation context information:
 
 Since array item validations don't call event handlers, the `ArrayLevel` 
 property will alwys be `0`.
+
+# Upcoming changes with .NET 8
+
+Some object validations which I've implemented in the ObjectValidation library 
+are now part of the .NET 8 preview. I won't remove them in v1.x, but in v2.x, 
+which will target .NET 8.
