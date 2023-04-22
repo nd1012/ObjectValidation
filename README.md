@@ -23,6 +23,7 @@ enumerable lengths
 - European VAT ID validation
 - XML validation
 - Conditional value requirements
+- Enumeration value validation
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -76,6 +77,7 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | XML validation | `XmlAttribute` |
 | Conditional value requirement | `RequiredIfAttribute` |
 | Allowed/denied values | `AllowedValuesAttribute`, `DeniedValuesAttribute` |
+| Enumeration value | (none - using the type) |
 
 ## Deep object validation
 
@@ -177,6 +179,20 @@ constructor from your constructor methods.
 only implementing the `IValidatableObject` interface your type may be 
 validated automatic, but not by the ObjectValidation library!
 
+In case you can't extend from `ValidatableObject`, you can implement the 
+`IValidatableObject` and `IObjectValidatable` interfaces like this:
+
+```cs
+public class YourType : AnyBaseType, IObjectValidatable
+{
+    ...
+
+    // Implement IValidatableObject
+    IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext context)
+        => ValidatableObject.ObjectValidatable(this);
+}
+```
+
 ## Conditional value requirement
 
 If a property value is required in case another property has a specified value:
@@ -243,7 +259,7 @@ validation should only be applied to a dictionary key. Examples:
 public Dictionary<string, string> Dict { get; }
 
 [CountLimit(1, 10)]// List object validation
-[ItemRequired, ItemStringLength(255]// Item validation
+[ItemRequired, ItemStringLength(255)]// Item validation
 public List<string> List { get; }
 ```
 
@@ -303,6 +319,16 @@ dictionary keys, too, if they're a dictionary or a list.
 Use the `ItemNullableAttribute`, if the dictionary value or list item may be 
 `null` (even if you wrote `T?` in your code, because the nullability 
 information my not be available during validation!).
+
+## Enumeration value validation
+
+An enumeration can be a value list or combined flags. Both variants are 
+validated by checking if
+
+- the value contains undefined flags
+- the value is an undefined enumeration value
+
+This ensures, that only defined enumeration (flag) values can be used.
 
 ## Force to fail with an exception
 

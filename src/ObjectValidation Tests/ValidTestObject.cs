@@ -124,6 +124,8 @@ namespace ObjectValidation_Tests
         [AllowedValues(TestEnum.Valid), DeniedValues(TestEnum.Invalid)]
         public TestEnum EnumProperty { get; set; } = TestEnum.Valid;
 
+        public TestEnum Enum2Property { get; set; } = TestEnum.Valid;
+
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             List<ValidationResult> results = new();

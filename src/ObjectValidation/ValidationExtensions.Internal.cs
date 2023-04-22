@@ -14,6 +14,11 @@ namespace wan24.ObjectValidation
         private const string VALIDATENEVER_ATTRIBUTE_TYPE = "Microsoft.AspNetCore.Mvc.ModelBinding.Validation.NeverValidateAttribute";
 
         /// <summary>
+        /// Unsigned numeric enum types
+        /// </summary>
+        private static readonly Type[] UnsignedNumericEnumTypes = new Type[] { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+
+        /// <summary>
         /// Validate an object
         /// </summary>
         /// <param name="info">Validation information</param>
@@ -46,7 +51,7 @@ namespace wan24.ObjectValidation
             {
                 // Skip object that disabled the validation or which has a not supported type
                 Type type = obj.GetType();// Given object type
-                if (type.IsValueType || type.IsArray || type.IsEnum || type == typeof(string) || type == typeof(object) || type.GetCustomAttribute<NoValidationAttribute>(inherit: true) != null)
+                if ((type.IsValueType && !type.IsEnum) || type.IsArray || type == typeof(string) || type == typeof(object) || type.GetCustomAttribute<NoValidationAttribute>(inherit: true) != null)
                     return true;
                 // Avoid an endless recursion
                 if (info.Seen.Contains(obj)) return true;
@@ -83,7 +88,7 @@ namespace wan24.ObjectValidation
                     (cancelled, res, failed) = RaiseEvent(OnObjectValidation, info.Seen, obj, validationResults, allResults, member, throwOnError, members, res);
                     if (cancelled) return Finalize();
                     // Use the default object validation
-                    if (!isObjectValidatable)
+                    if (!isObjectValidatable && !type.IsEnum)
                     {
                         ValidationContext validationContext = new(obj, serviceProvider, items: null);
                         res &= Validator.TryValidateObject(obj, validationContext, validationResults, validateAllProperties: true);
@@ -96,6 +101,41 @@ namespace wan24.ObjectValidation
                                 if (!AddResults(results, allResults, validationResults, member)) return Finalize();
                             }
                         }
+                    }
+                    // Validate an enumeration value
+                    if (type.IsEnum)
+                    {
+                        Type numericType = type.GetEnumUnderlyingType() ?? throw new InvalidProgramException($"Enumeration {type} without underlaying numeric type");
+                        if (type.GetCustomAttribute<FlagsAttribute>() != null)
+                        {
+                            bool err;
+                            object number,
+                                undefinedValue = null!;
+                            if (UnsignedNumericEnumTypes.Contains(numericType))
+                            {
+                                ulong allValues = 0,
+                                    numericValue = (ulong)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(ulong));
+                                number = numericValue;
+                                foreach (object v in Enum.GetValues(type)) allValues |= (ulong)Convert.ChangeType(Convert.ChangeType(v, numericType), typeof(ulong));
+                                err = (numericValue & ~allValues) != 0;
+                                if (err) undefinedValue = numericValue & ~allValues;
+                            }
+                            else
+                            {
+                                long allValues = 0,
+                                    numericValue = (long)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(long));
+                                number = numericValue;
+                                foreach (object v in Enum.GetValues(type)) allValues |= (long)Convert.ChangeType(Convert.ChangeType(v, numericType), typeof(long));
+                                err = (numericValue & ~allValues) != 0;
+                                if (err) undefinedValue = numericValue & ~allValues;
+                            }
+                            if (err) validationResults.Add(new($"Undefined enumeration flags value {number} (undefined flag(s) {undefinedValue})"));
+                        }
+                        else if (!Enum.IsDefined(type, obj))
+                        {
+                            validationResults.Add(new($"Undefined enumeration value {Convert.ChangeType(obj, numericType)}"));
+                        }
+                        return Finalize();
                     }
                     // Validate properties
                     object? value;// Property value

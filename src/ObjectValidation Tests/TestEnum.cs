@@ -2,7 +2,7 @@
 {
     public enum TestEnum
     {
-        Valid,
-        Invalid
+        Valid = 1,
+        Invalid = 2
     }
 }

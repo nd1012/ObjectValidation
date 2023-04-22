@@ -23,6 +23,7 @@ enumerable lengths
 - European VAT ID validation
 - XML validation
 - Conditional value requirements
+- Enumeration value validation
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -58,25 +59,25 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 
 ## Additional validations
 
-- Nullable types (`null` values in non-nullable properties will fail)
-- Dictionary list and enumerable count limit using `CountLimitAttribute`
-- Validations by event handlers
-- Dictionary and list key/value validation (including validating (non-)null 
-items using `ItemNullableAttribute`)
-- ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using 
-`IbanAttribute` and `BicAttribute`
-- ABA RTN validation (MICR/fraction) validation using the `AbaRtnAttribute`
-- IP address validation using `IpAttribute`
-- Country ISO 3166-1 alpha-2 code validation using `CountryAttribute`
-- Currency ISO 4217 code validation using `CurrencyAttribute`
-- Money amount validation using `AmountAttribute`
-- Luhn checksum validation using `LuhnChecksumAttribute`
-- XRechnung routing validation using `XRechnungRouteAttribute`
-- European VAT ID validation using `EuVatIdAttribute`
-- XML validation using `XmlAttribute`
-- Conditional value requirement using `RequiredIfAttribute`
-- Allowed/denied values using `AllowedValuesAttribute` and 
-`DeniedValuesAttribute`
+| Validation | Attribute |
+| --- | --- |
+| Validations by event handlers | (see `ValidationExtensions`) |
+| Dictionary list and enumerable count limit | `CountLimitAttribute` |
+| Nullable types (`null` values in non-nullable properties will fail) | `NullableAttribute` |
+| Dictionary and list key/value validation (including validating (non-)null items | `ItemNullableAttribute` |
+| ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation | `IbanAttribute`, `BicAttribute` |
+| ABA RTN validation (MICR/fraction) validation | `AbaRtnAttribute` |
+| IP address validation | `IpAttribute` |
+| Country ISO 3166-1 alpha-2 code validation | `CountryAttribute` |
+| Currency ISO 4217 code validation | `CurrencyAttribute` |
+| Money amount validation | `AmountAttribute` |
+| Luhn checksum validation | `LuhnChecksumAttribute` |
+| XRechnung routing validation | `XRechnungRouteAttribute` |
+| European VAT ID validation | `EuVatIdAttribute` |
+| XML validation | `XmlAttribute` |
+| Conditional value requirement | `RequiredIfAttribute` |
+| Allowed/denied values | `AllowedValuesAttribute`, `DeniedValuesAttribute` |
+| Enumeration value | (none - using the type) |
 
 ## Deep object validation
 
@@ -178,6 +179,20 @@ constructor from your constructor methods.
 only implementing the `IValidatableObject` interface your type may be 
 validated automatic, but not by the ObjectValidation library!
 
+In case you can't extend from `ValidatableObject`, you can implement the 
+`IValidatableObject` and `IObjectValidatable` interfaces like this:
+
+```cs
+public class YourType : AnyBaseType, IObjectValidatable
+{
+    ...
+
+    // Implement IValidatableObject
+    IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext context)
+        => ValidatableObject.ObjectValidatable(this);
+}
+```
+
 ## Conditional value requirement
 
 If a property value is required in case another property has a specified value:
@@ -244,7 +259,7 @@ validation should only be applied to a dictionary key. Examples:
 public Dictionary<string, string> Dict { get; }
 
 [CountLimit(1, 10)]// List object validation
-[ItemRequired, ItemStringLength(255]// Item validation
+[ItemRequired, ItemStringLength(255)]// Item validation
 public List<string> List { get; }
 ```
 
@@ -261,34 +276,36 @@ executed in case there's a `CountLimitAttribute` present.
 
 These item validation adapters exist:
 
-- `ValidationAttribute` -> `ItemValidationAttribute`
-- `CountLimitAttribute` -> `ItemCountLimitAttribute`
-- `RequiredAttribute` -> `ItemRequiredAttribute`
-- `CompareAttribute` -> `ItemCompareAttribute`
-- `CreditCardAttribute` -> `ItemCreditCardAttribute`
-- `EmailAddressAttribute` -> `ItemEmailAddressAttribute`
-- `MaxLengthAttribute` -> `ItemMaxLengthAttribute`
-- `MinLengthAttribute` -> `ItemMinLengthAttribute`
-- `NoValidationAttribute` -> `ItemNoValidationAttribute`
-- `PhoneAttribute` -> `ItemPhoneAttribute`
-- `RangeAttribute` -> `ItemRangeAttribute`
-- `RegularExpressionAttribute` -> `ItemRegularExpressionAttribute`
-- `StringLengthAttribute` -> `ItemStringLengthAttribute`
-- `UrlAttribute` -> `ItemUrlAttribute`
-- `DataTypeAttribute` -> `ItemDataTypeAttribute`
-- `IbanAttribute` -> `ItemIbanAttribute`
-- `BicAttribute` -> `ItemBicAttribute`
-- `AbaRtnAttribute` -> `ItemAbaRtnAttribute`
-- `IpAttribute` -> `ItemIpAttribute`
-- `CountryAttribute` -> `ItemCountryAttribute`
-- `CurrencyAttribute` -> `ItemCurrencyAttribute`
-- `AmountAttribute` -> `ItemAmountAttribute`
-- `LuhnChecksumAttribute` -> `ItemLuhnChecksumAttribute`
-- `XRechnungRouteAttribute` -> `ItemXRechnungRouteAttribute`
-- `EuVatIdAttribute` -> `ItemEuVatIdAttribute`
-- `AllowedValuesAttribute` -> `ItemAllowedValuesAttribute`
-- `DeniedValuesAttribute` -> `ItemDeniedValuesAttribute`
-- `CustomValidationAttribute` -> `ItemCustomValidationAttribute`
+| Property validation | Item validation |
+| --- | --- |
+| `ValidationAttribute` | `ItemValidationAttribute` |
+| `CountLimitAttribute` | `ItemCountLimitAttribute` |
+| `RequiredAttribute` | `ItemRequiredAttribute` |
+| `CompareAttribute` | `ItemCompareAttribute` |
+| `CreditCardAttribute` | `ItemCreditCardAttribute` |
+| `EmailAddressAttribute` | `ItemEmailAddressAttribute` |
+| `MaxLengthAttribute` | `ItemMaxLengthAttribute` |
+| `MinLengthAttribute` | `ItemMinLengthAttribute` |
+| `NoValidationAttribute` | `ItemNoValidationAttribute` |
+| `PhoneAttribute` | `ItemPhoneAttribute` |
+| `RangeAttribute` | `ItemRangeAttribute` |
+| `RegularExpressionAttribute` | `ItemRegularExpressionAttribute` |
+| `StringLengthAttribute` | `ItemStringLengthAttribute` |
+| `UrlAttribute` | `ItemUrlAttribute` |
+| `DataTypeAttribute` | `ItemDataTypeAttribute` |
+| `IbanAttribute` | `ItemIbanAttribute` |
+| `BicAttribute` | `ItemBicAttribute` |
+| `AbaRtnAttribute` | `ItemAbaRtnAttribute` |
+| `IpAttribute` | `ItemIpAttribute` |
+| `CountryAttribute` | `ItemCountryAttribute` |
+| `CurrencyAttribute` | `ItemCurrencyAttribute` |
+| `AmountAttribute` | `ItemAmountAttribute` |
+| `LuhnChecksumAttribute` | `ItemLuhnChecksumAttribute` |
+| `XRechnungRouteAttribute` | `ItemXRechnungRouteAttribute` |
+| `EuVatIdAttribute` | `ItemEuVatIdAttribute` |
+| `AllowedValuesAttribute` | `ItemAllowedValuesAttribute` |
+| `DeniedValuesAttribute` | `ItemDeniedValuesAttribute` |
+| `CustomValidationAttribute` | `ItemCustomValidationAttribute` |
 
 You can use the `ItemNoValidationAttribute` at the class level to prevent from 
 validating and dictionary or list contents.
@@ -326,20 +343,12 @@ validate only a property group).
 
 ## Handling validation events
 
-- `OnObjectValidation`: You can perform validations before any other 
-validations have been executed. When the event was cancelled, there won't be 
-any following validation, and the produced result will be used.
-- `OnObjectValidationFailed`: Raised, if the object validation failed. You may 
-add additional error messages, before the validation method returns.
-- `OnObjectPropertyValidation`: You can perform validations before any other 
-validations have been executed for the property. When the event was cancelled, 
-there won't be any following validation, and the produced result will be used 
-for the current property. The validation will then continue with the next 
-property.
-- `OnObjectPropertyValidationFailed`: Raised, if the object validation failed. 
-You may add additional error messages, before the validation method continues 
-with the next property. When the event was cancelled, the following property 
-validations will be skipped.
+| Event | Description |
+| --- | --- |
+| `OnObjectValidation` | You can perform validations before any other validations have been executed. When the event was cancelled, there won't be any following validation, and the produced result will be used. |
+| `OnObjectValidationFailed` | Raised, if the object validation failed. You may add additional error messages, before the validation method returns. |
+| `OnObjectPropertyValidation` | You can perform validations before any other validations have been executed for the property. When the event was cancelled, there won't be any following validation, and the produced result will be used for the current property. The validation will then continue with the next property. |
+| `OnObjectPropertyValidationFailed` | Raised, if the object validation failed. You may add additional error messages, before the validation method continues with the next property. When the event was cancelled, the following property validations will be skipped. |
 
 If the event arguments don't offer a `PropertyInfo` in the `Property` 
 property, the event was raised for the validated object.
@@ -466,9 +475,11 @@ An event handler can access the list of seen objects, which is used to prevent
 an endless recursion. The first object of that list is an `IValidationInfo` 
 object, which contains some validation context information:
 
-- `Seen`: Seen objects list
-- `CurrentDepth`: Current recursion depth
-- `ArrayLevel`: Current array level
+| Property | Description |
+| --- | --- |
+| `Seen` | Seen objects list |
+| `CurrentDepth` | Current recursion depth |
+| `ArrayLevel` | Current array level |
 
 **CAUTION**: Please DO NOT remove or exchange this object!
 
