@@ -303,6 +303,16 @@ Use the `ItemNullableAttribute`, if the dictionary value or list item may be
 `null` (even if you wrote `T?` in your code, because the nullability 
 information my not be available during validation!).
 
+## Enumeration value validation
+
+An enumeration can be a value list or combined flags. Both variants are 
+validated by checking if
+
+- the value contains undefined flags
+- the value is an undefined enumeration value
+
+This ensures, that only defined enumeration (flag) values can be used.
+
 ## Force to fail with an exception
 
 If you set the parameter `throwOnError` value to `true`, the validation will 
