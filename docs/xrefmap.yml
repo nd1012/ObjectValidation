@@ -836,6 +836,12 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ILongCountable.LongCount
   nameWithType: ILongCountable.LongCount
+- uid: wan24.ObjectValidation.IObjectValidatable
+  name: IObjectValidatable
+  href: api/wan24.ObjectValidation.IObjectValidatable.html
+  commentId: T:wan24.ObjectValidation.IObjectValidatable
+  fullName: wan24.ObjectValidation.IObjectValidatable
+  nameWithType: IObjectValidatable
 - uid: wan24.ObjectValidation.IpAttribute
   name: IpAttribute
   href: api/wan24.ObjectValidation.IpAttribute.html
@@ -2297,6 +2303,55 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ValidatableObject.ValidatableObject
   nameWithType: ValidatableObject.ValidatableObject
+- uid: wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  name: ObjectValidatable(IObjectValidatable)
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_ObjectValidatable_wan24_ObjectValidation_IObjectValidatable_
+  commentId: M:wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  fullName: wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  nameWithType: ValidatableObject.ObjectValidatable(IObjectValidatable)
+- uid: wan24.ObjectValidation.ValidatableObject.ObjectValidatable*
+  name: ObjectValidatable
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_ObjectValidatable_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObject.ObjectValidatable
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidatableObject.ObjectValidatable
+  nameWithType: ValidatableObject.ObjectValidatable
+- uid: wan24.ObjectValidation.ValidatableObject.op_Implicit(wan24.ObjectValidation.ValidatableObject)~System.ComponentModel.DataAnnotations.ValidationResult[]
+  name: Implicit(ValidatableObject to ValidationResult[])
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_op_Implicit_wan24_ObjectValidation_ValidatableObject__System_ComponentModel_DataAnnotations_ValidationResult__
+  commentId: M:wan24.ObjectValidation.ValidatableObject.op_Implicit(wan24.ObjectValidation.ValidatableObject)~System.ComponentModel.DataAnnotations.ValidationResult[]
+  name.vb: Widening(ValidatableObject to ValidationResult())
+  fullName: wan24.ObjectValidation.ValidatableObject.Implicit(wan24.ObjectValidation.ValidatableObject to System.ComponentModel.DataAnnotations.ValidationResult[])
+  fullName.vb: wan24.ObjectValidation.ValidatableObject.Widening(wan24.ObjectValidation.ValidatableObject to System.ComponentModel.DataAnnotations.ValidationResult())
+  nameWithType: ValidatableObject.Implicit(ValidatableObject to ValidationResult[])
+  nameWithType.vb: ValidatableObject.Widening(ValidatableObject to ValidationResult())
+- uid: wan24.ObjectValidation.ValidatableObject.op_Implicit*
+  name: Implicit
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_op_Implicit_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObject.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: wan24.ObjectValidation.ValidatableObject.Implicit
+  fullName.vb: wan24.ObjectValidation.ValidatableObject.Widening
+  nameWithType: ValidatableObject.Implicit
+  nameWithType.vb: ValidatableObject.Widening
+- uid: wan24.ObjectValidation.ValidatableObject.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:wan24.ObjectValidation.ValidatableObject.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: wan24.ObjectValidation.ValidatableObject.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ValidatableObject.IEnumerable.GetEnumerator()
+  nameWithType.vb: ValidatableObject.System.Collections.IEnumerable.GetEnumerator()
+- uid: wan24.ObjectValidation.ValidatableObject.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObject.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: wan24.ObjectValidation.ValidatableObject.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ValidatableObject.IEnumerable.GetEnumerator
+  nameWithType.vb: ValidatableObject.System.Collections.IEnumerable.GetEnumerator
 - uid: wan24.ObjectValidation.ValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
   name: Validate(ValidationContext)
   href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_Validate_System_ComponentModel_DataAnnotations_ValidationContext_

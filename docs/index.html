@@ -85,6 +85,7 @@ enumerable lengths</li>
 <li>European VAT ID validation</li>
 <li>XML validation</li>
 <li>Conditional value requirements</li>
+<li>Enumeration value validation</li>
 </ul>
 <p>It has been developed with the goal to offer an automatted deep object
 validation with support for deep dictionaries and lists contents, too.</p>
@@ -111,27 +112,84 @@ want to profit from the included general validation attributes for SWIFT etc.</p
 <p>The <strong>ObjectValidation-CountryValidator</strong> extension is licensed using the
 <strong>Apache-2.0 license</strong>.</p>
 <h2 id="additional-validations">Additional validations</h2>
-<ul>
-<li>Nullable types (<code>null</code> values in non-nullable properties will fail)</li>
-<li>Dictionary list and enumerable count limit using <code>CountLimitAttribute</code></li>
-<li>Validations by event handlers</li>
-<li>Dictionary and list key/value validation (including validating (non-)null
-items using <code>ItemNullableAttribute</code>)</li>
-<li>ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation using
-<code>IbanAttribute</code> and <code>BicAttribute</code></li>
-<li>ABA RTN validation (MICR/fraction) validation using the <code>AbaRtnAttribute</code></li>
-<li>IP address validation using <code>IpAttribute</code></li>
-<li>Country ISO 3166-1 alpha-2 code validation using <code>CountryAttribute</code></li>
-<li>Currency ISO 4217 code validation using <code>CurrencyAttribute</code></li>
-<li>Money amount validation using <code>AmountAttribute</code></li>
-<li>Luhn checksum validation using <code>LuhnChecksumAttribute</code></li>
-<li>XRechnung routing validation using <code>XRechnungRouteAttribute</code></li>
-<li>European VAT ID validation using <code>EuVatIdAttribute</code></li>
-<li>XML validation using <code>XmlAttribute</code></li>
-<li>Conditional value requirement using <code>RequiredIfAttribute</code></li>
-<li>Allowed/denied values using <code>AllowedValuesAttribute</code> and
-<code>DeniedValuesAttribute</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Validation</th>
+<th>Attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validations by event handlers</td>
+<td>(see <code>ValidationExtensions</code>)</td>
+</tr>
+<tr>
+<td>Dictionary list and enumerable count limit</td>
+<td><code>CountLimitAttribute</code></td>
+</tr>
+<tr>
+<td>Nullable types (<code>null</code> values in non-nullable properties will fail)</td>
+<td><code>NullableAttribute</code></td>
+</tr>
+<tr>
+<td>Dictionary and list key/value validation (including validating (non-)null items</td>
+<td><code>ItemNullableAttribute</code></td>
+</tr>
+<tr>
+<td>ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation</td>
+<td><code>IbanAttribute</code>, <code>BicAttribute</code></td>
+</tr>
+<tr>
+<td>ABA RTN validation (MICR/fraction) validation</td>
+<td><code>AbaRtnAttribute</code></td>
+</tr>
+<tr>
+<td>IP address validation</td>
+<td><code>IpAttribute</code></td>
+</tr>
+<tr>
+<td>Country ISO 3166-1 alpha-2 code validation</td>
+<td><code>CountryAttribute</code></td>
+</tr>
+<tr>
+<td>Currency ISO 4217 code validation</td>
+<td><code>CurrencyAttribute</code></td>
+</tr>
+<tr>
+<td>Money amount validation</td>
+<td><code>AmountAttribute</code></td>
+</tr>
+<tr>
+<td>Luhn checksum validation</td>
+<td><code>LuhnChecksumAttribute</code></td>
+</tr>
+<tr>
+<td>XRechnung routing validation</td>
+<td><code>XRechnungRouteAttribute</code></td>
+</tr>
+<tr>
+<td>European VAT ID validation</td>
+<td><code>EuVatIdAttribute</code></td>
+</tr>
+<tr>
+<td>XML validation</td>
+<td><code>XmlAttribute</code></td>
+</tr>
+<tr>
+<td>Conditional value requirement</td>
+<td><code>RequiredIfAttribute</code></td>
+</tr>
+<tr>
+<td>Allowed/denied values</td>
+<td><code>AllowedValuesAttribute</code>, <code>DeniedValuesAttribute</code></td>
+</tr>
+<tr>
+<td>Enumeration value</td>
+<td>(none - using the type)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="deep-object-validation">Deep object validation</h2>
 <p>Nested property object value validation is supported for:</p>
 <ul>
@@ -211,6 +269,17 @@ constructor from your constructor methods.</p>
 <p><strong>TIP</strong>: You should use the <code>ValidatableObject</code> base type, if possible! By
 only implementing the <code>IValidatableObject</code> interface your type may be
 validated automatic, but not by the ObjectValidation library!</p>
+<p>In case you can't extend from <code>ValidatableObject</code>, you can implement the
+<code>IValidatableObject</code> and <code>IObjectValidatable</code> interfaces like this:</p>
+<pre><code class="lang-cs">public class YourType : AnyBaseType, IObjectValidatable
+{
+    ...
+
+    // Implement IValidatableObject
+    IEnumerable&lt;ValidationResult&gt; IValidatableObject.Validate(ValidationContext context)
+        =&gt; ValidatableObject.ObjectValidatable(this);
+}
+</code></pre>
 <h2 id="conditional-value-requirement">Conditional value requirement</h2>
 <p>If a property value is required in case another property has a specified value:</p>
 <pre><code class="lang-cs">[Bic]
@@ -264,7 +333,7 @@ validation should only be applied to a dictionary key. Examples:</p>
 public Dictionary&lt;string, string&gt; Dict { get; }
 
 [CountLimit(1, 10)]// List object validation
-[ItemRequired, ItemStringLength(255]// Item validation
+[ItemRequired, ItemStringLength(255)]// Item validation
 public List&lt;string&gt; List { get; }
 </code></pre>
 <p>The dictionary needs to have at last one, maximum 10 key/value pairs, where
@@ -276,36 +345,128 @@ is limited to 1-255 characters.</p>
 a property. In case of an enumerable value, the enumeration needs to be
 executed in case there's a <code>CountLimitAttribute</code> present.</p>
 <p>These item validation adapters exist:</p>
-<ul>
-<li><code>ValidationAttribute</code> -&gt; <code>ItemValidationAttribute</code></li>
-<li><code>CountLimitAttribute</code> -&gt; <code>ItemCountLimitAttribute</code></li>
-<li><code>RequiredAttribute</code> -&gt; <code>ItemRequiredAttribute</code></li>
-<li><code>CompareAttribute</code> -&gt; <code>ItemCompareAttribute</code></li>
-<li><code>CreditCardAttribute</code> -&gt; <code>ItemCreditCardAttribute</code></li>
-<li><code>EmailAddressAttribute</code> -&gt; <code>ItemEmailAddressAttribute</code></li>
-<li><code>MaxLengthAttribute</code> -&gt; <code>ItemMaxLengthAttribute</code></li>
-<li><code>MinLengthAttribute</code> -&gt; <code>ItemMinLengthAttribute</code></li>
-<li><code>NoValidationAttribute</code> -&gt; <code>ItemNoValidationAttribute</code></li>
-<li><code>PhoneAttribute</code> -&gt; <code>ItemPhoneAttribute</code></li>
-<li><code>RangeAttribute</code> -&gt; <code>ItemRangeAttribute</code></li>
-<li><code>RegularExpressionAttribute</code> -&gt; <code>ItemRegularExpressionAttribute</code></li>
-<li><code>StringLengthAttribute</code> -&gt; <code>ItemStringLengthAttribute</code></li>
-<li><code>UrlAttribute</code> -&gt; <code>ItemUrlAttribute</code></li>
-<li><code>DataTypeAttribute</code> -&gt; <code>ItemDataTypeAttribute</code></li>
-<li><code>IbanAttribute</code> -&gt; <code>ItemIbanAttribute</code></li>
-<li><code>BicAttribute</code> -&gt; <code>ItemBicAttribute</code></li>
-<li><code>AbaRtnAttribute</code> -&gt; <code>ItemAbaRtnAttribute</code></li>
-<li><code>IpAttribute</code> -&gt; <code>ItemIpAttribute</code></li>
-<li><code>CountryAttribute</code> -&gt; <code>ItemCountryAttribute</code></li>
-<li><code>CurrencyAttribute</code> -&gt; <code>ItemCurrencyAttribute</code></li>
-<li><code>AmountAttribute</code> -&gt; <code>ItemAmountAttribute</code></li>
-<li><code>LuhnChecksumAttribute</code> -&gt; <code>ItemLuhnChecksumAttribute</code></li>
-<li><code>XRechnungRouteAttribute</code> -&gt; <code>ItemXRechnungRouteAttribute</code></li>
-<li><code>EuVatIdAttribute</code> -&gt; <code>ItemEuVatIdAttribute</code></li>
-<li><code>AllowedValuesAttribute</code> -&gt; <code>ItemAllowedValuesAttribute</code></li>
-<li><code>DeniedValuesAttribute</code> -&gt; <code>ItemDeniedValuesAttribute</code></li>
-<li><code>CustomValidationAttribute</code> -&gt; <code>ItemCustomValidationAttribute</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Property validation</th>
+<th>Item validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValidationAttribute</code></td>
+<td><code>ItemValidationAttribute</code></td>
+</tr>
+<tr>
+<td><code>CountLimitAttribute</code></td>
+<td><code>ItemCountLimitAttribute</code></td>
+</tr>
+<tr>
+<td><code>RequiredAttribute</code></td>
+<td><code>ItemRequiredAttribute</code></td>
+</tr>
+<tr>
+<td><code>CompareAttribute</code></td>
+<td><code>ItemCompareAttribute</code></td>
+</tr>
+<tr>
+<td><code>CreditCardAttribute</code></td>
+<td><code>ItemCreditCardAttribute</code></td>
+</tr>
+<tr>
+<td><code>EmailAddressAttribute</code></td>
+<td><code>ItemEmailAddressAttribute</code></td>
+</tr>
+<tr>
+<td><code>MaxLengthAttribute</code></td>
+<td><code>ItemMaxLengthAttribute</code></td>
+</tr>
+<tr>
+<td><code>MinLengthAttribute</code></td>
+<td><code>ItemMinLengthAttribute</code></td>
+</tr>
+<tr>
+<td><code>NoValidationAttribute</code></td>
+<td><code>ItemNoValidationAttribute</code></td>
+</tr>
+<tr>
+<td><code>PhoneAttribute</code></td>
+<td><code>ItemPhoneAttribute</code></td>
+</tr>
+<tr>
+<td><code>RangeAttribute</code></td>
+<td><code>ItemRangeAttribute</code></td>
+</tr>
+<tr>
+<td><code>RegularExpressionAttribute</code></td>
+<td><code>ItemRegularExpressionAttribute</code></td>
+</tr>
+<tr>
+<td><code>StringLengthAttribute</code></td>
+<td><code>ItemStringLengthAttribute</code></td>
+</tr>
+<tr>
+<td><code>UrlAttribute</code></td>
+<td><code>ItemUrlAttribute</code></td>
+</tr>
+<tr>
+<td><code>DataTypeAttribute</code></td>
+<td><code>ItemDataTypeAttribute</code></td>
+</tr>
+<tr>
+<td><code>IbanAttribute</code></td>
+<td><code>ItemIbanAttribute</code></td>
+</tr>
+<tr>
+<td><code>BicAttribute</code></td>
+<td><code>ItemBicAttribute</code></td>
+</tr>
+<tr>
+<td><code>AbaRtnAttribute</code></td>
+<td><code>ItemAbaRtnAttribute</code></td>
+</tr>
+<tr>
+<td><code>IpAttribute</code></td>
+<td><code>ItemIpAttribute</code></td>
+</tr>
+<tr>
+<td><code>CountryAttribute</code></td>
+<td><code>ItemCountryAttribute</code></td>
+</tr>
+<tr>
+<td><code>CurrencyAttribute</code></td>
+<td><code>ItemCurrencyAttribute</code></td>
+</tr>
+<tr>
+<td><code>AmountAttribute</code></td>
+<td><code>ItemAmountAttribute</code></td>
+</tr>
+<tr>
+<td><code>LuhnChecksumAttribute</code></td>
+<td><code>ItemLuhnChecksumAttribute</code></td>
+</tr>
+<tr>
+<td><code>XRechnungRouteAttribute</code></td>
+<td><code>ItemXRechnungRouteAttribute</code></td>
+</tr>
+<tr>
+<td><code>EuVatIdAttribute</code></td>
+<td><code>ItemEuVatIdAttribute</code></td>
+</tr>
+<tr>
+<td><code>AllowedValuesAttribute</code></td>
+<td><code>ItemAllowedValuesAttribute</code></td>
+</tr>
+<tr>
+<td><code>DeniedValuesAttribute</code></td>
+<td><code>ItemDeniedValuesAttribute</code></td>
+</tr>
+<tr>
+<td><code>CustomValidationAttribute</code></td>
+<td><code>ItemCustomValidationAttribute</code></td>
+</tr>
+</tbody>
+</table>
 <p>You can use the <code>ItemNoValidationAttribute</code> at the class level to prevent from
 validating and dictionary or list contents.</p>
 <p><strong>NOTE</strong>: By setting the <code>ArrayLevel</code> (starts with zero) of an
@@ -316,6 +477,14 @@ dictionary keys, too, if they're a dictionary or a list.</p>
 <p>Use the <code>ItemNullableAttribute</code>, if the dictionary value or list item may be
 <code>null</code> (even if you wrote <code>T?</code> in your code, because the nullability
 information my not be available during validation!).</p>
+<h2 id="enumeration-value-validation">Enumeration value validation</h2>
+<p>An enumeration can be a value list or combined flags. Both variants are
+validated by checking if</p>
+<ul>
+<li>the value contains undefined flags</li>
+<li>the value is an undefined enumeration value</li>
+</ul>
+<p>This ensures, that only defined enumeration (flag) values can be used.</p>
 <h2 id="force-to-fail-with-an-exception">Force to fail with an exception</h2>
 <p>If you set the parameter <code>throwOnError</code> value to <code>true</code>, the validation will
 throw a <code>ObjectValidationException</code>, as soon as an object was invalidated.</p>
@@ -324,22 +493,32 @@ throw a <code>ObjectValidationException</code>, as soon as an object was invalid
 avoid validating all properties which could be validated (f.e. you could
 validate only a property group).</p>
 <h2 id="handling-validation-events">Handling validation events</h2>
-<ul>
-<li><code>OnObjectValidation</code>: You can perform validations before any other
-validations have been executed. When the event was cancelled, there won't be
-any following validation, and the produced result will be used.</li>
-<li><code>OnObjectValidationFailed</code>: Raised, if the object validation failed. You may
-add additional error messages, before the validation method returns.</li>
-<li><code>OnObjectPropertyValidation</code>: You can perform validations before any other
-validations have been executed for the property. When the event was cancelled,
-there won't be any following validation, and the produced result will be used
-for the current property. The validation will then continue with the next
-property.</li>
-<li><code>OnObjectPropertyValidationFailed</code>: Raised, if the object validation failed.
-You may add additional error messages, before the validation method continues
-with the next property. When the event was cancelled, the following property
-validations will be skipped.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OnObjectValidation</code></td>
+<td>You can perform validations before any other validations have been executed. When the event was cancelled, there won't be any following validation, and the produced result will be used.</td>
+</tr>
+<tr>
+<td><code>OnObjectValidationFailed</code></td>
+<td>Raised, if the object validation failed. You may add additional error messages, before the validation method returns.</td>
+</tr>
+<tr>
+<td><code>OnObjectPropertyValidation</code></td>
+<td>You can perform validations before any other validations have been executed for the property. When the event was cancelled, there won't be any following validation, and the produced result will be used for the current property. The validation will then continue with the next property.</td>
+</tr>
+<tr>
+<td><code>OnObjectPropertyValidationFailed</code></td>
+<td>Raised, if the object validation failed. You may add additional error messages, before the validation method continues with the next property. When the event was cancelled, the following property validations will be skipped.</td>
+</tr>
+</tbody>
+</table>
 <p>If the event arguments don't offer a <code>PropertyInfo</code> in the <code>Property</code>
 property, the event was raised for the validated object.</p>
 <p>An event handler can set a failed state by setting the <code>Result</code> property of
@@ -436,11 +615,28 @@ limitations under the License.</p>
 <p>An event handler can access the list of seen objects, which is used to prevent
 an endless recursion. The first object of that list is an <code>IValidationInfo</code>
 object, which contains some validation context information:</p>
-<ul>
-<li><code>Seen</code>: Seen objects list</li>
-<li><code>CurrentDepth</code>: Current recursion depth</li>
-<li><code>ArrayLevel</code>: Current array level</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Seen</code></td>
+<td>Seen objects list</td>
+</tr>
+<tr>
+<td><code>CurrentDepth</code></td>
+<td>Current recursion depth</td>
+</tr>
+<tr>
+<td><code>ArrayLevel</code></td>
+<td>Current array level</td>
+</tr>
+</tbody>
+</table>
 <p><strong>CAUTION</strong>: Please DO NOT remove or exchange this object!</p>
 <p>Since array item validations don't call event handlers, the <code>ArrayLevel</code>
 property will alwys be <code>0</code>.</p>
@@ -452,7 +648,7 @@ property will alwys be <code>0</code>.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
