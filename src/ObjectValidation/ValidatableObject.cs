@@ -6,7 +6,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Base class for an object validatable object
     /// </summary>
-    public abstract class ValidatableObject : IObjectValidatable, IEnumerable<ValidationResult>
+    public abstract class ValidatableObject : IObjectValidatable
     {
         /// <summary>
         /// Constructor
@@ -19,12 +19,6 @@ namespace wan24.ObjectValidation
         /// <param name="validationContext">Context</param>
         /// <returns>Results</returns>
         protected virtual IEnumerable<ValidationResult> Validate(ValidationContext validationContext) => ObjectValidatable(this);
-
-        /// <inheritdoc/>
-        IEnumerator<ValidationResult> IEnumerable<ValidationResult>.GetEnumerator() => Validate(new(this, serviceProvider: null, items: null)).GetEnumerator();
-
-        /// <inheritdoc/>
-        IEnumerator IEnumerable.GetEnumerator() => Validate(new(this, serviceProvider: null, items: null)).GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext) => Validate(validationContext);
