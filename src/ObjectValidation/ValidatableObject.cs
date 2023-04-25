@@ -11,7 +11,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Constructor
         /// </summary>
-        protected ValidatableObject() : base() { }
+        protected ValidatableObject() { }
 
         /// <summary>
         /// Validate the object
