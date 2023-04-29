@@ -85,14 +85,55 @@ namespace wan24.ObjectValidation
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, which is the default)</exception>
         public static bool TryValidateNullableObject(
             this object? obj,
-            List<ValidationResult>?
-            results = null,
+            List<ValidationResult>? results = null,
             string? member = null,
             bool throwOnError = false,
             IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
             => obj == null || ValidationExtensions.ValidateObject(new(), obj, results, member, throwOnError, members, serviceProvider);
+
+        /// <summary>
+        /// Ensure a valid object
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <param name="errorHandler">Error handler</param>
+        /// <param name="members">Member names to validate</param>
+        /// <param name="serviceProvider">Service provider</param>
+        /// <returns>If the object is valid</returns>
+        public static bool EnsureValidObject(
+            this object obj,
+            Func<object, List<ValidationResult>, bool> errorHandler,
+            IEnumerable<string>? members = null,
+            IServiceProvider? serviceProvider = null
+            )
+        {
+            List<ValidationResult> results = new();
+            return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider) || errorHandler(obj, results);
+        }
+
+        /// <summary>
+        /// Get a valid object
+        /// </summary>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <param name="obj">Object</param>
+        /// <param name="errorHandler">Error handler</param>
+        /// <param name="members">Member names to validate</param>
+        /// <param name="serviceProvider">Service provider</param>
+        /// <returns>Valid object</returns>
+        public static T GetValidObject<T>(
+            this T obj,
+            Func<T, List<ValidationResult>, T> errorHandler,
+            IEnumerable<string>? members = null,
+            IServiceProvider? serviceProvider = null
+            )
+        {
+            if (obj == null) throw new ArgumentNullException(nameof(obj));
+            List<ValidationResult> results = new();
+            return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider)
+                ? obj
+                : errorHandler(obj, results);
+        }
 
         /// <summary>
         /// Delegate for a logger handler

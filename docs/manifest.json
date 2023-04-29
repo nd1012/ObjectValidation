@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "g5IgYPp3N2wBlfxJ1WGHC4c5ttDL2c3g+5v+yhTEK7M="
+          "hash": "b8ZzAw4Me9ZNvXr4ZZugrpo5l7YABBieg9JL1OQS7rY="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "w2qb06aGX0HyXYPMc17I+m0N3r3PD2r0szeXp99gqGg="
+          "hash": "9ED16MqwhcGNIePcKIfwswY4Ph6V7A5D6iEb3AEbQw4="
         }
       },
       "is_incremental": false,
@@ -833,11 +833,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidateObject.Logger_Delegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidateObject.Logger_Delegate.html",
+          "hash": "wM5KQTb5F0Kx2CrmL3qNLMBEqAAn6Yu0JslSPhJMFVs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.ValidateObject.yml",
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidateObject.html",
-          "hash": "MAdwDiXqM/KomO7UNIvnRswDtstv9BsUwx1bTsuZUDo="
+          "hash": "7z/IMVHuDdV0vHeqGAfhsPq2VMv0va4Fsi2lnv7tmfQ="
         }
       },
       "is_incremental": false,
@@ -909,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "C8NMKBx+aepMhKhTLs9OL7WQqCguX2zgRKqaSGePcPg="
+          "hash": "sTfGs/fDuADG5SCN+j0jrelW96qYO17Q91PAIl6SJXM="
         }
       },
       "is_incremental": false,
@@ -984,7 +996,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 74,
+          "total_file_count": 75,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

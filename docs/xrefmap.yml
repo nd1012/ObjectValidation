@@ -2354,6 +2354,25 @@ references:
   commentId: T:wan24.ObjectValidation.ValidateObject
   fullName: wan24.ObjectValidation.ValidateObject
   nameWithType: ValidateObject
+- uid: wan24.ObjectValidation.ValidateObject.Logger
+  name: Logger
+  href: api/wan24.ObjectValidation.ValidateObject.html#wan24_ObjectValidation_ValidateObject_Logger
+  commentId: P:wan24.ObjectValidation.ValidateObject.Logger
+  fullName: wan24.ObjectValidation.ValidateObject.Logger
+  nameWithType: ValidateObject.Logger
+- uid: wan24.ObjectValidation.ValidateObject.Logger*
+  name: Logger
+  href: api/wan24.ObjectValidation.ValidateObject.html#wan24_ObjectValidation_ValidateObject_Logger_
+  commentId: Overload:wan24.ObjectValidation.ValidateObject.Logger
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidateObject.Logger
+  nameWithType: ValidateObject.Logger
+- uid: wan24.ObjectValidation.ValidateObject.Logger_Delegate
+  name: ValidateObject.Logger_Delegate
+  href: api/wan24.ObjectValidation.ValidateObject.Logger_Delegate.html
+  commentId: T:wan24.ObjectValidation.ValidateObject.Logger_Delegate
+  fullName: wan24.ObjectValidation.ValidateObject.Logger_Delegate
+  nameWithType: ValidateObject.Logger_Delegate
 - uid: wan24.ObjectValidation.ValidateObject.TryValidateNullableObject(System.Object,List{System.ComponentModel.DataAnnotations.ValidationResult}@,System.String,System.Boolean,System.Nullable{IEnumerable{System.String}},System.Nullable{IServiceProvider})
   name: TryValidateNullableObject(Object, out List<ValidationResult>, String, Boolean, Nullable<IEnumerable<String>>, Nullable<IServiceProvider>)
   href: api/wan24.ObjectValidation.ValidateObject.html#wan24_ObjectValidation_ValidateObject_TryValidateNullableObject_System_Object_List_System_ComponentModel_DataAnnotations_ValidationResult___System_String_System_Boolean_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__
