@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics;
 
 namespace wan24.ObjectValidation
 {
@@ -8,6 +8,11 @@ namespace wan24.ObjectValidation
     /// </summary>
     public static class ValidateObject
     {
+        /// <summary>
+        /// Log message handler
+        /// </summary>
+        public static Logger_Delegate Logger { get; set; } = (message) => Debug.WriteLine(message);
+
         /// <summary>
         /// Validate an object
         /// </summary>
@@ -88,5 +93,11 @@ namespace wan24.ObjectValidation
             IServiceProvider? serviceProvider = null
             )
             => obj == null || ValidationExtensions.ValidateObject(new(), obj, results, member, throwOnError, members, serviceProvider);
+
+        /// <summary>
+        /// Delegate for a logger handler
+        /// </summary>
+        /// <param name="message"></param>
+        public delegate void Logger_Delegate(string message);
     }
 }
