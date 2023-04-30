@@ -363,6 +363,48 @@ failed state can't be deleted, unless the original result `OriginalResult` was
 The object validation will fail, if there was any validation result, or the 
 overall result is `false`.
 
+## Object validation methods
+
+In addition to the .NET object validation methods you can validate objects 
+like this:
+
+```cs
+// Will throw an exception on error
+try
+{
+    obj.ValidateObject(out List<ValidationResult> results);
+}
+catch(ObjectValidationException ex)
+{
+    // Handle the object errors
+}
+
+// Won't throw an exception
+if(!obj.TryValidateObject(out List<ValidationResult> results))
+{
+    // Handle the object errors
+}
+
+// Will execute an error handler (which may throw, f.e.)
+bool valid = obj.EnsureValidObject((obj, results) => ...);
+
+// The handler may correct object validation errors (or throw, f.e.) and return a valid object
+obj = obj.GetValidObject((obj, results) => ...);
+```
+
+For nullable objects you can use the static methods from `ValidateObject`.
+
+## Logging
+
+If you set a log delegate to `ValidateObject.Logger`, you can log all object 
+validation errors:
+
+```cs
+ValidateObject.Logger = (message) => ...;
+```
+
+Per default messages will be logged to the attached debugger.
+
 ## Found a bug?
 
 If the object validation doesn't work for you as expected, or you have any 

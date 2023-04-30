@@ -528,6 +528,38 @@ failed state can't be deleted, unless the original result <code>OriginalResult</
 <code>true</code>.</p>
 <p>The object validation will fail, if there was any validation result, or the
 overall result is <code>false</code>.</p>
+<h2 id="object-validation-methods">Object validation methods</h2>
+<p>In addition to the .NET object validation methods you can validate objects
+like this:</p>
+<pre><code class="lang-cs">// Will throw an exception on error
+try
+{
+    obj.ValidateObject(out List&lt;ValidationResult&gt; results);
+}
+catch(ObjectValidationException ex)
+{
+    // Handle the object errors
+}
+
+// Won't throw an exception
+if(!obj.TryValidateObject(out List&lt;ValidationResult&gt; results))
+{
+    // Handle the object errors
+}
+
+// Will execute an error handler (which may throw, f.e.)
+bool valid = obj.EnsureValidObject((obj, results) =&gt; ...);
+
+// The handler may correct object validation errors (or throw, f.e.) and return a valid object
+obj = obj.GetValidObject((obj, results) =&gt; ...);
+</code></pre>
+<p>For nullable objects you can use the static methods from <code>ValidateObject</code>.</p>
+<h2 id="logging">Logging</h2>
+<p>If you set a log delegate to <code>ValidateObject.Logger</code>, you can log all object
+validation errors:</p>
+<pre><code class="lang-cs">ValidateObject.Logger = (message) =&gt; ...;
+</code></pre>
+<p>Per default messages will be logged to the attached debugger.</p>
 <h2 id="found-a-bug">Found a bug?</h2>
 <p>If the object validation doesn't work for you as expected, or you have any
 idea for improvements, please open an issue - I'd be glad to help and make

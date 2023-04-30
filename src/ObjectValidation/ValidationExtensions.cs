@@ -99,6 +99,48 @@ namespace wan24.ObjectValidation
             => ValidateObject(new(), obj, results, member, throwOnError, members, serviceProvider);
 
         /// <summary>
+        /// Ensure a valid object
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <param name="errorHandler">Error handler</param>
+        /// <param name="members">Member names to validate</param>
+        /// <param name="serviceProvider">Service provider</param>
+        /// <returns>If the object is valid</returns>
+        public static bool EnsureValidObject(
+            this object obj,
+            Func<object, List<ValidationResult>, bool> errorHandler,
+            IEnumerable<string>? members = null,
+            IServiceProvider? serviceProvider = null
+            )
+        {
+            List<ValidationResult> results = new();
+            return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider) || errorHandler(obj, results);
+        }
+
+        /// <summary>
+        /// Get a valid object
+        /// </summary>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <param name="obj">Object</param>
+        /// <param name="errorHandler">Error handler</param>
+        /// <param name="members">Member names to validate</param>
+        /// <param name="serviceProvider">Service provider</param>
+        /// <returns>Valid object</returns>
+        public static T GetValidObject<T>(
+            this T obj,
+            Func<T, List<ValidationResult>, T> errorHandler,
+            IEnumerable<string>? members = null,
+            IServiceProvider? serviceProvider = null
+            )
+        {
+            if (obj == null) throw new ArgumentNullException(nameof(obj));
+            List<ValidationResult> results = new();
+            return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider)
+                ? obj
+                : errorHandler(obj, results);
+        }
+
+        /// <summary>
         /// Determine if validation results contain a validation exception
         /// </summary>
         /// <param name="results">Results</param>

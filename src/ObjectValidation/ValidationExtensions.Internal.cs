@@ -141,8 +141,10 @@ namespace wan24.ObjectValidation
                     object? value;// Property value
                     string memberName;// Full property member name
                     Type valueType;// Property value type
+#pragma warning disable IDE0018 // Can be defined inline
                     Type? itemType,// Property item type
                         keyType;// Property dictionary value key type
+#pragma warning restore IDE0018
                     Type[] genericArguments;// Property value type generic arguments
                     bool propFailed = true,// If the property validation failed
                         loopCancelled = false,// If the property validation loop was cancelled
@@ -260,6 +262,9 @@ namespace wan24.ObjectValidation
             {
                 info.CurrentDepth--;
                 if (seenIndex > 0) info.Seen.RemoveAt(seenIndex);
+                if (results != null)
+                    foreach (ValidationResult result in results)
+                        ObjectValidation.ValidateObject.Logger($"Object validation error: {result.ErrorMessage} (members {string.Join(',', result.MemberNames)})");
             }
         }
 
