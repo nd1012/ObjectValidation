@@ -5,7 +5,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Interface for an item validation attribute
     /// </summary>
-    public interface IItemValidationAttribute
+    public interface IItemValidationAttribute : IMultipleValidations
     {
         /// <summary>
         /// Validation target

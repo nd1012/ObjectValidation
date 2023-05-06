@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0079: Unnötige Unterdrückung entfernen
+dotnet_diagnostic.IDE0079.severity = silent

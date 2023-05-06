@@ -14,6 +14,15 @@ namespace ObjectValidation_Tests
         [NoValidation, MinLength(3), MaxLength(5), RegularExpression("^[a-z]{3,5}$")]
         public string ValidatedStringProperty { get; set; } = "test";
 
+        [ValidationReference(typeof(ValidTestObject), nameof(ValidatedStringProperty))]
+        public string ReferencedStringProperty { get; set; } = "test";
+
+        [ValidationTemplate("test")]
+        public string TemplateStringProperty { get; set; } = "test";
+
+        [ValidationTemplateIf("test", nameof(TemplateStringProperty), "test123")]
+        public string TemplateStringProperty2 { get; set; } = "test123";
+
         [MinLength(3), MaxLength(5), RegularExpression("^[a-z]{3,5}$")]
         public string NotValidatedStringProperty { get; set; } = "test";
 
@@ -74,6 +83,22 @@ namespace ObjectValidation_Tests
         [ItemStringLength(5, ItemValidationTargets.Key)]
         [ItemStringLength(5)]
         public Dictionary<string, string> DictProperty2 { get; set; } = new()
+        {
+            {"test","test" },
+            {"test2","test2" }
+        };
+
+        [ItemValidationReference(typeof(ValidTestObject), nameof(DictProperty2), target: ItemValidationTargets.Key)]
+        [ItemValidationReference(typeof(ValidTestObject), nameof(DictProperty2))]
+        public Dictionary<string, string> ReferencedDictProperty { get; set; } = new()
+        {
+            {"test","test" },
+            {"test2","test2" }
+        };
+
+        [ItemValidationTemplate("test", ItemValidationTargets.Key)]
+        [ItemValidationTemplate("test")]
+        public Dictionary<string, string> TemplateDictProperty { get; set; } = new()
         {
             {"test","test" },
             {"test2","test2" }

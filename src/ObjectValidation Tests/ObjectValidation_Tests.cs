@@ -1,11 +1,29 @@
 using System.ComponentModel.DataAnnotations;
 using wan24.ObjectValidation;
 
+//TODO Add ValidationTemplateIf tests
+
 namespace ObjectValidation_Tests
 {
     [TestClass]
     public class ObjectValidation_Tests
     {
+        public ObjectValidation_Tests()
+        {
+            ValidateObject.Logger = (message) => Console.WriteLine(message);
+            ValidationTemplates.PropertyValidations["test"] = new()
+            {
+                new MinLengthAttribute(3),
+                new MaxLengthAttribute(5),
+                new RegularExpressionAttribute("^[a-z]{3,5}$")
+            };
+            ValidationTemplates.ItemValidations["test"] = new()
+            {
+                new ItemStringLengthAttribute(5, ItemValidationTargets.Key),
+                new ItemStringLengthAttribute(5)
+            };
+        }
+
         [TestMethod]
         public void General_Tests()
         {
@@ -26,6 +44,9 @@ namespace ObjectValidation_Tests
             Assert.IsFalse(failedMembers.Contains(nameof(ValidTestObject.Recursion)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.StringProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.ValidatedStringProperty)));
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.ReferencedStringProperty)));
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.TemplateStringProperty)));
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.TemplateStringProperty2)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.NotValidatedStringProperty)));
             Assert.IsFalse(failedMembers.Contains(nameof(ValidTestObject.IgnoredStringProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.IntProperty)));
@@ -44,6 +65,14 @@ namespace ObjectValidation_Tests
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.DictProperty2)}[value#2]"));
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.DictProperty2)}[value#3]"));
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.DictProperty2)}[key#3]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ReferencedDictProperty)}[value#1]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ReferencedDictProperty)}[value#2]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ReferencedDictProperty)}[value#3]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ReferencedDictProperty)}[key#3]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.TemplateDictProperty)}[value#1]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.TemplateDictProperty)}[value#2]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.TemplateDictProperty)}[value#3]"));
+            Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.TemplateDictProperty)}[key#3]"));
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ListProperty2)}[1]"));
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ListProperty2)}[2]"));
             Assert.IsTrue(failedMembers.Contains($"{nameof(ValidTestObject.ArrProperty2)}[1]"));
@@ -57,7 +86,7 @@ namespace ObjectValidation_Tests
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.RequiredProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.EnumProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.Enum2Property)));
-            Assert.AreEqual(37, results.Count);
+            Assert.AreEqual(57, results.Count);
 
             // Validation exception
             Assert.IsFalse(results.HasValidationException());

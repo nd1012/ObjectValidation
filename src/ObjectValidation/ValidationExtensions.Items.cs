@@ -27,8 +27,8 @@ namespace wan24.ObjectValidation
             PropertyInfo pi,
             IDictionary dict,
             Type valueType,
-            Type keyType,
-            Type itemType,
+            Type? keyType,
+            Type? itemType,
             NullabilityInfo? nullabilityInfo,
             List<ValidationResult> validationResults,
             IServiceProvider? serviceProvider,
@@ -36,12 +36,26 @@ namespace wan24.ObjectValidation
             string? member = null
             )
         {
-            bool res = true;// Overall result
+            if (keyType != null && IsAbstractType(keyType)) keyType = null;
+            if (itemType != null && IsAbstractType(itemType)) itemType = null;
+            bool res = true,// Overall result
+                keyValidatable = keyType == null || ValidatableTypes.IsTypeValidatable(keyType),// If the key is validatable
+                itemValidatable = itemType == null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
             IItemValidationAttribute[]? keyValidations = GetItemValidations(pi, info.ArrayLevel, ItemValidationTargets.Key);// Key validations
             if (IsNoItemValidation(keyValidations)) keyValidations = null;
             IItemValidationAttribute[]? valueValidations = GetItemValidations(pi, info.ArrayLevel);// Value validations
             if (IsNoItemValidation(valueValidations)) valueValidations = null;
-            if (keyValidations == null && valueValidations == null) return res;
+            if (keyValidations == null && valueValidations == null)
+            {
+#if DEBUG
+                ObjectValidation.ValidateObject.Logger($"Skip {valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") key/item validation (no key/item validations)");
+#endif
+                return res;
+            }
+#if DEBUG
+            if (!keyValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") keys are not validatable");
+            if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
+#endif
             bool valueNullable = (nullabilityInfo != null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Dictionary<,>) && IsNullable(nullabilityInfo.GenericTypeArguments[1])) ||
                 pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) != null;// If values are nullable
             int count = 0;// Key/value pair count
@@ -52,8 +66,16 @@ namespace wan24.ObjectValidation
                 // Key validations
                 if (keyValidations != null)
                     res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, ItemValidationTargets.Key, isDict: true), key, keyValidations, serviceProvider, validationResults, throwOnError);
-                if (!keyType!.IsValueType)
+                if (keyValidatable && (keyType != null || ValidatableTypes.IsTypeValidatable(key.GetType())))
+                {
                     res &= ValidateObject(info, key, validationResults, GetMemberName(info, pi, count, member, ItemValidationTargets.Key, isDict: true), throwOnError);
+                }
+#if DEBUG
+                else if (keyType == null)
+                {
+                    ObjectValidation.ValidateObject.Logger($"{valueType} member {GetMemberName(info, pi, count, member)} key type {key.GetType()} is not validatable");
+                }
+#endif
                 // Value validations
                 val = dict[key];
                 if (val == null)
@@ -62,7 +84,7 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (a non-null value is required)",
+                            $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (a non-NULL value is required)",
                             new string[] { GetMemberName(info, pi, count, member, isDict: true) }
                             ));
                     }
@@ -74,8 +96,16 @@ namespace wan24.ObjectValidation
                 }
                 if (valueValidations != null)
                     res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, isDict: true), val, valueValidations, serviceProvider, validationResults, throwOnError);
-                if (!itemType!.IsValueType)
+                if (itemValidatable && (itemType != null || ValidatableTypes.IsTypeValidatable(val.GetType())))
+                {
                     res &= ValidateObject(info, val, validationResults, GetMemberName(info, pi, count, member, isDict: true), throwOnError, serviceProvider: serviceProvider);
+                }
+#if DEBUG
+                else if (itemType == null)
+                {
+                    ObjectValidation.ValidateObject.Logger($"{valueType} member {GetMemberName(info, pi, count, member)} item type {val.GetType()} is not validatable");
+                }
+#endif
             }
             return res;
         }
@@ -107,9 +137,20 @@ namespace wan24.ObjectValidation
             string? member = null
             )
         {
-            bool res = true;// Overall result
+            if (itemType != null && IsAbstractType(itemType)) itemType = null;
+            bool res = true,// Overall result
+                itemValidatable = itemType == null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
             IItemValidationAttribute[]? itemValidations = GetItemValidations(pi, info.ArrayLevel);// Item validations
-            if (IsNoItemValidation(itemValidations)) return res;
+            if (IsNoItemValidation(itemValidations))
+            {
+#if DEBUG
+                ObjectValidation.ValidateObject.Logger($"Skip {valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") item validation (no item validations)");
+#endif
+                return res;
+            }
+#if DEBUG
+            if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
+#endif
             bool itemNullable = (nullabilityInfo != null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>) && IsNullable(nullabilityInfo.GenericTypeArguments[0])) ||
                 (valueType.IsArray && nullabilityInfo?.ElementType != null && IsNullable(nullabilityInfo.ElementType)) ||
                 pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) != null;// If items are nullable
@@ -123,7 +164,7 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (a non-null value is required)",
+                            $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (a non-NULL value is required)",
                             new string[] { GetMemberName(info, pi, count, member) }
                             ));
                     }
@@ -134,8 +175,16 @@ namespace wan24.ObjectValidation
                     continue;
                 }
                 res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
-                if (!(itemType ?? val.GetType()).IsValueType)
+                if (itemValidatable && (itemType != null || ValidatableTypes.IsTypeValidatable(val.GetType())))
+                {
                     res &= ValidateObject(info, val, validationResults, GetMemberName(info, pi, count, member), throwOnError, serviceProvider: serviceProvider);
+                }
+#if DEBUG
+                else if(itemType == null)
+                {
+                    ObjectValidation.ValidateObject.Logger($"{valueType} member {GetMemberName(info, pi, count, member)} item type {val.GetType()} is not validatable");
+                }
+#endif
             }
             return res;
         }
@@ -165,23 +214,35 @@ namespace wan24.ObjectValidation
         {
             ValidationContext context = new(pi, serviceProvider, items: null) { MemberName = member };// Validation context
             ValidationResult? result;// Validation result
+            ValidationResult[] multiResults;// Multiplevalidation results
             bool res = true;// Overall result
             // Default validations
             foreach (IItemValidationAttribute attr in attrs)
-            {
-                if ((result = attr.GetValidationResult(value, context, serviceProvider)) == null) continue;
-                res = false;
-                validationResults.Add(result);
-            }
+                if (attr is IMultipleValidations multiValidation)
+                {
+                    multiResults = multiValidation.MultiValidation(value, context, serviceProvider).ToArray();
+                    if (multiResults.Length == 0) continue;
+                    res = false;
+                    validationResults.AddRange(multiResults);
+                }
+                else
+                {
+                    if ((result = attr.GetValidationResult(value, context, serviceProvider)) == null) continue;
+                    res = false;
+                    validationResults.Add(result);
+                }
             // Deep array validation
             if (value != null && (pi.GetCustomAttribute<ItemNoValidationAttribute>(inherit: true)?.ArrayLevel ?? -1) != info.ArrayLevel + 1)
             {
                 ValidationInfo nestedInfo = info.GetClone();
                 nestedInfo.ArrayLevel++;
                 Type valueType = value.GetType();// Value type
+                bool valueValidatable = ValidatableTypes.IsTypeValidatable(valueType);// If the value type is validatable
+#pragma warning disable IDE0018 // Declare inline
                 Type? keyType,// Dictionary key type
                     itemType;// Item type
-                int seenIndex = 0;// Seen index
+#pragma warning restore IDE0018 // Declare inline
+                int seenIndex;// Seen index
                 if (AsDictionary(value, out keyType, out itemType) is IDictionary dict)
                 {
                     seenIndex = info.Seen.Count;
@@ -196,7 +257,7 @@ namespace wan24.ObjectValidation
                         info.Seen.RemoveAt(seenIndex);
                     }
                 }
-                else if (value is Array arr && valueType.IsArray && valueType.GetElementType() != null)
+                else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() != null)
                 {
                     seenIndex = info.Seen.Count;
                     info.Seen.Add(arr);
@@ -224,7 +285,7 @@ namespace wan24.ObjectValidation
                         info.Seen.RemoveAt(seenIndex);
                     }
                 }
-                else if (value is ICollection col)
+                else if (valueValidatable && value is ICollection col)
                 {
                     seenIndex = info.Seen.Count;
                     info.Seen.Add(col);
@@ -238,7 +299,7 @@ namespace wan24.ObjectValidation
                         info.Seen.RemoveAt(seenIndex);
                     }
                 }
-                else if (value is IEnumerable enumerable)
+                else if (valueValidatable && value is IEnumerable enumerable)
                 {
                     seenIndex = info.Seen.Count;
                     info.Seen.Add(enumerable);
@@ -252,6 +313,14 @@ namespace wan24.ObjectValidation
                         info.Seen.RemoveAt(seenIndex);
                     }
                 }
+#if DEBUG
+                else
+                {
+                    ObjectValidation.ValidateObject.Logger(
+                        $"Can't validate item {member} type {valueType} of property {pi.DeclaringType}.{pi.Name} value (not validatable {pi.PropertyType} value)"
+                        );
+                }
+#endif
             }
             return res;
         }

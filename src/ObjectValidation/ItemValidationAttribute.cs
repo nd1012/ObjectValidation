@@ -45,13 +45,18 @@ namespace wan24.ObjectValidation
         /// </summary>
         public ValidationAttribute ValidationAttribute { get; }
 
-        /// <summary>
-        /// Target array level
-        /// </summary>
+        /// <inheritdoc/>
         public int ArrayLevel { get; set; }
 
         /// <inheritdoc/>
         public virtual ValidationResult? GetValidationResult(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider)
             => ValidationAttribute.GetValidationResult(value, validationContext);
+
+        /// <inheritdoc/>
+        public virtual IEnumerable<ValidationResult> MultiValidation(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider = null)
+        {
+            if (GetValidationResult(value, validationContext, serviceProvider) is ValidationResult result)
+                yield return result;
+        }
     }
 }

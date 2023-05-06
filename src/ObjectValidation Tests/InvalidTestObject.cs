@@ -6,6 +6,8 @@
         {
             StringProperty = "test";
             ValidatedStringProperty = "test123";
+            ReferencedStringProperty = "test123";
+            TemplateStringProperty = "test123";
             NotValidatedStringProperty = "TEST";
             IntProperty = 0;
             RequiredProperty = null;
@@ -22,6 +24,12 @@
             DictProperty2["test"] = null!;
             DictProperty2["test2"] = "test123";
             DictProperty2["test123"] = "test123";
+            ReferencedDictProperty["test"] = null!;
+            ReferencedDictProperty["test2"] = "test123";
+            ReferencedDictProperty["test123"] = "test123";
+            TemplateDictProperty["test"] = null!;
+            TemplateDictProperty["test2"] = "test123";
+            TemplateDictProperty["test123"] = "test123";
             ListProperty2[0] = null!;
             ListProperty2[1] = "test123";
             ArrProperty2[0] = null!;
