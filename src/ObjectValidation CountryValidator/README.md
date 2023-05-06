@@ -24,6 +24,8 @@ enumerable lengths
 - XML validation
 - Conditional value requirements
 - Enumeration value validation
+- Validation references
+- Validation templates (also conditional)
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -78,6 +80,8 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | Conditional value requirement | `RequiredIfAttribute` |
 | Allowed/denied values | `AllowedValuesAttribute`, `DeniedValuesAttribute` |
 | Enumeration value | (none - using the type) |
+| Validation references | `ValidationReferenceAttribute` |
+| Validation templates | `ValidationTemplateAttribute`, `ValidationTemplateIfAttribute` |
 
 ## Deep object validation
 
@@ -306,6 +310,10 @@ These item validation adapters exist:
 | `AllowedValuesAttribute` | `ItemAllowedValuesAttribute` |
 | `DeniedValuesAttribute` | `ItemDeniedValuesAttribute` |
 | `CustomValidationAttribute` | `ItemCustomValidationAttribute` |
+| `ValidationReferenceAttribute` | `ItemValidationReferenceAttribute` |
+| `ValidationReferenceIfAttribute` | `ItemValidationReferenceIfAttribute` |
+| `ValidationTemplateAttribute` | `ItemValidationTemplateAttribute` |
+| `ValidationTemplateIfAttribute` | `ItemValidationTemplateIfAttribute` |
 
 You can use the `ItemNoValidationAttribute` at the class level to prevent from 
 validating and dictionary or list contents.
@@ -329,6 +337,109 @@ validated by checking if
 - the value is an undefined enumeration value
 
 This ensures, that only defined enumeration (flag) values can be used.
+
+## Validation references
+
+Using a validation reference attribute you can inherit validation attributes 
+from another property, and even from another type:
+
+```cs
+public class A
+{
+    [StringLength(3)]
+    public string Property { get; set; } = string.Empty;
+}
+
+public class B
+{
+    [ValidationReference(typeof(A), nameof(A.Property))]
+    public string Property { get; set; } = string.Empty;
+}
+
+B obj = new()
+{
+    Property = "1234"
+};
+obj.ValidateObject();// Will fail, 'cause A.Property limits the string length to 3 characters
+```
+
+Now `B.Property` uses the validation attributes from `A.Property`.
+
+**CAUTION**: Attributes which would skip property/item validation will be 
+ignored!
+
+**NOTE**: The validation will fail with the first validation result of an 
+attribute from the target property.
+
+## Validation templates
+
+Similar to validation references you can use validation templates, which are 
+not bound to another existing property, but managed in the 
+`ValidationTemplates` class:
+
+```cs
+// Define a property validation template
+ValidationTemplates.PropertyValidations["Template name"] = new()
+{
+    new StringLengthAttribute(3)
+};
+
+// Apply the template
+public class YourType
+{
+    [ValidationTemplate("Template name")]
+    public string Property { get; set; } = string.Empty;
+}
+
+YourType obj = new()
+{
+    Property = "1234"
+};
+obj.ValidateObject();// Will fail, 'cause the validation template limits the string length to 3 characters
+```
+
+The same is also available for item validation, using the 
+`ValidationTemplates.ItemValidations` store, and the 
+`ItemValidationTemplateAttribute`.
+
+**CAUTION**: Attributes which would skip property/item validation will be 
+ignored!
+
+**NOTE**: The validation will fail with the first validation result of an 
+attribute from the template, if not validated using the ObectValidation 
+methods.
+
+The `ValidationTemplateIfAttribute` allows to apply a template only in case a 
+condition was met (just as with the `RequiredIfAttribute`).
+
+## Deny and force type validation
+
+Using the `ValidatableTypes` class you can define types which are not 
+validated, or which are forced to be vlidated, in addition to the default type 
+filter, which doesn't validate a type if
+
+- it's a non-enum value type
+- it's an array
+- the type was marked with a `NoValidationAttribute` attribute
+
+A denied type can't be forced to be validated.
+
+You can add a generic type definition for generic (final) types, and also 
+abstract types or interfaces. Anyway, when determining if a type should be 
+validated, its generic type definition (if the given type is generic) will 
+be checked, too - but not inherited (maybe abstract) types or interfaces.
+
+Per default these types won't be validated:
+
+- `string`
+- `object`
+- `IQueryable<>`
+
+**NOTE**: `string` and `object` shouldn't be removed from the denied type 
+list!
+
+By attaching to the `ValidatableTypes.OnIsTypeValidatable`, you can make a 
+conditional exception for an usually not validated type.
 
 ## Force to fail with an exception
 
