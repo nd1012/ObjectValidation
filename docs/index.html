@@ -86,6 +86,8 @@ enumerable lengths</li>
 <li>XML validation</li>
 <li>Conditional value requirements</li>
 <li>Enumeration value validation</li>
+<li>Validation references</li>
+<li>Validation templates (also conditional)</li>
 </ul>
 <p>It has been developed with the goal to offer an automatted deep object
 validation with support for deep dictionaries and lists contents, too.</p>
@@ -187,6 +189,14 @@ want to profit from the included general validation attributes for SWIFT etc.</p
 <tr>
 <td>Enumeration value</td>
 <td>(none - using the type)</td>
+</tr>
+<tr>
+<td>Validation references</td>
+<td><code>ValidationReferenceAttribute</code></td>
+</tr>
+<tr>
+<td>Validation templates</td>
+<td><code>ValidationTemplateAttribute</code>, <code>ValidationTemplateIfAttribute</code></td>
 </tr>
 </tbody>
 </table>
@@ -465,6 +475,14 @@ executed in case there's a <code>CountLimitAttribute</code> present.</p>
 <td><code>CustomValidationAttribute</code></td>
 <td><code>ItemCustomValidationAttribute</code></td>
 </tr>
+<tr>
+<td><code>ValidationReferenceAttribute</code></td>
+<td><code>ItemValidationReferenceAttribute</code></td>
+</tr>
+<tr>
+<td><code>ValidationTemplateAttribute</code></td>
+<td><code>ItemValidationTemplateAttribute</code></td>
+</tr>
 </tbody>
 </table>
 <p>You can use the <code>ItemNoValidationAttribute</code> at the class level to prevent from
@@ -485,6 +503,65 @@ validated by checking if</p>
 <li>the value is an undefined enumeration value</li>
 </ul>
 <p>This ensures, that only defined enumeration (flag) values can be used.</p>
+<h2 id="validation-references">Validation references</h2>
+<p>Using a validation reference attribute you can inherit validation attributes
+from another property, and even from another type:</p>
+<pre><code class="lang-cs">public class A
+{
+    [StringLength(3)]
+    public string Property { get; set; } = string.Empty;
+}
+
+public class B
+{
+    [ValidationReference(typeof(A), nameof(A.Property))]
+    public string Property { get; set; } = string.Empty;
+}
+
+B obj = new()
+{
+    Property = &quot;1234&quot;
+};
+obj.ValidateObject();// Will fail, 'cause A.Property limits the string length to 3 characters
+</code></pre>
+<p>Now <code>B.Property</code> uses the validation attributes from <code>A.Property</code>.</p>
+<p><strong>CAUTION</strong>: Attributes which would skip property/item validation will be
+ignored!</p>
+<p><strong>NOTE</strong>: The validation will fail with the first validation result of an
+attribute from the target property.</p>
+<h2 id="validation-templates">Validation templates</h2>
+<p>Similar to validation references you can use validation templates, which are
+not bound to another existing property, but managed in the
+<code>ValidationTemplates</code> class:</p>
+<pre><code class="lang-cs">// Define a property validation template
+ValidationTemplates.PropertyValidations[&quot;Template name&quot;] = new()
+{
+    new StringLengthAttribute(3)
+};
+
+// Apply the template
+public class YourType
+{
+    [ValidationTemplate(&quot;Template name&quot;)]
+    public string Property { get; set; } = string.Empty;
+}
+
+YourType obj = new()
+{
+    Property = &quot;1234&quot;
+};
+obj.ValidateObject();// Will fail, 'cause the validation template limits the string length to 3 characters
+</code></pre>
+<p>The same is also available for item validation, using the
+<code>ValidationTemplates.ItemValidations</code> store, and the
+<code>ItemValidationTemplateAttribute</code>.</p>
+<p><strong>CAUTION</strong>: Attributes which would skip property/item validation will be
+ignored!</p>
+<p><strong>NOTE</strong>: The validation will fail with the first validation result of an
+attribute from the template, if not validated using the ObectValidation
+methods.</p>
+<p>The <code>ValidationTemplateIfAttribute</code> allows to apply a template only in case a
+condition was met (just as with the <code>RequiredIfAttribute</code>).</p>
 <h2 id="force-to-fail-with-an-exception">Force to fail with an exception</h2>
 <p>If you set the parameter <code>throwOnError</code> value to <code>true</code>, the validation will
 throw a <code>ObjectValidationException</code>, as soon as an object was invalidated.</p>

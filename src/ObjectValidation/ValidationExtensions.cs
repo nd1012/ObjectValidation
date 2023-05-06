@@ -23,6 +23,11 @@ namespace wan24.ObjectValidation
         public static int MaxErrors { get; set; } = 200;
 
         /// <summary>
+        /// Ignore errors when calling a public get-only-property getter?
+        /// </summary>
+        public static bool IgnoreGetOnlyErrors { get; set; } = true;
+
+        /// <summary>
         /// Validate an object
         /// </summary>
         /// <param name="obj">Object</param>
