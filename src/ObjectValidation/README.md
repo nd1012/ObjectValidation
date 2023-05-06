@@ -311,7 +311,9 @@ These item validation adapters exist:
 | `DeniedValuesAttribute` | `ItemDeniedValuesAttribute` |
 | `CustomValidationAttribute` | `ItemCustomValidationAttribute` |
 | `ValidationReferenceAttribute` | `ItemValidationReferenceAttribute` |
+| `ValidationReferenceIfAttribute` | `ItemValidationReferenceIfAttribute` |
 | `ValidationTemplateAttribute` | `ItemValidationTemplateAttribute` |
+| `ValidationTemplateIfAttribute` | `ItemValidationTemplateIfAttribute` |
 
 You can use the `ItemNoValidationAttribute` at the class level to prevent from 
 validating and dictionary or list contents.
@@ -409,6 +411,35 @@ methods.
 
 The `ValidationTemplateIfAttribute` allows to apply a template only in case a 
 condition was met (just as with the `RequiredIfAttribute`).
+
+## Deny and force type validation
+
+Using the `ValidatableTypes` class you can define types which are not 
+validated, or which are forced to be vlidated, in addition to the default type 
+filter, which doesn't validate a type if
+
+- it's a non-enum value type
+- it's an array
+- the type was marked with a `NoValidationAttribute` attribute
+
+A denied type can't be forced to be validated.
+
+You can add a generic type definition for generic (final) types, and also 
+abstract types or interfaces. Anyway, when determining if a type should be 
+validated, its generic type definition (if the given type is generic) will 
+be checked, too - but not inherited (maybe abstract) types or interfaces.
+
+Per default these types won't be validated:
+
+- `string`
+- `object`
+- `IQueryable<>`
+
+**NOTE**: `string` and `object` shouldn't be removed from the denied type 
+list!
+
+By attaching to the `ValidatableTypes.OnIsTypeValidatable`, you can make a 
+conditional exception for an usually not validated type.
 
 ## Force to fail with an exception
 
