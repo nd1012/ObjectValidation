@@ -2617,51 +2617,70 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ValidatableObject.ValidatableObject
   nameWithType: ValidatableObject.ValidatableObject
-- uid: wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
-  name: ObjectValidatable(IObjectValidatable)
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_ObjectValidatable_wan24_ObjectValidation_IObjectValidatable_
-  commentId: M:wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
-  fullName: wan24.ObjectValidation.ValidatableObject.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
-  nameWithType: ValidatableObject.ObjectValidatable(IObjectValidatable)
-- uid: wan24.ObjectValidation.ValidatableObject.ObjectValidatable*
-  name: ObjectValidatable
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_ObjectValidatable_
-  commentId: Overload:wan24.ObjectValidation.ValidatableObject.ObjectValidatable
+- uid: wan24.ObjectValidation.ValidatableObjectBase
+  name: ValidatableObjectBase
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html
+  commentId: T:wan24.ObjectValidation.ValidatableObjectBase
+  fullName: wan24.ObjectValidation.ValidatableObjectBase
+  nameWithType: ValidatableObjectBase
+- uid: wan24.ObjectValidation.ValidatableObjectBase.#ctor
+  name: ValidatableObjectBase()
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase__ctor
+  commentId: M:wan24.ObjectValidation.ValidatableObjectBase.#ctor
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.ValidatableObjectBase()
+  nameWithType: ValidatableObjectBase.ValidatableObjectBase()
+- uid: wan24.ObjectValidation.ValidatableObjectBase.#ctor*
+  name: ValidatableObjectBase
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase__ctor_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObjectBase.#ctor
   isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableObject.ObjectValidatable
-  nameWithType: ValidatableObject.ObjectValidatable
-- uid: wan24.ObjectValidation.ValidatableObject.op_Implicit(wan24.ObjectValidation.ValidatableObject)~System.ComponentModel.DataAnnotations.ValidationResult[]
-  name: Implicit(ValidatableObject to ValidationResult[])
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_op_Implicit_wan24_ObjectValidation_ValidatableObject__System_ComponentModel_DataAnnotations_ValidationResult__
-  commentId: M:wan24.ObjectValidation.ValidatableObject.op_Implicit(wan24.ObjectValidation.ValidatableObject)~System.ComponentModel.DataAnnotations.ValidationResult[]
-  name.vb: Widening(ValidatableObject to ValidationResult())
-  fullName: wan24.ObjectValidation.ValidatableObject.Implicit(wan24.ObjectValidation.ValidatableObject to System.ComponentModel.DataAnnotations.ValidationResult[])
-  fullName.vb: wan24.ObjectValidation.ValidatableObject.Widening(wan24.ObjectValidation.ValidatableObject to System.ComponentModel.DataAnnotations.ValidationResult())
-  nameWithType: ValidatableObject.Implicit(ValidatableObject to ValidationResult[])
-  nameWithType.vb: ValidatableObject.Widening(ValidatableObject to ValidationResult())
-- uid: wan24.ObjectValidation.ValidatableObject.op_Implicit*
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.ValidatableObjectBase
+  nameWithType: ValidatableObjectBase.ValidatableObjectBase
+- uid: wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  name: ObjectValidatable(IObjectValidatable)
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_ObjectValidatable_wan24_ObjectValidation_IObjectValidatable_
+  commentId: M:wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable(wan24.ObjectValidation.IObjectValidatable)
+  nameWithType: ValidatableObjectBase.ObjectValidatable(IObjectValidatable)
+- uid: wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable*
+  name: ObjectValidatable
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_ObjectValidatable_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.ObjectValidatable
+  nameWithType: ValidatableObjectBase.ObjectValidatable
+- uid: wan24.ObjectValidation.ValidatableObjectBase.op_Implicit(wan24.ObjectValidation.ValidatableObjectBase)~System.ComponentModel.DataAnnotations.ValidationResult[]
+  name: Implicit(ValidatableObjectBase to ValidationResult[])
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_op_Implicit_wan24_ObjectValidation_ValidatableObjectBase__System_ComponentModel_DataAnnotations_ValidationResult__
+  commentId: M:wan24.ObjectValidation.ValidatableObjectBase.op_Implicit(wan24.ObjectValidation.ValidatableObjectBase)~System.ComponentModel.DataAnnotations.ValidationResult[]
+  name.vb: Widening(ValidatableObjectBase to ValidationResult())
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.Implicit(wan24.ObjectValidation.ValidatableObjectBase to System.ComponentModel.DataAnnotations.ValidationResult[])
+  fullName.vb: wan24.ObjectValidation.ValidatableObjectBase.Widening(wan24.ObjectValidation.ValidatableObjectBase to System.ComponentModel.DataAnnotations.ValidationResult())
+  nameWithType: ValidatableObjectBase.Implicit(ValidatableObjectBase to ValidationResult[])
+  nameWithType.vb: ValidatableObjectBase.Widening(ValidatableObjectBase to ValidationResult())
+- uid: wan24.ObjectValidation.ValidatableObjectBase.op_Implicit*
   name: Implicit
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_op_Implicit_
-  commentId: Overload:wan24.ObjectValidation.ValidatableObject.op_Implicit
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_op_Implicit_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObjectBase.op_Implicit
   isSpec: "True"
   name.vb: Widening
-  fullName: wan24.ObjectValidation.ValidatableObject.Implicit
-  fullName.vb: wan24.ObjectValidation.ValidatableObject.Widening
-  nameWithType: ValidatableObject.Implicit
-  nameWithType.vb: ValidatableObject.Widening
-- uid: wan24.ObjectValidation.ValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.Implicit
+  fullName.vb: wan24.ObjectValidation.ValidatableObjectBase.Widening
+  nameWithType: ValidatableObjectBase.Implicit
+  nameWithType.vb: ValidatableObjectBase.Widening
+- uid: wan24.ObjectValidation.ValidatableObjectBase.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
   name: Validate(ValidationContext)
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_Validate_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.ValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.ValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidatableObject.Validate(ValidationContext)
-- uid: wan24.ObjectValidation.ValidatableObject.Validate*
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_Validate_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.ValidatableObjectBase.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.Validate(System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidatableObjectBase.Validate(ValidationContext)
+- uid: wan24.ObjectValidation.ValidatableObjectBase.Validate*
   name: Validate
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject_Validate_
-  commentId: Overload:wan24.ObjectValidation.ValidatableObject.Validate
+  href: api/wan24.ObjectValidation.ValidatableObjectBase.html#wan24_ObjectValidation_ValidatableObjectBase_Validate_
+  commentId: Overload:wan24.ObjectValidation.ValidatableObjectBase.Validate
   isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableObject.Validate
-  nameWithType: ValidatableObject.Validate
+  fullName: wan24.ObjectValidation.ValidatableObjectBase.Validate
+  nameWithType: ValidatableObjectBase.Validate
 - uid: wan24.ObjectValidation.ValidatableTypes
   name: ValidatableTypes
   href: api/wan24.ObjectValidation.ValidatableTypes.html

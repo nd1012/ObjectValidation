@@ -480,8 +480,16 @@ executed in case there's a <code>CountLimitAttribute</code> present.</p>
 <td><code>ItemValidationReferenceAttribute</code></td>
 </tr>
 <tr>
+<td><code>ValidationReferenceIfAttribute</code></td>
+<td><code>ItemValidationReferenceIfAttribute</code></td>
+</tr>
+<tr>
 <td><code>ValidationTemplateAttribute</code></td>
 <td><code>ItemValidationTemplateAttribute</code></td>
+</tr>
+<tr>
+<td><code>ValidationTemplateIfAttribute</code></td>
+<td><code>ItemValidationTemplateIfAttribute</code></td>
 </tr>
 </tbody>
 </table>
@@ -562,6 +570,30 @@ attribute from the template, if not validated using the ObectValidation
 methods.</p>
 <p>The <code>ValidationTemplateIfAttribute</code> allows to apply a template only in case a
 condition was met (just as with the <code>RequiredIfAttribute</code>).</p>
+<h2 id="deny-and-force-type-validation">Deny and force type validation</h2>
+<p>Using the <code>ValidatableTypes</code> class you can define types which are not
+validated, or which are forced to be vlidated, in addition to the default type
+filter, which doesn't validate a type if</p>
+<ul>
+<li>it's a non-enum value type</li>
+<li>it's an array</li>
+<li>the type was marked with a <code>NoValidationAttribute</code> attribute</li>
+</ul>
+<p>A denied type can't be forced to be validated.</p>
+<p>You can add a generic type definition for generic (final) types, and also
+abstract types or interfaces. Anyway, when determining if a type should be
+validated, its generic type definition (if the given type is generic) will
+be checked, too - but not inherited (maybe abstract) types or interfaces.</p>
+<p>Per default these types won't be validated:</p>
+<ul>
+<li><code>string</code></li>
+<li><code>object</code></li>
+<li><code>IQueryable&lt;&gt;</code></li>
+</ul>
+<p><strong>NOTE</strong>: <code>string</code> and <code>object</code> shouldn't be removed from the denied type
+list!</p>
+<p>By attaching to the <code>ValidatableTypes.OnIsTypeValidatable</code>, you can make a
+conditional exception for an usually not validated type.</p>
 <h2 id="force-to-fail-with-an-exception">Force to fail with an exception</h2>
 <p>If you set the parameter <code>throwOnError</code> value to <code>true</code>, the validation will
 throw a <code>ObjectValidationException</code>, as soon as an object was invalidated.</p>

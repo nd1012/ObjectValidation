@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
-//TODO --> ValidatableObjectBase
-
 namespace wan24.ObjectValidation
 {
     /// <summary>

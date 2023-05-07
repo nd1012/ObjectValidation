@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8QPVz60Bebs42DYm+nAhikkEKmq1v2NbmWjFf2MNheQ="
+          "hash": "zJ7PFAMluPI8UClGPntKDd0RLUQVO4+8bwku40HUmbE="
         }
       },
       "is_incremental": false,
@@ -873,7 +873,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidatableObject.html",
-          "hash": "DmG+mM1O5oO1e5aTqaiM1DcOkpesROusHNxjAne45gA="
+          "hash": "PNLKnaQ+f8PUJl1YTz7t/12eZIiH4uv7LiS9bSHFOZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidatableObjectBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidatableObjectBase.html",
+          "hash": "Hh+iDZJeE4/pcWEjbvpmT1ggKGlV1IIGSnqIYkUiwuE="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "FJ+sWRUqIYcQai6XvYQMIBmyQxKcAbIMUJzQPXDGiDU="
+          "hash": "NNJhz1NoG2Zpv6MwiJNtnsQnWt06J4V0sKU579BH7qY="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OrY8QWxiSowRzgI7sxcJRQBWPMBs6ZnThT9QUahibbE="
+          "hash": "iu+ZHew8d8BlisQYXsL0qaEjA06ms29n8B+00LjzYvU="
         }
       },
       "is_incremental": false,
@@ -1128,7 +1140,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 86,
+          "total_file_count": 87,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
