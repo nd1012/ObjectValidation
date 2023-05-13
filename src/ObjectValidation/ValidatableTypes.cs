@@ -23,7 +23,7 @@ namespace wan24.ObjectValidation
         static ValidatableTypes()
         {
             ForcedTypes = new();
-            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>) });
+            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>), typeof(Type) });
         }
 
         /// <summary>
