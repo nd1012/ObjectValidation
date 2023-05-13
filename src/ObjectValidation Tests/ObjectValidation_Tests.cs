@@ -1,8 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using wan24.ObjectValidation;
 
-//TODO Add ValidationTemplateIf tests
-
 namespace ObjectValidation_Tests
 {
     [TestClass]
