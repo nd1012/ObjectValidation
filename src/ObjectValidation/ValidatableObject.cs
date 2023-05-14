@@ -9,6 +9,6 @@
         /// <summary>
         /// Constructor
         /// </summary>
-        protected ValidatableObject() { }
+        protected ValidatableObject() : base() { }
     }
 }
