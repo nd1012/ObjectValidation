@@ -26,7 +26,7 @@ namespace ObjectValidation_Tests
         [MinLength(3), MaxLength(5), RegularExpression("^[a-z]{3,5}$")]
         public string NotValidatedStringProperty { get; set; } = "test";
 
-        [NoValidation]
+        [NoValidation(skipNullValueCheck: true)]
         public string IgnoredStringProperty { get; set; } = null!;
 
         [Range(1, 5)]
@@ -35,7 +35,7 @@ namespace ObjectValidation_Tests
         [Required]
         public string? RequiredProperty { get; set; } = "test";
 
-        [CountLimit(1,2)]
+        [CountLimit(1, 2)]
         public Dictionary<string, object> DictPropertyValue { get; set; } = new()
         {
             {"a",new() },
@@ -125,7 +125,7 @@ namespace ObjectValidation_Tests
             "test2"
         }.AsEnumerable();
 
-        [ItemNoValidation]
+        [ItemNoValidation(skipNullValueCheck: true)]
         public string[] ItemIgnoredProperty { get; set; } = new string[]
         {
             "test",

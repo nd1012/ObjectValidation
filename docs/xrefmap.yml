@@ -1367,6 +1367,12 @@ references:
   commentId: T:wan24.ObjectValidation.ItemNoValidationAttribute
   fullName: wan24.ObjectValidation.ItemNoValidationAttribute
   nameWithType: ItemNoValidationAttribute
+- uid: wan24.ObjectValidation.ItemNoValidationAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemNoValidationAttribute(Boolean, ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemNoValidationAttribute.html#wan24_ObjectValidation_ItemNoValidationAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemNoValidationAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemNoValidationAttribute.ItemNoValidationAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemNoValidationAttribute.ItemNoValidationAttribute(Boolean, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemNoValidationAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
   name: ItemNoValidationAttribute(ItemValidationTargets)
   href: api/wan24.ObjectValidation.ItemNoValidationAttribute.html#wan24_ObjectValidation_ItemNoValidationAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
@@ -2201,12 +2207,12 @@ references:
   commentId: T:wan24.ObjectValidation.NoValidationAttribute
   fullName: wan24.ObjectValidation.NoValidationAttribute
   nameWithType: NoValidationAttribute
-- uid: wan24.ObjectValidation.NoValidationAttribute.#ctor
-  name: NoValidationAttribute()
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute__ctor
-  commentId: M:wan24.ObjectValidation.NoValidationAttribute.#ctor
-  fullName: wan24.ObjectValidation.NoValidationAttribute.NoValidationAttribute()
-  nameWithType: NoValidationAttribute.NoValidationAttribute()
+- uid: wan24.ObjectValidation.NoValidationAttribute.#ctor(System.Boolean)
+  name: NoValidationAttribute(Boolean)
+  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute__ctor_System_Boolean_
+  commentId: M:wan24.ObjectValidation.NoValidationAttribute.#ctor(System.Boolean)
+  fullName: wan24.ObjectValidation.NoValidationAttribute.NoValidationAttribute(System.Boolean)
+  nameWithType: NoValidationAttribute.NoValidationAttribute(Boolean)
 - uid: wan24.ObjectValidation.NoValidationAttribute.#ctor*
   name: NoValidationAttribute
   href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute__ctor_
@@ -2227,6 +2233,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.NoValidationAttribute.IsValid
   nameWithType: NoValidationAttribute.IsValid
+- uid: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
+  name: SkipNullValueCheck
+  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_SkipNullValueCheck
+  commentId: P:wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
+  fullName: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
+  nameWithType: NoValidationAttribute.SkipNullValueCheck
+- uid: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck*
+  name: SkipNullValueCheck
+  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_SkipNullValueCheck_
+  commentId: Overload:wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
+  nameWithType: NoValidationAttribute.SkipNullValueCheck
 - uid: wan24.ObjectValidation.ObjectValidationEventArgs
   name: ObjectValidationEventArgs
   href: api/wan24.ObjectValidation.ObjectValidationEventArgs.html

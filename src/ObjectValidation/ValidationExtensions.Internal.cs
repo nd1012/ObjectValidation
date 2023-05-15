@@ -81,7 +81,7 @@ namespace wan24.ObjectValidation
                     if (res &= allResults.Count == 0) return true;
                     RaiseEvent(OnObjectValidationFailed, info.Seen, obj, validationResults, allResults, member, throwOnError, members, res);
                     string error = $"Object validation of {type} {contextInfo} failed with {allResults.Count} error(s)";
-                    if (throwOnError) throw new ObjectValidationException(allResults,error);
+                    if (throwOnError) throw new ObjectValidationException(allResults, error);
                     ObjectValidation.ValidateObject.Logger(error);
                     return false;
                 }
@@ -164,11 +164,14 @@ namespace wan24.ObjectValidation
                     ValidationResult[] multiValidationResults;// Multiple validation results
                     bool propFailed = true,// If the property validation failed
                         loopCancelled = false,// If the property validation loop was cancelled
+                        noValidation,// Property value validation disabled?
                         noItemValidation = (type.GetCustomAttribute<ItemNoValidationAttribute>(inherit: true)?.ArrayLevel ?? -1)
                             == info.ArrayLevel,// Property value item validation disabled?
+                        onlyItemNullValueChecks,// If value items should only be checked for nullability
                         valueValidatable;// If the property value is validatable
                     NullabilityInfoContext nullabilityContext = new();// Context for nullable validation
                     NullabilityInfo nullabilityInfo;// Nullability info
+                    NoValidationAttribute? noValidationAttr;// No validation attribute
                     foreach (PropertyInfo pi in from pi in type.GetProperties(BindingFlags.Instance | BindingFlags.Public)
                                                     // Included
                                                 where (members?.Contains(pi.Name) ?? true) &&
@@ -224,10 +227,12 @@ namespace wan24.ObjectValidation
                             }
                             // Default property validation
                             validationAttrs = pi.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
+                            noValidationAttr = (NoValidationAttribute?)validationAttrs.FirstOrDefault(a => a is NoValidationAttribute);
+                            noValidation = noValidationAttr != null;
                             if (isObjectValidatable)
                             {
                                 res &= Validator.TryValidateProperty(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, validationResults);
-                                if (validationAttrs.Any(a => a is NoValidationAttribute))
+                                if (noValidation && noValidationAttr!.SkipNullValueCheck)
                                 {
 #if DEBUG
                                     ObjectValidation.ValidateObject.Logger($"Skip {type}.{memberName} {contextInfo} value validation (disabled by {typeof(NoValidationAttribute)})");
@@ -236,13 +241,14 @@ namespace wan24.ObjectValidation
                                 }
                             }
                             // Multiple validation attributes
-                            foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
-                            {
-                                multiValidationResults = attr.MultiValidation(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, serviceProvider).ToArray();
-                                if (multiValidationResults.Length == 0) continue;
-                                res = false;
-                                validationResults.AddRange(multiValidationResults);
-                            }
+                            if (!isObjectValidatable)
+                                foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                                {
+                                    multiValidationResults = attr.MultiValidation(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, serviceProvider).ToArray();
+                                    if (multiValidationResults.Length == 0) continue;
+                                    res = false;
+                                    validationResults.AddRange(multiValidationResults);
+                                }
                             // Ensure a valid value (shouldn't be NULL, if the property type isn't nullable) and skip NULL values
                             nullabilityInfo = nullabilityContext.Create(pi.GetMethod!.ReturnParameter);
                             if (value == null)
@@ -258,9 +264,15 @@ namespace wan24.ObjectValidation
                                 }
                                 continue;
                             }
+                            if (isObjectValidatable) continue;
                             // Deep object validation
                             valueType = value.GetType();
-                            if (valueType.GetCustomAttributes(inherit: true).Any(a => a is NoValidationAttribute || a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE))
+                            noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributes(inherit: true).FirstOrDefault(a => a is NoValidationAttribute);
+                            onlyItemNullValueChecks = noValidationAttr != null && !noValidationAttr.SkipNullValueCheck;
+                            if (
+                                !(noValidationAttr?.SkipNullValueCheck ?? false) &&
+                                valueType.GetCustomAttributes(inherit: true).Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
+                                )
                             {
 #if DEBUG
                                 ObjectValidation.ValidateObject.Logger($"Skip {type}.{memberName} {contextInfo} value validation (disabled by attribute)");
@@ -268,30 +280,64 @@ namespace wan24.ObjectValidation
                                 continue;
                             }
                             valueValidatable = ValidatableTypes.IsTypeValidatable(valueType);
-                            if (!noItemValidation)
+                            if (!noItemValidation || onlyItemNullValueChecks)
                             {
                                 if (AsDictionary(value, out keyType, out itemType) is IDictionary dict)
                                 {
-                                    res &= ValidateDictionary(info, pi, dict, valueType, keyType!, itemType!, nullabilityInfo, validationResults, serviceProvider, throwOnError);
+                                    res &= ValidateDictionary(
+                                        info,
+                                        pi,
+                                        dict,
+                                        valueType,
+                                        keyType!,
+                                        itemType!,
+                                        nullabilityInfo,
+                                        validationResults,
+                                        serviceProvider,
+                                        onlyItemNullValueChecks,
+                                        throwOnError
+                                        );
                                     continue;
                                 }
                                 else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() != null)
                                 {
-                                    res &= ValidateList(info, pi, arr, valueType, valueType.GetElementType(), nullabilityInfo, validationResults, serviceProvider, throwOnError);
+                                    res &= ValidateList(
+                                        info,
+                                        pi,
+                                        arr,
+                                        valueType,
+                                        valueType.GetElementType(),
+                                        nullabilityInfo,
+                                        validationResults,
+                                        serviceProvider,
+                                        onlyItemNullValueChecks,
+                                        throwOnError
+                                        );
                                     continue;
                                 }
                                 else if (AsList(value, out itemType) is IList list)
                                 {
-                                    res &= ValidateList(info, pi, list, valueType, itemType, nullabilityInfo, validationResults, serviceProvider, throwOnError);
+                                    res &= ValidateList(info, pi, list, valueType, itemType, nullabilityInfo, validationResults, serviceProvider, onlyItemNullValueChecks, throwOnError);
                                     continue;
                                 }
                                 else if (valueValidatable && value is ICollection col)
                                 {
-                                    res &= ValidateList(info, pi, col, valueType, itemType, nullabilityInfo, validationResults, serviceProvider, throwOnError);
+                                    res &= ValidateList(info, pi, col, valueType, itemType, nullabilityInfo, validationResults, serviceProvider, onlyItemNullValueChecks, throwOnError);
                                 }
                                 else if (valueValidatable && value is IEnumerable enumerable)
                                 {
-                                    res &= ValidateList(info, pi, enumerable, valueType, itemType: null, nullabilityInfo, validationResults, serviceProvider, throwOnError);
+                                    res &= ValidateList(
+                                        info,
+                                        pi,
+                                        enumerable,
+                                        valueType,
+                                        itemType: null,
+                                        nullabilityInfo,
+                                        validationResults,
+                                        serviceProvider,
+                                        onlyItemNullValueChecks,
+                                        throwOnError
+                                        );
                                 }
                             }
 #if DEBUG
@@ -304,7 +350,7 @@ namespace wan24.ObjectValidation
 #endif
                             if (valueValidatable)
                             {
-                                res &= ValidateObject(info, value, validationResults, pi.Name, throwOnError, serviceProvider: serviceProvider);
+                                if (!onlyItemNullValueChecks) res &= ValidateObject(info, value, validationResults, pi.Name, throwOnError, serviceProvider: serviceProvider);
                             }
 #if DEBUG
                             else

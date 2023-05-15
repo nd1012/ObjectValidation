@@ -1,7 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-//TODO Optional skip NULL value check
-
 namespace wan24.ObjectValidation
 {
     /// <summary>
@@ -13,12 +11,13 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Constructor
         /// </summary>
-        public NoValidationAttribute() : base() { }
-        
+        /// <param name="skipNullValueCheck">Skip the <see langword="null"/> value check(s)?</param>
+        public NoValidationAttribute(bool skipNullValueCheck = false) : base() => SkipNullValueCheck = skipNullValueCheck;
+
         /// <summary>
         /// Skip the <see langword="null"/> value check(s)?
         /// </summary>
-        public bool SkipNullValueCheck { get; set; }
+        public bool SkipNullValueCheck { get; }
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext) => null;

@@ -19,6 +19,7 @@ namespace wan24.ObjectValidation
         /// <param name="nullabilityInfo">Nullability info</param>
         /// <param name="validationResults">Validation results</param>
         /// <param name="serviceProvider">Service provider</param>
+        /// <param name="onlyNullCheck">Only <see langword="null"/> checks?</param>
         /// <param name="throwOnError">Throw an exception on error?</param>
         /// <param name="member">Member name</param>
         /// <returns>Overall result</returns>
@@ -32,6 +33,7 @@ namespace wan24.ObjectValidation
             NullabilityInfo? nullabilityInfo,
             List<ValidationResult> validationResults,
             IServiceProvider? serviceProvider,
+            bool onlyNullCheck,
             bool throwOnError,
             string? member = null
             )
@@ -41,30 +43,31 @@ namespace wan24.ObjectValidation
             bool res = true,// Overall result
                 keyValidatable = keyType == null || ValidatableTypes.IsTypeValidatable(keyType),// If the key is validatable
                 itemValidatable = itemType == null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
-            IItemValidationAttribute[]? keyValidations = GetItemValidations(pi, info.ArrayLevel, ItemValidationTargets.Key);// Key validations
-            if (IsNoItemValidation(keyValidations)) keyValidations = null;
-            IItemValidationAttribute[]? valueValidations = GetItemValidations(pi, info.ArrayLevel);// Value validations
-            if (IsNoItemValidation(valueValidations)) valueValidations = null;
-            if (keyValidations == null && valueValidations == null)
+            IItemValidationAttribute[] keyValidations = onlyNullCheck
+                ? Array.Empty<IItemValidationAttribute>()
+                : GetItemValidations(pi, info.ArrayLevel, ItemValidationTargets.Key);// Key validations
+            if (keyValidations.Length != 0 && IsNoItemValidation(keyValidations)) keyValidations = Array.Empty<IItemValidationAttribute>();
+            IItemValidationAttribute[] valueValidations = onlyNullCheck
+                ? Array.Empty<IItemValidationAttribute>()
+                : GetItemValidations(pi, info.ArrayLevel);// Value validations
+            if (valueValidations.Length != 0 && IsNoItemValidation(valueValidations, ref onlyNullCheck)) valueValidations = Array.Empty<IItemValidationAttribute>();
+#if DEBUG
+            if (!onlyNullCheck)
             {
-#if DEBUG
-                ObjectValidation.ValidateObject.Logger($"Skip {valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") key/item validation (no key/item validations)");
-#endif
-                return res;
+                if (!keyValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") keys are not validatable");
+                if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
             }
-#if DEBUG
-            if (!keyValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") keys are not validatable");
-            if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
 #endif
             bool valueNullable = (nullabilityInfo != null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Dictionary<,>) && IsNullable(nullabilityInfo.GenericTypeArguments[1])) ||
                 pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) != null;// If values are nullable
+            if (valueNullable && onlyNullCheck) return res;
             int count = 0;// Key/value pair count
             object? val;// Value
             foreach (object key in dict.Keys)
             {
                 count++;
                 // Key validations
-                if (keyValidations != null)
+                if (keyValidations.Length != 0)
                     res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, ItemValidationTargets.Key, isDict: true), key, keyValidations, serviceProvider, validationResults, throwOnError);
                 if (keyValidatable && (keyType != null || ValidatableTypes.IsTypeValidatable(key.GetType())))
                 {
@@ -88,13 +91,14 @@ namespace wan24.ObjectValidation
                             new string[] { GetMemberName(info, pi, count, member, isDict: true) }
                             ));
                     }
-                    else if (valueValidations != null)
+                    else if (valueValidations.Length != 0)
                     {
                         res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, isDict: true), val, valueValidations, serviceProvider, validationResults, throwOnError);
                     }
                     continue;
                 }
-                if (valueValidations != null)
+                if (onlyNullCheck) continue;
+                if (valueValidations.Length != 0)
                     res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member, isDict: true), val, valueValidations, serviceProvider, validationResults, throwOnError);
                 if (itemValidatable && (itemType != null || ValidatableTypes.IsTypeValidatable(val.GetType())))
                 {
@@ -121,6 +125,7 @@ namespace wan24.ObjectValidation
         /// <param name="nullabilityInfo">Nullability info</param>
         /// <param name="validationResults">Validation results</param>
         /// <param name="serviceProvider">Service provider</param>
+        /// <param name="onlyNullCheck">Only <see langword="null"/> checks?</param>
         /// <param name="throwOnError">Throw an exception on error?</param>
         /// <param name="member">Member name</param>
         /// <returns>Overall result</returns>
@@ -133,27 +138,29 @@ namespace wan24.ObjectValidation
             NullabilityInfo? nullabilityInfo,
             List<ValidationResult> validationResults,
             IServiceProvider? serviceProvider,
+            bool onlyNullCheck,
             bool throwOnError,
             string? member = null
             )
         {
             if (itemType != null && IsAbstractType(itemType)) itemType = null;
+            IItemValidationAttribute[] itemValidations = onlyNullCheck
+                ? Array.Empty<IItemValidationAttribute>()
+                : GetItemValidations(pi, info.ArrayLevel);// Item validations
             bool res = true,// Overall result
                 itemValidatable = itemType == null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
-            IItemValidationAttribute[]? itemValidations = GetItemValidations(pi, info.ArrayLevel);// Item validations
-            if (IsNoItemValidation(itemValidations))
+            if (itemValidations.Length != 0 && IsNoItemValidation(itemValidations, ref onlyNullCheck)) itemValidations = Array.Empty<IItemValidationAttribute>();
+            if (!itemValidatable && !onlyNullCheck)
             {
 #if DEBUG
-                ObjectValidation.ValidateObject.Logger($"Skip {valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") item validation (no item validations)");
+                ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
 #endif
-                return res;
+                if (itemValidations.Length == 0) return res;
             }
-#if DEBUG
-            if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
-#endif
             bool itemNullable = (nullabilityInfo != null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>) && IsNullable(nullabilityInfo.GenericTypeArguments[0])) ||
                 (valueType.IsArray && nullabilityInfo?.ElementType != null && IsNullable(nullabilityInfo.ElementType)) ||
                 pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) != null;// If items are nullable
+            if (itemNullable && onlyNullCheck) return res;
             int count = 0;// Item count
             foreach (object? val in list)
             {
@@ -168,19 +175,21 @@ namespace wan24.ObjectValidation
                             new string[] { GetMemberName(info, pi, count, member) }
                             ));
                     }
-                    else
+                    else if (itemValidations.Length != 0)
                     {
                         res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
                     }
                     continue;
                 }
-                res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
+                if (onlyNullCheck) continue;
+                if (itemValidations.Length != 0)
+                    res &= ValidateItem(info, pi, GetMemberName(info, pi, count, member), val, itemValidations, serviceProvider, validationResults, throwOnError);
                 if (itemValidatable && (itemType != null || ValidatableTypes.IsTypeValidatable(val.GetType())))
                 {
                     res &= ValidateObject(info, val, validationResults, GetMemberName(info, pi, count, member), throwOnError, serviceProvider: serviceProvider);
                 }
 #if DEBUG
-                else if(itemType == null)
+                else if (itemType == null)
                 {
                     ObjectValidation.ValidateObject.Logger($"{valueType} member {GetMemberName(info, pi, count, member)} item type {val.GetType()} is not validatable");
                 }
@@ -250,7 +259,20 @@ namespace wan24.ObjectValidation
                     try
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateDictionary(nestedInfo, pi, dict, valueType, keyType!, itemType!, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                        res &= ValidateDictionary(
+                            nestedInfo,
+                            pi,
+                            dict,
+                            valueType,
+                            keyType!,
+                            itemType!,
+                            nullabilityInfo: null,
+                            validationResults,
+                            serviceProvider,
+                            onlyNullCheck: false,
+                            throwOnError,
+                            member
+                            );
                     }
                     finally
                     {
@@ -264,7 +286,19 @@ namespace wan24.ObjectValidation
                     try
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, arr, valueType, valueType.GetElementType(), nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                        res &= ValidateList(
+                            nestedInfo,
+                            pi,
+                            arr,
+                            valueType,
+                            valueType.GetElementType(),
+                            nullabilityInfo: null,
+                            validationResults,
+                            serviceProvider,
+                            onlyNullCheck: false,
+                            throwOnError,
+                            member
+                            );
                     }
                     finally
                     {
@@ -278,7 +312,7 @@ namespace wan24.ObjectValidation
                     try
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, list, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                        res &= ValidateList(nestedInfo, pi, list, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, onlyNullCheck: false, throwOnError, member);
                     }
                     finally
                     {
@@ -292,7 +326,7 @@ namespace wan24.ObjectValidation
                     try
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, col, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                        res &= ValidateList(nestedInfo, pi, col, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, onlyNullCheck: false, throwOnError, member);
                     }
                     finally
                     {
@@ -306,7 +340,19 @@ namespace wan24.ObjectValidation
                     try
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, enumerable, valueType, itemType: null, nullabilityInfo: null, validationResults, serviceProvider, throwOnError, member);
+                        res &= ValidateList(
+                            nestedInfo,
+                            pi,
+                            enumerable,
+                            valueType,
+                            itemType: null,
+                            nullabilityInfo: null,
+                            validationResults,
+                            serviceProvider,
+                            onlyNullCheck: false,
+                            throwOnError,
+                            member
+                            );
                     }
                     finally
                     {
@@ -346,6 +392,19 @@ namespace wan24.ObjectValidation
         /// <param name="attrs">Attributes</param>
         /// <returns>Item validation is disabled?</returns>
         internal static bool IsNoItemValidation(IItemValidationAttribute[] attrs) => attrs.Any(a => a is ItemNoValidationAttribute);
+
+        /// <summary>
+        /// Determine if an item validation was disabled
+        /// </summary>
+        /// <param name="attrs">Attributes</param>
+        /// <param name="onlyNullCheck">Only item value <see langword="null"/> check?</param>
+        /// <returns>Item validation is disabled?</returns>
+        internal static bool IsNoItemValidation(IItemValidationAttribute[] attrs, ref bool onlyNullCheck)
+        {
+            if (attrs.FirstOrDefault(a => a is ItemNoValidationAttribute) is not ItemNoValidationAttribute attr) return false;
+            if (!onlyNullCheck && !((NoValidationAttribute)attr.ValidationAttribute).SkipNullValueCheck) onlyNullCheck = true;
+            return true;
+        }
 
         /// <summary>
         /// Get a member name
