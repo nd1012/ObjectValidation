@@ -29,7 +29,7 @@
   <ItemGroup>
     <PackageReference Include="CountryValidator" Version="1.1.3" />
     <PackageReference Include="CountryValidator.DataAnnotations" Version="1.1.3" />
-    <PackageReference Include="ObjectValidation" Version="1.4.0" />
+    <PackageReference Include="ObjectValidation" Version="1.5.0" />
   </ItemGroup>
 
   <ItemGroup>
