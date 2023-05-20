@@ -14,7 +14,7 @@
         /// Constructor
         /// </summary>
         /// <param name="seen">Seen objects</param>
-        public ValidationInfo(List<object>? seen = null) => Seen = seen ?? new();
+        internal ValidationInfo(List<object>? seen = null) => Seen = seen ?? new();
 
         /// <inheritdoc/>
         public List<object> Seen { get; }
@@ -34,10 +34,7 @@
         /// <inheritdoc/>
         public int ArrayLevel { get; set; }
 
-        /// <summary>
-        /// Get a clone
-        /// </summary>
-        /// <returns>Clone</returns>
+        /// <inheritdoc/>
         public ValidationInfo GetClone() => new(Seen)
         {
             CurrentDepth = CurrentDepth,

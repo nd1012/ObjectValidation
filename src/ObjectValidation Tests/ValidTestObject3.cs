@@ -3,7 +3,7 @@ using wan24.ObjectValidation;
 
 namespace ObjectValidation_Tests
 {
-    public class ValidTestObject3 : ValidatableObject
+    public class ValidTestObject3 : ValidatableObjectBase
     {
         public ValidTestObject3() : base() => Recursion = this;
 

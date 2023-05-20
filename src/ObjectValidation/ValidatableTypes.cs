@@ -23,7 +23,7 @@ namespace wan24.ObjectValidation
         static ValidatableTypes()
         {
             ForcedTypes = new();
-            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>) });
+            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>), typeof(Type), typeof(Stream) });
         }
 
         /// <summary>
@@ -38,17 +38,17 @@ namespace wan24.ObjectValidation
             if (res)
             {
                 Type? gtd = type.IsGenericType ? type.GetGenericTypeDefinition() : null;// Generic type definition
-                res = !DeniedTypes.Contains(type) && // Not denied
-                    ( // Not denied generic type definition
-                        gtd == null ||
-                        !DeniedTypes.Contains(gtd)
-                    ) &&
-                    ( // Allowed
-                        ForcedTypes.Contains(type) || // Forced
-                        ( // Forced generic type definition
-                            gtd != null &&
-                            ForcedTypes.Contains(gtd)
-                        ) ||
+                res = ForcedTypes.Contains(type) || // Forced
+                    ( // Forced generic type definition
+                        gtd != null &&
+                        ForcedTypes.Contains(gtd)
+                    ) ||
+                    (
+                        !DeniedTypes.Contains(type) && // Not denied
+                        ( // Not denied generic type definition
+                            gtd == null ||
+                            !DeniedTypes.Contains(gtd)
+                        ) &&
                         !( // Other type restrictions
                             (type.IsValueType && !type.IsEnum) || // Not a non-enum value type
                             type.IsArray || // Not an array

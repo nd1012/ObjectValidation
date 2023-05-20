@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8QPVz60Bebs42DYm+nAhikkEKmq1v2NbmWjFf2MNheQ="
+          "hash": "zJ7PFAMluPI8UClGPntKDd0RLUQVO4+8bwku40HUmbE="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemCompanyTINAttribute.html",
-          "hash": "R7rLHD8Jf+NTvVGKaHUIpKyvoa6PXDWlHH3PFqWYP0A="
+          "hash": "WUJSt+IoxJVlPbewZlLbVKDOQ4QKqIVcxCvid1g848s="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemNoValidationAttribute.html",
-          "hash": "b+9nc3EhHN7mdgtUy7boxuGUcK5ihAOiXXnEcztzwd8="
+          "hash": "sScU+46qXzqwzUuWs/do0M3haYX/XlXvQ8D2TTRRv8A="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemPersonTINAttribute.html",
-          "hash": "YhhI368bT4l2lj98niSuJFoQVFKokz4dfbyKgJ0KYFw="
+          "hash": "aPYzQbJ6pgs6g+uBrCLWooi4b6V/68yTYDChhYDTtWM="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemSSNAttribute.html",
-          "hash": "ofuQF2QF+Gd5ma4Ve6IGrsp6ghyYS1WZULni5cwM8nc="
+          "hash": "5K/5kv0Trpwig5b+zviu12dfzI9Ce5f1uFGx8NXHT5Q="
         }
       },
       "is_incremental": false,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemVATAttribute.html",
-          "hash": "SzkBQdWn0ZWJsTmMYNnNDEKiAMAO9ylIfjKezB+em1I="
+          "hash": "vASVXVqv+LiK4HglPRlGmbUQvWbFIGO8sDlNEHKbsLg="
         }
       },
       "is_incremental": false,
@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ItemZipCodeAttribute.html",
-          "hash": "GYIld/9ZWi6ftmgwRkfncMumo20rUzDN3mvxDvsMwEw="
+          "hash": "RWuqaN6sqkKOa7S5eRBwXkOtSkNhP8cmF3cL9GTB2kY="
         }
       },
       "is_incremental": false,
@@ -813,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.NoValidationAttribute.html",
-          "hash": "tm3sF1PpPSnkE0+CEao7aphNuzQkPaeHpkrXE2A9H54="
+          "hash": "cnEnJaA1qSKgyhVQWmP3tQmk0zs7KS4Nu7TVrkdQoVo="
         }
       },
       "is_incremental": false,
@@ -873,7 +873,19 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.ValidatableObject.html",
-          "hash": "DmG+mM1O5oO1e5aTqaiM1DcOkpesROusHNxjAne45gA="
+          "hash": "PNLKnaQ+f8PUJl1YTz7t/12eZIiH4uv7LiS9bSHFOZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.ValidatableObjectBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.ValidatableObjectBase.html",
+          "hash": "Hh+iDZJeE4/pcWEjbvpmT1ggKGlV1IIGSnqIYkUiwuE="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "FJ+sWRUqIYcQai6XvYQMIBmyQxKcAbIMUJzQPXDGiDU="
+          "hash": "zi+sHw1mKd6T/sSCMUOILDOzSL592RmxEjepGJRILi8="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OrY8QWxiSowRzgI7sxcJRQBWPMBs6ZnThT9QUahibbE="
+          "hash": "iu+ZHew8d8BlisQYXsL0qaEjA06ms29n8B+00LjzYvU="
         }
       },
       "is_incremental": false,
@@ -1128,7 +1140,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 86,
+          "total_file_count": 87,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
