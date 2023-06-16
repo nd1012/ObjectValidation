@@ -379,11 +379,10 @@ namespace wan24.ObjectValidation
         /// <param name="target">Validation target</param>
         /// <returns>Validations</returns>
         internal static IItemValidationAttribute[] GetItemValidations(PropertyInfo pi, int arrayLevel, ItemValidationTargets target = ItemValidationTargets.Item)
-            => (from a in pi.GetCustomAttributes(inherit: true)
-                where a is IItemValidationAttribute iva &&
-                    iva.ValidationTarget == target &&
-                    iva.ArrayLevel == arrayLevel
-                select a as IItemValidationAttribute)
+            => (from a in pi.GetItemValidationAttributes()
+                where a.ValidationTarget == target &&
+                    a.ArrayLevel == arrayLevel
+                select a)
                 .ToArray();
 
         /// <summary>

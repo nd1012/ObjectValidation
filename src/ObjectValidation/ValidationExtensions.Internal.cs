@@ -172,19 +172,15 @@ namespace wan24.ObjectValidation
                     NullabilityInfoContext nullabilityContext = new();// Context for nullable validation
                     NullabilityInfo nullabilityInfo;// Nullability info
                     NoValidationAttribute? noValidationAttr;// No validation attribute
-                    foreach (PropertyInfo pi in from pi in type.GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                    foreach (PropertyInfo pi in from pi in type.GetPropertiesCached()
                                                     // Included
                                                 where (members?.Contains(pi.Name) ?? true) &&
-                                                    // Public getter
-                                                    (pi.GetMethod?.IsPublic ?? false) &&
-                                                    // Not an indexer
-                                                    pi.GetIndexParameters().Length == 0 &&
                                                     // Not excluded
                                                     (
                                                         isObjectValidatable ||
-                                                        !pi.GetCustomAttributes(inherit: true).Any(a => a is NoValidationAttribute)
+                                                        !pi.GetCustomAttributesCached().Any(a => a is NoValidationAttribute)
                                                     ) &&
-                                                    !pi.GetCustomAttributes(inherit: true).Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
+                                                    !pi.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
                                                 orderby pi.Name
                                                 select pi)
                     {
@@ -212,7 +208,7 @@ namespace wan24.ObjectValidation
                             memberName = member == null ? pi.Name : $"{member}.{pi.Name}";
                             try
                             {
-                                value = pi.GetValue(obj);
+                                value = pi.GetGetterDelegate()!(obj);
                             }
                             catch (Exception ex)
                             {
@@ -267,11 +263,11 @@ namespace wan24.ObjectValidation
                             if (isObjectValidatable) continue;
                             // Deep object validation
                             valueType = value.GetType();
-                            noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributes(inherit: true).FirstOrDefault(a => a is NoValidationAttribute);
+                            noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributesCached().FirstOrDefault(a => a is NoValidationAttribute);
                             onlyItemNullValueChecks = noValidationAttr != null && !noValidationAttr.SkipNullValueCheck;
                             if (
                                 !(noValidationAttr?.SkipNullValueCheck ?? false) &&
-                                valueType.GetCustomAttributes(inherit: true).Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
+                                valueType.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
                                 )
                             {
 #if DEBUG

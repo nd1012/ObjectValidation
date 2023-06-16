@@ -70,7 +70,7 @@
 <li>Validation events</li>
 <li><code>CountLimitAttribute</code> for limiting dictionary, list, array, collection and
 enumerable lengths</li>
-<li><code>ValidatableObject</code> for implementing automatic validated types</li>
+<li><code>ValidatableObjectBase</code> for implementing automatic validated types</li>
 <li>Deep dictionary and list key/value validation</li>
 <li><code>ICountable</code> and <code>ILongCountable</code> interfaces for count limitation</li>
 <li><code>ItemNullableAttribute</code> for (non-)nullable dictionary or list item validation</li>
@@ -94,7 +94,7 @@ validation with support for deep dictionaries and lists contents, too.</p>
 <p>All public instance properties with a public getter method will be validated,
 unless there's a <code>NoValidationAttribute</code> present. You can use any
 <code>ValidationAttribute</code> to define property value constraints.</p>
-<p>Also the <code>IValidatableObject</code> interface is supported by using the
+<p>Also the <code>IValidatableObjectBase</code> interface is supported by using the
 <code>Validator.TryValidateObject</code> method with the <code>validateAllProperties</code>
 parameter having the value <code>true</code> (the <code>IValidationObject</code> validation method
 will be called in a second round). Using this interface you can implement some
@@ -271,15 +271,15 @@ return anyObject4.ValidateObject();
 exceptions and their stack trace. You can use the <code>HasValidationException</code>
 method and a LINQ expression like the one from the example to filter out any
 exception in the results.</p>
-<p><code>ValidatableObject</code> types may be validated automatic (depending on the app
+<p><code>ValidatableObjectBase</code> types may be validated automatic (depending on the app
 context), because they implement the <code>IValidatableObject</code> interface. The
-<code>ValidatableObject</code> executes the ObjectValidation method internal. For using
-the <code>ValidatableObject</code> base class, simply extend from it, and call the base
-constructor from your constructor methods.</p>
+<code>ValidatableObjectBase</code> executes the ObjectValidation method internal. For
+using the <code>ValidatableObject</code> base class, simply extend from it, and call the
+base constructor from your constructor methods.</p>
 <p><strong>TIP</strong>: You should use the <code>ValidatableObject</code> base type, if possible! By
 only implementing the <code>IValidatableObject</code> interface your type may be
 validated automatic, but not by the ObjectValidation library!</p>
-<p>In case you can't extend from <code>ValidatableObject</code>, you can implement the
+<p>In case you can't extend from <code>ValidatableObjectBase</code>, you can implement the
 <code>IValidatableObject</code> and <code>IObjectValidatable</code> interfaces like this:</p>
 <pre><code class="lang-cs">public class YourType : AnyBaseType, IObjectValidatable
 {
@@ -293,7 +293,7 @@ validated automatic, but not by the ObjectValidation library!</p>
 <h2 id="conditional-value-requirement">Conditional value requirement</h2>
 <p>If a property value is required in case another property has a specified value:</p>
 <pre><code class="lang-cs">[Bic]
-public string BIC { get; set; }
+public string BIC { get; set; } = null!;
 
 [Iban, RequiredIf(nameof(ABA), RequiredIfNull = true)]
 public string? IBAN { get; set; }
@@ -697,7 +697,7 @@ your application!</p>
 <h3 id="aspnet">ASP.NET</h3>
 <p>ASP.NET (7) automatic validates <code>IValidatableObject</code> objects when
 unserializing for an API controller call. The ObjectValidation library will be
-used automatic, if you've used the <code>ValidatableObject</code> base class for your
+used automatic, if you've used the <code>ValidatableObjectBase</code> base class for your
 types, which you want to be validated automatic. Simply use it as base class
 for your DTO objects, and you don't need to care about validation anymore.</p>
 <p>You should also understand the difference between <code>NoValidateAttribute</code> and
@@ -712,7 +712,7 @@ returns a generic type. But if f.e. the return type is a
 determine the nullability of the second generic type argument of the base
 type, because the nullability information will be discarded during your code
 compilation. For the dictionary item validation please specify the
-<code>ItemNullableAttribute</code> in that case. The same is valid for deep array
+<code>ItemNullableAttribute</code> in that case. The same applies to deep array
 validations.</p>
 <h3 id="more-validations">More validations</h3>
 <p>Have a look at the
