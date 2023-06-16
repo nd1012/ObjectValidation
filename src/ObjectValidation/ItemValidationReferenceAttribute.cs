@@ -27,10 +27,9 @@ namespace wan24.ObjectValidation
             ArrayLevel = arrayLevel;
             ReferencedProperty = type.GetProperty(propertyName, BindingFlags.Instance | BindingFlags.Public)
                 ?? throw new ArgumentException($"Public instance property \"{type}.{propertyName}\" not found", nameof(propertyName));
-            Attributes = (from attr in ReferencedProperty.GetCustomAttributes(inherit: true)
-                          where attr is IItemValidationAttribute itemValidation &&
-                            itemValidation.ArrayLevel == arrayLevel
-                          select (attr as IItemValidationAttribute)!).ToArray();
+            Attributes = (from attr in ReferencedProperty.GetItemValidationAttributes()
+                          where attr.ArrayLevel == arrayLevel
+                          select attr).ToArray();
         }
 
         /// <inheritdoc/>

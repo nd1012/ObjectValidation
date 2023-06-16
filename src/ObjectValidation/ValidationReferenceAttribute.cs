@@ -22,7 +22,7 @@ namespace wan24.ObjectValidation
         {
             ReferencedProperty = type.GetProperty(propertyName, BindingFlags.Instance | BindingFlags.Public)
                 ?? throw new ArgumentException($"Public instance property \"{type}.{propertyName}\" not found", nameof(propertyName));
-            Attributes = ReferencedProperty.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
+            Attributes = ReferencedProperty.GetCustomAttributesCached().Where(a => a is ValidationAttribute).Cast<ValidationAttribute>().ToArray();
         }
 
         /// <summary>

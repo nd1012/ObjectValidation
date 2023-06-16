@@ -1016,11 +1016,11 @@ references:
   commentId: T:wan24.ObjectValidation.ItemCompanyTINAttribute
   fullName: wan24.ObjectValidation.ItemCompanyTINAttribute
   nameWithType: ItemCompanyTINAttribute
-- uid: wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
   name: ItemCompanyTINAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCompanyTINAttribute.html#wan24_ObjectValidation_ItemCompanyTINAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCompanyTINAttribute.ItemCompanyTINAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemCompanyTINAttribute.html#wan24_ObjectValidation_ItemCompanyTINAttribute__ctor_CountryValidation_Country_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemCompanyTINAttribute.ItemCompanyTINAttribute(CountryValidation.Country, ItemValidationTargets)
   nameWithType: ItemCompanyTINAttribute.ItemCompanyTINAttribute(Country, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor*
   name: ItemCompanyTINAttribute
@@ -1048,6 +1048,12 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemCompareAttribute.ItemCompareAttribute
   nameWithType: ItemCompareAttribute.ItemCompareAttribute
+- uid: wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
+  name: _OwnProperty
+  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute__OwnProperty
+  commentId: F:wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
+  fullName: wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
+  nameWithType: ItemCompareAttribute._OwnProperty
 - uid: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
   name: GetValidationResult(Object, ValidationContext, Nullable<IServiceProvider>)
   href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_GetValidationResult_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
@@ -1077,6 +1083,12 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
   nameWithType: ItemCompareAttribute.OwnProperty
+- uid: wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
+  name: OwnPropertyGetter
+  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_OwnPropertyGetter
+  commentId: F:wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
+  fullName: wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
+  nameWithType: ItemCompareAttribute.OwnPropertyGetter
 - uid: wan24.ObjectValidation.ItemCountLimitAttribute
   name: ItemCountLimitAttribute
   href: api/wan24.ObjectValidation.ItemCountLimitAttribute.html
@@ -1424,11 +1436,11 @@ references:
   commentId: T:wan24.ObjectValidation.ItemPersonTINAttribute
   fullName: wan24.ObjectValidation.ItemPersonTINAttribute
   nameWithType: ItemPersonTINAttribute
-- uid: wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
   name: ItemPersonTINAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemPersonTINAttribute.html#wan24_ObjectValidation_ItemPersonTINAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemPersonTINAttribute.ItemPersonTINAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemPersonTINAttribute.html#wan24_ObjectValidation_ItemPersonTINAttribute__ctor_CountryValidation_Country_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemPersonTINAttribute.ItemPersonTINAttribute(CountryValidation.Country, ItemValidationTargets)
   nameWithType: ItemPersonTINAttribute.ItemPersonTINAttribute(Country, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemPersonTINAttribute.#ctor*
   name: ItemPersonTINAttribute
@@ -1531,11 +1543,11 @@ references:
   commentId: T:wan24.ObjectValidation.ItemSSNAttribute
   fullName: wan24.ObjectValidation.ItemSSNAttribute
   nameWithType: ItemSSNAttribute
-- uid: wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
   name: ItemSSNAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemSSNAttribute.html#wan24_ObjectValidation_ItemSSNAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemSSNAttribute.ItemSSNAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemSSNAttribute.html#wan24_ObjectValidation_ItemSSNAttribute__ctor_CountryValidation_Country_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemSSNAttribute.ItemSSNAttribute(CountryValidation.Country, ItemValidationTargets)
   nameWithType: ItemSSNAttribute.ItemSSNAttribute(Country, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemSSNAttribute.#ctor*
   name: ItemSSNAttribute
@@ -1964,6 +1976,18 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation
   nameWithType: ItemValidationTemplateIfAttribute.MultiValidation
+- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
+  name: Property
+  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_Property
+  commentId: F:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
+  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
+  nameWithType: ItemValidationTemplateIfAttribute.Property
+- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
+  name: PropertyGetter
+  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_PropertyGetter
+  commentId: F:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
+  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
+  nameWithType: ItemValidationTemplateIfAttribute.PropertyGetter
 - uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
   name: PropertyName
   href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_PropertyName
@@ -1996,11 +2020,11 @@ references:
   commentId: T:wan24.ObjectValidation.ItemVATAttribute
   fullName: wan24.ObjectValidation.ItemVATAttribute
   nameWithType: ItemVATAttribute
-- uid: wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
   name: ItemVATAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemVATAttribute.html#wan24_ObjectValidation_ItemVATAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemVATAttribute.ItemVATAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemVATAttribute.html#wan24_ObjectValidation_ItemVATAttribute__ctor_CountryValidation_Country_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemVATAttribute.ItemVATAttribute(CountryValidation.Country, ItemValidationTargets)
   nameWithType: ItemVATAttribute.ItemVATAttribute(Country, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemVATAttribute.#ctor*
   name: ItemVATAttribute
@@ -2053,11 +2077,11 @@ references:
   commentId: T:wan24.ObjectValidation.ItemZipCodeAttribute
   fullName: wan24.ObjectValidation.ItemZipCodeAttribute
   nameWithType: ItemZipCodeAttribute
-- uid: wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
   name: ItemZipCodeAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemZipCodeAttribute.html#wan24_ObjectValidation_ItemZipCodeAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemZipCodeAttribute.ItemZipCodeAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemZipCodeAttribute.html#wan24_ObjectValidation_ItemZipCodeAttribute__ctor_CountryValidation_Country_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemZipCodeAttribute.ItemZipCodeAttribute(CountryValidation.Country, ItemValidationTargets)
   nameWithType: ItemZipCodeAttribute.ItemZipCodeAttribute(Country, ItemValidationTargets)
 - uid: wan24.ObjectValidation.ItemZipCodeAttribute.#ctor*
   name: ItemZipCodeAttribute
@@ -2520,6 +2544,18 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.RequiredIfAttribute.IsValid
   nameWithType: RequiredIfAttribute.IsValid
+- uid: wan24.ObjectValidation.RequiredIfAttribute.Property
+  name: Property
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Property
+  commentId: F:wan24.ObjectValidation.RequiredIfAttribute.Property
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.Property
+  nameWithType: RequiredIfAttribute.Property
+- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
+  name: PropertyGetter
+  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyGetter
+  commentId: F:wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
+  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
+  nameWithType: RequiredIfAttribute.PropertyGetter
 - uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
   name: PropertyName
   href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyName
@@ -3234,6 +3270,18 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation
   nameWithType: ValidationTemplateIfAttribute.MultiValidation
+- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
+  name: Property
+  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_Property
+  commentId: F:wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
+  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
+  nameWithType: ValidationTemplateIfAttribute.Property
+- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
+  name: PropertyGetter
+  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_PropertyGetter
+  commentId: F:wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
+  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
+  nameWithType: ValidationTemplateIfAttribute.PropertyGetter
 - uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
   name: PropertyName
   href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_PropertyName

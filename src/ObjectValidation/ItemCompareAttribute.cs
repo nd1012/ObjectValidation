@@ -9,6 +9,15 @@ namespace wan24.ObjectValidation
     public class ItemCompareAttribute : ItemValidationAttribute
     {
         /// <summary>
+        /// Own property
+        /// </summary>
+        protected PropertyInfo? _OwnProperty = null;
+        /// <summary>
+        /// Own property getter
+        /// </summary>
+        protected Func<object?, object?>? OwnPropertyGetter = null;
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="ownProperty">Own property name</param>
@@ -27,11 +36,16 @@ namespace wan24.ObjectValidation
         public override ValidationResult? GetValidationResult(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider)
         {
             if (value == null) return null;
-            PropertyInfo? ownProperty = value.GetType().GetProperty(nameof(OwnProperty), BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
-            if (ownProperty == null) throw new ValidationException($"Property {value.GetType()}.{OwnProperty} not found");
+            if (OwnPropertyGetter == null)
+            {
+                _OwnProperty = value.GetType().GetProperty(OwnProperty, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)
+                    ?? throw new ValidationException($"Property {value.GetType()}.{OwnProperty} not found");
+                OwnPropertyGetter = _OwnProperty.GetGetterDelegate()
+                    ?? throw new ValidationException($"Property {value.GetType()}.{OwnProperty} has no getter");
+            }
             try
             {
-                return base.GetValidationResult(ownProperty.GetValue(value), new(value, serviceProvider, items: null) { MemberName = OwnProperty }, serviceProvider);
+                return base.GetValidationResult(OwnPropertyGetter!(value), new(value, serviceProvider, items: null) { MemberName = OwnProperty }, serviceProvider);
             }
             catch(Exception ex)
             {

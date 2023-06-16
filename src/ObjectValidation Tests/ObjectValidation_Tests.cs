@@ -22,7 +22,7 @@ namespace ObjectValidation_Tests
             };
         }
 
-        [TestMethod]
+        [TestMethod, Timeout(3000)]
         public void General_Tests()
         {
             List<ValidationResult> results = new();

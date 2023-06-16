@@ -8,7 +8,7 @@ This library contains some object validation helper:
 - Validation events
 - `CountLimitAttribute` for limiting dictionary, list, array, collection and 
 enumerable lengths
-- `ValidatableObject` for implementing automatic validated types
+- `ValidatableObjectBase` for implementing automatic validated types
 - Deep dictionary and list key/value validation
 - `ICountable` and `ILongCountable` interfaces for count limitation
 - `ItemNullableAttribute` for (non-)nullable dictionary or list item validation
@@ -34,7 +34,7 @@ All public instance properties with a public getter method will be validated,
 unless there's a `NoValidationAttribute` present. You can use any 
 `ValidationAttribute` to define property value constraints.
 
-Also the `IValidatableObject` interface is supported by using the 
+Also the `IValidatableObjectBase` interface is supported by using the 
 `Validator.TryValidateObject` method with the `validateAllProperties` 
 parameter having the value `true` (the `IValidationObject` validation method 
 will be called in a second round). Using this interface you can implement some 
@@ -173,17 +173,17 @@ exceptions and their stack trace. You can use the `HasValidationException`
 method and a LINQ expression like the one from the example to filter out any 
 exception in the results.
 
-`ValidatableObject` types may be validated automatic (depending on the app 
+`ValidatableObjectBase` types may be validated automatic (depending on the app 
 context), because they implement the `IValidatableObject` interface. The 
-`ValidatableObject` executes the ObjectValidation method internal. For using 
-the `ValidatableObject` base class, simply extend from it, and call the base 
-constructor from your constructor methods.
+`ValidatableObjectBase` executes the ObjectValidation method internal. For 
+using the `ValidatableObject` base class, simply extend from it, and call the 
+base constructor from your constructor methods.
 
 **TIP**: You should use the `ValidatableObject` base type, if possible! By 
 only implementing the `IValidatableObject` interface your type may be 
 validated automatic, but not by the ObjectValidation library!
 
-In case you can't extend from `ValidatableObject`, you can implement the 
+In case you can't extend from `ValidatableObjectBase`, you can implement the 
 `IValidatableObject` and `IObjectValidatable` interfaces like this:
 
 ```cs
@@ -203,7 +203,7 @@ If a property value is required in case another property has a specified value:
 
 ```cs
 [Bic]
-public string BIC { get; set; }
+public string BIC { get; set; } = null!;
 
 [Iban, RequiredIf(nameof(ABA), RequiredIfNull = true)]
 public string? IBAN { get; set; }
@@ -555,7 +555,7 @@ your application!
 
 ASP.NET (7) automatic validates `IValidatableObject` objects when 
 unserializing for an API controller call. The ObjectValidation library will be 
-used automatic, if you've used the `ValidatableObject` base class for your 
+used automatic, if you've used the `ValidatableObjectBase` base class for your 
 types, which you want to be validated automatic. Simply use it as base class 
 for your DTO objects, and you don't need to care about validation anymore.
 
@@ -573,7 +573,7 @@ returns a generic type. But if f.e. the return type is a
 determine the nullability of the second generic type argument of the base 
 type, because the nullability information will be discarded during your code 
 compilation. For the dictionary item validation please specify the 
-`ItemNullableAttribute` in that case. The same is valid for deep array 
+`ItemNullableAttribute` in that case. The same applies to deep array 
 validations.
 
 ### More validations
