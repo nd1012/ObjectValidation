@@ -30,10 +30,7 @@
     <PackageReference Include="CountryValidator" Version="1.1.3" />
     <PackageReference Include="CountryValidator.DataAnnotations" Version="1.1.3" />
     <PackageReference Include="ObjectValidation" Version="1.6.0" Condition="'$(Configuration)' != 'Debug'" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ObjectValidation\ObjectValidation.csproj" Condition="'$(Configuration)' == 'Debug'" />
+    <PackageReference Include="ObjectValidation" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
