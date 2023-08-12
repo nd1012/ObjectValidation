@@ -138,7 +138,7 @@ namespace wan24.ObjectValidation
             IServiceProvider? serviceProvider = null
             )
         {
-            if (obj == null) throw new ArgumentNullException(nameof(obj));
+            if (obj is null) throw new ArgumentNullException(nameof(obj));
             List<ValidationResult> results = new();
             return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider)
                 ? obj

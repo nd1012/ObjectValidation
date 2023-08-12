@@ -15,7 +15,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Property getter
         /// </summary>
-        protected Func<object?, object?>? PropertyGetter = null;
+        protected ReflectionHelper.PropertyGetter_Delegate? PropertyGetter = null;
 
         /// <summary>
         /// Constructor
@@ -53,7 +53,7 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (PropertyGetter == null)
+            if (PropertyGetter is null)
             {
                 Property = validationContext.ObjectInstance.GetType().GetProperty(PropertyName, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public)
                     ?? throw new InvalidDataException($"Property {PropertyName} not found in validated type {validationContext.ObjectInstance.GetType()}");
@@ -61,7 +61,7 @@ namespace wan24.ObjectValidation
                     ?? throw new InvalidDataException($"Property {validationContext.ObjectInstance.GetType()}.{Property.Name} requires a public getter");
             }
             object? v = PropertyGetter(validationContext.ObjectInstance);
-            return (Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && RequiredIfNull == (v == null))
+            return (Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && RequiredIfNull == (v is null))
                 ? base.IsValid(value, validationContext)
                 : null;
         }

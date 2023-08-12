@@ -6,28 +6,28 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Reflection helper
     /// </summary>
-    internal static class ReflectionHelper
+    public static class ReflectionHelper
     {
         /// <summary>
         /// CreateGetterDelegate method
         /// </summary>
-        internal static readonly MethodInfo CreateGetterDelegateMethod;
+        private static readonly MethodInfo CreateGetterDelegateMethod;
         /// <summary>
         /// Getter cache
         /// </summary>
-        internal static readonly ConcurrentDictionary<int, Func<object?, object?>> GetterCache;
+        private static readonly ConcurrentDictionary<int, PropertyGetter_Delegate> GetterCache;
         /// <summary>
         /// Item validation attribute cache
         /// </summary>
-        internal static readonly ConcurrentDictionary<int, IItemValidationAttribute[]> ItemValidationAttributeCache;
+        private static readonly ConcurrentDictionary<int, IItemValidationAttribute[]> ItemValidationAttributeCache;
         /// <summary>
         /// <see cref="PropertyInfo"/> cache
         /// </summary>
-        internal static readonly ConcurrentDictionary<int, PropertyInfo[]> PropertyInfoCache;
+        private static readonly ConcurrentDictionary<int, PropertyInfo[]> PropertyInfoCache;
         /// <summary>
         /// <see cref="Attribute"/> cache
         /// </summary>
-        internal static readonly ConcurrentDictionary<int, Attribute[]> AttributeCache;
+        private static readonly ConcurrentDictionary<int, Attribute[]> AttributeCache;
 
         /// <summary>
         /// Static constructor
@@ -47,11 +47,11 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="pi">Property</param>
         /// <returns>Getter</returns>
-        internal static Func<object?, object?>? GetGetterDelegate(this PropertyInfo pi)
+        public static PropertyGetter_Delegate? GetGetterDelegate(this PropertyInfo pi)
             => pi.CanRead
                 ? GetterCache.GetOrAdd(
                     pi.GetHashCode(),
-                    (key) => (Func<object?, object?>)CreateGetterDelegateMethod.MakeGenericMethod(pi.DeclaringType!, pi.PropertyType)
+                    (key) => (PropertyGetter_Delegate)CreateGetterDelegateMethod.MakeGenericMethod(pi.DeclaringType!, pi.PropertyType)
                         .Invoke(obj: null, new object[] { pi.GetMethod!.CreateDelegate(typeof(Func<,>).MakeGenericType(pi.DeclaringType!, pi.PropertyType)) })!
                     )
                 : null;
@@ -61,7 +61,7 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="cap">Object</param>
         /// <returns>Attributes</returns>
-        internal static IItemValidationAttribute[] GetItemValidationAttributes(this ICustomAttributeProvider cap)
+        public static IItemValidationAttribute[] GetItemValidationAttributes(this ICustomAttributeProvider cap)
             => ItemValidationAttributeCache.GetOrAdd(
                 cap.GetHashCode(),
                 (key) => GetCustomAttributesCached(cap).Where(a => a is IItemValidationAttribute).Cast<IItemValidationAttribute>().ToArray()
@@ -72,7 +72,7 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="type">Type</param>
         /// <returns>Properties</returns>
-        internal static PropertyInfo[] GetPropertiesCached(this Type type)
+        public static PropertyInfo[] GetPropertiesCached(this Type type)
             => PropertyInfoCache.GetOrAdd(
                 type.GetHashCode(),
                 (key) => type.GetProperties(BindingFlags.Instance | BindingFlags.Public).Where(p => p.CanRead && p.GetMethod!.IsPublic && p.GetIndexParameters().Length == 0).ToArray()
@@ -83,7 +83,7 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="cap">Object</param>
         /// <returns>Attributes</returns>
-        internal static Attribute[] GetCustomAttributesCached(this ICustomAttributeProvider cap)
+        public static Attribute[] GetCustomAttributesCached(this ICustomAttributeProvider cap)
             => AttributeCache.GetOrAdd(
                 cap.GetHashCode(),
                 (key) => cap.GetCustomAttributes(inherit: true).Cast<Attribute>().ToArray()
@@ -96,6 +96,13 @@ namespace wan24.ObjectValidation
         /// <typeparam name="tValue">Value type</typeparam>
         /// <param name="getter">Getter</param>
         /// <returns>Getter delegate</returns>
-        private static Func<object?, object?> CreateGetterDelegate<tObject, tValue>(Func<tObject?, tValue?> getter) => (obj) => getter((tObject)obj!);
+        private static PropertyGetter_Delegate CreateGetterDelegate<tObject, tValue>(Func<tObject?, tValue?> getter) => (obj) => getter((tObject)obj!);
+
+        /// <summary>
+        /// Property getter delegate
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <returns>Property value</returns>
+        public delegate object? PropertyGetter_Delegate(object? obj);
     }
 }

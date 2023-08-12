@@ -23,8 +23,8 @@ namespace wan24.ObjectValidation
             => AllowedValues.Contains(value)
                 ? null
                 : new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Value isn't allowed" : $"{validationContext.MemberName}: Value isn't allowed"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Value isn't allowed" : $"{validationContext.MemberName}: Value isn't allowed"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
     }
 }

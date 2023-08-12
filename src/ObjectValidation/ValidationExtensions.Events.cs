@@ -33,7 +33,7 @@ namespace wan24.ObjectValidation
             PropertyInfo? pi = null
             )
         {
-            if (delegates == null) return (Cancelled: false, NewResult: res, Failed: false);
+            if (delegates is null) return (Cancelled: false, NewResult: res, Failed: false);
             ObjectValidationEventArgs e = new(seen, obj, validationResults, allResults, member, throwOnError, members, res, pi);
             delegates(e);
             if (!res && e.Result) throw new InvalidOperationException("Validation failed state can't be overridden");

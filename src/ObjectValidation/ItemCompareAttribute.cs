@@ -15,7 +15,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Own property getter
         /// </summary>
-        protected Func<object?, object?>? OwnPropertyGetter = null;
+        protected ReflectionHelper.PropertyGetter_Delegate? OwnPropertyGetter = null;
 
         /// <summary>
         /// Constructor
@@ -35,8 +35,8 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         public override ValidationResult? GetValidationResult(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider)
         {
-            if (value == null) return null;
-            if (OwnPropertyGetter == null)
+            if (value is null) return null;
+            if (OwnPropertyGetter is null)
             {
                 _OwnProperty = value.GetType().GetProperty(OwnProperty, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)
                     ?? throw new ValidationException($"Property {value.GetType()}.{OwnProperty} not found");

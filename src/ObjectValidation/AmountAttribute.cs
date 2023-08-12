@@ -21,21 +21,21 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value == null) return null;
+            if (value is null) return null;
             if (value is not decimal amount)
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Amount value as {typeof(decimal)} expected" : $"{validationContext.MemberName}: Amount value as {typeof(decimal)} expected"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Amount value as {typeof(decimal)} expected" : $"{validationContext.MemberName}: Amount value as {typeof(decimal)} expected"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             if (!CurrencyCodes.Known.ContainsKey(Currency))
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Invalid currency configured" : $"{validationContext.MemberName}: Invalid currency configured"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency configured" : $"{validationContext.MemberName}: Invalid currency configured"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             if (!CurrencyCodes.Known[Currency].Validate(amount))
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Invalid amount value" : $"{validationContext.MemberName}: Invalid amount value"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid amount value" : $"{validationContext.MemberName}: Invalid amount value"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             return null;
         }

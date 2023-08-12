@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
-using System.Diagnostics;
 using System.Reflection;
 
 namespace wan24.ObjectValidation
@@ -69,7 +68,7 @@ namespace wan24.ObjectValidation
                 {
                     // Finalize the validation results
                     AddResults(results, allResults, validationResults, member);
-                    if (results != null)
+                    if (results is not null)
                     {
                         int addErrors = allResults.Count;
                         if (addErrors > 0)
@@ -121,7 +120,7 @@ namespace wan24.ObjectValidation
                     if (type.IsEnum)
                     {
                         Type numericType = type.GetEnumUnderlyingType() ?? throw new InvalidProgramException($"Enumeration {type} {contextInfo} without underlying numeric type");
-                        if (type.GetCustomAttribute<FlagsAttribute>() != null)
+                        if (type.GetCustomAttribute<FlagsAttribute>() is not null)
                         {
                             bool err;
                             object number,
@@ -200,12 +199,12 @@ namespace wan24.ObjectValidation
                             if (cancelled)
                             {
 #if DEBUG
-                                ObjectValidation.ValidateObject.Logger($"Event handler cancelled {type}.{(member == null ? pi.Name : $"{member}.{pi.Name}")} {contextInfo} validation");
+                                ObjectValidation.ValidateObject.Logger($"Event handler cancelled {type}.{(member is null ? pi.Name : $"{member}.{pi.Name}")} {contextInfo} validation");
 #endif
                                 continue;
                             }
                             // Get the full property member name and its value
-                            memberName = member == null ? pi.Name : $"{member}.{pi.Name}";
+                            memberName = member is null ? pi.Name : $"{member}.{pi.Name}";
                             try
                             {
                                 value = pi.GetGetterDelegate()!(obj);
@@ -224,7 +223,7 @@ namespace wan24.ObjectValidation
                             // Default property validation
                             validationAttrs = pi.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
                             noValidationAttr = (NoValidationAttribute?)validationAttrs.FirstOrDefault(a => a is NoValidationAttribute);
-                            noValidation = noValidationAttr != null;
+                            noValidation = noValidationAttr is not null;
                             if (isObjectValidatable)
                             {
                                 res &= Validator.TryValidateProperty(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, validationResults);
@@ -247,7 +246,7 @@ namespace wan24.ObjectValidation
                                 }
                             // Ensure a valid value (shouldn't be NULL, if the property type isn't nullable) and skip NULL values
                             nullabilityInfo = nullabilityContext.Create(pi.GetMethod!.ReturnParameter);
-                            if (value == null)
+                            if (value is null)
                             {
                                 if (!IsNullable(nullabilityInfo))
                                 {
@@ -264,7 +263,7 @@ namespace wan24.ObjectValidation
                             // Deep object validation
                             valueType = value.GetType();
                             noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributesCached().FirstOrDefault(a => a is NoValidationAttribute);
-                            onlyItemNullValueChecks = noValidationAttr != null && !noValidationAttr.SkipNullValueCheck;
+                            onlyItemNullValueChecks = noValidationAttr is not null && !noValidationAttr.SkipNullValueCheck;
                             if (
                                 !(noValidationAttr?.SkipNullValueCheck ?? false) &&
                                 valueType.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
@@ -295,7 +294,7 @@ namespace wan24.ObjectValidation
                                         );
                                     continue;
                                 }
-                                else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() != null)
+                                else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() is not null)
                                 {
                                     res &= ValidateList(
                                         info,
@@ -385,7 +384,7 @@ namespace wan24.ObjectValidation
             {
                 info.CurrentDepth--;
                 if (seenIndex > 0) info.Seen.RemoveAt(seenIndex);
-                if (results != null)
+                if (results is not null)
                     foreach (ValidationResult result in results)
                         ObjectValidation.ValidateObject.Logger(
                             $"Object {type} {contextInfo} validation error: {result.ErrorMessage} (members {(result.MemberNames.Any() ? string.Join(", ", result.MemberNames) : "[none]")})"
@@ -404,7 +403,7 @@ namespace wan24.ObjectValidation
         internal static bool AddResults(List<ValidationResult>? results, List<ValidationResult> allResults, List<ValidationResult> validationResults, string? member)
         {
             if (validationResults.Count == 0) return MaxErrors < 1 || (results?.Count ?? 0) + allResults.Count < MaxErrors;
-            if (member != null)
+            if (member is not null)
                 for (int i = 0; i < validationResults.Count; i++)
                     validationResults[i] = new(
                         validationResults[i].ErrorMessage,
@@ -437,7 +436,7 @@ namespace wan24.ObjectValidation
             keyType = null;
             valueType = null;
             bool isDict = false;
-            for (Type? type = obj.GetType(); type != null; type = type.BaseType)
+            for (Type? type = obj.GetType(); type is not null; type = type.BaseType)
             {
                 if (!type.IsGenericType || type.GetGenericTypeDefinition() != typeof(Dictionary<,>)) continue;
                 isDict = true;
@@ -459,7 +458,7 @@ namespace wan24.ObjectValidation
         {
             itemType = null;
             bool isList = false;
-            for (Type? type = obj.GetType(); type != null; type = type.BaseType)
+            for (Type? type = obj.GetType(); type is not null; type = type.BaseType)
             {
                 if (!type.IsGenericType || type.GetGenericTypeDefinition() != typeof(List<>)) continue;
                 isList = true;
