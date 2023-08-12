@@ -21,16 +21,16 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value == null) return null;
+            if (value is null) return null;
             if (value is not string vatId)
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"VAT ID value as {typeof(string)} expected" : $"{validationContext.MemberName}: VAT ID value as {typeof(string)} expected"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"VAT ID value as {typeof(string)} expected" : $"{validationContext.MemberName}: VAT ID value as {typeof(string)} expected"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             if (!EuVatId.Validate(Normalize ? EuVatId.Normalize(vatId) : vatId))
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Invalid VAT ID value" : $"{validationContext.MemberName}: Invalid VAT ID value"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid VAT ID value" : $"{validationContext.MemberName}: Invalid VAT ID value"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             return null;
         }

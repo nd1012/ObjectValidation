@@ -44,17 +44,17 @@ namespace wan24.ObjectValidation
         /// <param name="member">Member</param>
         /// <returns>Error message</returns>
         public string? GetErrorMessage(long? count, string? member)
-            => count == null || ((Min == null || count >= Min) && count <= Max)
+            => count is null || ((Min is null || count >= Min) && count <= Max)
                 ? null
-                : member == null
-                        ? (Min == null
+                : member is null
+                        ? (Min is null
                             ? ErrorMessage ?? $"Maximum count is {Max} ({count})"
                             : ErrorMessage ?? $"Count must be between {Min} and {Max} ({count})")
-                        : (Min == null
-                            ? (ErrorMessage == null
+                        : (Min is null
+                            ? (ErrorMessage is null
                                 ? $"Maximum count of the property {member} is {Max} ({count})"
                                 : $"{member}: {ErrorMessage}")
-                            : (ErrorMessage == null
+                            : (ErrorMessage is null
                                 ? $"Count of the property {member} must be between {Min} and {Max} ({count})"
                                 : $"{member}: {ErrorMessage}"));
 
@@ -73,7 +73,7 @@ namespace wan24.ObjectValidation
                     },
                     validationContext.MemberName
                     ) is string error
-                ? new ValidationResult(error, validationContext.MemberName == null ? null : new string[] { validationContext.MemberName })
+                ? new ValidationResult(error, validationContext.MemberName is null ? null : new string[] { validationContext.MemberName })
                 : null;
     }
 }

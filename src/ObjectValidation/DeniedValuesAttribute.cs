@@ -22,8 +22,8 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
             => DeniedValues.Contains(value)
                 ? new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Value is denied" : $"{validationContext.MemberName}: Value is denied"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Value is denied" : $"{validationContext.MemberName}: Value is denied"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     )
                 : null;
     }

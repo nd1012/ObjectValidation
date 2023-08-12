@@ -21,16 +21,16 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value == null) return null;
+            if (value is null) return null;
             if (value is not string route)
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"XRechnung route value as {typeof(string)} expected" : $"{validationContext.MemberName}: XRechnung route value as {typeof(string)} expected"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"XRechnung route value as {typeof(string)} expected" : $"{validationContext.MemberName}: XRechnung route value as {typeof(string)} expected"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             if (!XRechnungRouting.Validate(Normalize ? XRechnungRouting.Normalize(route) : route))
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Invalid XRechnung route value" : $"{validationContext.MemberName}: Invalid XRechnung route value"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid XRechnung route value" : $"{validationContext.MemberName}: Invalid XRechnung route value"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             return null;
         }

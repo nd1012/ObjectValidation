@@ -34,25 +34,25 @@ namespace wan24.ObjectValidation
         public static bool IsTypeValidatable(Type type)
         {
             Type? nullableType = Nullable.GetUnderlyingType(type);// Underlying nullable type
-            bool res = nullableType == null || IsTypeValidatable(nullableType);// Result
+            bool res = nullableType is null || IsTypeValidatable(nullableType);// Result
             if (res)
             {
                 Type? gtd = type.IsGenericType ? type.GetGenericTypeDefinition() : null;// Generic type definition
                 res = ForcedTypes.Contains(type) || // Forced
                     ( // Forced generic type definition
-                        gtd != null &&
+                        gtd is not null &&
                         ForcedTypes.Contains(gtd)
                     ) ||
                     (
                         !DeniedTypes.Contains(type) && // Not denied
                         ( // Not denied generic type definition
-                            gtd == null ||
+                            gtd is null ||
                             !DeniedTypes.Contains(gtd)
                         ) &&
                         !( // Other type restrictions
                             (type.IsValueType && !type.IsEnum) || // Not a non-enum value type
                             type.IsArray || // Not an array
-                            type.GetCustomAttribute<NoValidationAttribute>(inherit: true) != null // Not ignored
+                            type.GetCustomAttribute<NoValidationAttribute>(inherit: true) is not null // Not ignored
                         )
                     );
                 if (res) return res;// Validate, if validatable in this moment

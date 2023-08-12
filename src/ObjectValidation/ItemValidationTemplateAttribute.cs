@@ -40,8 +40,8 @@ namespace wan24.ObjectValidation
             if (!ValidationTemplates.ItemValidations.TryGetValue(Template, out List<IItemValidationAttribute>? attrs))
             {
                 yield return new(
-                    validationContext.MemberName == null ? $"Validation template \"{Template}\" not found" : $"{validationContext.MemberName}: Validation template \"{Template}\" not found",
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    validationContext.MemberName is null ? $"Validation template \"{Template}\" not found" : $"{validationContext.MemberName}: Validation template \"{Template}\" not found",
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             }
             else

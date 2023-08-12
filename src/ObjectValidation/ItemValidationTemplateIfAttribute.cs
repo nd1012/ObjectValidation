@@ -15,7 +15,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Property getter
         /// </summary>
-        protected Func<object?, object?>? PropertyGetter = null;
+        protected ReflectionHelper.PropertyGetter_Delegate? PropertyGetter = null;
 
         /// <summary>
         /// Constructor
@@ -55,7 +55,7 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         public override IEnumerable<ValidationResult> MultiValidation(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider = null)
         {
-            if (PropertyGetter == null)
+            if (PropertyGetter is null)
             {
                 Property = validationContext.ObjectInstance.GetType().GetProperty(PropertyName, BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public)
                     ?? throw new InvalidDataException($"Property {PropertyName} not found in validated type {validationContext.ObjectInstance.GetType()}");
@@ -63,7 +63,7 @@ namespace wan24.ObjectValidation
                     ?? throw new InvalidDataException($"Property {validationContext.ObjectInstance.GetType()}.{Property.Name} requires a public getter");
             }
             object? v = PropertyGetter(validationContext.ObjectInstance);
-            if ((Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && ApplyIfNull == (v == null)))
+            if ((Values.Length > 0 && IfNotInValues != Values.Contains(v)) || (Values.Length == 0 && ApplyIfNull == (v is null)))
                 foreach (ValidationResult result in base.MultiValidation(value, validationContext, serviceProvider))
                     yield return result;
         }

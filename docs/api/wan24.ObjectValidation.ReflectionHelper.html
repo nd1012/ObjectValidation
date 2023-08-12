@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SwiftValidation
+    <title>Class ReflectionHelper
    | ObjectValidation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SwiftValidation
+    <meta name="title" content="Class ReflectionHelper
    | ObjectValidation ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="wan24.ObjectValidation.SwiftValidation">
+            <article class="content wrap" id="_content" data-uid="wan24.ObjectValidation.ReflectionHelper">
   
   
-  <h1 id="wan24_ObjectValidation_SwiftValidation" data-uid="wan24.ObjectValidation.SwiftValidation" class="text-break">Class SwiftValidation
+  <h1 id="wan24_ObjectValidation_ReflectionHelper" data-uid="wan24.ObjectValidation.ReflectionHelper" class="text-break">Class ReflectionHelper
   </h1>
-  <div class="markdown level0 summary"><p>SWIFT (ISO 13616/9362) validation helper</p>
+  <div class="markdown level0 summary"><p>Reflection helper</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SwiftValidation</span></div>
+    <div class="level1"><span class="xref">ReflectionHelper</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,27 +107,27 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="wan24.ObjectValidation.html">wan24.ObjectValidation</a></h6>
   <h6><strong>Assembly</strong>: ObjectValidation.dll</h6>
-  <h5 id="wan24_ObjectValidation_SwiftValidation_syntax">Syntax</h5>
+  <h5 id="wan24_ObjectValidation_ReflectionHelper_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SwiftValidation</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ReflectionHelper</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_SwiftValidation_Normalize_System_String_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.SwiftValidation.Normalize(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_ReflectionHelper_GetCustomAttributesCached_System_Reflection_ICustomAttributeProvider_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ReflectionHelper.GetCustomAttributesCached(System.Reflection.ICustomAttributeProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/SwiftValidation.cs/#L77">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/ReflectionHelper.cs/#L86">View Source</a>
   </span>
-  <a id="wan24_ObjectValidation_SwiftValidation_Normalize_" data-uid="wan24.ObjectValidation.SwiftValidation.Normalize*"></a>
-  <h4 id="wan24_ObjectValidation_SwiftValidation_Normalize_System_String_" data-uid="wan24.ObjectValidation.SwiftValidation.Normalize(System.String)">Normalize(String)</h4>
-  <div class="markdown level1 summary"><p>Normalize an IBAN (ISO 13616) or BIC (ISO 9362)</p>
+  <a id="wan24_ObjectValidation_ReflectionHelper_GetCustomAttributesCached_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetCustomAttributesCached*"></a>
+  <h4 id="wan24_ObjectValidation_ReflectionHelper_GetCustomAttributesCached_System_Reflection_ICustomAttributeProvider_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetCustomAttributesCached(System.Reflection.ICustomAttributeProvider)">GetCustomAttributesCached(ICustomAttributeProvider)</h4>
+  <div class="markdown level1 summary"><p>Get cached custom attributes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Normalize(string str)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Attribute[] GetCustomAttributesCached(this ICustomAttributeProvider cap)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,9 +140,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">str</span></td>
-        <td><p>IBAN/BIC</p>
+        <td><span class="xref">System.Reflection.ICustomAttributeProvider</span></td>
+        <td><span class="parametername">cap</span></td>
+        <td><p>Object</p>
 </td>
       </tr>
     </tbody>
@@ -157,27 +157,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>Normalized value</p>
+        <td><span class="xref">Attribute</span>[]</td>
+        <td><p>Attributes</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_SwiftValidation_SplitIban_System_String_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.SwiftValidation.SplitIban(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_ReflectionHelper_GetGetterDelegate_System_Reflection_PropertyInfo_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ReflectionHelper.GetGetterDelegate(System.Reflection.PropertyInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/SwiftValidation.cs/#L41">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/ReflectionHelper.cs/#L50">View Source</a>
   </span>
-  <a id="wan24_ObjectValidation_SwiftValidation_SplitIban_" data-uid="wan24.ObjectValidation.SwiftValidation.SplitIban*"></a>
-  <h4 id="wan24_ObjectValidation_SwiftValidation_SplitIban_System_String_" data-uid="wan24.ObjectValidation.SwiftValidation.SplitIban(System.String)">SplitIban(String)</h4>
-  <div class="markdown level1 summary"><p>Split an IBAN (ISO 13616) into country, checksum, bank ID and account ID</p>
+  <a id="wan24_ObjectValidation_ReflectionHelper_GetGetterDelegate_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetGetterDelegate*"></a>
+  <h4 id="wan24_ObjectValidation_ReflectionHelper_GetGetterDelegate_System_Reflection_PropertyInfo_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetGetterDelegate(System.Reflection.PropertyInfo)">GetGetterDelegate(PropertyInfo)</h4>
+  <div class="markdown level1 summary"><p>Get the property getter</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static (string CountryCode, string Checksum, string BankId, string AccountId) SplitIban(string iban)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ReflectionHelper.PropertyGetter_Delegate GetGetterDelegate(this PropertyInfo pi)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,9 +190,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">iban</span></td>
-        <td><p>IBAN</p>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">pi</span></td>
+        <td><p>Property</p>
 </td>
       </tr>
     </tbody>
@@ -207,27 +207,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>Country, checksum, bank ID and account ID</p>
+        <td><a class="xref" href="wan24.ObjectValidation.ReflectionHelper.PropertyGetter_Delegate.html">ReflectionHelper.PropertyGetter_Delegate</a></td>
+        <td><p>Getter</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_SwiftValidation_ValidateBic_System_String_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.SwiftValidation.ValidateBic(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_ReflectionHelper_GetItemValidationAttributes_System_Reflection_ICustomAttributeProvider_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ReflectionHelper.GetItemValidationAttributes(System.Reflection.ICustomAttributeProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/SwiftValidation.cs/#L70">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/ReflectionHelper.cs/#L64">View Source</a>
   </span>
-  <a id="wan24_ObjectValidation_SwiftValidation_ValidateBic_" data-uid="wan24.ObjectValidation.SwiftValidation.ValidateBic*"></a>
-  <h4 id="wan24_ObjectValidation_SwiftValidation_ValidateBic_System_String_" data-uid="wan24.ObjectValidation.SwiftValidation.ValidateBic(System.String)">ValidateBic(String)</h4>
-  <div class="markdown level1 summary"><p>Validate a BIC (ISO 9362)</p>
+  <a id="wan24_ObjectValidation_ReflectionHelper_GetItemValidationAttributes_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetItemValidationAttributes*"></a>
+  <h4 id="wan24_ObjectValidation_ReflectionHelper_GetItemValidationAttributes_System_Reflection_ICustomAttributeProvider_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetItemValidationAttributes(System.Reflection.ICustomAttributeProvider)">GetItemValidationAttributes(ICustomAttributeProvider)</h4>
+  <div class="markdown level1 summary"><p>Get item validation attributes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ValidateBic(string bic)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IItemValidationAttribute[] GetItemValidationAttributes(this ICustomAttributeProvider cap)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,9 +240,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">bic</span></td>
-        <td><p>BIC</p>
+        <td><span class="xref">System.Reflection.ICustomAttributeProvider</span></td>
+        <td><span class="parametername">cap</span></td>
+        <td><p>Object</p>
 </td>
       </tr>
     </tbody>
@@ -257,27 +257,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>Valid?</p>
+        <td><a class="xref" href="wan24.ObjectValidation.IItemValidationAttribute.html">IItemValidationAttribute</a>[]</td>
+        <td><p>Attributes</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_SwiftValidation_ValidateIban_System_String_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.SwiftValidation.ValidateIban(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_ReflectionHelper_GetPropertiesCached_Type_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ReflectionHelper.GetPropertiesCached(Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/SwiftValidation.cs/#L52">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/ReflectionHelper.cs/#L75">View Source</a>
   </span>
-  <a id="wan24_ObjectValidation_SwiftValidation_ValidateIban_" data-uid="wan24.ObjectValidation.SwiftValidation.ValidateIban*"></a>
-  <h4 id="wan24_ObjectValidation_SwiftValidation_ValidateIban_System_String_" data-uid="wan24.ObjectValidation.SwiftValidation.ValidateIban(System.String)">ValidateIban(String)</h4>
-  <div class="markdown level1 summary"><p>Validate an IBAN (ISO 13616)</p>
+  <a id="wan24_ObjectValidation_ReflectionHelper_GetPropertiesCached_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetPropertiesCached*"></a>
+  <h4 id="wan24_ObjectValidation_ReflectionHelper_GetPropertiesCached_Type_" data-uid="wan24.ObjectValidation.ReflectionHelper.GetPropertiesCached(Type)">GetPropertiesCached(Type)</h4>
+  <div class="markdown level1 summary"><p>Get cached <span class="xref">System.Reflection.PropertyInfo</span></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ValidateIban(string iban)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PropertyInfo[] GetPropertiesCached(this Type type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,9 +290,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">iban</span></td>
-        <td><p>IBAN</p>
+        <td><span class="xref">Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type</p>
 </td>
       </tr>
     </tbody>
@@ -307,8 +307,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>Valid?</p>
+        <td><span class="xref">System.Reflection.PropertyInfo</span>[]</td>
+        <td><p>Properties</p>
 </td>
       </tr>
     </tbody>
@@ -321,10 +321,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_SwiftValidation.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.SwiftValidation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/ObjectValidation/new/dev/apiSpec/new?filename=wan24_ObjectValidation_ReflectionHelper.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ReflectionHelper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/SwiftValidation.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation/ReflectionHelper.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

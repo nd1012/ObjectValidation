@@ -229,7 +229,7 @@ another value, the ObjectValidation will create an error for this property.</p>
 public List&lt;string?&gt; NullableList { get; set; } = new() { null };// Ok
 
 [ItemNullable]
-public List&lt;string&gt; NonNullList { get; set; } = new() { null };// Ok
+public List&lt;string&gt; NonNullList { get; set; } = new() { null! };// Ok
 
 public List&lt;string?&gt; NullableList2 { get; set; } = new() { null };// This will generate an error
 
@@ -326,7 +326,7 @@ public string? DeliveryCountry { get; set; }
 <p>In case the value of <code>DeliveryAddress</code> is <code>true</code>, all delivery address
 properties are required to have a value.</p>
 <p><strong>NOTE</strong>: Because the validation attribute needs to access the validated
-object properties, it's required to work with valid vlaidation contexts, which
+object properties, it's required to work with valid validation contexts, which
 contain the validated object instance.</p>
 <h2 id="dictionary-and-list-keyvalue-validation">Dictionary and list key/value validation</h2>
 <p>By implementing the <code>IItemValidationAttribute</code> interface, you can define
@@ -502,7 +502,7 @@ a deeper array level counts as recursion. The array level can be set for
 dictionary keys, too, if they're a dictionary or a list.</p>
 <p>Use the <code>ItemNullableAttribute</code>, if the dictionary value or list item may be
 <code>null</code> (even if you wrote <code>T?</code> in your code, because the nullability
-information my not be available during validation!).</p>
+information may not be available during validation!).</p>
 <h2 id="enumeration-value-validation">Enumeration value validation</h2>
 <p>An enumeration can be a value list or combined flags. Both variants are
 validated by checking if</p>
@@ -566,7 +566,7 @@ obj.ValidateObject();// Will fail, 'cause the validation template limits the str
 <p><strong>CAUTION</strong>: Attributes which would skip property/item validation will be
 ignored!</p>
 <p><strong>NOTE</strong>: The validation will fail with the first validation result of an
-attribute from the template, if not validated using the ObectValidation
+attribute from the template, if not validated using the ObjectValidation
 methods.</p>
 <p>The <code>ValidationTemplateIfAttribute</code> allows to apply a template only in case a
 condition was met (just as with the <code>RequiredIfAttribute</code>).</p>
@@ -780,8 +780,8 @@ object, which contains some validation context information:</p>
 </table>
 <p><strong>CAUTION</strong>: Please DO NOT remove or exchange this object!</p>
 <p>Since array item validations don't call event handlers, the <code>ArrayLevel</code>
-property will alwys be <code>0</code>.</p>
-<h1 id="upcoming-changes-with-net-8">Upcoming changes with .NET 8</h1>
+property will always be <code>0</code>.</p>
+<h2 id="upcoming-changes-with-net-8">Upcoming changes with .NET 8</h2>
 <p>Some object validations which I've implemented in the ObjectValidation library
 are now part of the .NET 8 preview. I won't remove them in v1.x, but in v2.x,
 which will target .NET 8.</p>
@@ -793,7 +793,7 @@ which will target .NET 8.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nd1012/ObjectValidation/blob/dev/src/ObjectValidation Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

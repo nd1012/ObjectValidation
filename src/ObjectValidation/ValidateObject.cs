@@ -91,7 +91,7 @@ namespace wan24.ObjectValidation
             IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
-            => obj == null || ValidationExtensions.ValidateObject(new(), obj, results, member, throwOnError, members, serviceProvider);
+            => obj is null || ValidationExtensions.ValidateObject(new(), obj, results, member, throwOnError, members, serviceProvider);
 
         /// <summary>
         /// Delegate for a logger handler

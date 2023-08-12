@@ -124,7 +124,7 @@ Another feature is the validation of (non-)null dictionary or list items:
 public List<string?> NullableList { get; set; } = new() { null };// Ok
 
 [ItemNullable]
-public List<string> NonNullList { get; set; } = new() { null };// Ok
+public List<string> NonNullList { get; set; } = new() { null! };// Ok
 
 public List<string?> NullableList2 { get; set; } = new() { null };// This will generate an error
 
@@ -242,7 +242,7 @@ In case the value of `DeliveryAddress` is `true`, all delivery address
 properties are required to have a value.
 
 **NOTE**: Because the validation attribute needs to access the validated 
-object properties, it's required to work with valid vlaidation contexts, which 
+object properties, it's required to work with valid validation contexts, which 
 contain the validated object instance.
 
 ## Dictionary and list key/value validation
@@ -326,7 +326,7 @@ dictionary keys, too, if they're a dictionary or a list.
 
 Use the `ItemNullableAttribute`, if the dictionary value or list item may be 
 `null` (even if you wrote `T?` in your code, because the nullability 
-information my not be available during validation!).
+information may not be available during validation!).
 
 ## Enumeration value validation
 
@@ -406,7 +406,7 @@ The same is also available for item validation, using the
 ignored!
 
 **NOTE**: The validation will fail with the first validation result of an 
-attribute from the template, if not validated using the ObectValidation 
+attribute from the template, if not validated using the ObjectValidation 
 methods.
 
 The `ValidationTemplateIfAttribute` allows to apply a template only in case a 
@@ -637,9 +637,9 @@ object, which contains some validation context information:
 **CAUTION**: Please DO NOT remove or exchange this object!
 
 Since array item validations don't call event handlers, the `ArrayLevel` 
-property will alwys be `0`.
+property will always be `0`.
 
-# Upcoming changes with .NET 8
+## Upcoming changes with .NET 8
 
 Some object validations which I've implemented in the ObjectValidation library 
 are now part of the .NET 8 preview. I won't remove them in v1.x, but in v2.x, 

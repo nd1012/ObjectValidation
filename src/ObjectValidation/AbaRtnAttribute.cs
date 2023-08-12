@@ -26,16 +26,16 @@ namespace wan24.ObjectValidation
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            if (value == null) return null;
+            if (value is null) return null;
             if (value is not string aba)
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"ABA RTN value as {typeof(string)} expected" : $"{validationContext.MemberName}: ABA RTN value as {typeof(string)} expected"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"ABA RTN value as {typeof(string)} expected" : $"{validationContext.MemberName}: ABA RTN value as {typeof(string)} expected"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             if (!AbaValidation.ValidateAbaRtn(Normalize ? AbaValidation.Normalize(aba, Format) : aba))
                 return new(
-                    ErrorMessage ?? (validationContext.MemberName == null ? $"Invalid ABA RTN value" : $"{validationContext.MemberName}: Invalid ABA RTN value"),
-                    validationContext.MemberName == null ? null : new string[] { validationContext.MemberName }
+                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid ABA RTN value" : $"{validationContext.MemberName}: Invalid ABA RTN value"),
+                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
             return null;
         }
