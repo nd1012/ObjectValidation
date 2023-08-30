@@ -65,6 +65,8 @@
 <p>This library contains some object validation helper:</p>
 <ul>
 <li><code>(Try)ValidateObject</code> extension for validating any object type</li>
+<li><code>Validate(Value|Item)</code> extension for validating any value using a set of
+validation attributes or a pre-defined validation template</li>
 <li><code>NoValidationAttribute</code> for excluding types or properties from validation</li>
 <li><code>ObjectValidationException</code> for handling validation errors</li>
 <li>Validation events</li>
@@ -537,6 +539,36 @@ obj.ValidateObject();// Will fail, 'cause A.Property limits the string length to
 ignored!</p>
 <p><strong>NOTE</strong>: The validation will fail with the first validation result of an
 attribute from the target property.</p>
+<h2 id="direct-value-validation">Direct value validation</h2>
+<p>Actually the .NET validation attributes are being used at properties, but in
+case you'd like to validate a value which is not hosted by a types property,
+you'll have to instance and call the validation methods of the attributes
+manually.</p>
+<p>The <code>ValueValidation</code> extension methods allow to apply a set of validation
+attributes to any value, and even a pre-defined validation template:</p>
+<pre><code class="lang-cs">// Using validation attribute instances
+IEnumerable&lt;ValidationResult&gt; results = anyValue.ValidateValue(new EmailAddressAttribute(), ...);
+if(results.Any()) throw new Exception(&quot;Invalid value&quot;);
+
+// Using pre-defined validation templates from ValidationTemplates
+ValidationTemplates.PropertyValidations[&quot;email&quot;] = new()
+{
+    new EmailAddressAttribute(),
+    ...
+};
+IEnumerable&lt;ValidationResult&gt; results = anyValue.ValidateValue(&quot;email&quot;);
+if(results.Any()) throw new Exception(&quot;Invalid value&quot;);
+</code></pre>
+<p>Using the <code>ValidateItem</code> extension methods, you can also validate a value as
+an item using <code>IItemValidationAttribute</code> implementing attributes or pre-
+defined templates from <code>ValidationTemplates.ItemValidations</code>.</p>
+<p><strong>NOTE</strong>: Instead of returning only the first validation failure when using
+validation templates on properties (<code>ValidationTemplateAttribute</code>), the
+template using <code>Validate(Value|Item)</code> methods will yield all validation
+results for a value.</p>
+<p>The <code>Validate(AsValue|Item)</code> extension will throw an
+<code>ObjectValidationException</code>, while the <code>TryValidate(AsValue|Item)</code> extension
+returns a boolean indicator, if the value has been validated without any error.</p>
 <h2 id="validation-templates">Validation templates</h2>
 <p>Similar to validation references you can use validation templates, which are
 not bound to another existing property, but managed in the

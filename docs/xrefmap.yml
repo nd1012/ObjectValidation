@@ -3381,29 +3381,293 @@ references:
 - uid: wan24.ObjectValidation.ValidationTemplates.ItemValidations
   name: ItemValidations
   href: api/wan24.ObjectValidation.ValidationTemplates.html#wan24_ObjectValidation_ValidationTemplates_ItemValidations
-  commentId: P:wan24.ObjectValidation.ValidationTemplates.ItemValidations
-  fullName: wan24.ObjectValidation.ValidationTemplates.ItemValidations
-  nameWithType: ValidationTemplates.ItemValidations
-- uid: wan24.ObjectValidation.ValidationTemplates.ItemValidations*
-  name: ItemValidations
-  href: api/wan24.ObjectValidation.ValidationTemplates.html#wan24_ObjectValidation_ValidationTemplates_ItemValidations_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplates.ItemValidations
-  isSpec: "True"
+  commentId: F:wan24.ObjectValidation.ValidationTemplates.ItemValidations
   fullName: wan24.ObjectValidation.ValidationTemplates.ItemValidations
   nameWithType: ValidationTemplates.ItemValidations
 - uid: wan24.ObjectValidation.ValidationTemplates.PropertyValidations
   name: PropertyValidations
   href: api/wan24.ObjectValidation.ValidationTemplates.html#wan24_ObjectValidation_ValidationTemplates_PropertyValidations
-  commentId: P:wan24.ObjectValidation.ValidationTemplates.PropertyValidations
+  commentId: F:wan24.ObjectValidation.ValidationTemplates.PropertyValidations
   fullName: wan24.ObjectValidation.ValidationTemplates.PropertyValidations
   nameWithType: ValidationTemplates.PropertyValidations
-- uid: wan24.ObjectValidation.ValidationTemplates.PropertyValidations*
-  name: PropertyValidations
-  href: api/wan24.ObjectValidation.ValidationTemplates.html#wan24_ObjectValidation_ValidationTemplates_PropertyValidations_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplates.PropertyValidations
+- uid: wan24.ObjectValidation.ValueValidation
+  name: ValueValidation
+  href: api/wan24.ObjectValidation.ValueValidation.html
+  commentId: T:wan24.ObjectValidation.ValueValidation
+  fullName: wan24.ObjectValidation.ValueValidation
+  nameWithType: ValueValidation
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate*
+  name: TryValidate
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.TryValidate
   isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplates.PropertyValidations
-  nameWithType: ValidationTemplates.PropertyValidations
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate
+  nameWithType: ValueValidation.TryValidate
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name: TryValidate<T>(T, IEnumerable<ValidationAttribute>, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IEnumerable_System_ComponentModel_DataAnnotations_ValidationAttribute__IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name.vb: TryValidate(Of T)(T, IEnumerable(Of ValidationAttribute), ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute>, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationAttribute), ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.TryValidate<T>(T, IEnumerable<ValidationAttribute>, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, IEnumerable(Of ValidationAttribute), ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: TryValidate<T>(T, out IEnumerable<ValidationResult>, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: TryValidate(Of T)(T, ByRef IEnumerable(Of ValidationResult), ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.TryValidate<T>(T, out IEnumerable<ValidationResult>, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, ByRef IEnumerable(Of ValidationResult), ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: TryValidate<T>(T, out IEnumerable<ValidationResult>, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: TryValidate(Of T)(T, ByRef IEnumerable(Of ValidationResult), IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.TryValidate<T>(T, out IEnumerable<ValidationResult>, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, ByRef IEnumerable(Of ValidationResult), IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name: TryValidate<T>(T, IEnumerable<IItemValidationAttribute>, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IEnumerable_wan24_ObjectValidation_IItemValidationAttribute__IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name.vb: TryValidate(Of T)(T, IEnumerable(Of IItemValidationAttribute), ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, IEnumerable<wan24.ObjectValidation.IItemValidationAttribute>, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, IEnumerable(Of wan24.ObjectValidation.IItemValidationAttribute), ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.TryValidate<T>(T, IEnumerable<IItemValidationAttribute>, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, IEnumerable(Of IItemValidationAttribute), ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IServiceProvider,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: TryValidate<T>(T, IServiceProvider, out IEnumerable<ValidationResult>, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IServiceProvider_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IServiceProvider,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of ValidationResult), ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, IServiceProvider, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.TryValidate<T>(T, IServiceProvider, out IEnumerable<ValidationResult>, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of ValidationResult), ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IServiceProvider,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: TryValidate<T>(T, IServiceProvider, out IEnumerable<ValidationResult>, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidate__1___0_IServiceProvider_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidate``1(``0,IServiceProvider,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of ValidationResult), IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidate<T>(T, IServiceProvider, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.TryValidate<T>(T, IServiceProvider, out IEnumerable<ValidationResult>, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.TryValidate(Of T)(T, IServiceProvider, ByRef IEnumerable(Of ValidationResult), IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.TryValidateAsItem*
+  name: TryValidateAsItem
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidateAsItem_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.TryValidateAsItem
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidateAsItem
+  nameWithType: ValueValidation.TryValidateAsItem
+- uid: wan24.ObjectValidation.ValueValidation.TryValidateAsItem``1(``0,System.String,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name: TryValidateAsItem<T>(T, String, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidateAsItem__1___0_System_String_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidateAsItem``1(``0,System.String,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name.vb: TryValidateAsItem(Of T)(T, String, ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidateAsItem<T>(T, System.String, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidateAsItem(Of T)(T, System.String, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.TryValidateAsItem<T>(T, String, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.TryValidateAsItem(Of T)(T, String, ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.TryValidateAsValue*
+  name: TryValidateAsValue
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidateAsValue_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.TryValidateAsValue
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidateAsValue
+  nameWithType: ValueValidation.TryValidateAsValue
+- uid: wan24.ObjectValidation.ValueValidation.TryValidateAsValue``1(``0,System.String,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name: TryValidateAsValue<T>(T, String, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_TryValidateAsValue__1___0_System_String_IEnumerable_System_ComponentModel_DataAnnotations_ValidationResult___System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.TryValidateAsValue``1(``0,System.String,IEnumerable{System.ComponentModel.DataAnnotations.ValidationResult}@,System.Nullable{IServiceProvider})
+  name.vb: TryValidateAsValue(Of T)(T, String, ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.TryValidateAsValue<T>(T, System.String, out IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.TryValidateAsValue(Of T)(T, System.String, ByRef IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.TryValidateAsValue<T>(T, String, out IEnumerable<ValidationResult>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.TryValidateAsValue(Of T)(T, String, ByRef IEnumerable(Of ValidationResult), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.Validate*
+  name: Validate
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.Validate
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.Validate
+  nameWithType: ValueValidation.Validate
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},System.Nullable{IServiceProvider})
+  name: Validate<T>(T, IEnumerable<ValidationAttribute>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_IEnumerable_System_ComponentModel_DataAnnotations_ValidationAttribute__System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},System.Nullable{IServiceProvider})
+  name.vb: Validate(Of T)(T, IEnumerable(Of ValidationAttribute), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationAttribute), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.Validate<T>(T, IEnumerable<ValidationAttribute>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, IEnumerable(Of ValidationAttribute), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},System.Nullable{IServiceProvider})
+  name: Validate<T>(T, IEnumerable<IItemValidationAttribute>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_IEnumerable_wan24_ObjectValidation_IItemValidationAttribute__System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},System.Nullable{IServiceProvider})
+  name.vb: Validate(Of T)(T, IEnumerable(Of IItemValidationAttribute), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, IEnumerable<wan24.ObjectValidation.IItemValidationAttribute>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, IEnumerable(Of wan24.ObjectValidation.IItemValidationAttribute), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.Validate<T>(T, IEnumerable<IItemValidationAttribute>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, IEnumerable(Of IItemValidationAttribute), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,IServiceProvider,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: Validate<T>(T, IServiceProvider, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_IServiceProvider_System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,IServiceProvider,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: Validate(Of T)(T, IServiceProvider, ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, IServiceProvider, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, IServiceProvider, System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.Validate<T>(T, IServiceProvider, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, IServiceProvider, ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,IServiceProvider,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: Validate<T>(T, IServiceProvider, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_IServiceProvider_wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,IServiceProvider,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: Validate(Of T)(T, IServiceProvider, IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, IServiceProvider, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, IServiceProvider, wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.Validate<T>(T, IServiceProvider, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, IServiceProvider, IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: Validate<T>(T, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: Validate(Of T)(T, ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.Validate<T>(T, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.Validate``1(``0,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: Validate<T>(T, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_Validate__1___0_wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.Validate``1(``0,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: Validate(Of T)(T, IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.Validate<T>(T, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.Validate(Of T)(T, wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.Validate<T>(T, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.Validate(Of T)(T, IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.ValidateAsItem*
+  name: ValidateAsItem
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateAsItem_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.ValidateAsItem
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateAsItem
+  nameWithType: ValueValidation.ValidateAsItem
+- uid: wan24.ObjectValidation.ValueValidation.ValidateAsItem``1(``0,System.String,System.Nullable{IServiceProvider})
+  name: ValidateAsItem<T>(T, String, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateAsItem__1___0_System_String_System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateAsItem``1(``0,System.String,System.Nullable{IServiceProvider})
+  name.vb: ValidateAsItem(Of T)(T, String, Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateAsItem<T>(T, System.String, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateAsItem(Of T)(T, System.String, System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateAsItem<T>(T, String, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateAsItem(Of T)(T, String, Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.ValidateAsValue*
+  name: ValidateAsValue
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateAsValue_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.ValidateAsValue
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateAsValue
+  nameWithType: ValueValidation.ValidateAsValue
+- uid: wan24.ObjectValidation.ValueValidation.ValidateAsValue``1(``0,System.String,System.Nullable{IServiceProvider})
+  name: ValidateAsValue<T>(T, String, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateAsValue__1___0_System_String_System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateAsValue``1(``0,System.String,System.Nullable{IServiceProvider})
+  name.vb: ValidateAsValue(Of T)(T, String, Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateAsValue<T>(T, System.String, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateAsValue(Of T)(T, System.String, System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateAsValue<T>(T, String, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateAsValue(Of T)(T, String, Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.ValidateItem*
+  name: ValidateItem
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateItem_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.ValidateItem
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateItem
+  nameWithType: ValueValidation.ValidateItem
+- uid: wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},System.Nullable{IServiceProvider})
+  name: ValidateItem<T>(T, IEnumerable<IItemValidationAttribute>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateItem__1___0_IEnumerable_wan24_ObjectValidation_IItemValidationAttribute__System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,IEnumerable{wan24.ObjectValidation.IItemValidationAttribute},System.Nullable{IServiceProvider})
+  name.vb: ValidateItem(Of T)(T, IEnumerable(Of IItemValidationAttribute), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateItem<T>(T, IEnumerable<wan24.ObjectValidation.IItemValidationAttribute>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateItem(Of T)(T, IEnumerable(Of wan24.ObjectValidation.IItemValidationAttribute), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateItem<T>(T, IEnumerable<IItemValidationAttribute>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateItem(Of T)(T, IEnumerable(Of IItemValidationAttribute), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,IServiceProvider,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: ValidateItem<T>(T, IServiceProvider, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateItem__1___0_IServiceProvider_wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,IServiceProvider,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: ValidateItem(Of T)(T, IServiceProvider, IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateItem<T>(T, IServiceProvider, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateItem(Of T)(T, IServiceProvider, wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.ValidateItem<T>(T, IServiceProvider, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.ValidateItem(Of T)(T, IServiceProvider, IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,System.String,System.Nullable{IServiceProvider})
+  name: ValidateItem<T>(T, String, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateItem__1___0_System_String_System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,System.String,System.Nullable{IServiceProvider})
+  name.vb: ValidateItem(Of T)(T, String, Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateItem<T>(T, System.String, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateItem(Of T)(T, System.String, System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateItem<T>(T, String, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateItem(Of T)(T, String, Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,wan24.ObjectValidation.IItemValidationAttribute[])
+  name: ValidateItem<T>(T, IItemValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateItem__1___0_wan24_ObjectValidation_IItemValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateItem``1(``0,wan24.ObjectValidation.IItemValidationAttribute[])
+  name.vb: ValidateItem(Of T)(T, IItemValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateItem<T>(T, wan24.ObjectValidation.IItemValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateItem(Of T)(T, wan24.ObjectValidation.IItemValidationAttribute())
+  nameWithType: ValueValidation.ValidateItem<T>(T, IItemValidationAttribute[])
+  nameWithType.vb: ValueValidation.ValidateItem(Of T)(T, IItemValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.ValidateValue*
+  name: ValidateValue
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateValue_
+  commentId: Overload:wan24.ObjectValidation.ValueValidation.ValidateValue
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateValue
+  nameWithType: ValueValidation.ValidateValue
+- uid: wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},System.Nullable{IServiceProvider})
+  name: ValidateValue<T>(T, IEnumerable<ValidationAttribute>, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateValue__1___0_IEnumerable_System_ComponentModel_DataAnnotations_ValidationAttribute__System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,IEnumerable{System.ComponentModel.DataAnnotations.ValidationAttribute},System.Nullable{IServiceProvider})
+  name.vb: ValidateValue(Of T)(T, IEnumerable(Of ValidationAttribute), Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateValue<T>(T, IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute>, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateValue(Of T)(T, IEnumerable(Of System.ComponentModel.DataAnnotations.ValidationAttribute), System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateValue<T>(T, IEnumerable<ValidationAttribute>, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateValue(Of T)(T, IEnumerable(Of ValidationAttribute), Nullable(Of IServiceProvider))
+- uid: wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,IServiceProvider,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: ValidateValue<T>(T, IServiceProvider, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateValue__1___0_IServiceProvider_System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,IServiceProvider,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: ValidateValue(Of T)(T, IServiceProvider, ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateValue<T>(T, IServiceProvider, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateValue(Of T)(T, IServiceProvider, System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.ValidateValue<T>(T, IServiceProvider, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.ValidateValue(Of T)(T, IServiceProvider, ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name: ValidateValue<T>(T, ValidationAttribute[])
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateValue__1___0_System_ComponentModel_DataAnnotations_ValidationAttribute___
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  name.vb: ValidateValue(Of T)(T, ValidationAttribute())
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateValue<T>(T, System.ComponentModel.DataAnnotations.ValidationAttribute[])
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateValue(Of T)(T, System.ComponentModel.DataAnnotations.ValidationAttribute())
+  nameWithType: ValueValidation.ValidateValue<T>(T, ValidationAttribute[])
+  nameWithType.vb: ValueValidation.ValidateValue(Of T)(T, ValidationAttribute())
+- uid: wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,System.String,System.Nullable{IServiceProvider})
+  name: ValidateValue<T>(T, String, Nullable<IServiceProvider>)
+  href: api/wan24.ObjectValidation.ValueValidation.html#wan24_ObjectValidation_ValueValidation_ValidateValue__1___0_System_String_System_Nullable_IServiceProvider__
+  commentId: M:wan24.ObjectValidation.ValueValidation.ValidateValue``1(``0,System.String,System.Nullable{IServiceProvider})
+  name.vb: ValidateValue(Of T)(T, String, Nullable(Of IServiceProvider))
+  fullName: wan24.ObjectValidation.ValueValidation.ValidateValue<T>(T, System.String, System.Nullable<IServiceProvider>)
+  fullName.vb: wan24.ObjectValidation.ValueValidation.ValidateValue(Of T)(T, System.String, System.Nullable(Of IServiceProvider))
+  nameWithType: ValueValidation.ValidateValue<T>(T, String, Nullable<IServiceProvider>)
+  nameWithType.vb: ValueValidation.ValidateValue(Of T)(T, String, Nullable(Of IServiceProvider))
 - uid: wan24.ObjectValidation.XmlAttribute
   name: XmlAttribute
   href: api/wan24.ObjectValidation.XmlAttribute.html

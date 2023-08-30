@@ -37,7 +37,12 @@ namespace wan24.ObjectValidation
         /// <param name="serviceProvider">Service provider</param>
         /// <returns>Object</returns>
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation</exception>
-        public static T ValidateObject<T>(this T obj, out List<ValidationResult> results, string? member = null, IEnumerable<string>? members = null, IServiceProvider? serviceProvider = null)
+        public static T ValidateObject<T>(
+            this T obj, out List<ValidationResult> results, 
+            string? member = null, 
+            IEnumerable<string>? members = null, 
+            IServiceProvider? serviceProvider = null
+            )
             where T : notnull
         {
             TryValidateObject(obj, results = new(), member, throwOnError: true, members, serviceProvider);
@@ -54,7 +59,12 @@ namespace wan24.ObjectValidation
         /// <param name="serviceProvider">Service provider</param>
         /// <returns>Object</returns>
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation</exception>
-        public static T ValidateObject<T>(this T obj, List<ValidationResult> results, string? member = null, IEnumerable<string>? members = null, IServiceProvider? serviceProvider = null)
+        public static T ValidateObject<T>(
+            this T obj, List<ValidationResult> results, 
+            string? member = null, 
+            IEnumerable<string>? members = null, 
+            IServiceProvider? serviceProvider = null
+            )
             where T : notnull
         {
             TryValidateObject(obj, results, member, throwOnError: true, members, serviceProvider);
@@ -71,7 +81,8 @@ namespace wan24.ObjectValidation
         /// <param name="members">Member names to validate</param>
         /// <param name="serviceProvider">Service provider</param>
         /// <returns>Valid?</returns>
-        /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, which is the default)</exception>
+        /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, 
+        /// which is the default)</exception>
         public static bool TryValidateObject(
             this object obj, 
             out List<ValidationResult> results, 
@@ -92,7 +103,8 @@ namespace wan24.ObjectValidation
         /// <param name="members">Member names to validate</param>
         /// <param name="serviceProvider">Service provider</param>
         /// <returns>Valid?</returns>
-        /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, which is the default)</exception>
+        /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, 
+        /// which is the default)</exception>
         public static bool TryValidateObject(
             this object obj, 
             List<ValidationResult>? results = null, 
