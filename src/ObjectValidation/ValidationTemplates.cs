@@ -10,11 +10,11 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Property validation templates (key is the template name, value a list of validation attributes to apply)
         /// </summary>
-        public static Dictionary<string, List<ValidationAttribute>> PropertyValidations { get; } = new();
+        public static readonly Dictionary<string, List<ValidationAttribute>> PropertyValidations = new();
 
         /// <summary>
         /// Item validation templates (key is the template name, value a list of validation attributes to apply)
         /// </summary>
-        public static Dictionary<string, List<IItemValidationAttribute>> ItemValidations { get; } = new();
+        public static readonly Dictionary<string, List<IItemValidationAttribute>> ItemValidations = new();
     }
 }

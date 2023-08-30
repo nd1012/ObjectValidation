@@ -3,6 +3,8 @@
 This library contains some object validation helper:
 
 - `(Try)ValidateObject` extension for validating any object type
+- `Validate(Value|Item)` extension for validating any value using a set of 
+validation attributes or a pre-defined validation template
 - `NoValidationAttribute` for excluding types or properties from validation
 - `ObjectValidationException` for handling validation errors
 - Validation events
@@ -370,6 +372,44 @@ ignored!
 
 **NOTE**: The validation will fail with the first validation result of an 
 attribute from the target property.
+
+## Direct value validation
+
+Actually the .NET validation attributes are being used at properties, but in 
+case you'd like to validate a value which is not hosted by a types property, 
+you'll have to instance and call the validation methods of the attributes 
+manually.
+
+The `ValueValidation` extension methods allow to apply a set of validation 
+attributes to any value, and even a pre-defined validation template:
+
+```cs
+// Using validation attribute instances
+IEnumerable<ValidationResult> results = anyValue.ValidateValue(new EmailAddressAttribute(), ...);
+if(results.Any()) throw new Exception("Invalid value");
+
+// Using pre-defined validation templates from ValidationTemplates
+ValidationTemplates.PropertyValidations["email"] = new()
+{
+    new EmailAddressAttribute(),
+    ...
+};
+IEnumerable<ValidationResult> results = anyValue.ValidateValue("email");
+if(results.Any()) throw new Exception("Invalid value");
+```
+
+Using the `ValidateItem` extension methods, you can also validate a value as 
+an item using `IItemValidationAttribute` implementing attributes or pre-
+defined templates from `ValidationTemplates.ItemValidations`.
+
+**NOTE**: Instead of returning only the first validation failure when using 
+validation templates on properties (`ValidationTemplateAttribute`), the 
+template using `Validate(Value|Item)` methods will yield all validation 
+results for a value.
+
+The `Validate(AsValue|Item)` extension will throw an 
+`ObjectValidationException`, while the `TryValidate(AsValue|Item)` extension 
+returns a boolean indicator, if the value has been validated without any error.
 
 ## Validation templates
 
