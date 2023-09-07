@@ -137,6 +137,10 @@ public List<string> NonNullList2 { get; set; } = new() { null! };// This will ge
 Using the `ItemNullableAttribute` you can define, if the dictionary value or 
 the list item may be `null`.
 
+Nullability can also be defined by the .NET `AllowNullAttribute` and 
+`DisallowNullAttribute` - `DisallowNullAttribute` has priority. Those 
+attributes can be used to override the nullability of a property type.
+
 ## General examples
 
 ```cs
@@ -616,6 +620,10 @@ type, because the nullability information will be discarded during your code
 compilation. For the dictionary item validation please specify the 
 `ItemNullableAttribute` in that case. The same applies to deep array 
 validations.
+
+Nullability can also be defined by the .NET `AllowNullAttribute` and 
+`DisallowNullAttribute` - `DisallowNullAttribute` has priority. Those 
+attributes can be used to override the nullability of a property type.
 
 ### More validations
 
