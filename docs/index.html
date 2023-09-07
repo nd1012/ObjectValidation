@@ -133,11 +133,15 @@ want to profit from the included general validation attributes for SWIFT etc.</p
 <td><code>CountLimitAttribute</code></td>
 </tr>
 <tr>
-<td>Nullable types (<code>null</code> values in non-nullable properties will fail)</td>
-<td><code>NullableAttribute</code></td>
+<td>Non-nullable property values (<code>null</code> values will fail, even if the type is nullable)</td>
+<td><code>DisallowNullAttribute</code></td>
 </tr>
 <tr>
-<td>Dictionary and list key/value validation (including validating (non-)null items</td>
+<td>Nullable property values (does allow a <code>null</code> value, even if the type is not nullable)</td>
+<td><code>AllowNullAttribute</code></td>
+</tr>
+<tr>
+<td>Dictionary, list and array key/value validation (including validating (non-)null items)</td>
 <td><code>ItemNullableAttribute</code></td>
 </tr>
 <tr>
@@ -239,6 +243,9 @@ public List&lt;string&gt; NonNullList2 { get; set; } = new() { null! };// This w
 </code></pre>
 <p>Using the <code>ItemNullableAttribute</code> you can define, if the dictionary value or
 the list item may be <code>null</code>.</p>
+<p>Nullability can also be defined by the .NET <code>AllowNullAttribute</code> and
+<code>DisallowNullAttribute</code> - <code>DisallowNullAttribute</code> has priority. Those
+attributes can be used to override the nullability of a property type.</p>
 <h2 id="general-examples">General examples</h2>
 <pre><code class="lang-cs">// Only determine if valid/invalid
 if(!anyObject1.TryValidateObject())
@@ -746,6 +753,9 @@ type, because the nullability information will be discarded during your code
 compilation. For the dictionary item validation please specify the
 <code>ItemNullableAttribute</code> in that case. The same applies to deep array
 validations.</p>
+<p>Nullability can also be defined by the .NET <code>AllowNullAttribute</code> and
+<code>DisallowNullAttribute</code> - <code>DisallowNullAttribute</code> has priority. Those
+attributes can be used to override the nullability of a property type.</p>
 <h3 id="more-validations">More validations</h3>
 <p>Have a look at the
 <a href="https://github.com/anghelvalentin/CountryValidator">CountryValidator</a>

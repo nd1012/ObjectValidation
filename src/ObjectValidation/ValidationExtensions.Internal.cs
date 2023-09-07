@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace wan24.ObjectValidation
@@ -97,9 +98,10 @@ namespace wan24.ObjectValidation
                         return Finalize();
                     }
                     // Use the default object validation
+                    ValidationContext? validationContext = null;
                     if (!isObjectValidatable && !type.IsEnum)
                     {
-                        ValidationContext validationContext = new(obj, serviceProvider, items: null);
+                        validationContext = new(obj, serviceProvider, items: null);
                         res &= Validator.TryValidateObject(obj, validationContext, validationResults, validateAllProperties: true);
                         if (obj is IValidatableObject validatable)
                         {
@@ -227,7 +229,11 @@ namespace wan24.ObjectValidation
                             noValidation = noValidationAttr is not null;
                             if (isObjectValidatable)
                             {
-                                res &= Validator.TryValidateProperty(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, validationResults);
+                                validationContext = new(obj, serviceProvider, items: null)
+                                {
+                                    MemberName = pi.Name
+                                };
+                                res &= Validator.TryValidateProperty(value, validationContext, validationResults);
                                 if (noValidation && noValidationAttr!.SkipNullValueCheck)
                                 {
 #if DEBUG
@@ -236,31 +242,38 @@ namespace wan24.ObjectValidation
                                     continue;
                                 }
                             }
+                            else
+                            {
+                                validationContext = null;
+                            }
                             // Multiple validation attributes
-                            if (!isObjectValidatable)
-                                foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                            foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                            {
+                                validationContext ??= new(obj, serviceProvider, items: null)
                                 {
-                                    multiValidationResults = attr.MultiValidation(value, new(obj, serviceProvider, items: null) { MemberName = pi.Name }, serviceProvider).ToArray();
-                                    if (multiValidationResults.Length == 0) continue;
-                                    res = false;
-                                    validationResults.AddRange(multiValidationResults);
-                                }
+                                    MemberName = pi.Name
+                                };
+                                multiValidationResults = attr.MultiValidation(value, validationContext, serviceProvider).ToArray();
+                                if (multiValidationResults.Length == 0) continue;
+                                res = false;
+                                validationResults.AddRange(multiValidationResults);
+                            }
                             // Ensure a valid value (shouldn't be NULL, if the property type isn't nullable) and skip NULL values
                             nullabilityInfo = nullabilityContext.Create(pi.GetMethod!.ReturnParameter);
                             if (value is null)
                             {
-                                if (!IsNullable(nullabilityInfo))
+                                if (!IsNullable(pi, nullabilityInfo))
                                 {
                                     res = false;
                                     validationResults.Add(new(
-                                        $"Property {pi.Name} value is NULL, but the property type {pi.PropertyType} isn't nullable (a non-NULL value is required)",
+                                        $"Property {pi.Name} value is NULL, but the property type {pi.PropertyType} isn't nullable (or a non-NULL value is required)",
                                         new string[] { pi.Name }
                                         ));
                                     (_, res, _) = RaiseEvent(OnObjectPropertyValidationFailed, info.Seen, obj, validationResults, allResults, member, throwOnError, members, res);
                                 }
                                 continue;
                             }
-                            if (isObjectValidatable) continue;
+                            //if (isObjectValidatable) continue;// WTH?
                             // Deep object validation
                             valueType = value.GetType();
                             noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributesCached().FirstOrDefault(a => a is NoValidationAttribute);
@@ -424,6 +437,27 @@ namespace wan24.ObjectValidation
         /// <param name="ni">Nullability info</param>
         /// <returns>Is nullable?</returns>
         internal static bool IsNullable(NullabilityInfo ni) => ni.WriteState != NullabilityState.NotNull || ni.ReadState != NullabilityState.NotNull;
+
+        /// <summary>
+        /// Determine if nullable (checks for nullability attributes and info, if given)
+        /// </summary>
+        /// <param name="obj">Object with custom attributes</param>
+        /// <param name="ni">Nullability info</param>
+        /// <param name="isItem">Is an item?</param>
+        /// <param name="arrayLevel">Array level</param>
+        /// <returns>Is nullable?</returns>
+        internal static bool IsNullable(ICustomAttributeProvider obj, NullabilityInfo? ni = null, bool isItem = false, int arrayLevel = 0)
+        {
+            Attribute[] attributes = obj.GetCustomAttributesCached();
+            if (!isItem)
+            {
+                if (attributes.Any(a => a is DisallowNullAttribute)) return false;
+                if (attributes.Any(a => a is AllowNullAttribute)) return true;
+            }
+            if (isItem && attributes.Any(a => a is ItemNullableAttribute attr && attr.ArrayLevel == arrayLevel)) return true;
+            if (ni is not null && !IsNullable(ni)) return false;
+            return true;
+        }
 
         /// <summary>
         /// Get an object as dictionary (if it is a dictionary)

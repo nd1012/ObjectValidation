@@ -20,5 +20,10 @@
         public ItemNoValidationAttribute(bool skipNullValueCheck, ItemValidationTargets target = ItemValidationTargets.Item)
             : base(target, new NoValidationAttribute(skipNullValueCheck))
         { }
+
+        /// <summary>
+        /// Skip the <see langword="null"/> value check(s)?
+        /// </summary>
+        public bool SkipNullValueCheck => ((NoValidationAttribute)ValidationAttribute).SkipNullValueCheck;
     }
 }
