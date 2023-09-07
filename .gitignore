@@ -402,5 +402,5 @@ nuget.config
 nuget-publish.bat
 
 # Others
-log.txt
+**/log.txt
 src/ObjectValidation Docs/log.txt

@@ -67,8 +67,9 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | --- | --- |
 | Validations by event handlers | (see `ValidationExtensions`) |
 | Dictionary list and enumerable count limit | `CountLimitAttribute` |
-| Nullable types (`null` values in non-nullable properties will fail) | `NullableAttribute` |
-| Dictionary and list key/value validation (including validating (non-)null items | `ItemNullableAttribute` |
+| Non-nullable property values (`null` values will fail, even if the type is nullable) | `DisallowNullAttribute` |
+| Nullable property values (does allow a `null` value, even if the type is not nullable) | `AllowNullAttribute` |
+| Dictionary, list and array key/value validation (including validating (non-)null items) | `ItemNullableAttribute` |
 | ISO 13616 IBAN and ISO 9362 BIC (SWIFT code) validation | `IbanAttribute`, `BicAttribute` |
 | ABA RTN validation (MICR/fraction) validation | `AbaRtnAttribute` |
 | IP address validation | `IpAttribute` |
@@ -135,6 +136,10 @@ public List<string> NonNullList2 { get; set; } = new() { null! };// This will ge
 
 Using the `ItemNullableAttribute` you can define, if the dictionary value or 
 the list item may be `null`.
+
+Nullability can also be defined by the .NET `AllowNullAttribute` and 
+`DisallowNullAttribute` - `DisallowNullAttribute` has priority. Those 
+attributes can be used to override the nullability of a property type.
 
 ## General examples
 
@@ -615,6 +620,10 @@ type, because the nullability information will be discarded during your code
 compilation. For the dictionary item validation please specify the 
 `ItemNullableAttribute` in that case. The same applies to deep array 
 validations.
+
+Nullability can also be defined by the .NET `AllowNullAttribute` and 
+`DisallowNullAttribute` - `DisallowNullAttribute` has priority. Those 
+attributes can be used to override the nullability of a property type.
 
 ### More validations
 

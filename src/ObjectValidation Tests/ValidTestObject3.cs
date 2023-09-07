@@ -97,7 +97,7 @@ namespace ObjectValidation_Tests
             "test2"
         }.AsEnumerable();
 
-        [ItemNoValidation]
+        [ItemNoValidation(skipNullValueCheck: true)]
         public string[] ItemIgnoredProperty { get; set; } = new string[]
         {
             "test",

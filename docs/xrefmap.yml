@@ -1398,6 +1398,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemNoValidationAttribute.ItemNoValidationAttribute
   nameWithType: ItemNoValidationAttribute.ItemNoValidationAttribute
+- uid: wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck
+  name: SkipNullValueCheck
+  href: api/wan24.ObjectValidation.ItemNoValidationAttribute.html#wan24_ObjectValidation_ItemNoValidationAttribute_SkipNullValueCheck
+  commentId: P:wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck
+  fullName: wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck
+  nameWithType: ItemNoValidationAttribute.SkipNullValueCheck
+- uid: wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck*
+  name: SkipNullValueCheck
+  href: api/wan24.ObjectValidation.ItemNoValidationAttribute.html#wan24_ObjectValidation_ItemNoValidationAttribute_SkipNullValueCheck_
+  commentId: Overload:wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemNoValidationAttribute.SkipNullValueCheck
+  nameWithType: ItemNoValidationAttribute.SkipNullValueCheck
 - uid: wan24.ObjectValidation.ItemNullableAttribute
   name: ItemNullableAttribute
   href: api/wan24.ObjectValidation.ItemNullableAttribute.html

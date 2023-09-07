@@ -58,8 +58,9 @@ namespace wan24.ObjectValidation
                 if (!itemValidatable) ObjectValidation.ValidateObject.Logger($"{valueType} ({pi.DeclaringType}.{pi.Name}, member \"{member}\") items are not validatable");
             }
 #endif
-            bool valueNullable = (nullabilityInfo is not null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Dictionary<,>) && IsNullable(nullabilityInfo.GenericTypeArguments[1])) ||
-                pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) is not null;// If values are nullable
+            bool valueNullable = pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(Dictionary<,>)
+                ? IsNullable(pi, nullabilityInfo?.GenericTypeArguments[1], isItem: true, info.ArrayLevel)
+                : IsNullable(pi, ni: null, isItem: true, info.ArrayLevel);// If values are nullable
             if (valueNullable && onlyNullCheck) return res;
             int count = 0;// Key/value pair count
             object? val;// Value
@@ -157,9 +158,19 @@ namespace wan24.ObjectValidation
 #endif
                 if (itemValidations.Length == 0) return res;
             }
-            bool itemNullable = (nullabilityInfo is not null && pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>) && IsNullable(nullabilityInfo.GenericTypeArguments[0])) ||
-                (valueType.IsArray && nullabilityInfo?.ElementType is not null && IsNullable(nullabilityInfo.ElementType)) ||
-                pi.GetCustomAttribute<ItemNullableAttribute>(inherit: true) is not null;// If items are nullable
+            bool itemNullable;
+            if(pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+            {
+                itemNullable = IsNullable(pi, nullabilityInfo?.GenericTypeArguments[0], isItem: true, info.ArrayLevel);
+            }
+            else if (pi.PropertyType.IsArray)
+            {
+                itemNullable = IsNullable(pi, nullabilityInfo?.ElementType, isItem: true, info.ArrayLevel);
+            }
+            else
+            {
+                itemNullable = IsNullable(pi, ni: null, isItem: true, info.ArrayLevel);
+            }
             if (itemNullable && onlyNullCheck) return res;
             int count = 0;// Item count
             foreach (object? val in list)
