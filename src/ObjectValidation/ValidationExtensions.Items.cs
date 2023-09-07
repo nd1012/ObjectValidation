@@ -88,7 +88,7 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (a non-NULL value is required)",
+                            $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (or a non-NULL value is required)",
                             new string[] { GetMemberName(info, pi, count, member, isDict: true) }
                             ));
                     }
@@ -158,8 +158,8 @@ namespace wan24.ObjectValidation
 #endif
                 if (itemValidations.Length == 0) return res;
             }
-            bool itemNullable;
-            if(pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+            bool itemNullable;// If values are nullable
+            if (pi.PropertyType.IsGenericType && pi.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
             {
                 itemNullable = IsNullable(pi, nullabilityInfo?.GenericTypeArguments[0], isItem: true, info.ArrayLevel);
             }
@@ -182,7 +182,7 @@ namespace wan24.ObjectValidation
                     {
                         res = false;
                         validationResults.Add(new(
-                            $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (a non-NULL value is required)",
+                            $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (or a non-NULL value is required)",
                             new string[] { GetMemberName(info, pi, count, member) }
                             ));
                     }

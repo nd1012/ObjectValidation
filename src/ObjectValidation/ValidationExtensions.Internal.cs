@@ -98,7 +98,7 @@ namespace wan24.ObjectValidation
                         return Finalize();
                     }
                     // Use the default object validation
-                    ValidationContext validationContext;
+                    ValidationContext? validationContext = null;
                     if (!isObjectValidatable && !type.IsEnum)
                     {
                         validationContext = new(obj, serviceProvider, items: null);
@@ -227,12 +227,12 @@ namespace wan24.ObjectValidation
                             validationAttrs = pi.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
                             noValidationAttr = (NoValidationAttribute?)validationAttrs.FirstOrDefault(a => a is NoValidationAttribute);
                             noValidation = noValidationAttr is not null;
-                            validationContext= new(obj, serviceProvider, items: null)
-                            {
-                                MemberName = pi.Name
-                            };
                             if (isObjectValidatable)
                             {
+                                validationContext = new(obj, serviceProvider, items: null)
+                                {
+                                    MemberName = pi.Name
+                                };
                                 res &= Validator.TryValidateProperty(value, validationContext, validationResults);
                                 if (noValidation && noValidationAttr!.SkipNullValueCheck)
                                 {
@@ -242,15 +242,22 @@ namespace wan24.ObjectValidation
                                     continue;
                                 }
                             }
+                            else
+                            {
+                                validationContext = null;
+                            }
                             // Multiple validation attributes
-                            if (!isObjectValidatable)
-                                foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                            foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                            {
+                                validationContext ??= new(obj, serviceProvider, items: null)
                                 {
-                                    multiValidationResults = attr.MultiValidation(value, validationContext, serviceProvider).ToArray();
-                                    if (multiValidationResults.Length == 0) continue;
-                                    res = false;
-                                    validationResults.AddRange(multiValidationResults);
-                                }
+                                    MemberName = pi.Name
+                                };
+                                multiValidationResults = attr.MultiValidation(value, validationContext, serviceProvider).ToArray();
+                                if (multiValidationResults.Length == 0) continue;
+                                res = false;
+                                validationResults.AddRange(multiValidationResults);
+                            }
                             // Ensure a valid value (shouldn't be NULL, if the property type isn't nullable) and skip NULL values
                             nullabilityInfo = nullabilityContext.Create(pi.GetMethod!.ReturnParameter);
                             if (value is null)
@@ -259,7 +266,7 @@ namespace wan24.ObjectValidation
                                 {
                                     res = false;
                                     validationResults.Add(new(
-                                        $"Property {pi.Name} value is NULL, but the property type {pi.PropertyType} isn't nullable (a non-NULL value is required)",
+                                        $"Property {pi.Name} value is NULL, but the property type {pi.PropertyType} isn't nullable (or a non-NULL value is required)",
                                         new string[] { pi.Name }
                                         ));
                                     (_, res, _) = RaiseEvent(OnObjectPropertyValidationFailed, info.Seen, obj, validationResults, allResults, member, throwOnError, members, res);
