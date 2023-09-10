@@ -49,6 +49,7 @@ namespace wan24.ObjectValidation
                     ) ||
                     (
                         !DeniedTypes.Contains(type) && // Not denied
+                        !DeniedTypes.Any(t=>t.IsAssignableFrom(type)) && 
                         ( // Not denied generic type definition
                             gtd is null ||
                             (
