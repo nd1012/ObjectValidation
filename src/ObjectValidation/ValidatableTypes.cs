@@ -13,9 +13,17 @@ namespace wan24.ObjectValidation
         /// </summary>
         public static readonly ConcurrentBag<Type> ForcedTypes;
         /// <summary>
+        /// Types (also inherited) which are forced to be validated
+        /// </summary>
+        public static readonly ConcurrentBag<Type> ForcedTypesInheritable;
+        /// <summary>
         /// Types which are denied to be validated
         /// </summary>
         public static readonly ConcurrentBag<Type> DeniedTypes;
+        /// <summary>
+        /// Types (also inherited) which are denied to be validated
+        /// </summary>
+        public static readonly ConcurrentBag<Type> DeniedTypesInheritable;
 
         /// <summary>
         /// Constructor
@@ -23,7 +31,9 @@ namespace wan24.ObjectValidation
         static ValidatableTypes()
         {
             ForcedTypes = new();
-            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>), typeof(Type), typeof(Stream) });
+            ForcedTypesInheritable = new();
+            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>) });
+            DeniedTypesInheritable = new(new Type[] { typeof(Type), typeof(Stream) });
         }
 
         /// <summary>
@@ -39,21 +49,22 @@ namespace wan24.ObjectValidation
             {
                 Type? gtd = type.IsGenericType ? type.GetGenericTypeDefinition() : null;// Generic type definition
                 res = ForcedTypes.Contains(type) || // Forced
-                    ForcedTypes.Any(t=>t.IsAssignableFrom(type)) ||
+                    ForcedTypesInheritable.Any(t=>t.IsAssignableFrom(type)) ||
                     ( // Forced generic type definition
                         gtd is not null &&
                         (
                             ForcedTypes.Contains(gtd) ||
-                            ForcedTypes.Any(t=>t.IsAssignableFrom(gtd))
+                            ForcedTypesInheritable.Any(t=>t.IsAssignableFrom(gtd))
                         )
                     ) ||
                     (
                         !DeniedTypes.Contains(type) && // Not denied
+                        !DeniedTypesInheritable.Any(t=>t.IsAssignableFrom(type)) && 
                         ( // Not denied generic type definition
                             gtd is null ||
                             (
                                 !DeniedTypes.Contains(gtd) &&
-                                !DeniedTypes.Any(t=>t.IsAssignableFrom(gtd))
+                                !DeniedTypesInheritable.Any(t=>t.IsAssignableFrom(gtd))
                             )
                         ) &&
                         !( // Other type restrictions
