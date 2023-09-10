@@ -2825,12 +2825,24 @@ references:
   commentId: F:wan24.ObjectValidation.ValidatableTypes.DeniedTypes
   fullName: wan24.ObjectValidation.ValidatableTypes.DeniedTypes
   nameWithType: ValidatableTypes.DeniedTypes
+- uid: wan24.ObjectValidation.ValidatableTypes.DeniedTypesInheritable
+  name: DeniedTypesInheritable
+  href: api/wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_DeniedTypesInheritable
+  commentId: F:wan24.ObjectValidation.ValidatableTypes.DeniedTypesInheritable
+  fullName: wan24.ObjectValidation.ValidatableTypes.DeniedTypesInheritable
+  nameWithType: ValidatableTypes.DeniedTypesInheritable
 - uid: wan24.ObjectValidation.ValidatableTypes.ForcedTypes
   name: ForcedTypes
   href: api/wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_ForcedTypes
   commentId: F:wan24.ObjectValidation.ValidatableTypes.ForcedTypes
   fullName: wan24.ObjectValidation.ValidatableTypes.ForcedTypes
   nameWithType: ValidatableTypes.ForcedTypes
+- uid: wan24.ObjectValidation.ValidatableTypes.ForcedTypesInheritable
+  name: ForcedTypesInheritable
+  href: api/wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_ForcedTypesInheritable
+  commentId: F:wan24.ObjectValidation.ValidatableTypes.ForcedTypesInheritable
+  fullName: wan24.ObjectValidation.ValidatableTypes.ForcedTypesInheritable
+  nameWithType: ValidatableTypes.ForcedTypesInheritable
 - uid: wan24.ObjectValidation.ValidatableTypes.IsTypeValidatable(Type)
   name: IsTypeValidatable(Type)
   href: api/wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_IsTypeValidatable_Type_

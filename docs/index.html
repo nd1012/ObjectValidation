@@ -628,9 +628,14 @@ be checked, too - but not inherited (maybe abstract) types or interfaces.</p>
 <li><code>string</code></li>
 <li><code>object</code></li>
 <li><code>IQueryable&lt;&gt;</code></li>
+<li><code>Type</code> (also inherited)</li>
+<li><code>Stream</code> (also inherited)</li>
 </ul>
 <p><strong>NOTE</strong>: <code>string</code> and <code>object</code> shouldn't be removed from the denied type
 list!</p>
+<p>While <code>ForcedTypes</code> contains types which need to match 1:1,
+<code>ForcedTypesInherited</code> may contain base and abstract or interface types. The
+same difference applies to <code>DeniedTypes</code> and <code>DeniedTypesInherited</code>.</p>
 <p>By attaching to the <code>ValidatableTypes.OnIsTypeValidatable</code>, you can make a
 conditional exception for an usually not validated type.</p>
 <h2 id="force-to-fail-with-an-exception">Force to fail with an exception</h2>
