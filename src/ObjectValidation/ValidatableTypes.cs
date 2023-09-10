@@ -39,15 +39,22 @@ namespace wan24.ObjectValidation
             {
                 Type? gtd = type.IsGenericType ? type.GetGenericTypeDefinition() : null;// Generic type definition
                 res = ForcedTypes.Contains(type) || // Forced
+                    ForcedTypes.Any(t=>t.IsAssignableFrom(type)) ||
                     ( // Forced generic type definition
                         gtd is not null &&
-                        ForcedTypes.Contains(gtd)
+                        (
+                            ForcedTypes.Contains(gtd) ||
+                            ForcedTypes.Any(t=>t.IsAssignableFrom(gtd))
+                        )
                     ) ||
                     (
                         !DeniedTypes.Contains(type) && // Not denied
                         ( // Not denied generic type definition
                             gtd is null ||
-                            !DeniedTypes.Contains(gtd)
+                            (
+                                !DeniedTypes.Contains(gtd) &&
+                                !DeniedTypes.Any(t=>t.IsAssignableFrom(gtd))
+                            )
                         ) &&
                         !( // Other type restrictions
                             (type.IsValueType && !type.IsEnum) || // Not a non-enum value type
