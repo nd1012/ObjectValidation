@@ -479,9 +479,15 @@ Per default these types won't be validated:
 - `string`
 - `object`
 - `IQueryable<>`
+- `Type` (also inherited)
+- `Stream` (also inherited)
 
 **NOTE**: `string` and `object` shouldn't be removed from the denied type 
 list!
+
+While `ForcedTypes` contains types which need to match 1:1, 
+`ForcedTypesInherited` may contain base and abstract or interface types. The 
+same difference applies to `DeniedTypes` and `DeniedTypesInherited`.
 
 By attaching to the `ValidatableTypes.OnIsTypeValidatable`, you can make a 
 conditional exception for an usually not validated type.
