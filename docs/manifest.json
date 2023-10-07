@@ -21,7 +21,19 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ufNFeudBKg0uoG+9Tf+Zv1VK99wKNHzB2hFk4ZRgX2Y="
+          "hash": "rk85/ng3XKq4IIoudETfZOhBqcWuxOphd+4tAYP6IcU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation..yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation..html",
+          "hash": "r3F/q9v/WQcFrYtCykgYB9H3mPp32YOn6Cz9VuIFRXs="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "SkfGX/tXZKdpYgUhLNJFKV54AEQDI/KPMYYLq6SVaZs="
+          "hash": "BZvLilIew2bqoQ2SzVsvMpT1ExYZoyq/MikPP1+BFu8="
         }
       },
       "is_incremental": false,
@@ -1176,7 +1188,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 90,
+          "total_file_count": 91,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

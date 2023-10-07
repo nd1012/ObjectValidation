@@ -7,6 +7,11 @@ references:
   commentId: N:wan24.ObjectValidation
   fullName: wan24.ObjectValidation
   nameWithType: wan24.ObjectValidation
+- uid: wan24.ObjectValidation.
+  name: ''
+  href: api/wan24.ObjectValidation..html
+  commentId: T:wan24.ObjectValidation.
+  fullName: wan24.ObjectValidation.
 - uid: wan24.ObjectValidation.AbaFormats
   name: AbaFormats
   href: api/wan24.ObjectValidation.AbaFormats.html
