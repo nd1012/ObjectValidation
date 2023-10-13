@@ -1,5 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//TODO .NET 8: Minimum/MaximumIsExclusive
+//TODO .NET 8: (Item)LengthAttribute
+//TODO .NET 8: (Item)Base64StringAttribute
+
 namespace wan24.ObjectValidation
 {
     /// <summary>

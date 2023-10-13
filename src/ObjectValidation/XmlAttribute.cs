@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Xml;
 
+//TODO .NET 7: Remove and use (Item)StringSyntaxAttribute instead
+
 namespace wan24.ObjectValidation
 {
     /// <summary>
