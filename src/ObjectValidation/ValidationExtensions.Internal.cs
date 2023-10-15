@@ -178,10 +178,7 @@ namespace wan24.ObjectValidation
                                                     // Included
                                                 where (members?.Contains(pi.Name) ?? true) &&
                                                     // Not excluded
-                                                    (
-                                                        isObjectValidatable ||
-                                                        !pi.GetCustomAttributesCached().Any(a => a is NoValidationAttribute)
-                                                    ) &&
+                                                    !pi.GetCustomAttributesCached().Any(a => a is NoValidationAttribute) &&
                                                     !pi.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
                                                 orderby pi.Name
                                                 select pi)
