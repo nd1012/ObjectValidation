@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//TODO .NET 8: Remove
+
 namespace wan24.ObjectValidation
 {
     /// <summary>
