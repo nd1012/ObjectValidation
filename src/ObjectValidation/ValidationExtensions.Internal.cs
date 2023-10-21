@@ -226,11 +226,14 @@ namespace wan24.ObjectValidation
                             noValidation = noValidationAttr is not null;
                             if (isObjectValidatable)
                             {
-                                validationContext = new(obj, serviceProvider, items: null)
+                                if (value is not null)
                                 {
-                                    MemberName = pi.Name
-                                };
-                                res &= Validator.TryValidateProperty(value, validationContext, validationResults);
+                                    validationContext = new(obj, serviceProvider, items: null)
+                                    {
+                                        MemberName = pi.Name
+                                    };
+                                    res &= Validator.TryValidateProperty(value, validationContext, validationResults);
+                                }
                                 if (noValidation && noValidationAttr!.SkipNullValueCheck)
                                 {
 #if DEBUG
