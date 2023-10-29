@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "rk85/ng3XKq4IIoudETfZOhBqcWuxOphd+4tAYP6IcU="
+          "hash": "yUWBu0gVyEaRRGyyHfpqCCwbqhfnWeXylPt2HNK/x6Y="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.IpAttribute.html",
-          "hash": "EkuXQtL4cMtGiMIF+fngu38rtrknnUf/OT9jQ0dVvj0="
+          "hash": "S3Qk4jwJsetj1z6kI9i+F5lFc6o86vLFBuGuxCSk8JA="
         }
       },
       "is_incremental": false,
@@ -857,6 +857,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.OptionsValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.OptionsValidator-1.html",
+          "hash": "rfyQrbG8Oc4afKlls2uN/7vptEvyfxstsV76iPYe4N8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.ObjectValidation.OptionsValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.ObjectValidation.OptionsValidator.html",
+          "hash": "Er57jbMPLX0+Lx4Xs/8aEiRQZ5UngtqW0mprlTJfH0E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/wan24.ObjectValidation.ReflectionHelper.PropertyGetter_Delegate.yml",
       "output": {
         ".html": {
@@ -1113,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.ObjectValidation.html",
-          "hash": "BZvLilIew2bqoQ2SzVsvMpT1ExYZoyq/MikPP1+BFu8="
+          "hash": "q03DabF5kFwyvbQkf9KNzx9WyHuGEGZ9rpeN35lxtaM="
         }
       },
       "is_incremental": false,
@@ -1149,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "+YWSQ4CSkD9Zhug/Kol3/Eh9MB+kc2NVsIkdhRTKFpg="
+          "hash": "rJ3QCnWk0lg2H+Mtmk0Rvs5v+b/8cikhi2DZt6R1gYY="
         }
       },
       "is_incremental": false,
@@ -1188,7 +1212,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 91,
+          "total_file_count": 93,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

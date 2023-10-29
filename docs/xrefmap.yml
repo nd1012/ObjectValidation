@@ -2514,6 +2514,158 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ObjectValidationException.Results
   nameWithType: ObjectValidationException.Results
+- uid: wan24.ObjectValidation.OptionsValidator
+  name: OptionsValidator
+  href: api/wan24.ObjectValidation.OptionsValidator.html
+  commentId: T:wan24.ObjectValidation.OptionsValidator
+  fullName: wan24.ObjectValidation.OptionsValidator
+  nameWithType: OptionsValidator
+- uid: wan24.ObjectValidation.OptionsValidator.AddOptionsValidation(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type[])
+  name: AddOptionsValidation(IServiceCollection, Type[])
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_AddOptionsValidation_Microsoft_Extensions_DependencyInjection_IServiceCollection_Type___
+  commentId: M:wan24.ObjectValidation.OptionsValidator.AddOptionsValidation(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type[])
+  name.vb: AddOptionsValidation(IServiceCollection, Type())
+  fullName: wan24.ObjectValidation.OptionsValidator.AddOptionsValidation(Microsoft.Extensions.DependencyInjection.IServiceCollection, Type[])
+  fullName.vb: wan24.ObjectValidation.OptionsValidator.AddOptionsValidation(Microsoft.Extensions.DependencyInjection.IServiceCollection, Type())
+  nameWithType: OptionsValidator.AddOptionsValidation(IServiceCollection, Type[])
+  nameWithType.vb: OptionsValidator.AddOptionsValidation(IServiceCollection, Type())
+- uid: wan24.ObjectValidation.OptionsValidator.AddOptionsValidation*
+  name: AddOptionsValidation
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_AddOptionsValidation_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator.AddOptionsValidation
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator.AddOptionsValidation
+  nameWithType: OptionsValidator.AddOptionsValidation
+- uid: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator*
+  name: AddOptionsValidator
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_AddOptionsValidator_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator.AddOptionsValidator
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator
+  nameWithType: OptionsValidator.AddOptionsValidator
+- uid: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddOptionsValidator<T>(IServiceCollection)
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_AddOptionsValidator__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:wan24.ObjectValidation.OptionsValidator.AddOptionsValidator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddOptionsValidator(Of T)(IServiceCollection)
+  fullName: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: OptionsValidator.AddOptionsValidator<T>(IServiceCollection)
+  nameWithType.vb: OptionsValidator.AddOptionsValidator(Of T)(IServiceCollection)
+- uid: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  name: AddOptionsValidator<T>(IServiceCollection, String)
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_AddOptionsValidator__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  commentId: M:wan24.ObjectValidation.OptionsValidator.AddOptionsValidator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  name.vb: AddOptionsValidator(Of T)(IServiceCollection, String)
+  fullName: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator<T>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator.AddOptionsValidator(Of T)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String)
+  nameWithType: OptionsValidator.AddOptionsValidator<T>(IServiceCollection, String)
+  nameWithType.vb: OptionsValidator.AddOptionsValidator(Of T)(IServiceCollection, String)
+- uid: wan24.ObjectValidation.OptionsValidator.Validate*
+  name: Validate
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_Validate_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator.Validate
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator.Validate
+  nameWithType: OptionsValidator.Validate
+- uid: wan24.ObjectValidation.OptionsValidator.Validate``1(Microsoft.Extensions.Options.OptionsBuilder{``0})
+  name: Validate<T>(OptionsBuilder<T>)
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_Validate__1_Microsoft_Extensions_Options_OptionsBuilder___0__
+  commentId: M:wan24.ObjectValidation.OptionsValidator.Validate``1(Microsoft.Extensions.Options.OptionsBuilder{``0})
+  name.vb: Validate(Of T)(OptionsBuilder(Of T))
+  fullName: wan24.ObjectValidation.OptionsValidator.Validate<T>(Microsoft.Extensions.Options.OptionsBuilder<T>)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator.Validate(Of T)(Microsoft.Extensions.Options.OptionsBuilder(Of T))
+  nameWithType: OptionsValidator.Validate<T>(OptionsBuilder<T>)
+  nameWithType.vb: OptionsValidator.Validate(Of T)(OptionsBuilder(Of T))
+- uid: wan24.ObjectValidation.OptionsValidator.Validate``1(Microsoft.Extensions.Options.OptionsBuilder{``0},System.String)
+  name: Validate<T>(OptionsBuilder<T>, String)
+  href: api/wan24.ObjectValidation.OptionsValidator.html#wan24_ObjectValidation_OptionsValidator_Validate__1_Microsoft_Extensions_Options_OptionsBuilder___0__System_String_
+  commentId: M:wan24.ObjectValidation.OptionsValidator.Validate``1(Microsoft.Extensions.Options.OptionsBuilder{``0},System.String)
+  name.vb: Validate(Of T)(OptionsBuilder(Of T), String)
+  fullName: wan24.ObjectValidation.OptionsValidator.Validate<T>(Microsoft.Extensions.Options.OptionsBuilder<T>, System.String)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator.Validate(Of T)(Microsoft.Extensions.Options.OptionsBuilder(Of T), System.String)
+  nameWithType: OptionsValidator.Validate<T>(OptionsBuilder<T>, String)
+  nameWithType.vb: OptionsValidator.Validate(Of T)(OptionsBuilder(Of T), String)
+- uid: wan24.ObjectValidation.OptionsValidator`1
+  name: OptionsValidator<T>
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html
+  commentId: T:wan24.ObjectValidation.OptionsValidator`1
+  name.vb: OptionsValidator(Of T)
+  fullName: wan24.ObjectValidation.OptionsValidator<T>
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T)
+  nameWithType: OptionsValidator<T>
+  nameWithType.vb: OptionsValidator(Of T)
+- uid: wan24.ObjectValidation.OptionsValidator`1.#ctor(System.Nullable{IServiceProvider},System.String)
+  name: OptionsValidator(Nullable<IServiceProvider>, String)
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1__ctor_System_Nullable_IServiceProvider__System_String_
+  commentId: M:wan24.ObjectValidation.OptionsValidator`1.#ctor(System.Nullable{IServiceProvider},System.String)
+  name.vb: OptionsValidator(Nullable(Of IServiceProvider), String)
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.OptionsValidator(System.Nullable<IServiceProvider>, System.String)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).OptionsValidator(System.Nullable(Of IServiceProvider), System.String)
+  nameWithType: OptionsValidator<T>.OptionsValidator(Nullable<IServiceProvider>, String)
+  nameWithType.vb: OptionsValidator(Of T).OptionsValidator(Nullable(Of IServiceProvider), String)
+- uid: wan24.ObjectValidation.OptionsValidator`1.#ctor*
+  name: OptionsValidator
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1__ctor_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.#ctor
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.OptionsValidator
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).OptionsValidator
+  nameWithType: OptionsValidator<T>.OptionsValidator
+  nameWithType.vb: OptionsValidator(Of T).OptionsValidator
+- uid: wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate(System.String,`0)
+  name: IValidateOptions<T>.Validate(String, T)
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_System_String__0_
+  commentId: M:wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate(System.String,`0)
+  name.vb: Microsoft.Extensions.Options.IValidateOptions<T>.Validate(String, T)
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.Microsoft.Extensions.Options.IValidateOptions<T>.Validate(System.String, T)
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate(System.String, T)
+  nameWithType: OptionsValidator<T>.IValidateOptions<T>.Validate(String, T)
+  nameWithType.vb: OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate(String, T)
+- uid: wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate*
+  name: IValidateOptions<T>.Validate
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate
+  isSpec: "True"
+  name.vb: Microsoft.Extensions.Options.IValidateOptions<T>.Validate
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.Microsoft.Extensions.Options.IValidateOptions<T>.Validate
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate
+  nameWithType: OptionsValidator<T>.IValidateOptions<T>.Validate
+  nameWithType.vb: OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate
+- uid: wan24.ObjectValidation.OptionsValidator`1.Name
+  name: Name
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Name
+  commentId: P:wan24.ObjectValidation.OptionsValidator`1.Name
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.Name
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Name
+  nameWithType: OptionsValidator<T>.Name
+  nameWithType.vb: OptionsValidator(Of T).Name
+- uid: wan24.ObjectValidation.OptionsValidator`1.Name*
+  name: Name
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Name_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.Name
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.Name
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Name
+  nameWithType: OptionsValidator<T>.Name
+  nameWithType.vb: OptionsValidator(Of T).Name
+- uid: wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
+  name: ServiceProvider
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_ServiceProvider
+  commentId: P:wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.ServiceProvider
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).ServiceProvider
+  nameWithType: OptionsValidator<T>.ServiceProvider
+  nameWithType.vb: OptionsValidator(Of T).ServiceProvider
+- uid: wan24.ObjectValidation.OptionsValidator`1.ServiceProvider*
+  name: ServiceProvider
+  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_ServiceProvider_
+  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.OptionsValidator<T>.ServiceProvider
+  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).ServiceProvider
+  nameWithType: OptionsValidator<T>.ServiceProvider
+  nameWithType.vb: OptionsValidator(Of T).ServiceProvider
 - uid: wan24.ObjectValidation.ReflectionHelper
   name: ReflectionHelper
   href: api/wan24.ObjectValidation.ReflectionHelper.html
