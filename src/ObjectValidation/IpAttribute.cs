@@ -2,6 +2,8 @@
 using System.Net;
 using System.Net.Sockets;
 
+//TODO Support IPAddress type
+
 namespace wan24.ObjectValidation
 {
     /// <summary>
