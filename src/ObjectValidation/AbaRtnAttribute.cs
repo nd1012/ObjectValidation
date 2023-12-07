@@ -5,18 +5,16 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// ABA RTN validation attribute
     /// </summary>
-    public class AbaRtnAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    public class AbaRtnAttribute(bool normalize = true) : ValidationAttribute()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        public AbaRtnAttribute(bool normalize = true) : base() => Normalize = normalize;
-
         /// <summary>
         /// Normalize?
         /// </summary>
-        public bool Normalize { get; }
+        public bool Normalize { get; } = normalize;
 
         /// <summary>
         /// Supported ABA RTN formats

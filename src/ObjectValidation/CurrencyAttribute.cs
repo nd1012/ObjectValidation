@@ -5,18 +5,16 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Currency ISO 4217 code validation attribute
     /// </summary>
-    public class CurrencyAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="format">Format</param>
+    public class CurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode) : ValidationAttribute()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="format">Format</param>
-        public CurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode) : base() => Format = format;
-
         /// <summary>
         /// Format
         /// </summary>
-        public CurrencyFormats Format { get; }
+        public CurrencyFormats Format { get; } = format;
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)

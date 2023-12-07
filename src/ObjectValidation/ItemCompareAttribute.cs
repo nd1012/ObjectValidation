@@ -6,7 +6,14 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Item property compare attribute
     /// </summary>
-    public class ItemCompareAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="ownProperty">Own property name</param>
+    /// <param name="otherProperty">Other property name</param>
+    /// <param name="target">Validation target</param>
+    public class ItemCompareAttribute(string ownProperty, string otherProperty, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new CompareAttribute(otherProperty))
     {
         /// <summary>
         /// Own property
@@ -18,19 +25,9 @@ namespace wan24.ObjectValidation
         protected ReflectionHelper.PropertyGetter_Delegate? OwnPropertyGetter = null;
 
         /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="ownProperty">Own property name</param>
-        /// <param name="otherProperty">Other property name</param>
-        /// <param name="target">Validation target</param>
-        public ItemCompareAttribute(string ownProperty, string otherProperty, ItemValidationTargets target = ItemValidationTargets.Item)
-            : base(target, new CompareAttribute(otherProperty))
-            => OwnProperty = ownProperty;
-
-        /// <summary>
         /// Own property name
         /// </summary>
-        public string OwnProperty { get; }
+        public string OwnProperty { get; } = ownProperty;
 
         /// <inheritdoc/>
         public override ValidationResult? GetValidationResult(object? value, ValidationContext validationContext, IServiceProvider? serviceProvider)

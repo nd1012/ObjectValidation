@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>wan24.ObjectValidation</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageId>ObjectValidation-CountryValidator</PackageId>
     <Title>ObjectValidation-CountryValidator</Title>
-    <Version>1.11.1</Version>
+    <Version>2.0.0</Version>
     <Authors>nd1012</Authors>
     <Company>Andreas Zimmermann, wan24.de</Company>
     <Product>ObjectValidation</Product>
@@ -29,7 +29,7 @@
   <ItemGroup>
     <PackageReference Include="CountryValidator" Version="1.1.3" />
     <PackageReference Include="CountryValidator.DataAnnotations" Version="1.1.3" />
-    <PackageReference Include="ObjectValidation" Version="1.12.1" />
+    <PackageReference Include="ObjectValidation" Version="1.13.0" />
   </ItemGroup>
 
   <ItemGroup>

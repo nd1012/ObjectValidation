@@ -5,7 +5,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// SWIFT (ISO 13616/9362) validation helper
     /// </summary>
-    public static class SwiftValidation
+    public static partial class SwiftValidation
     {
         /// <summary>
         /// IBAN checksum calculation characters
@@ -19,19 +19,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[\d|A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex Normalizing = Normalizing_Generated();
         /// <summary>
         /// IBAN syntax regular expression (<c>$1</c> is the country, <c>$2</c> the checksum, <c>$3</c> the bank ID and <c>$4</c> the account ID)
         /// </summary>
-        private static readonly Regex IbanSyntax = new(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex IbanSyntax = IbanSyntax_Generated();
         /// <summary>
         /// IBAN checksum calculation regular expression
         /// </summary>
-        private static readonly Regex IbanChecksum = new(@"[A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex IbanChecksum = IbanChecksum_Generated();
         /// <summary>
         /// BIC syntax regular expression
         /// </summary>
-        private static readonly Regex BicSyntax = new(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex BicSyntax = BicSyntax_Generated();
 
         /// <summary>
         /// Split an IBAN (ISO 13616) into country, checksum, bank ID and account ID
@@ -75,5 +75,29 @@ namespace wan24.ObjectValidation
         /// <param name="str">IBAN/BIC</param>
         /// <returns>Normalized value</returns>
         public static string Normalize(string str) => Normalizing.Replace(str.ToUpper(), string.Empty);
+
+        /// <summary>
+        /// Normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex Normalizing_Generated();
+
+        /// <summary>
+        /// IBAN syntax regular expression (<c>$1</c> is the country, <c>$2</c> the checksum, <c>$3</c> the bank ID and <c>$4</c> the account ID)
+        /// </summary>
+        [GeneratedRegex(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex IbanSyntax_Generated();
+
+        /// <summary>
+        /// IBAN checksum calculation regular expression
+        /// </summary>
+        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex IbanChecksum_Generated();
+
+        /// <summary>
+        /// BIC syntax regular expression
+        /// </summary>
+        [GeneratedRegex(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex BicSyntax_Generated();
     }
 }

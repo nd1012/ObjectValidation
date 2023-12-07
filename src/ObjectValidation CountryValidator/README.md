@@ -28,6 +28,7 @@ enumerable lengths
 - Enumeration value validation
 - Validation references
 - Validation templates (also conditional)
+- Options validation (Microsoft Extensions)
 
 It has been developed with the goal to offer an automatted deep object 
 validation with support for deep dictionaries and lists contents, too.
@@ -378,6 +379,37 @@ ignored!
 **NOTE**: The validation will fail with the first validation result of an 
 attribute from the target property.
 
+## Options validation (Microsoft Extensions)
+
+For validating options from the `appsettings.json`:
+
+```cs
+...
+builder.Services.AddOptions<YourOptionsType>().Validate();
+// OR
+builder.Services.AddOptionsValidator<YourOptionsType>();
+// OR
+builder.Services.AddOptionsValidation(typeof(YourOptionsType), ...);
+...
+```
+
+`YourOptionsType` may implement `IValidatableObject` (or `IObjectValidatable`) 
+or extend `Validatable(Object|Record)Base` - it doesn't really matter, because 
+the .NET object validation will use the `OptionsValidator<YourOptionsType>` 
+for validation, which uses the `ObjectValidation` validation then.
+
+There's also a `DataAnnotationValidateOptions`, which does almost the same as 
+`OptionsValidator<T>` does. `OptionsValidator<T>` adds a `IServiceProvider` 
+value in addition, which will be used for the validation context.
+
+**NOTE**: .NET 8 can generate automatic `IValidateOptions<T>` types, but 
+they'll omit `IValidatableObject` object validations, and also the 
+`ObjectValidation` in total. To avoid that, use the `OptionsValidator` 
+approach instead (it uses a reflection cache).
+The `[OptionsValidator]` approach of .NET 8 is a faster one, if you don't need 
+the (deep) object validation capabilities of `ObjectValidation` for specific 
+types.
+
 ## Direct value validation
 
 Actually the .NET validation attributes are being used at properties, but in 
@@ -417,6 +449,12 @@ The `Validate(AsValue|Item)` extension will throw an
 returns a boolean indicator, if the value has been validated without any error.
 
 ## Validation templates
+
+**CAUTION**: When defining data annotations to EF Core entity properties for 
+example, which are required for any module using reflections, you shouldn't 
+use validation templates, since they'll wrap those annotations and hide them 
+for reflection selectors. Do only use validation templates for validation-only 
+annotations.
 
 Similar to validation references you can use validation templates, which are 
 not bound to another existing property, but managed in the 

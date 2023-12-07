@@ -3,13 +3,12 @@
     /// <summary>
     /// IBAN item validation attribute
     /// </summary>
-    public class ItemIbanAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    /// <param name="target">Validation target</param>
+    public class ItemIbanAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item) : ItemValidationAttribute(target,new IbanAttribute(normalize))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        /// <param name="target">Validation target</param>
-        public ItemIbanAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item):base(target,new IbanAttribute(normalize)) { }
     }
 }

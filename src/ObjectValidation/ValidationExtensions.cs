@@ -45,7 +45,7 @@ namespace wan24.ObjectValidation
             )
             where T : notnull
         {
-            TryValidateObject(obj, results = new(), member, throwOnError: true, members, serviceProvider);
+            TryValidateObject(obj, results = [], member, throwOnError: true, members, serviceProvider);
             return obj;
         }
 
@@ -91,7 +91,7 @@ namespace wan24.ObjectValidation
             IEnumerable<string>? members = null, 
             IServiceProvider? serviceProvider = null
             )
-            => TryValidateObject(obj, results = new(), member, throwOnError, members, serviceProvider);
+            => TryValidateObject(obj, results = [], member, throwOnError, members, serviceProvider);
 
         /// <summary>
         /// Validate an object
@@ -130,7 +130,7 @@ namespace wan24.ObjectValidation
             IServiceProvider? serviceProvider = null
             )
         {
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider) || errorHandler(obj, results);
         }
 
@@ -151,7 +151,7 @@ namespace wan24.ObjectValidation
             )
         {
             if (obj is null) throw new ArgumentNullException(nameof(obj));
-            List<ValidationResult> results = new();
+            List<ValidationResult> results = [];
             return obj.TryValidateObject(results, members: members, serviceProvider: serviceProvider)
                 ? obj
                 : errorHandler(obj, results);

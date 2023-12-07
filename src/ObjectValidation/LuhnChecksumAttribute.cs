@@ -5,18 +5,16 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Luhn checksum validation attribute
     /// </summary>
-    public class LuhnChecksumAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    public class LuhnChecksumAttribute(bool normalize = true) : ValidationAttribute()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        public LuhnChecksumAttribute(bool normalize = true) : base() => Normalize = normalize;
-
         /// <summary>
         /// Normalize?
         /// </summary>
-        public bool Normalize { get; }
+        public bool Normalize { get; } = normalize;
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)

@@ -35,7 +35,7 @@ namespace wan24.ObjectValidation
         /// <returns>Validation results</returns>
         public static IEnumerable<ValidationResult> ObjectValidatable(IObjectValidatable obj)
         {
-            List<ValidationResult> res = new();
+            List<ValidationResult> res = [];
             ValidationExtensions.TryValidateObject(obj, res);
             return res;
         }

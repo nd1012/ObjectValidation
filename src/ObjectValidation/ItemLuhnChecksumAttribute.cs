@@ -3,13 +3,13 @@
     /// <summary>
     /// Item Luhn checksum validation attribute
     /// </summary>
-    public class ItemLuhnChecksumAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    /// <param name="target">Validation target</param>
+    public class ItemLuhnChecksumAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new LuhnChecksumAttribute(normalize))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        /// <param name="target">Validation target</param>
-        public ItemLuhnChecksumAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new LuhnChecksumAttribute(normalize)) { }
     }
 }

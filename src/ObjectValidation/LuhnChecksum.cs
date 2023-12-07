@@ -5,12 +5,12 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Luhn checksum validation
     /// </summary>
-    public static class LuhnChecksum
+    public static partial class LuhnChecksum
     {
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[^\d]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex Normalizing = Normalizing_Generated();
 
         /// <summary>
         /// Validate the Luhn checksum of a value
@@ -26,5 +26,11 @@ namespace wan24.ObjectValidation
         /// <param name="value">Value</param>
         /// <returns>Normalized value</returns>
         public static string Normalize(string value) => Normalizing.Replace(value, string.Empty);
+
+        /// <summary>
+        /// Normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex Normalizing_Generated();
     }
 }

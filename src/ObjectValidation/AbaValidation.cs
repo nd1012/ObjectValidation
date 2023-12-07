@@ -5,24 +5,24 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// ABA RTN validation
     /// </summary>
-    public static class AbaValidation
+    public static partial class AbaValidation
     {
         /// <summary>
         /// MICR format normalizing regular expression
         /// </summary>
-        private static readonly Regex NormalizingMicr = new(@"[^\d]", RegexOptions.Singleline| RegexOptions.Compiled);
+        private static readonly Regex NormalizingMicr = NormalizingMicr_Generated();
         /// <summary>
         /// Fraction format normalizing regular expression
         /// </summary>
-        private static readonly Regex NormalizingFraction = new(@"[^\d|\-|/]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex NormalizingFraction = NormalizingFraction_Generated();
         /// <summary>
         /// MICR syntax validating regular expression (<c>$1</c> is the FED routing symbol, <c>$2</c> the ABA institution identifier, and <c>$3</c> the check digit)
         /// </summary>
-        private static readonly Regex MicrSyntax = new(@"^(\d{4})(\d{4})(\d)$", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex MicrSyntax = MicrSyntax_Generated();
         /// <summary>
         /// Fraction syntax validating regular expression (<c>$1</c> is the ABA prefix, <c>$2</c> the ABA institution identifier, and <c>$3</c> the FED routing symbol)
         /// </summary>
-        private static readonly Regex FractionSyntax = new(@"^(\d{1,2})\-(\d{4})/?(\d{4})$", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex FractionSyntax = FractionSyntax_Generated();
 
         /// <summary>
         /// Validate an ABA RTN
@@ -38,7 +38,7 @@ namespace wan24.ObjectValidation
                 case AbaFormats.MICR:
                     if (!MicrSyntax.IsMatch(aba)) return false;
                     if (!ValidateFed(int.Parse(aba[..2]))) return false;
-                    if (((int.Parse(aba.Substring(0, 1)) + int.Parse(aba.Substring(3, 1)) + int.Parse(aba.Substring(6, 1))) * 3 +
+                    if (((int.Parse(aba[..1]) + int.Parse(aba.Substring(3, 1)) + int.Parse(aba.Substring(6, 1))) * 3 +
                         (int.Parse(aba.Substring(1, 1)) + int.Parse(aba.Substring(4, 1)) + int.Parse(aba.Substring(7, 1))) * 7 +
                         (int.Parse(aba.Substring(2, 1)) + int.Parse(aba.Substring(5, 1)) + int.Parse(aba.Substring(8, 1))) * 1) % 10 != 0)
                         return false;
@@ -89,5 +89,29 @@ namespace wan24.ObjectValidation
         /// <param name="fed">FED ID</param>
         /// <returns>Valid?</returns>
         private static bool ValidateFed(int fed) => (fed > 0 && fed < 13) || (fed > 20 && fed < 37) || (fed > 60 && fed < 73) || fed == 80;
+
+        /// <summary>
+        /// MICR format normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex NormalizingMicr_Generated();
+
+        /// <summary>
+        /// Fraction format normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[^\d|\-|/]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex NormalizingFraction_Generated();
+
+        /// <summary>
+        /// MICR syntax validating regular expression (<c>$1</c> is the FED routing symbol, <c>$2</c> the ABA institution identifier, and <c>$3</c> the check digit)
+        /// </summary>
+        [GeneratedRegex(@"^(\d{4})(\d{4})(\d)$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex MicrSyntax_Generated();
+
+        /// <summary>
+        /// Fraction syntax validating regular expression (<c>$1</c> is the ABA prefix, <c>$2</c> the ABA institution identifier, and <c>$3</c> the FED routing symbol)
+        /// </summary>
+        [GeneratedRegex(@"^(\d{1,2})\-(\d{4})/?(\d{4})$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex FractionSyntax_Generated();
     }
 }

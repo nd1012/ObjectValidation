@@ -30,8 +30,8 @@ namespace wan24.ObjectValidation
         /// </summary>
         static ValidatableTypes()
         {
-            ForcedTypes = new();
-            ForcedTypesInheritable = new();
+            ForcedTypes = [];
+            ForcedTypesInheritable = [];
             DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>) });
             DeniedTypesInheritable = new(new Type[] { typeof(Type), typeof(Stream) });
         }

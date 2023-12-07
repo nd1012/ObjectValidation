@@ -76,39 +76,32 @@ namespace wan24.ObjectValidation
     /// Options validator
     /// </summary>
     /// <typeparam name="T">Options type</typeparam>
-    public sealed class OptionsValidator<T> : IValidateOptions<T> where T : class
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="serviceProvider">Service provider</param>
+    /// <param name="name">Name to limit this instance to</param>
+    public sealed class OptionsValidator<T>(IServiceProvider? serviceProvider = null, string? name = null) : IValidateOptions<T> where T : class
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="serviceProvider">Service provider</param>
-        /// <param name="name">Name to limit this instance to</param>
-        public OptionsValidator(IServiceProvider? serviceProvider = null, string? name = null)
-        {
-            ServiceProvider = serviceProvider;
-            Name = name;
-        }
-
         /// <summary>
         /// Service provider
         /// </summary>
-        public IServiceProvider? ServiceProvider { get; }
+        public IServiceProvider? ServiceProvider { get; } = serviceProvider;
 
         /// <summary>
         /// Name which this instance is limited to
         /// </summary>
-        public string? Name { get; }
+        public string? Name { get; } = name;
 
         /// <inheritdoc/>
         ValidateOptionsResult IValidateOptions<T>.Validate(string? name, T options)
         {
             if (Name is not null && name != Name) return ValidateOptionsResult.Skip;
             options.ValidateObject(out List<ValidationResult> results, name, members: null, ServiceProvider);
-            return results.Count == 0
-                ? ValidateOptionsResult.Success
-                : ValidateOptionsResult.Fail(from result in results
-                                             select $"[Member {GetMemberName(name, result.MemberNames)}] {result.ErrorMessage}");
-            //TODO .NET 8: Use ValidateOptionsResultBuilder
+            if (results.Count == 0) return ValidateOptionsResult.Success;
+            ValidateOptionsResultBuilder rb = new();
+            rb.AddResults(results);
+            return rb.Build();
         }
 
         /// <summary>

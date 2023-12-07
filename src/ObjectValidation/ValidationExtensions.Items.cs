@@ -44,13 +44,13 @@ namespace wan24.ObjectValidation
                 keyValidatable = keyType is null || ValidatableTypes.IsTypeValidatable(keyType),// If the key is validatable
                 itemValidatable = itemType is null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
             IItemValidationAttribute[] keyValidations = onlyNullCheck
-                ? Array.Empty<IItemValidationAttribute>()
+                ? []
                 : GetItemValidations(pi, info.ArrayLevel, ItemValidationTargets.Key);// Key validations
-            if (keyValidations.Length != 0 && IsNoItemValidation(keyValidations)) keyValidations = Array.Empty<IItemValidationAttribute>();
+            if (keyValidations.Length != 0 && IsNoItemValidation(keyValidations)) keyValidations = [];
             IItemValidationAttribute[] valueValidations = onlyNullCheck
-                ? Array.Empty<IItemValidationAttribute>()
+                ? []
                 : GetItemValidations(pi, info.ArrayLevel);// Value validations
-            if (valueValidations.Length != 0 && IsNoItemValidation(valueValidations, ref onlyNullCheck)) valueValidations = Array.Empty<IItemValidationAttribute>();
+            if (valueValidations.Length != 0 && IsNoItemValidation(valueValidations, ref onlyNullCheck)) valueValidations = [];
 #if DEBUG
             if (!onlyNullCheck)
             {
@@ -146,11 +146,11 @@ namespace wan24.ObjectValidation
         {
             if (itemType is not null && IsAbstractType(itemType)) itemType = null;
             IItemValidationAttribute[] itemValidations = onlyNullCheck
-                ? Array.Empty<IItemValidationAttribute>()
+                ? []
                 : GetItemValidations(pi, info.ArrayLevel);// Item validations
             bool res = true,// Overall result
                 itemValidatable = itemType is null || ValidatableTypes.IsTypeValidatable(itemType);// If an item is validatable
-            if (itemValidations.Length != 0 && IsNoItemValidation(itemValidations, ref onlyNullCheck)) itemValidations = Array.Empty<IItemValidationAttribute>();
+            if (itemValidations.Length != 0 && IsNoItemValidation(itemValidations, ref onlyNullCheck)) itemValidations = [];
             if (!itemValidatable && !onlyNullCheck)
             {
 #if DEBUG
@@ -216,7 +216,7 @@ namespace wan24.ObjectValidation
         /// <param name="pi">Property info</param>
         /// <param name="member">Member name</param>
         /// <param name="value">Value</param>
-        /// <param name="attrs">Attributes</param>
+        /// <param name="attributes">Attributes</param>
         /// <param name="serviceProvider">Service provider</param>
         /// <param name="validationResults">Results</param>
         /// <param name="throwOnError">Throw an exception on error?</param>
@@ -226,7 +226,7 @@ namespace wan24.ObjectValidation
             PropertyInfo pi,
             string member,
             object? value,
-            IItemValidationAttribute[] attrs,
+            IItemValidationAttribute[] attributes,
             IServiceProvider? serviceProvider,
             List<ValidationResult> validationResults,
             bool throwOnError
@@ -234,10 +234,10 @@ namespace wan24.ObjectValidation
         {
             ValidationContext context = new(pi, serviceProvider, items: null) { MemberName = member };// Validation context
             ValidationResult? result;// Validation result
-            ValidationResult[] multiResults;// Multiplevalidation results
+            ValidationResult[] multiResults;// Multiple validation results
             bool res = true;// Overall result
             // Default validations
-            foreach (IItemValidationAttribute attr in attrs)
+            foreach (IItemValidationAttribute attr in attributes)
                 if (attr is IMultipleValidations multiValidation)
                 {
                     multiResults = multiValidation.MultiValidation(value, context, serviceProvider).ToArray();
@@ -399,19 +399,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Determine if an item validation was disabled
         /// </summary>
-        /// <param name="attrs">Attributes</param>
+        /// <param name="attributes">Attributes</param>
         /// <returns>Item validation is disabled?</returns>
-        internal static bool IsNoItemValidation(IItemValidationAttribute[] attrs) => attrs.Any(a => a is ItemNoValidationAttribute);
+        internal static bool IsNoItemValidation(IItemValidationAttribute[] attributes) => attributes.Any(a => a is ItemNoValidationAttribute);
 
         /// <summary>
         /// Determine if an item validation was disabled
         /// </summary>
-        /// <param name="attrs">Attributes</param>
+        /// <param name="attributes">Attributes</param>
         /// <param name="onlyNullCheck">Only item value <see langword="null"/> check?</param>
         /// <returns>Item validation is disabled?</returns>
-        internal static bool IsNoItemValidation(IItemValidationAttribute[] attrs, ref bool onlyNullCheck)
+        internal static bool IsNoItemValidation(IItemValidationAttribute[] attributes, ref bool onlyNullCheck)
         {
-            if (attrs.FirstOrDefault(a => a is ItemNoValidationAttribute) is not ItemNoValidationAttribute attr) return false;
+            if (attributes.FirstOrDefault(a => a is ItemNoValidationAttribute) is not ItemNoValidationAttribute attr) return false;
             if (!onlyNullCheck && !((NoValidationAttribute)attr.ValidationAttribute).SkipNullValueCheck) onlyNullCheck = true;
             return true;
         }

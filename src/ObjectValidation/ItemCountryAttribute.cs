@@ -3,12 +3,11 @@
     /// <summary>
     /// Item country code validation attribute
     /// </summary>
-    public class ItemCountryAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="target">Validation target</param>
+    public class ItemCountryAttribute(ItemValidationTargets target = ItemValidationTargets.Item) : ItemValidationAttribute(target,new CountryAttribute())
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="target">Validation target</param>
-        public ItemCountryAttribute(ItemValidationTargets target = ItemValidationTargets.Item) : base(target,new CountryAttribute()) { }
     }
 }

@@ -52,7 +52,7 @@ namespace wan24.ObjectValidation
                 ? GetterCache.GetOrAdd(
                     pi.GetHashCode(),
                     (key) => (PropertyGetter_Delegate)CreateGetterDelegateMethod.MakeGenericMethod(pi.DeclaringType!, pi.PropertyType)
-                        .Invoke(obj: null, new object[] { pi.GetMethod!.CreateDelegate(typeof(Func<,>).MakeGenericType(pi.DeclaringType!, pi.PropertyType)) })!
+                        .Invoke(obj: null, [pi.GetMethod!.CreateDelegate(typeof(Func<,>).MakeGenericType(pi.DeclaringType!, pi.PropertyType))])!
                     )
                 : null;
 

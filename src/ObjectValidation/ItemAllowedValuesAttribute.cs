@@ -1,4 +1,6 @@
-﻿namespace wan24.ObjectValidation
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace wan24.ObjectValidation
 {
     /// <summary>
     /// Attribute for validating allowed item values
