@@ -48,58 +48,6 @@ references:
   commentId: T:wan24.ObjectValidation.AbaRtnAttribute
   fullName: wan24.ObjectValidation.AbaRtnAttribute
   nameWithType: AbaRtnAttribute
-- uid: wan24.ObjectValidation.AbaRtnAttribute.#ctor(System.Boolean)
-  name: AbaRtnAttribute(Boolean)
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.AbaRtnAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.AbaRtnAttribute(System.Boolean)
-  nameWithType: AbaRtnAttribute.AbaRtnAttribute(Boolean)
-- uid: wan24.ObjectValidation.AbaRtnAttribute.#ctor*
-  name: AbaRtnAttribute
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.AbaRtnAttribute
-  nameWithType: AbaRtnAttribute.AbaRtnAttribute
-- uid: wan24.ObjectValidation.AbaRtnAttribute.Format
-  name: Format
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Format
-  commentId: P:wan24.ObjectValidation.AbaRtnAttribute.Format
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.Format
-  nameWithType: AbaRtnAttribute.Format
-- uid: wan24.ObjectValidation.AbaRtnAttribute.Format*
-  name: Format
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Format_
-  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.Format
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.Format
-  nameWithType: AbaRtnAttribute.Format
-- uid: wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: AbaRtnAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.AbaRtnAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.IsValid
-  nameWithType: AbaRtnAttribute.IsValid
-- uid: wan24.ObjectValidation.AbaRtnAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.AbaRtnAttribute.Normalize
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.Normalize
-  nameWithType: AbaRtnAttribute.Normalize
-- uid: wan24.ObjectValidation.AbaRtnAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.AbaRtnAttribute.html#wan24_ObjectValidation_AbaRtnAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.AbaRtnAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AbaRtnAttribute.Normalize
-  nameWithType: AbaRtnAttribute.Normalize
 - uid: wan24.ObjectValidation.AbaValidation
   name: AbaValidation
   href: api/wan24.ObjectValidation.AbaValidation.html
@@ -145,144 +93,18 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.AbaValidation.ValidateAbaRtn
   nameWithType: AbaValidation.ValidateAbaRtn
-- uid: wan24.ObjectValidation.AllowedValuesAttribute
-  name: AllowedValuesAttribute
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html
-  commentId: T:wan24.ObjectValidation.AllowedValuesAttribute
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute
-  nameWithType: AllowedValuesAttribute
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.#ctor(System.Object[])
-  name: AllowedValuesAttribute(Object[])
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute__ctor_System_Object___
-  commentId: M:wan24.ObjectValidation.AllowedValuesAttribute.#ctor(System.Object[])
-  name.vb: AllowedValuesAttribute(Object())
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute(System.Object[])
-  fullName.vb: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute(System.Object())
-  nameWithType: AllowedValuesAttribute.AllowedValuesAttribute(Object[])
-  nameWithType.vb: AllowedValuesAttribute.AllowedValuesAttribute(Object())
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.#ctor*
-  name: AllowedValuesAttribute
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValuesAttribute
-  nameWithType: AllowedValuesAttribute.AllowedValuesAttribute
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
-  name: AllowedValues
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_AllowedValues
-  commentId: P:wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
-  nameWithType: AllowedValuesAttribute.AllowedValues
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues*
-  name: AllowedValues
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_AllowedValues_
-  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.AllowedValues
-  nameWithType: AllowedValuesAttribute.AllowedValues
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: AllowedValuesAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.AllowedValuesAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.AllowedValuesAttribute.html#wan24_ObjectValidation_AllowedValuesAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.AllowedValuesAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AllowedValuesAttribute.IsValid
-  nameWithType: AllowedValuesAttribute.IsValid
 - uid: wan24.ObjectValidation.AmountAttribute
   name: AmountAttribute
   href: api/wan24.ObjectValidation.AmountAttribute.html
   commentId: T:wan24.ObjectValidation.AmountAttribute
   fullName: wan24.ObjectValidation.AmountAttribute
   nameWithType: AmountAttribute
-- uid: wan24.ObjectValidation.AmountAttribute.#ctor(System.String)
-  name: AmountAttribute(String)
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute__ctor_System_String_
-  commentId: M:wan24.ObjectValidation.AmountAttribute.#ctor(System.String)
-  fullName: wan24.ObjectValidation.AmountAttribute.AmountAttribute(System.String)
-  nameWithType: AmountAttribute.AmountAttribute(String)
-- uid: wan24.ObjectValidation.AmountAttribute.#ctor*
-  name: AmountAttribute
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.AmountAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AmountAttribute.AmountAttribute
-  nameWithType: AmountAttribute.AmountAttribute
-- uid: wan24.ObjectValidation.AmountAttribute.Currency
-  name: Currency
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_Currency
-  commentId: P:wan24.ObjectValidation.AmountAttribute.Currency
-  fullName: wan24.ObjectValidation.AmountAttribute.Currency
-  nameWithType: AmountAttribute.Currency
-- uid: wan24.ObjectValidation.AmountAttribute.Currency*
-  name: Currency
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_Currency_
-  commentId: Overload:wan24.ObjectValidation.AmountAttribute.Currency
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AmountAttribute.Currency
-  nameWithType: AmountAttribute.Currency
-- uid: wan24.ObjectValidation.AmountAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.AmountAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.AmountAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: AmountAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.AmountAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.AmountAttribute.html#wan24_ObjectValidation_AmountAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.AmountAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.AmountAttribute.IsValid
-  nameWithType: AmountAttribute.IsValid
 - uid: wan24.ObjectValidation.BicAttribute
   name: BicAttribute
   href: api/wan24.ObjectValidation.BicAttribute.html
   commentId: T:wan24.ObjectValidation.BicAttribute
   fullName: wan24.ObjectValidation.BicAttribute
   nameWithType: BicAttribute
-- uid: wan24.ObjectValidation.BicAttribute.#ctor(System.Boolean)
-  name: BicAttribute(Boolean)
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.BicAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.BicAttribute.BicAttribute(System.Boolean)
-  nameWithType: BicAttribute.BicAttribute(Boolean)
-- uid: wan24.ObjectValidation.BicAttribute.#ctor*
-  name: BicAttribute
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.BicAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.BicAttribute.BicAttribute
-  nameWithType: BicAttribute.BicAttribute
-- uid: wan24.ObjectValidation.BicAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.BicAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.BicAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: BicAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.BicAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.BicAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.BicAttribute.IsValid
-  nameWithType: BicAttribute.IsValid
-- uid: wan24.ObjectValidation.BicAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.BicAttribute.Normalize
-  fullName: wan24.ObjectValidation.BicAttribute.Normalize
-  nameWithType: BicAttribute.Normalize
-- uid: wan24.ObjectValidation.BicAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.BicAttribute.html#wan24_ObjectValidation_BicAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.BicAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.BicAttribute.Normalize
-  nameWithType: BicAttribute.Normalize
 - uid: wan24.ObjectValidation.CountLimitAttribute
   name: CountLimitAttribute
   href: api/wan24.ObjectValidation.CountLimitAttribute.html
@@ -413,160 +235,108 @@ references:
   commentId: T:wan24.ObjectValidation.CurrencyAttribute
   fullName: wan24.ObjectValidation.CurrencyAttribute
   nameWithType: CurrencyAttribute
-- uid: wan24.ObjectValidation.CurrencyAttribute.#ctor(wan24.ObjectValidation.CurrencyFormats)
-  name: CurrencyAttribute(CurrencyFormats)
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute__ctor_wan24_ObjectValidation_CurrencyFormats_
-  commentId: M:wan24.ObjectValidation.CurrencyAttribute.#ctor(wan24.ObjectValidation.CurrencyFormats)
-  fullName: wan24.ObjectValidation.CurrencyAttribute.CurrencyAttribute(wan24.ObjectValidation.CurrencyFormats)
-  nameWithType: CurrencyAttribute.CurrencyAttribute(CurrencyFormats)
-- uid: wan24.ObjectValidation.CurrencyAttribute.#ctor*
-  name: CurrencyAttribute
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.CurrencyAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyAttribute.CurrencyAttribute
-  nameWithType: CurrencyAttribute.CurrencyAttribute
-- uid: wan24.ObjectValidation.CurrencyAttribute.Format
-  name: Format
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute_Format
-  commentId: P:wan24.ObjectValidation.CurrencyAttribute.Format
-  fullName: wan24.ObjectValidation.CurrencyAttribute.Format
-  nameWithType: CurrencyAttribute.Format
-- uid: wan24.ObjectValidation.CurrencyAttribute.Format*
-  name: Format
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute_Format_
-  commentId: Overload:wan24.ObjectValidation.CurrencyAttribute.Format
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyAttribute.Format
-  nameWithType: CurrencyAttribute.Format
-- uid: wan24.ObjectValidation.CurrencyAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.CurrencyAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.CurrencyAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: CurrencyAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.CurrencyAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.CurrencyAttribute.html#wan24_ObjectValidation_CurrencyAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.CurrencyAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyAttribute.IsValid
-  nameWithType: CurrencyAttribute.IsValid
 - uid: wan24.ObjectValidation.CurrencyCodes
   name: CurrencyCodes
   href: api/wan24.ObjectValidation.CurrencyCodes.html
   commentId: T:wan24.ObjectValidation.CurrencyCodes
   fullName: wan24.ObjectValidation.CurrencyCodes
   nameWithType: CurrencyCodes
+- uid: wan24.ObjectValidation.CurrencyCodes._Factor
+  name: _Factor
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes__Factor
+  commentId: F:wan24.ObjectValidation.CurrencyCodes._Factor
+  fullName: wan24.ObjectValidation.CurrencyCodes._Factor
+  nameWithType: CurrencyCodes._Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Code
+  name: Code
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Code
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Code
+  fullName: wan24.ObjectValidation.CurrencyCodes.Code
+  nameWithType: CurrencyCodes.Code
+- uid: wan24.ObjectValidation.CurrencyCodes.Code*
+  name: Code
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Code_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Code
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Code
+  nameWithType: CurrencyCodes.Code
 - uid: wan24.ObjectValidation.CurrencyCodes.Currency
   name: CurrencyCodes.Currency
   href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html
   commentId: T:wan24.ObjectValidation.CurrencyCodes.Currency
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency
   nameWithType: CurrencyCodes.Currency
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String,System.Int32)
-  name: Currency(String, String, String, Int32)
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__ctor_System_String_System_String_System_String_System_Int32_
-  commentId: M:wan24.ObjectValidation.CurrencyCodes.Currency.#ctor(System.String,System.String,System.String,System.Int32)
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Currency(System.String, System.String, System.String, System.Int32)
-  nameWithType: CurrencyCodes.Currency.Currency(String, String, String, Int32)
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.#ctor*
-  name: Currency
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__ctor_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Currency
-  nameWithType: CurrencyCodes.Currency.Currency
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency._Factor
-  name: _Factor
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency__Factor
-  commentId: F:wan24.ObjectValidation.CurrencyCodes.Currency._Factor
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency._Factor
-  nameWithType: CurrencyCodes.Currency._Factor
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Code
-  name: Code
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Code
-  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.Code
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Code
-  nameWithType: CurrencyCodes.Currency.Code
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Code*
-  name: Code
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Code_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Code
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Code
-  nameWithType: CurrencyCodes.Currency.Code
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Factor
   name: Factor
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Factor
-  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.Factor
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
-  nameWithType: CurrencyCodes.Currency.Factor
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Factor*
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Factor
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Factor
+  fullName: wan24.ObjectValidation.CurrencyCodes.Factor
+  nameWithType: CurrencyCodes.Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Factor*
   name: Factor
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Factor_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Factor
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Factor_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Factor
   isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Factor
-  nameWithType: CurrencyCodes.Currency.Factor
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
-  name: MinorUnit
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_MinorUnit
-  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
-  nameWithType: CurrencyCodes.Currency.MinorUnit
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit*
-  name: MinorUnit
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_MinorUnit_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.MinorUnit
-  nameWithType: CurrencyCodes.Currency.MinorUnit
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Name
-  name: Name
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Name
-  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.Name
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Name
-  nameWithType: CurrencyCodes.Currency.Name
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Name*
-  name: Name
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Name_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Name
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Name
-  nameWithType: CurrencyCodes.Currency.Name
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
-  name: NumericCode
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_NumericCode
-  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
-  nameWithType: CurrencyCodes.Currency.NumericCode
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode*
-  name: NumericCode
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_NumericCode_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.NumericCode
-  nameWithType: CurrencyCodes.Currency.NumericCode
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
-  name: Validate(Decimal)
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Validate_System_Decimal_
-  commentId: M:wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Validate(System.Decimal)
-  nameWithType: CurrencyCodes.Currency.Validate(Decimal)
-- uid: wan24.ObjectValidation.CurrencyCodes.Currency.Validate*
-  name: Validate
-  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_Validate_
-  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.Validate
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.Validate
-  nameWithType: CurrencyCodes.Currency.Validate
+  fullName: wan24.ObjectValidation.CurrencyCodes.Factor
+  nameWithType: CurrencyCodes.Factor
 - uid: wan24.ObjectValidation.CurrencyCodes.Known
   name: Known
   href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Known
   commentId: F:wan24.ObjectValidation.CurrencyCodes.Known
   fullName: wan24.ObjectValidation.CurrencyCodes.Known
   nameWithType: CurrencyCodes.Known
+- uid: wan24.ObjectValidation.CurrencyCodes.MinorUnit
+  name: MinorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_MinorUnit
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.MinorUnit
+  fullName: wan24.ObjectValidation.CurrencyCodes.MinorUnit
+  nameWithType: CurrencyCodes.MinorUnit
+- uid: wan24.ObjectValidation.CurrencyCodes.MinorUnit*
+  name: MinorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_MinorUnit_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.MinorUnit
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.MinorUnit
+  nameWithType: CurrencyCodes.MinorUnit
+- uid: wan24.ObjectValidation.CurrencyCodes.Name
+  name: Name
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Name
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Name
+  fullName: wan24.ObjectValidation.CurrencyCodes.Name
+  nameWithType: CurrencyCodes.Name
+- uid: wan24.ObjectValidation.CurrencyCodes.Name*
+  name: Name
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Name_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Name
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Name
+  nameWithType: CurrencyCodes.Name
+- uid: wan24.ObjectValidation.CurrencyCodes.NumericCode
+  name: NumericCode
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_NumericCode
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.NumericCode
+  fullName: wan24.ObjectValidation.CurrencyCodes.NumericCode
+  nameWithType: CurrencyCodes.NumericCode
+- uid: wan24.ObjectValidation.CurrencyCodes.NumericCode*
+  name: NumericCode
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_NumericCode_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.NumericCode
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.NumericCode
+  nameWithType: CurrencyCodes.NumericCode
+- uid: wan24.ObjectValidation.CurrencyCodes.Validate(System.Decimal)
+  name: Validate(Decimal)
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Validate_System_Decimal_
+  commentId: M:wan24.ObjectValidation.CurrencyCodes.Validate(System.Decimal)
+  fullName: wan24.ObjectValidation.CurrencyCodes.Validate(System.Decimal)
+  nameWithType: CurrencyCodes.Validate(Decimal)
+- uid: wan24.ObjectValidation.CurrencyCodes.Validate*
+  name: Validate
+  href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Validate_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Validate
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Validate
+  nameWithType: CurrencyCodes.Validate
 - uid: wan24.ObjectValidation.CurrencyFormats
   name: CurrencyFormats
   href: api/wan24.ObjectValidation.CurrencyFormats.html
@@ -585,54 +355,6 @@ references:
   commentId: F:wan24.ObjectValidation.CurrencyFormats.NumericCode
   fullName: wan24.ObjectValidation.CurrencyFormats.NumericCode
   nameWithType: CurrencyFormats.NumericCode
-- uid: wan24.ObjectValidation.DeniedValuesAttribute
-  name: DeniedValuesAttribute
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html
-  commentId: T:wan24.ObjectValidation.DeniedValuesAttribute
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute
-  nameWithType: DeniedValuesAttribute
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.#ctor(System.Object[])
-  name: DeniedValuesAttribute(Object[])
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute__ctor_System_Object___
-  commentId: M:wan24.ObjectValidation.DeniedValuesAttribute.#ctor(System.Object[])
-  name.vb: DeniedValuesAttribute(Object())
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute(System.Object[])
-  fullName.vb: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute(System.Object())
-  nameWithType: DeniedValuesAttribute.DeniedValuesAttribute(Object[])
-  nameWithType.vb: DeniedValuesAttribute.DeniedValuesAttribute(Object())
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.#ctor*
-  name: DeniedValuesAttribute
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValuesAttribute
-  nameWithType: DeniedValuesAttribute.DeniedValuesAttribute
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
-  name: DeniedValues
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_DeniedValues
-  commentId: P:wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
-  nameWithType: DeniedValuesAttribute.DeniedValues
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues*
-  name: DeniedValues
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_DeniedValues_
-  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.DeniedValues
-  nameWithType: DeniedValuesAttribute.DeniedValues
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: DeniedValuesAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.DeniedValuesAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.DeniedValuesAttribute.html#wan24_ObjectValidation_DeniedValuesAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.DeniedValuesAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.DeniedValuesAttribute.IsValid
-  nameWithType: DeniedValuesAttribute.IsValid
 - uid: wan24.ObjectValidation.EuVatId
   name: EuVatId
   href: api/wan24.ObjectValidation.EuVatId.html
@@ -671,90 +393,12 @@ references:
   commentId: T:wan24.ObjectValidation.EuVatIdAttribute
   fullName: wan24.ObjectValidation.EuVatIdAttribute
   nameWithType: EuVatIdAttribute
-- uid: wan24.ObjectValidation.EuVatIdAttribute.#ctor(System.Boolean)
-  name: EuVatIdAttribute(Boolean)
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.EuVatIdAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.EuVatIdAttribute(System.Boolean)
-  nameWithType: EuVatIdAttribute.EuVatIdAttribute(Boolean)
-- uid: wan24.ObjectValidation.EuVatIdAttribute.#ctor*
-  name: EuVatIdAttribute
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.EuVatIdAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.EuVatIdAttribute
-  nameWithType: EuVatIdAttribute.EuVatIdAttribute
-- uid: wan24.ObjectValidation.EuVatIdAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.EuVatIdAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: EuVatIdAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.EuVatIdAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.EuVatIdAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.IsValid
-  nameWithType: EuVatIdAttribute.IsValid
-- uid: wan24.ObjectValidation.EuVatIdAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.EuVatIdAttribute.Normalize
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.Normalize
-  nameWithType: EuVatIdAttribute.Normalize
-- uid: wan24.ObjectValidation.EuVatIdAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.EuVatIdAttribute.html#wan24_ObjectValidation_EuVatIdAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.EuVatIdAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.EuVatIdAttribute.Normalize
-  nameWithType: EuVatIdAttribute.Normalize
 - uid: wan24.ObjectValidation.IbanAttribute
   name: IbanAttribute
   href: api/wan24.ObjectValidation.IbanAttribute.html
   commentId: T:wan24.ObjectValidation.IbanAttribute
   fullName: wan24.ObjectValidation.IbanAttribute
   nameWithType: IbanAttribute
-- uid: wan24.ObjectValidation.IbanAttribute.#ctor(System.Boolean)
-  name: IbanAttribute(Boolean)
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.IbanAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.IbanAttribute.IbanAttribute(System.Boolean)
-  nameWithType: IbanAttribute.IbanAttribute(Boolean)
-- uid: wan24.ObjectValidation.IbanAttribute.#ctor*
-  name: IbanAttribute
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.IbanAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IbanAttribute.IbanAttribute
-  nameWithType: IbanAttribute.IbanAttribute
-- uid: wan24.ObjectValidation.IbanAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.IbanAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.IbanAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: IbanAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.IbanAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.IbanAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IbanAttribute.IsValid
-  nameWithType: IbanAttribute.IsValid
-- uid: wan24.ObjectValidation.IbanAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.IbanAttribute.Normalize
-  fullName: wan24.ObjectValidation.IbanAttribute.Normalize
-  nameWithType: IbanAttribute.Normalize
-- uid: wan24.ObjectValidation.IbanAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.IbanAttribute.html#wan24_ObjectValidation_IbanAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.IbanAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IbanAttribute.Normalize
-  nameWithType: IbanAttribute.Normalize
 - uid: wan24.ObjectValidation.ICountable
   name: ICountable
   href: api/wan24.ObjectValidation.ICountable.html
@@ -875,77 +519,12 @@ references:
   commentId: T:wan24.ObjectValidation.IpAttribute
   fullName: wan24.ObjectValidation.IpAttribute
   nameWithType: IpAttribute
-- uid: wan24.ObjectValidation.IpAttribute.#ctor(System.Net.Sockets.AddressFamily)
-  name: IpAttribute(AddressFamily)
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute__ctor_System_Net_Sockets_AddressFamily_
-  commentId: M:wan24.ObjectValidation.IpAttribute.#ctor(System.Net.Sockets.AddressFamily)
-  fullName: wan24.ObjectValidation.IpAttribute.IpAttribute(System.Net.Sockets.AddressFamily)
-  nameWithType: IpAttribute.IpAttribute(AddressFamily)
-- uid: wan24.ObjectValidation.IpAttribute.#ctor*
-  name: IpAttribute
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.IpAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IpAttribute.IpAttribute
-  nameWithType: IpAttribute.IpAttribute
-- uid: wan24.ObjectValidation.IpAttribute.AddressFamily
-  name: AddressFamily
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute_AddressFamily
-  commentId: P:wan24.ObjectValidation.IpAttribute.AddressFamily
-  fullName: wan24.ObjectValidation.IpAttribute.AddressFamily
-  nameWithType: IpAttribute.AddressFamily
-- uid: wan24.ObjectValidation.IpAttribute.AddressFamily*
-  name: AddressFamily
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute_AddressFamily_
-  commentId: Overload:wan24.ObjectValidation.IpAttribute.AddressFamily
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IpAttribute.AddressFamily
-  nameWithType: IpAttribute.AddressFamily
-- uid: wan24.ObjectValidation.IpAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.IpAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.IpAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: IpAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.IpAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.IpAttribute.html#wan24_ObjectValidation_IpAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.IpAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.IpAttribute.IsValid
-  nameWithType: IpAttribute.IsValid
 - uid: wan24.ObjectValidation.ItemAbaRtnAttribute
   name: ItemAbaRtnAttribute
   href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html
   commentId: T:wan24.ObjectValidation.ItemAbaRtnAttribute
   fullName: wan24.ObjectValidation.ItemAbaRtnAttribute
   nameWithType: ItemAbaRtnAttribute
-- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemAbaRtnAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.ItemAbaRtnAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemAbaRtnAttribute.ItemAbaRtnAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor*
-  name: ItemAbaRtnAttribute
-  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemAbaRtnAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.ItemAbaRtnAttribute
-  nameWithType: ItemAbaRtnAttribute.ItemAbaRtnAttribute
-- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
-  name: Format
-  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute_Format
-  commentId: P:wan24.ObjectValidation.ItemAbaRtnAttribute.Format
-  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
-  nameWithType: ItemAbaRtnAttribute.Format
-- uid: wan24.ObjectValidation.ItemAbaRtnAttribute.Format*
-  name: Format
-  href: api/wan24.ObjectValidation.ItemAbaRtnAttribute.html#wan24_ObjectValidation_ItemAbaRtnAttribute_Format_
-  commentId: Overload:wan24.ObjectValidation.ItemAbaRtnAttribute.Format
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemAbaRtnAttribute.Format
-  nameWithType: ItemAbaRtnAttribute.Format
 - uid: wan24.ObjectValidation.ItemAllowedValuesAttribute
   name: ItemAllowedValuesAttribute
   href: api/wan24.ObjectValidation.ItemAllowedValuesAttribute.html
@@ -983,117 +562,43 @@ references:
   commentId: T:wan24.ObjectValidation.ItemAmountAttribute
   fullName: wan24.ObjectValidation.ItemAmountAttribute
   nameWithType: ItemAmountAttribute
-- uid: wan24.ObjectValidation.ItemAmountAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemAmountAttribute(String, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemAmountAttribute.html#wan24_ObjectValidation_ItemAmountAttribute__ctor_System_String_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemAmountAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemAmountAttribute.ItemAmountAttribute(System.String, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemAmountAttribute.ItemAmountAttribute(String, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemAmountAttribute.#ctor*
-  name: ItemAmountAttribute
-  href: api/wan24.ObjectValidation.ItemAmountAttribute.html#wan24_ObjectValidation_ItemAmountAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemAmountAttribute.#ctor
+- uid: wan24.ObjectValidation.ItemBase64StringAttribute
+  name: ItemBase64StringAttribute
+  href: api/wan24.ObjectValidation.ItemBase64StringAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemBase64StringAttribute
+  fullName: wan24.ObjectValidation.ItemBase64StringAttribute
+  nameWithType: ItemBase64StringAttribute
+- uid: wan24.ObjectValidation.ItemBase64StringAttribute.#ctor
+  name: ItemBase64StringAttribute()
+  href: api/wan24.ObjectValidation.ItemBase64StringAttribute.html#wan24_ObjectValidation_ItemBase64StringAttribute__ctor
+  commentId: M:wan24.ObjectValidation.ItemBase64StringAttribute.#ctor
+  fullName: wan24.ObjectValidation.ItemBase64StringAttribute.ItemBase64StringAttribute()
+  nameWithType: ItemBase64StringAttribute.ItemBase64StringAttribute()
+- uid: wan24.ObjectValidation.ItemBase64StringAttribute.#ctor*
+  name: ItemBase64StringAttribute
+  href: api/wan24.ObjectValidation.ItemBase64StringAttribute.html#wan24_ObjectValidation_ItemBase64StringAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemBase64StringAttribute.#ctor
   isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemAmountAttribute.ItemAmountAttribute
-  nameWithType: ItemAmountAttribute.ItemAmountAttribute
+  fullName: wan24.ObjectValidation.ItemBase64StringAttribute.ItemBase64StringAttribute
+  nameWithType: ItemBase64StringAttribute.ItemBase64StringAttribute
 - uid: wan24.ObjectValidation.ItemBicAttribute
   name: ItemBicAttribute
   href: api/wan24.ObjectValidation.ItemBicAttribute.html
   commentId: T:wan24.ObjectValidation.ItemBicAttribute
   fullName: wan24.ObjectValidation.ItemBicAttribute
   nameWithType: ItemBicAttribute
-- uid: wan24.ObjectValidation.ItemBicAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemBicAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemBicAttribute.html#wan24_ObjectValidation_ItemBicAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemBicAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemBicAttribute.ItemBicAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemBicAttribute.ItemBicAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemBicAttribute.#ctor*
-  name: ItemBicAttribute
-  href: api/wan24.ObjectValidation.ItemBicAttribute.html#wan24_ObjectValidation_ItemBicAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemBicAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemBicAttribute.ItemBicAttribute
-  nameWithType: ItemBicAttribute.ItemBicAttribute
 - uid: wan24.ObjectValidation.ItemCompanyTINAttribute
   name: ItemCompanyTINAttribute
   href: api/wan24.ObjectValidation.ItemCompanyTINAttribute.html
   commentId: T:wan24.ObjectValidation.ItemCompanyTINAttribute
   fullName: wan24.ObjectValidation.ItemCompanyTINAttribute
   nameWithType: ItemCompanyTINAttribute
-- uid: wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCompanyTINAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCompanyTINAttribute.html#wan24_ObjectValidation_ItemCompanyTINAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCompanyTINAttribute.ItemCompanyTINAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCompanyTINAttribute.ItemCompanyTINAttribute(Country, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor*
-  name: ItemCompanyTINAttribute
-  href: api/wan24.ObjectValidation.ItemCompanyTINAttribute.html#wan24_ObjectValidation_ItemCompanyTINAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCompanyTINAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCompanyTINAttribute.ItemCompanyTINAttribute
-  nameWithType: ItemCompanyTINAttribute.ItemCompanyTINAttribute
 - uid: wan24.ObjectValidation.ItemCompareAttribute
   name: ItemCompareAttribute
   href: api/wan24.ObjectValidation.ItemCompareAttribute.html
   commentId: T:wan24.ObjectValidation.ItemCompareAttribute
   fullName: wan24.ObjectValidation.ItemCompareAttribute
   nameWithType: ItemCompareAttribute
-- uid: wan24.ObjectValidation.ItemCompareAttribute.#ctor(System.String,System.String,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCompareAttribute(String, String, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute__ctor_System_String_System_String_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCompareAttribute.#ctor(System.String,System.String,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.ItemCompareAttribute(System.String, System.String, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCompareAttribute.ItemCompareAttribute(String, String, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCompareAttribute.#ctor*
-  name: ItemCompareAttribute
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCompareAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.ItemCompareAttribute
-  nameWithType: ItemCompareAttribute.ItemCompareAttribute
-- uid: wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
-  name: _OwnProperty
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute__OwnProperty
-  commentId: F:wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
-  fullName: wan24.ObjectValidation.ItemCompareAttribute._OwnProperty
-  nameWithType: ItemCompareAttribute._OwnProperty
-- uid: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: GetValidationResult(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_GetValidationResult_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: GetValidationResult(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ItemCompareAttribute.GetValidationResult(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ItemCompareAttribute.GetValidationResult(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult*
-  name: GetValidationResult
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_GetValidationResult_
-  commentId: Overload:wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.GetValidationResult
-  nameWithType: ItemCompareAttribute.GetValidationResult
-- uid: wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
-  name: OwnProperty
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_OwnProperty
-  commentId: P:wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
-  nameWithType: ItemCompareAttribute.OwnProperty
-- uid: wan24.ObjectValidation.ItemCompareAttribute.OwnProperty*
-  name: OwnProperty
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_OwnProperty_
-  commentId: Overload:wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.OwnProperty
-  nameWithType: ItemCompareAttribute.OwnProperty
-- uid: wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
-  name: OwnPropertyGetter
-  href: api/wan24.ObjectValidation.ItemCompareAttribute.html#wan24_ObjectValidation_ItemCompareAttribute_OwnPropertyGetter
-  commentId: F:wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
-  fullName: wan24.ObjectValidation.ItemCompareAttribute.OwnPropertyGetter
-  nameWithType: ItemCompareAttribute.OwnPropertyGetter
 - uid: wan24.ObjectValidation.ItemCountLimitAttribute
   name: ItemCountLimitAttribute
   href: api/wan24.ObjectValidation.ItemCountLimitAttribute.html
@@ -1125,95 +630,30 @@ references:
   commentId: T:wan24.ObjectValidation.ItemCountryAttribute
   fullName: wan24.ObjectValidation.ItemCountryAttribute
   nameWithType: ItemCountryAttribute
-- uid: wan24.ObjectValidation.ItemCountryAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCountryAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCountryAttribute.html#wan24_ObjectValidation_ItemCountryAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCountryAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCountryAttribute.ItemCountryAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCountryAttribute.ItemCountryAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCountryAttribute.#ctor*
-  name: ItemCountryAttribute
-  href: api/wan24.ObjectValidation.ItemCountryAttribute.html#wan24_ObjectValidation_ItemCountryAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCountryAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCountryAttribute.ItemCountryAttribute
-  nameWithType: ItemCountryAttribute.ItemCountryAttribute
 - uid: wan24.ObjectValidation.ItemCreditCardAttribute
   name: ItemCreditCardAttribute
   href: api/wan24.ObjectValidation.ItemCreditCardAttribute.html
   commentId: T:wan24.ObjectValidation.ItemCreditCardAttribute
   fullName: wan24.ObjectValidation.ItemCreditCardAttribute
   nameWithType: ItemCreditCardAttribute
-- uid: wan24.ObjectValidation.ItemCreditCardAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCreditCardAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCreditCardAttribute.html#wan24_ObjectValidation_ItemCreditCardAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCreditCardAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCreditCardAttribute.ItemCreditCardAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCreditCardAttribute.ItemCreditCardAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCreditCardAttribute.#ctor*
-  name: ItemCreditCardAttribute
-  href: api/wan24.ObjectValidation.ItemCreditCardAttribute.html#wan24_ObjectValidation_ItemCreditCardAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCreditCardAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCreditCardAttribute.ItemCreditCardAttribute
-  nameWithType: ItemCreditCardAttribute.ItemCreditCardAttribute
 - uid: wan24.ObjectValidation.ItemCurrencyAttribute
   name: ItemCurrencyAttribute
   href: api/wan24.ObjectValidation.ItemCurrencyAttribute.html
   commentId: T:wan24.ObjectValidation.ItemCurrencyAttribute
   fullName: wan24.ObjectValidation.ItemCurrencyAttribute
   nameWithType: ItemCurrencyAttribute
-- uid: wan24.ObjectValidation.ItemCurrencyAttribute.#ctor(wan24.ObjectValidation.CurrencyFormats,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCurrencyAttribute(CurrencyFormats, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCurrencyAttribute.html#wan24_ObjectValidation_ItemCurrencyAttribute__ctor_wan24_ObjectValidation_CurrencyFormats_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCurrencyAttribute.#ctor(wan24.ObjectValidation.CurrencyFormats,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCurrencyAttribute.ItemCurrencyAttribute(wan24.ObjectValidation.CurrencyFormats, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCurrencyAttribute.ItemCurrencyAttribute(CurrencyFormats, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCurrencyAttribute.#ctor*
-  name: ItemCurrencyAttribute
-  href: api/wan24.ObjectValidation.ItemCurrencyAttribute.html#wan24_ObjectValidation_ItemCurrencyAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCurrencyAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCurrencyAttribute.ItemCurrencyAttribute
-  nameWithType: ItemCurrencyAttribute.ItemCurrencyAttribute
 - uid: wan24.ObjectValidation.ItemCustomValidationAttribute
   name: ItemCustomValidationAttribute
   href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html
   commentId: T:wan24.ObjectValidation.ItemCustomValidationAttribute
   fullName: wan24.ObjectValidation.ItemCustomValidationAttribute
   nameWithType: ItemCustomValidationAttribute
-- uid: wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor(Type,System.String,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemCustomValidationAttribute(Type, String, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html#wan24_ObjectValidation_ItemCustomValidationAttribute__ctor_Type_System_String_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor(Type,System.String,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemCustomValidationAttribute.ItemCustomValidationAttribute(Type, System.String, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemCustomValidationAttribute.ItemCustomValidationAttribute(Type, String, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor*
-  name: ItemCustomValidationAttribute
-  href: api/wan24.ObjectValidation.ItemCustomValidationAttribute.html#wan24_ObjectValidation_ItemCustomValidationAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemCustomValidationAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemCustomValidationAttribute.ItemCustomValidationAttribute
-  nameWithType: ItemCustomValidationAttribute.ItemCustomValidationAttribute
 - uid: wan24.ObjectValidation.ItemDataTypeAttribute
   name: ItemDataTypeAttribute
   href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html
   commentId: T:wan24.ObjectValidation.ItemDataTypeAttribute
   fullName: wan24.ObjectValidation.ItemDataTypeAttribute
   nameWithType: ItemDataTypeAttribute
-- uid: wan24.ObjectValidation.ItemDataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
-  name: ItemDataTypeAttribute(DataType)
-  href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html#wan24_ObjectValidation_ItemDataTypeAttribute__ctor_System_ComponentModel_DataAnnotations_DataType_
-  commentId: M:wan24.ObjectValidation.ItemDataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
-  fullName: wan24.ObjectValidation.ItemDataTypeAttribute.ItemDataTypeAttribute(System.ComponentModel.DataAnnotations.DataType)
-  nameWithType: ItemDataTypeAttribute.ItemDataTypeAttribute(DataType)
-- uid: wan24.ObjectValidation.ItemDataTypeAttribute.#ctor*
-  name: ItemDataTypeAttribute
-  href: api/wan24.ObjectValidation.ItemDataTypeAttribute.html#wan24_ObjectValidation_ItemDataTypeAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemDataTypeAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemDataTypeAttribute.ItemDataTypeAttribute
-  nameWithType: ItemDataTypeAttribute.ItemDataTypeAttribute
 - uid: wan24.ObjectValidation.ItemDeniedValuesAttribute
   name: ItemDeniedValuesAttribute
   href: api/wan24.ObjectValidation.ItemDeniedValuesAttribute.html
@@ -1251,133 +691,61 @@ references:
   commentId: T:wan24.ObjectValidation.ItemEmailAddressAttribute
   fullName: wan24.ObjectValidation.ItemEmailAddressAttribute
   nameWithType: ItemEmailAddressAttribute
-- uid: wan24.ObjectValidation.ItemEmailAddressAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemEmailAddressAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemEmailAddressAttribute.html#wan24_ObjectValidation_ItemEmailAddressAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemEmailAddressAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemEmailAddressAttribute.ItemEmailAddressAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemEmailAddressAttribute.ItemEmailAddressAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemEmailAddressAttribute.#ctor*
-  name: ItemEmailAddressAttribute
-  href: api/wan24.ObjectValidation.ItemEmailAddressAttribute.html#wan24_ObjectValidation_ItemEmailAddressAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemEmailAddressAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemEmailAddressAttribute.ItemEmailAddressAttribute
-  nameWithType: ItemEmailAddressAttribute.ItemEmailAddressAttribute
 - uid: wan24.ObjectValidation.ItemEuVatIdAttribute
   name: ItemEuVatIdAttribute
   href: api/wan24.ObjectValidation.ItemEuVatIdAttribute.html
   commentId: T:wan24.ObjectValidation.ItemEuVatIdAttribute
   fullName: wan24.ObjectValidation.ItemEuVatIdAttribute
   nameWithType: ItemEuVatIdAttribute
-- uid: wan24.ObjectValidation.ItemEuVatIdAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemEuVatIdAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemEuVatIdAttribute.html#wan24_ObjectValidation_ItemEuVatIdAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemEuVatIdAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemEuVatIdAttribute.ItemEuVatIdAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemEuVatIdAttribute.ItemEuVatIdAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemEuVatIdAttribute.#ctor*
-  name: ItemEuVatIdAttribute
-  href: api/wan24.ObjectValidation.ItemEuVatIdAttribute.html#wan24_ObjectValidation_ItemEuVatIdAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemEuVatIdAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemEuVatIdAttribute.ItemEuVatIdAttribute
-  nameWithType: ItemEuVatIdAttribute.ItemEuVatIdAttribute
 - uid: wan24.ObjectValidation.ItemIbanAttribute
   name: ItemIbanAttribute
   href: api/wan24.ObjectValidation.ItemIbanAttribute.html
   commentId: T:wan24.ObjectValidation.ItemIbanAttribute
   fullName: wan24.ObjectValidation.ItemIbanAttribute
   nameWithType: ItemIbanAttribute
-- uid: wan24.ObjectValidation.ItemIbanAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemIbanAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemIbanAttribute.html#wan24_ObjectValidation_ItemIbanAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemIbanAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemIbanAttribute.ItemIbanAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemIbanAttribute.ItemIbanAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemIbanAttribute.#ctor*
-  name: ItemIbanAttribute
-  href: api/wan24.ObjectValidation.ItemIbanAttribute.html#wan24_ObjectValidation_ItemIbanAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemIbanAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemIbanAttribute.ItemIbanAttribute
-  nameWithType: ItemIbanAttribute.ItemIbanAttribute
 - uid: wan24.ObjectValidation.ItemIpAttribute
   name: ItemIpAttribute
   href: api/wan24.ObjectValidation.ItemIpAttribute.html
   commentId: T:wan24.ObjectValidation.ItemIpAttribute
   fullName: wan24.ObjectValidation.ItemIpAttribute
   nameWithType: ItemIpAttribute
-- uid: wan24.ObjectValidation.ItemIpAttribute.#ctor(System.Net.Sockets.AddressFamily,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemIpAttribute(AddressFamily, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemIpAttribute.html#wan24_ObjectValidation_ItemIpAttribute__ctor_System_Net_Sockets_AddressFamily_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemIpAttribute.#ctor(System.Net.Sockets.AddressFamily,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemIpAttribute.ItemIpAttribute(System.Net.Sockets.AddressFamily, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemIpAttribute.ItemIpAttribute(AddressFamily, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemIpAttribute.#ctor*
-  name: ItemIpAttribute
-  href: api/wan24.ObjectValidation.ItemIpAttribute.html#wan24_ObjectValidation_ItemIpAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemIpAttribute.#ctor
+- uid: wan24.ObjectValidation.ItemLengthAttribute
+  name: ItemLengthAttribute
+  href: api/wan24.ObjectValidation.ItemLengthAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemLengthAttribute
+  fullName: wan24.ObjectValidation.ItemLengthAttribute
+  nameWithType: ItemLengthAttribute
+- uid: wan24.ObjectValidation.ItemLengthAttribute.#ctor(System.Int32,System.Int32)
+  name: ItemLengthAttribute(Int32, Int32)
+  href: api/wan24.ObjectValidation.ItemLengthAttribute.html#wan24_ObjectValidation_ItemLengthAttribute__ctor_System_Int32_System_Int32_
+  commentId: M:wan24.ObjectValidation.ItemLengthAttribute.#ctor(System.Int32,System.Int32)
+  fullName: wan24.ObjectValidation.ItemLengthAttribute.ItemLengthAttribute(System.Int32, System.Int32)
+  nameWithType: ItemLengthAttribute.ItemLengthAttribute(Int32, Int32)
+- uid: wan24.ObjectValidation.ItemLengthAttribute.#ctor*
+  name: ItemLengthAttribute
+  href: api/wan24.ObjectValidation.ItemLengthAttribute.html#wan24_ObjectValidation_ItemLengthAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemLengthAttribute.#ctor
   isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemIpAttribute.ItemIpAttribute
-  nameWithType: ItemIpAttribute.ItemIpAttribute
+  fullName: wan24.ObjectValidation.ItemLengthAttribute.ItemLengthAttribute
+  nameWithType: ItemLengthAttribute.ItemLengthAttribute
 - uid: wan24.ObjectValidation.ItemLuhnChecksumAttribute
   name: ItemLuhnChecksumAttribute
   href: api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.html
   commentId: T:wan24.ObjectValidation.ItemLuhnChecksumAttribute
   fullName: wan24.ObjectValidation.ItemLuhnChecksumAttribute
   nameWithType: ItemLuhnChecksumAttribute
-- uid: wan24.ObjectValidation.ItemLuhnChecksumAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemLuhnChecksumAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.html#wan24_ObjectValidation_ItemLuhnChecksumAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemLuhnChecksumAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemLuhnChecksumAttribute.ItemLuhnChecksumAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemLuhnChecksumAttribute.ItemLuhnChecksumAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemLuhnChecksumAttribute.#ctor*
-  name: ItemLuhnChecksumAttribute
-  href: api/wan24.ObjectValidation.ItemLuhnChecksumAttribute.html#wan24_ObjectValidation_ItemLuhnChecksumAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemLuhnChecksumAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemLuhnChecksumAttribute.ItemLuhnChecksumAttribute
-  nameWithType: ItemLuhnChecksumAttribute.ItemLuhnChecksumAttribute
 - uid: wan24.ObjectValidation.ItemMaxLengthAttribute
   name: ItemMaxLengthAttribute
   href: api/wan24.ObjectValidation.ItemMaxLengthAttribute.html
   commentId: T:wan24.ObjectValidation.ItemMaxLengthAttribute
   fullName: wan24.ObjectValidation.ItemMaxLengthAttribute
   nameWithType: ItemMaxLengthAttribute
-- uid: wan24.ObjectValidation.ItemMaxLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemMaxLengthAttribute(Int32, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemMaxLengthAttribute.html#wan24_ObjectValidation_ItemMaxLengthAttribute__ctor_System_Int32_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemMaxLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemMaxLengthAttribute.ItemMaxLengthAttribute(System.Int32, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemMaxLengthAttribute.ItemMaxLengthAttribute(Int32, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemMaxLengthAttribute.#ctor*
-  name: ItemMaxLengthAttribute
-  href: api/wan24.ObjectValidation.ItemMaxLengthAttribute.html#wan24_ObjectValidation_ItemMaxLengthAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemMaxLengthAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemMaxLengthAttribute.ItemMaxLengthAttribute
-  nameWithType: ItemMaxLengthAttribute.ItemMaxLengthAttribute
 - uid: wan24.ObjectValidation.ItemMinLengthAttribute
   name: ItemMinLengthAttribute
   href: api/wan24.ObjectValidation.ItemMinLengthAttribute.html
   commentId: T:wan24.ObjectValidation.ItemMinLengthAttribute
   fullName: wan24.ObjectValidation.ItemMinLengthAttribute
   nameWithType: ItemMinLengthAttribute
-- uid: wan24.ObjectValidation.ItemMinLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemMinLengthAttribute(Int32, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemMinLengthAttribute.html#wan24_ObjectValidation_ItemMinLengthAttribute__ctor_System_Int32_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemMinLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemMinLengthAttribute.ItemMinLengthAttribute(System.Int32, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemMinLengthAttribute.ItemMinLengthAttribute(Int32, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemMinLengthAttribute.#ctor*
-  name: ItemMinLengthAttribute
-  href: api/wan24.ObjectValidation.ItemMinLengthAttribute.html#wan24_ObjectValidation_ItemMinLengthAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemMinLengthAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemMinLengthAttribute.ItemMinLengthAttribute
-  nameWithType: ItemMinLengthAttribute.ItemMinLengthAttribute
 - uid: wan24.ObjectValidation.ItemNoValidationAttribute
   name: ItemNoValidationAttribute
   href: api/wan24.ObjectValidation.ItemNoValidationAttribute.html
@@ -1454,38 +822,12 @@ references:
   commentId: T:wan24.ObjectValidation.ItemPersonTINAttribute
   fullName: wan24.ObjectValidation.ItemPersonTINAttribute
   nameWithType: ItemPersonTINAttribute
-- uid: wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemPersonTINAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemPersonTINAttribute.html#wan24_ObjectValidation_ItemPersonTINAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemPersonTINAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemPersonTINAttribute.ItemPersonTINAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemPersonTINAttribute.ItemPersonTINAttribute(Country, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemPersonTINAttribute.#ctor*
-  name: ItemPersonTINAttribute
-  href: api/wan24.ObjectValidation.ItemPersonTINAttribute.html#wan24_ObjectValidation_ItemPersonTINAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemPersonTINAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemPersonTINAttribute.ItemPersonTINAttribute
-  nameWithType: ItemPersonTINAttribute.ItemPersonTINAttribute
 - uid: wan24.ObjectValidation.ItemPhoneAttribute
   name: ItemPhoneAttribute
   href: api/wan24.ObjectValidation.ItemPhoneAttribute.html
   commentId: T:wan24.ObjectValidation.ItemPhoneAttribute
   fullName: wan24.ObjectValidation.ItemPhoneAttribute
   nameWithType: ItemPhoneAttribute
-- uid: wan24.ObjectValidation.ItemPhoneAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemPhoneAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemPhoneAttribute.html#wan24_ObjectValidation_ItemPhoneAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemPhoneAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemPhoneAttribute.ItemPhoneAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemPhoneAttribute.ItemPhoneAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemPhoneAttribute.#ctor*
-  name: ItemPhoneAttribute
-  href: api/wan24.ObjectValidation.ItemPhoneAttribute.html#wan24_ObjectValidation_ItemPhoneAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemPhoneAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemPhoneAttribute.ItemPhoneAttribute
-  nameWithType: ItemPhoneAttribute.ItemPhoneAttribute
 - uid: wan24.ObjectValidation.ItemRangeAttribute
   name: ItemRangeAttribute
   href: api/wan24.ObjectValidation.ItemRangeAttribute.html
@@ -1517,101 +859,88 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.ItemRangeAttribute.ItemRangeAttribute
   nameWithType: ItemRangeAttribute.ItemRangeAttribute
+- uid: wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture
+  name: ConvertValueInInvariantCulture
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_ConvertValueInInvariantCulture
+  commentId: P:wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture
+  nameWithType: ItemRangeAttribute.ConvertValueInInvariantCulture
+- uid: wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture*
+  name: ConvertValueInInvariantCulture
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_ConvertValueInInvariantCulture_
+  commentId: Overload:wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.ConvertValueInInvariantCulture
+  nameWithType: ItemRangeAttribute.ConvertValueInInvariantCulture
+- uid: wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive
+  name: MaximumIsExclusive
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_MaximumIsExclusive
+  commentId: P:wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive
+  nameWithType: ItemRangeAttribute.MaximumIsExclusive
+- uid: wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive*
+  name: MaximumIsExclusive
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_MaximumIsExclusive_
+  commentId: Overload:wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.MaximumIsExclusive
+  nameWithType: ItemRangeAttribute.MaximumIsExclusive
+- uid: wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive
+  name: MinimumIsExclusive
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_MinimumIsExclusive
+  commentId: P:wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive
+  nameWithType: ItemRangeAttribute.MinimumIsExclusive
+- uid: wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive*
+  name: MinimumIsExclusive
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_MinimumIsExclusive_
+  commentId: Overload:wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.MinimumIsExclusive
+  nameWithType: ItemRangeAttribute.MinimumIsExclusive
+- uid: wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture
+  name: ParseLimitsInInvariantCulture
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_ParseLimitsInInvariantCulture
+  commentId: P:wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture
+  nameWithType: ItemRangeAttribute.ParseLimitsInInvariantCulture
+- uid: wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture*
+  name: ParseLimitsInInvariantCulture
+  href: api/wan24.ObjectValidation.ItemRangeAttribute.html#wan24_ObjectValidation_ItemRangeAttribute_ParseLimitsInInvariantCulture_
+  commentId: Overload:wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemRangeAttribute.ParseLimitsInInvariantCulture
+  nameWithType: ItemRangeAttribute.ParseLimitsInInvariantCulture
 - uid: wan24.ObjectValidation.ItemRegularExpressionAttribute
   name: ItemRegularExpressionAttribute
   href: api/wan24.ObjectValidation.ItemRegularExpressionAttribute.html
   commentId: T:wan24.ObjectValidation.ItemRegularExpressionAttribute
   fullName: wan24.ObjectValidation.ItemRegularExpressionAttribute
   nameWithType: ItemRegularExpressionAttribute
-- uid: wan24.ObjectValidation.ItemRegularExpressionAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemRegularExpressionAttribute(String, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemRegularExpressionAttribute.html#wan24_ObjectValidation_ItemRegularExpressionAttribute__ctor_System_String_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemRegularExpressionAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemRegularExpressionAttribute.ItemRegularExpressionAttribute(System.String, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemRegularExpressionAttribute.ItemRegularExpressionAttribute(String, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemRegularExpressionAttribute.#ctor*
-  name: ItemRegularExpressionAttribute
-  href: api/wan24.ObjectValidation.ItemRegularExpressionAttribute.html#wan24_ObjectValidation_ItemRegularExpressionAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemRegularExpressionAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemRegularExpressionAttribute.ItemRegularExpressionAttribute
-  nameWithType: ItemRegularExpressionAttribute.ItemRegularExpressionAttribute
 - uid: wan24.ObjectValidation.ItemRequiredAttribute
   name: ItemRequiredAttribute
   href: api/wan24.ObjectValidation.ItemRequiredAttribute.html
   commentId: T:wan24.ObjectValidation.ItemRequiredAttribute
   fullName: wan24.ObjectValidation.ItemRequiredAttribute
   nameWithType: ItemRequiredAttribute
-- uid: wan24.ObjectValidation.ItemRequiredAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemRequiredAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemRequiredAttribute.html#wan24_ObjectValidation_ItemRequiredAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemRequiredAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemRequiredAttribute.ItemRequiredAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemRequiredAttribute.ItemRequiredAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemRequiredAttribute.#ctor*
-  name: ItemRequiredAttribute
-  href: api/wan24.ObjectValidation.ItemRequiredAttribute.html#wan24_ObjectValidation_ItemRequiredAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemRequiredAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemRequiredAttribute.ItemRequiredAttribute
-  nameWithType: ItemRequiredAttribute.ItemRequiredAttribute
 - uid: wan24.ObjectValidation.ItemSSNAttribute
   name: ItemSSNAttribute
   href: api/wan24.ObjectValidation.ItemSSNAttribute.html
   commentId: T:wan24.ObjectValidation.ItemSSNAttribute
   fullName: wan24.ObjectValidation.ItemSSNAttribute
   nameWithType: ItemSSNAttribute
-- uid: wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemSSNAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemSSNAttribute.html#wan24_ObjectValidation_ItemSSNAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemSSNAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemSSNAttribute.ItemSSNAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemSSNAttribute.ItemSSNAttribute(Country, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemSSNAttribute.#ctor*
-  name: ItemSSNAttribute
-  href: api/wan24.ObjectValidation.ItemSSNAttribute.html#wan24_ObjectValidation_ItemSSNAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemSSNAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemSSNAttribute.ItemSSNAttribute
-  nameWithType: ItemSSNAttribute.ItemSSNAttribute
 - uid: wan24.ObjectValidation.ItemStringLengthAttribute
   name: ItemStringLengthAttribute
   href: api/wan24.ObjectValidation.ItemStringLengthAttribute.html
   commentId: T:wan24.ObjectValidation.ItemStringLengthAttribute
   fullName: wan24.ObjectValidation.ItemStringLengthAttribute
   nameWithType: ItemStringLengthAttribute
-- uid: wan24.ObjectValidation.ItemStringLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemStringLengthAttribute(Int32, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemStringLengthAttribute.html#wan24_ObjectValidation_ItemStringLengthAttribute__ctor_System_Int32_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemStringLengthAttribute.#ctor(System.Int32,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemStringLengthAttribute.ItemStringLengthAttribute(System.Int32, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemStringLengthAttribute.ItemStringLengthAttribute(Int32, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemStringLengthAttribute.#ctor*
-  name: ItemStringLengthAttribute
-  href: api/wan24.ObjectValidation.ItemStringLengthAttribute.html#wan24_ObjectValidation_ItemStringLengthAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemStringLengthAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemStringLengthAttribute.ItemStringLengthAttribute
-  nameWithType: ItemStringLengthAttribute.ItemStringLengthAttribute
 - uid: wan24.ObjectValidation.ItemUrlAttribute
   name: ItemUrlAttribute
   href: api/wan24.ObjectValidation.ItemUrlAttribute.html
   commentId: T:wan24.ObjectValidation.ItemUrlAttribute
   fullName: wan24.ObjectValidation.ItemUrlAttribute
   nameWithType: ItemUrlAttribute
-- uid: wan24.ObjectValidation.ItemUrlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemUrlAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemUrlAttribute.html#wan24_ObjectValidation_ItemUrlAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemUrlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemUrlAttribute.ItemUrlAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemUrlAttribute.ItemUrlAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemUrlAttribute.#ctor*
-  name: ItemUrlAttribute
-  href: api/wan24.ObjectValidation.ItemUrlAttribute.html#wan24_ObjectValidation_ItemUrlAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemUrlAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemUrlAttribute.ItemUrlAttribute
-  nameWithType: ItemUrlAttribute.ItemUrlAttribute
 - uid: wan24.ObjectValidation.ItemValidationAttribute
   name: ItemValidationAttribute
   href: api/wan24.ObjectValidation.ItemValidationAttribute.html
@@ -1846,268 +1175,36 @@ references:
   commentId: T:wan24.ObjectValidation.ItemValidationTemplateAttribute
   fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute
   nameWithType: ItemValidationTemplateAttribute
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemValidationTemplateAttribute(String, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute__ctor_System_String_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemValidationTemplateAttribute.#ctor(System.String,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ItemValidationTemplateAttribute(System.String, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemValidationTemplateAttribute.ItemValidationTemplateAttribute(String, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.#ctor*
-  name: ItemValidationTemplateAttribute
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ItemValidationTemplateAttribute
-  nameWithType: ItemValidationTemplateAttribute.ItemValidationTemplateAttribute
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel
-  name: ArrayLevel
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_ArrayLevel
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel
-  nameWithType: ItemValidationTemplateAttribute.ArrayLevel
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel*
-  name: ArrayLevel
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_ArrayLevel_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ArrayLevel
-  nameWithType: ItemValidationTemplateAttribute.ArrayLevel
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: GetValidationResult(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_GetValidationResult_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: GetValidationResult(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ItemValidationTemplateAttribute.GetValidationResult(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ItemValidationTemplateAttribute.GetValidationResult(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult*
-  name: GetValidationResult
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_GetValidationResult_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.GetValidationResult
-  nameWithType: ItemValidationTemplateAttribute.GetValidationResult
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_MultiValidation_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ItemValidationTemplateAttribute.MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ItemValidationTemplateAttribute.MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation*
-  name: MultiValidation
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_MultiValidation_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.MultiValidation
-  nameWithType: ItemValidationTemplateAttribute.MultiValidation
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.Template
-  name: Template
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_Template
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateAttribute.Template
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.Template
-  nameWithType: ItemValidationTemplateAttribute.Template
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.Template*
-  name: Template
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_Template_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.Template
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.Template
-  nameWithType: ItemValidationTemplateAttribute.Template
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget
-  name: ValidationTarget
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_ValidationTarget
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget
-  nameWithType: ItemValidationTemplateAttribute.ValidationTarget
-- uid: wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget*
-  name: ValidationTarget
-  href: api/wan24.ObjectValidation.ItemValidationTemplateAttribute.html#wan24_ObjectValidation_ItemValidationTemplateAttribute_ValidationTarget_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateAttribute.ValidationTarget
-  nameWithType: ItemValidationTemplateAttribute.ValidationTarget
 - uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute
   name: ItemValidationTemplateIfAttribute
   href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html
   commentId: T:wan24.ObjectValidation.ItemValidationTemplateIfAttribute
   fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute
   nameWithType: ItemValidationTemplateIfAttribute
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.#ctor(System.String,System.String,wan24.ObjectValidation.ItemValidationTargets,System.Object[])
-  name: ItemValidationTemplateIfAttribute(String, String, ItemValidationTargets, Object[])
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute__ctor_System_String_System_String_wan24_ObjectValidation_ItemValidationTargets_System_Object___
-  commentId: M:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.#ctor(System.String,System.String,wan24.ObjectValidation.ItemValidationTargets,System.Object[])
-  name.vb: ItemValidationTemplateIfAttribute(String, String, ItemValidationTargets, Object())
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute(System.String, System.String, wan24.ObjectValidation.ItemValidationTargets, System.Object[])
-  fullName.vb: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute(System.String, System.String, wan24.ObjectValidation.ItemValidationTargets, System.Object())
-  nameWithType: ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute(String, String, ItemValidationTargets, Object[])
-  nameWithType.vb: ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute(String, String, ItemValidationTargets, Object())
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.#ctor*
-  name: ItemValidationTemplateIfAttribute
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute
-  nameWithType: ItemValidationTemplateIfAttribute.ItemValidationTemplateIfAttribute
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull
-  name: ApplyIfNull
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_ApplyIfNull
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull
-  nameWithType: ItemValidationTemplateIfAttribute.ApplyIfNull
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull*
-  name: ApplyIfNull
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_ApplyIfNull_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.ApplyIfNull
-  nameWithType: ItemValidationTemplateIfAttribute.ApplyIfNull
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_IfNotInValues
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues
-  nameWithType: ItemValidationTemplateIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues*
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_IfNotInValues_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.IfNotInValues
-  nameWithType: ItemValidationTemplateIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_MultiValidation_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ItemValidationTemplateIfAttribute.MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ItemValidationTemplateIfAttribute.MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation*
-  name: MultiValidation
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_MultiValidation_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.MultiValidation
-  nameWithType: ItemValidationTemplateIfAttribute.MultiValidation
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
-  name: Property
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_Property
-  commentId: F:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Property
-  nameWithType: ItemValidationTemplateIfAttribute.Property
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
-  name: PropertyGetter
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_PropertyGetter
-  commentId: F:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyGetter
-  nameWithType: ItemValidationTemplateIfAttribute.PropertyGetter
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
-  name: PropertyName
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_PropertyName
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
-  nameWithType: ItemValidationTemplateIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName*
-  name: PropertyName
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_PropertyName_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.PropertyName
-  nameWithType: ItemValidationTemplateIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values
-  name: Values
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_Values
-  commentId: P:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values
-  nameWithType: ItemValidationTemplateIfAttribute.Values
-- uid: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values*
-  name: Values
-  href: api/wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html#wan24_ObjectValidation_ItemValidationTemplateIfAttribute_Values_
-  commentId: Overload:wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemValidationTemplateIfAttribute.Values
-  nameWithType: ItemValidationTemplateIfAttribute.Values
 - uid: wan24.ObjectValidation.ItemVATAttribute
   name: ItemVATAttribute
   href: api/wan24.ObjectValidation.ItemVATAttribute.html
   commentId: T:wan24.ObjectValidation.ItemVATAttribute
   fullName: wan24.ObjectValidation.ItemVATAttribute
   nameWithType: ItemVATAttribute
-- uid: wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemVATAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemVATAttribute.html#wan24_ObjectValidation_ItemVATAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemVATAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemVATAttribute.ItemVATAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemVATAttribute.ItemVATAttribute(Country, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemVATAttribute.#ctor*
-  name: ItemVATAttribute
-  href: api/wan24.ObjectValidation.ItemVATAttribute.html#wan24_ObjectValidation_ItemVATAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemVATAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemVATAttribute.ItemVATAttribute
-  nameWithType: ItemVATAttribute.ItemVATAttribute
 - uid: wan24.ObjectValidation.ItemXmlAttribute
   name: ItemXmlAttribute
   href: api/wan24.ObjectValidation.ItemXmlAttribute.html
   commentId: T:wan24.ObjectValidation.ItemXmlAttribute
   fullName: wan24.ObjectValidation.ItemXmlAttribute
   nameWithType: ItemXmlAttribute
-- uid: wan24.ObjectValidation.ItemXmlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemXmlAttribute(ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemXmlAttribute.html#wan24_ObjectValidation_ItemXmlAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemXmlAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemXmlAttribute.ItemXmlAttribute(wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemXmlAttribute.ItemXmlAttribute(ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemXmlAttribute.#ctor*
-  name: ItemXmlAttribute
-  href: api/wan24.ObjectValidation.ItemXmlAttribute.html#wan24_ObjectValidation_ItemXmlAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemXmlAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemXmlAttribute.ItemXmlAttribute
-  nameWithType: ItemXmlAttribute.ItemXmlAttribute
 - uid: wan24.ObjectValidation.ItemXRechnungRouteAttribute
   name: ItemXRechnungRouteAttribute
   href: api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html
   commentId: T:wan24.ObjectValidation.ItemXRechnungRouteAttribute
   fullName: wan24.ObjectValidation.ItemXRechnungRouteAttribute
   nameWithType: ItemXRechnungRouteAttribute
-- uid: wan24.ObjectValidation.ItemXRechnungRouteAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemXRechnungRouteAttribute(Boolean, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html#wan24_ObjectValidation_ItemXRechnungRouteAttribute__ctor_System_Boolean_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemXRechnungRouteAttribute.#ctor(System.Boolean,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemXRechnungRouteAttribute.ItemXRechnungRouteAttribute(System.Boolean, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemXRechnungRouteAttribute.ItemXRechnungRouteAttribute(Boolean, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemXRechnungRouteAttribute.#ctor*
-  name: ItemXRechnungRouteAttribute
-  href: api/wan24.ObjectValidation.ItemXRechnungRouteAttribute.html#wan24_ObjectValidation_ItemXRechnungRouteAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemXRechnungRouteAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemXRechnungRouteAttribute.ItemXRechnungRouteAttribute
-  nameWithType: ItemXRechnungRouteAttribute.ItemXRechnungRouteAttribute
 - uid: wan24.ObjectValidation.ItemZipCodeAttribute
   name: ItemZipCodeAttribute
   href: api/wan24.ObjectValidation.ItemZipCodeAttribute.html
   commentId: T:wan24.ObjectValidation.ItemZipCodeAttribute
   fullName: wan24.ObjectValidation.ItemZipCodeAttribute
   nameWithType: ItemZipCodeAttribute
-- uid: wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  name: ItemZipCodeAttribute(Country, ItemValidationTargets)
-  href: api/wan24.ObjectValidation.ItemZipCodeAttribute.html#wan24_ObjectValidation_ItemZipCodeAttribute__ctor_CountryValidation_Country_wan24_ObjectValidation_ItemValidationTargets_
-  commentId: M:wan24.ObjectValidation.ItemZipCodeAttribute.#ctor(CountryValidation.Country,wan24.ObjectValidation.ItemValidationTargets)
-  fullName: wan24.ObjectValidation.ItemZipCodeAttribute.ItemZipCodeAttribute(CountryValidation.Country, wan24.ObjectValidation.ItemValidationTargets)
-  nameWithType: ItemZipCodeAttribute.ItemZipCodeAttribute(Country, ItemValidationTargets)
-- uid: wan24.ObjectValidation.ItemZipCodeAttribute.#ctor*
-  name: ItemZipCodeAttribute
-  href: api/wan24.ObjectValidation.ItemZipCodeAttribute.html#wan24_ObjectValidation_ItemZipCodeAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ItemZipCodeAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ItemZipCodeAttribute.ItemZipCodeAttribute
-  nameWithType: ItemZipCodeAttribute.ItemZipCodeAttribute
 - uid: wan24.ObjectValidation.IValidationInfo
   name: IValidationInfo
   href: api/wan24.ObjectValidation.IValidationInfo.html
@@ -2204,90 +1301,12 @@ references:
   commentId: T:wan24.ObjectValidation.LuhnChecksumAttribute
   fullName: wan24.ObjectValidation.LuhnChecksumAttribute
   nameWithType: LuhnChecksumAttribute
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.#ctor(System.Boolean)
-  name: LuhnChecksumAttribute(Boolean)
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.LuhnChecksumAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.LuhnChecksumAttribute(System.Boolean)
-  nameWithType: LuhnChecksumAttribute.LuhnChecksumAttribute(Boolean)
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.#ctor*
-  name: LuhnChecksumAttribute
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.LuhnChecksumAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.LuhnChecksumAttribute
-  nameWithType: LuhnChecksumAttribute.LuhnChecksumAttribute
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.LuhnChecksumAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: LuhnChecksumAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.LuhnChecksumAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.IsValid
-  nameWithType: LuhnChecksumAttribute.IsValid
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.LuhnChecksumAttribute.Normalize
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.Normalize
-  nameWithType: LuhnChecksumAttribute.Normalize
-- uid: wan24.ObjectValidation.LuhnChecksumAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.LuhnChecksumAttribute.html#wan24_ObjectValidation_LuhnChecksumAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.LuhnChecksumAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.LuhnChecksumAttribute.Normalize
-  nameWithType: LuhnChecksumAttribute.Normalize
 - uid: wan24.ObjectValidation.NoValidationAttribute
   name: NoValidationAttribute
   href: api/wan24.ObjectValidation.NoValidationAttribute.html
   commentId: T:wan24.ObjectValidation.NoValidationAttribute
   fullName: wan24.ObjectValidation.NoValidationAttribute
   nameWithType: NoValidationAttribute
-- uid: wan24.ObjectValidation.NoValidationAttribute.#ctor(System.Boolean)
-  name: NoValidationAttribute(Boolean)
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.NoValidationAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.NoValidationAttribute.NoValidationAttribute(System.Boolean)
-  nameWithType: NoValidationAttribute.NoValidationAttribute(Boolean)
-- uid: wan24.ObjectValidation.NoValidationAttribute.#ctor*
-  name: NoValidationAttribute
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.NoValidationAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.NoValidationAttribute.NoValidationAttribute
-  nameWithType: NoValidationAttribute.NoValidationAttribute
-- uid: wan24.ObjectValidation.NoValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.NoValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.NoValidationAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: NoValidationAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.NoValidationAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.NoValidationAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.NoValidationAttribute.IsValid
-  nameWithType: NoValidationAttribute.IsValid
-- uid: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
-  name: SkipNullValueCheck
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_SkipNullValueCheck
-  commentId: P:wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
-  fullName: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
-  nameWithType: NoValidationAttribute.SkipNullValueCheck
-- uid: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck*
-  name: SkipNullValueCheck
-  href: api/wan24.ObjectValidation.NoValidationAttribute.html#wan24_ObjectValidation_NoValidationAttribute_SkipNullValueCheck_
-  commentId: Overload:wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.NoValidationAttribute.SkipNullValueCheck
-  nameWithType: NoValidationAttribute.SkipNullValueCheck
 - uid: wan24.ObjectValidation.ObjectValidationEventArgs
   name: ObjectValidationEventArgs
   href: api/wan24.ObjectValidation.ObjectValidationEventArgs.html
@@ -2595,77 +1614,6 @@ references:
   fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T)
   nameWithType: OptionsValidator<T>
   nameWithType.vb: OptionsValidator(Of T)
-- uid: wan24.ObjectValidation.OptionsValidator`1.#ctor(System.Nullable{IServiceProvider},System.String)
-  name: OptionsValidator(Nullable<IServiceProvider>, String)
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1__ctor_System_Nullable_IServiceProvider__System_String_
-  commentId: M:wan24.ObjectValidation.OptionsValidator`1.#ctor(System.Nullable{IServiceProvider},System.String)
-  name.vb: OptionsValidator(Nullable(Of IServiceProvider), String)
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.OptionsValidator(System.Nullable<IServiceProvider>, System.String)
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).OptionsValidator(System.Nullable(Of IServiceProvider), System.String)
-  nameWithType: OptionsValidator<T>.OptionsValidator(Nullable<IServiceProvider>, String)
-  nameWithType.vb: OptionsValidator(Of T).OptionsValidator(Nullable(Of IServiceProvider), String)
-- uid: wan24.ObjectValidation.OptionsValidator`1.#ctor*
-  name: OptionsValidator
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1__ctor_
-  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.OptionsValidator
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).OptionsValidator
-  nameWithType: OptionsValidator<T>.OptionsValidator
-  nameWithType.vb: OptionsValidator(Of T).OptionsValidator
-- uid: wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate(System.String,`0)
-  name: IValidateOptions<T>.Validate(String, T)
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_System_String__0_
-  commentId: M:wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate(System.String,`0)
-  name.vb: Microsoft.Extensions.Options.IValidateOptions<T>.Validate(String, T)
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.Microsoft.Extensions.Options.IValidateOptions<T>.Validate(System.String, T)
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate(System.String, T)
-  nameWithType: OptionsValidator<T>.IValidateOptions<T>.Validate(String, T)
-  nameWithType.vb: OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate(String, T)
-- uid: wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate*
-  name: IValidateOptions<T>.Validate
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_
-  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate
-  isSpec: "True"
-  name.vb: Microsoft.Extensions.Options.IValidateOptions<T>.Validate
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.Microsoft.Extensions.Options.IValidateOptions<T>.Validate
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate
-  nameWithType: OptionsValidator<T>.IValidateOptions<T>.Validate
-  nameWithType.vb: OptionsValidator(Of T).Microsoft.Extensions.Options.IValidateOptions<T>.Validate
-- uid: wan24.ObjectValidation.OptionsValidator`1.Name
-  name: Name
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Name
-  commentId: P:wan24.ObjectValidation.OptionsValidator`1.Name
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.Name
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Name
-  nameWithType: OptionsValidator<T>.Name
-  nameWithType.vb: OptionsValidator(Of T).Name
-- uid: wan24.ObjectValidation.OptionsValidator`1.Name*
-  name: Name
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_Name_
-  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.Name
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.Name
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).Name
-  nameWithType: OptionsValidator<T>.Name
-  nameWithType.vb: OptionsValidator(Of T).Name
-- uid: wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
-  name: ServiceProvider
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_ServiceProvider
-  commentId: P:wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.ServiceProvider
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).ServiceProvider
-  nameWithType: OptionsValidator<T>.ServiceProvider
-  nameWithType.vb: OptionsValidator(Of T).ServiceProvider
-- uid: wan24.ObjectValidation.OptionsValidator`1.ServiceProvider*
-  name: ServiceProvider
-  href: api/wan24.ObjectValidation.OptionsValidator-1.html#wan24_ObjectValidation_OptionsValidator_1_ServiceProvider_
-  commentId: Overload:wan24.ObjectValidation.OptionsValidator`1.ServiceProvider
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.OptionsValidator<T>.ServiceProvider
-  fullName.vb: wan24.ObjectValidation.OptionsValidator(Of T).ServiceProvider
-  nameWithType: OptionsValidator<T>.ServiceProvider
-  nameWithType.vb: OptionsValidator(Of T).ServiceProvider
 - uid: wan24.ObjectValidation.ReflectionHelper
   name: ReflectionHelper
   href: api/wan24.ObjectValidation.ReflectionHelper.html
@@ -2736,99 +1684,6 @@ references:
   commentId: T:wan24.ObjectValidation.RequiredIfAttribute
   fullName: wan24.ObjectValidation.RequiredIfAttribute
   nameWithType: RequiredIfAttribute
-- uid: wan24.ObjectValidation.RequiredIfAttribute.#ctor(System.String,System.Object[])
-  name: RequiredIfAttribute(String, Object[])
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute__ctor_System_String_System_Object___
-  commentId: M:wan24.ObjectValidation.RequiredIfAttribute.#ctor(System.String,System.Object[])
-  name.vb: RequiredIfAttribute(String, Object())
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute(System.String, System.Object[])
-  fullName.vb: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute(System.String, System.Object())
-  nameWithType: RequiredIfAttribute.RequiredIfAttribute(String, Object[])
-  nameWithType.vb: RequiredIfAttribute.RequiredIfAttribute(String, Object())
-- uid: wan24.ObjectValidation.RequiredIfAttribute.#ctor*
-  name: RequiredIfAttribute
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfAttribute
-  nameWithType: RequiredIfAttribute.RequiredIfAttribute
-- uid: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IfNotInValues
-  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
-  nameWithType: RequiredIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues*
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IfNotInValues_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.IfNotInValues
-  nameWithType: RequiredIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: RequiredIfAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.RequiredIfAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.IsValid
-  nameWithType: RequiredIfAttribute.IsValid
-- uid: wan24.ObjectValidation.RequiredIfAttribute.Property
-  name: Property
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Property
-  commentId: F:wan24.ObjectValidation.RequiredIfAttribute.Property
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.Property
-  nameWithType: RequiredIfAttribute.Property
-- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
-  name: PropertyGetter
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyGetter
-  commentId: F:wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyGetter
-  nameWithType: RequiredIfAttribute.PropertyGetter
-- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
-  name: PropertyName
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyName
-  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.PropertyName
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
-  nameWithType: RequiredIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.RequiredIfAttribute.PropertyName*
-  name: PropertyName
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_PropertyName_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.PropertyName
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.PropertyName
-  nameWithType: RequiredIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
-  name: RequiredIfNull
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNull
-  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
-  nameWithType: RequiredIfAttribute.RequiredIfNull
-- uid: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull*
-  name: RequiredIfNull
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_RequiredIfNull_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.RequiredIfNull
-  nameWithType: RequiredIfAttribute.RequiredIfNull
-- uid: wan24.ObjectValidation.RequiredIfAttribute.Values
-  name: Values
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Values
-  commentId: P:wan24.ObjectValidation.RequiredIfAttribute.Values
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.Values
-  nameWithType: RequiredIfAttribute.Values
-- uid: wan24.ObjectValidation.RequiredIfAttribute.Values*
-  name: Values
-  href: api/wan24.ObjectValidation.RequiredIfAttribute.html#wan24_ObjectValidation_RequiredIfAttribute_Values_
-  commentId: Overload:wan24.ObjectValidation.RequiredIfAttribute.Values
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.RequiredIfAttribute.Values
-  nameWithType: RequiredIfAttribute.Values
 - uid: wan24.ObjectValidation.SwiftValidation
   name: SwiftValidation
   href: api/wan24.ObjectValidation.SwiftValidation.html
@@ -2887,25 +1742,6 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.SwiftValidation.ValidateIban
   nameWithType: SwiftValidation.ValidateIban
-- uid: wan24.ObjectValidation.ValidatableObject
-  name: ValidatableObject
-  href: api/wan24.ObjectValidation.ValidatableObject.html
-  commentId: T:wan24.ObjectValidation.ValidatableObject
-  fullName: wan24.ObjectValidation.ValidatableObject
-  nameWithType: ValidatableObject
-- uid: wan24.ObjectValidation.ValidatableObject.#ctor
-  name: ValidatableObject()
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject__ctor
-  commentId: M:wan24.ObjectValidation.ValidatableObject.#ctor
-  fullName: wan24.ObjectValidation.ValidatableObject.ValidatableObject()
-  nameWithType: ValidatableObject.ValidatableObject()
-- uid: wan24.ObjectValidation.ValidatableObject.#ctor*
-  name: ValidatableObject
-  href: api/wan24.ObjectValidation.ValidatableObject.html#wan24_ObjectValidation_ValidatableObject__ctor_
-  commentId: Overload:wan24.ObjectValidation.ValidatableObject.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableObject.ValidatableObject
-  nameWithType: ValidatableObject.ValidatableObject
 - uid: wan24.ObjectValidation.ValidatableObjectBase
   name: ValidatableObjectBase
   href: api/wan24.ObjectValidation.ValidatableObjectBase.html
@@ -3031,45 +1867,6 @@ references:
   commentId: T:wan24.ObjectValidation.ValidatableTypesEventArgs
   fullName: wan24.ObjectValidation.ValidatableTypesEventArgs
   nameWithType: ValidatableTypesEventArgs
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.#ctor(Type)
-  name: ValidatableTypesEventArgs(Type)
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs__ctor_Type_
-  commentId: M:wan24.ObjectValidation.ValidatableTypesEventArgs.#ctor(Type)
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.ValidatableTypesEventArgs(Type)
-  nameWithType: ValidatableTypesEventArgs.ValidatableTypesEventArgs(Type)
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.#ctor*
-  name: ValidatableTypesEventArgs
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs__ctor_
-  commentId: Overload:wan24.ObjectValidation.ValidatableTypesEventArgs.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.ValidatableTypesEventArgs
-  nameWithType: ValidatableTypesEventArgs.ValidatableTypesEventArgs
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable
-  name: IsValidatable
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs_IsValidatable
-  commentId: P:wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable
-  nameWithType: ValidatableTypesEventArgs.IsValidatable
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable*
-  name: IsValidatable
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs_IsValidatable_
-  commentId: Overload:wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.IsValidatable
-  nameWithType: ValidatableTypesEventArgs.IsValidatable
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.Type
-  name: Type
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs_Type
-  commentId: P:wan24.ObjectValidation.ValidatableTypesEventArgs.Type
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.Type
-  nameWithType: ValidatableTypesEventArgs.Type
-- uid: wan24.ObjectValidation.ValidatableTypesEventArgs.Type*
-  name: Type
-  href: api/wan24.ObjectValidation.ValidatableTypesEventArgs.html#wan24_ObjectValidation_ValidatableTypesEventArgs_Type_
-  commentId: Overload:wan24.ObjectValidation.ValidatableTypesEventArgs.Type
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidatableTypesEventArgs.Type
-  nameWithType: ValidatableTypesEventArgs.Type
 - uid: wan24.ObjectValidation.ValidateObject
   name: ValidateObject
   href: api/wan24.ObjectValidation.ValidateObject.html
@@ -3397,163 +2194,12 @@ references:
   commentId: T:wan24.ObjectValidation.ValidationTemplateAttribute
   fullName: wan24.ObjectValidation.ValidationTemplateAttribute
   nameWithType: ValidationTemplateAttribute
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.#ctor(System.String)
-  name: ValidationTemplateAttribute(String)
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute__ctor_System_String_
-  commentId: M:wan24.ObjectValidation.ValidationTemplateAttribute.#ctor(System.String)
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.ValidationTemplateAttribute(System.String)
-  nameWithType: ValidationTemplateAttribute.ValidationTemplateAttribute(String)
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.#ctor*
-  name: ValidationTemplateAttribute
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.ValidationTemplateAttribute
-  nameWithType: ValidationTemplateAttribute.ValidationTemplateAttribute
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.ValidationTemplateAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: ValidationTemplateAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.IsValid
-  nameWithType: ValidationTemplateAttribute.IsValid
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_MultiValidation_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ValidationTemplateAttribute.MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ValidationTemplateAttribute.MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation*
-  name: MultiValidation
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_MultiValidation_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.MultiValidation
-  nameWithType: ValidationTemplateAttribute.MultiValidation
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.Template
-  name: Template
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_Template
-  commentId: P:wan24.ObjectValidation.ValidationTemplateAttribute.Template
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.Template
-  nameWithType: ValidationTemplateAttribute.Template
-- uid: wan24.ObjectValidation.ValidationTemplateAttribute.Template*
-  name: Template
-  href: api/wan24.ObjectValidation.ValidationTemplateAttribute.html#wan24_ObjectValidation_ValidationTemplateAttribute_Template_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateAttribute.Template
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateAttribute.Template
-  nameWithType: ValidationTemplateAttribute.Template
 - uid: wan24.ObjectValidation.ValidationTemplateIfAttribute
   name: ValidationTemplateIfAttribute
   href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html
   commentId: T:wan24.ObjectValidation.ValidationTemplateIfAttribute
   fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute
   nameWithType: ValidationTemplateIfAttribute
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.#ctor(System.String,System.String,System.Object[])
-  name: ValidationTemplateIfAttribute(String, String, Object[])
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute__ctor_System_String_System_String_System_Object___
-  commentId: M:wan24.ObjectValidation.ValidationTemplateIfAttribute.#ctor(System.String,System.String,System.Object[])
-  name.vb: ValidationTemplateIfAttribute(String, String, Object())
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.ValidationTemplateIfAttribute(System.String, System.String, System.Object[])
-  fullName.vb: wan24.ObjectValidation.ValidationTemplateIfAttribute.ValidationTemplateIfAttribute(System.String, System.String, System.Object())
-  nameWithType: ValidationTemplateIfAttribute.ValidationTemplateIfAttribute(String, String, Object[])
-  nameWithType.vb: ValidationTemplateIfAttribute.ValidationTemplateIfAttribute(String, String, Object())
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.#ctor*
-  name: ValidationTemplateIfAttribute
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.ValidationTemplateIfAttribute
-  nameWithType: ValidationTemplateIfAttribute.ValidationTemplateIfAttribute
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull
-  name: ApplyIfNull
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_ApplyIfNull
-  commentId: P:wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull
-  nameWithType: ValidationTemplateIfAttribute.ApplyIfNull
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull*
-  name: ApplyIfNull
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_ApplyIfNull_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.ApplyIfNull
-  nameWithType: ValidationTemplateIfAttribute.ApplyIfNull
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_IfNotInValues
-  commentId: P:wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues
-  nameWithType: ValidationTemplateIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues*
-  name: IfNotInValues
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_IfNotInValues_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.IfNotInValues
-  nameWithType: ValidationTemplateIfAttribute.IfNotInValues
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name: MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_MultiValidation_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_System_Nullable_IServiceProvider__
-  commentId: M:wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Nullable{IServiceProvider})
-  name.vb: MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable<IServiceProvider>)
-  fullName.vb: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation(System.Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Nullable(Of IServiceProvider))
-  nameWithType: ValidationTemplateIfAttribute.MultiValidation(Object, ValidationContext, Nullable<IServiceProvider>)
-  nameWithType.vb: ValidationTemplateIfAttribute.MultiValidation(Object, ValidationContext, Nullable(Of IServiceProvider))
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation*
-  name: MultiValidation
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_MultiValidation_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.MultiValidation
-  nameWithType: ValidationTemplateIfAttribute.MultiValidation
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
-  name: Property
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_Property
-  commentId: F:wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.Property
-  nameWithType: ValidationTemplateIfAttribute.Property
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
-  name: PropertyGetter
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_PropertyGetter
-  commentId: F:wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyGetter
-  nameWithType: ValidationTemplateIfAttribute.PropertyGetter
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
-  name: PropertyName
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_PropertyName
-  commentId: P:wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
-  nameWithType: ValidationTemplateIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName*
-  name: PropertyName
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_PropertyName_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.PropertyName
-  nameWithType: ValidationTemplateIfAttribute.PropertyName
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.Values
-  name: Values
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_Values
-  commentId: P:wan24.ObjectValidation.ValidationTemplateIfAttribute.Values
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.Values
-  nameWithType: ValidationTemplateIfAttribute.Values
-- uid: wan24.ObjectValidation.ValidationTemplateIfAttribute.Values*
-  name: Values
-  href: api/wan24.ObjectValidation.ValidationTemplateIfAttribute.html#wan24_ObjectValidation_ValidationTemplateIfAttribute_Values_
-  commentId: Overload:wan24.ObjectValidation.ValidationTemplateIfAttribute.Values
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.ValidationTemplateIfAttribute.Values
-  nameWithType: ValidationTemplateIfAttribute.Values
 - uid: wan24.ObjectValidation.ValidationTemplates
   name: ValidationTemplates
   href: api/wan24.ObjectValidation.ValidationTemplates.html
@@ -3888,45 +2534,6 @@ references:
   commentId: T:wan24.ObjectValidation.XRechnungRouteAttribute
   fullName: wan24.ObjectValidation.XRechnungRouteAttribute
   nameWithType: XRechnungRouteAttribute
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.#ctor(System.Boolean)
-  name: XRechnungRouteAttribute(Boolean)
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute__ctor_System_Boolean_
-  commentId: M:wan24.ObjectValidation.XRechnungRouteAttribute.#ctor(System.Boolean)
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.XRechnungRouteAttribute(System.Boolean)
-  nameWithType: XRechnungRouteAttribute.XRechnungRouteAttribute(Boolean)
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.#ctor*
-  name: XRechnungRouteAttribute
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute__ctor_
-  commentId: Overload:wan24.ObjectValidation.XRechnungRouteAttribute.#ctor
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.XRechnungRouteAttribute
-  nameWithType: XRechnungRouteAttribute.XRechnungRouteAttribute
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  name: IsValid(Object, ValidationContext)
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
-  commentId: M:wan24.ObjectValidation.XRechnungRouteAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.IsValid(System.Object, System.ComponentModel.DataAnnotations.ValidationContext)
-  nameWithType: XRechnungRouteAttribute.IsValid(Object, ValidationContext)
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.IsValid*
-  name: IsValid
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute_IsValid_
-  commentId: Overload:wan24.ObjectValidation.XRechnungRouteAttribute.IsValid
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.IsValid
-  nameWithType: XRechnungRouteAttribute.IsValid
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.Normalize
-  name: Normalize
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute_Normalize
-  commentId: P:wan24.ObjectValidation.XRechnungRouteAttribute.Normalize
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.Normalize
-  nameWithType: XRechnungRouteAttribute.Normalize
-- uid: wan24.ObjectValidation.XRechnungRouteAttribute.Normalize*
-  name: Normalize
-  href: api/wan24.ObjectValidation.XRechnungRouteAttribute.html#wan24_ObjectValidation_XRechnungRouteAttribute_Normalize_
-  commentId: Overload:wan24.ObjectValidation.XRechnungRouteAttribute.Normalize
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.XRechnungRouteAttribute.Normalize
-  nameWithType: XRechnungRouteAttribute.Normalize
 - uid: wan24.ObjectValidation.XRechnungRouting
   name: XRechnungRouting
   href: api/wan24.ObjectValidation.XRechnungRouting.html

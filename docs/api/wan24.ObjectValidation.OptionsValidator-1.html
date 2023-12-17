@@ -81,10 +81,6 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">OptionsValidator&lt;T&gt;</span></div>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">Microsoft.Extensions.Options.IValidateOptions</span>&lt;T&gt;</div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -113,7 +109,7 @@
   <h6><strong>Assembly</strong>: ObjectValidation.dll</h6>
   <h5 id="wan24_ObjectValidation_OptionsValidator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class OptionsValidator&lt;T&gt; : IValidateOptions&lt;T&gt; where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class OptionsValidator&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,170 +127,9 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_OptionsValidator_1__ctor_System_Nullable_IServiceProvider__System_String_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.OptionsValidator%601.%23ctor(System.Nullable%7BIServiceProvider%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L86">View Source</a>
-  </span>
-  <a id="wan24_ObjectValidation_OptionsValidator_1__ctor_" data-uid="wan24.ObjectValidation.OptionsValidator`1.#ctor*"></a>
-  <h4 id="wan24_ObjectValidation_OptionsValidator_1__ctor_System_Nullable_IServiceProvider__System_String_" data-uid="wan24.ObjectValidation.OptionsValidator`1.#ctor(System.Nullable{IServiceProvider},System.String)">OptionsValidator(Nullable&lt;IServiceProvider&gt;, String)</h4>
-  <div class="markdown level1 summary"><p>Constructor</p>
+  <h5 id="wan24_ObjectValidation_OptionsValidator_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Constructor</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OptionsValidator(IServiceProvider? serviceProvider = null, string name = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
-        <td><span class="parametername">serviceProvider</span></td>
-        <td><p>Service provider</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Name to limit this instance to</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_OptionsValidator_1_Name.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.OptionsValidator%601.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L100">View Source</a>
-  </span>
-  <a id="wan24_ObjectValidation_OptionsValidator_1_Name_" data-uid="wan24.ObjectValidation.OptionsValidator`1.Name*"></a>
-  <h4 id="wan24_ObjectValidation_OptionsValidator_1_Name" data-uid="wan24.ObjectValidation.OptionsValidator`1.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Name which this instance is limited to</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_OptionsValidator_1_ServiceProvider.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.OptionsValidator%601.ServiceProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L95">View Source</a>
-  </span>
-  <a id="wan24_ObjectValidation_OptionsValidator_1_ServiceProvider_" data-uid="wan24.ObjectValidation.OptionsValidator`1.ServiceProvider*"></a>
-  <h4 id="wan24_ObjectValidation_OptionsValidator_1_ServiceProvider" data-uid="wan24.ObjectValidation.OptionsValidator`1.ServiceProvider">ServiceProvider</h4>
-  <div class="markdown level1 summary"><p>Service provider</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IServiceProvider? ServiceProvider { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IServiceProvider</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_System_String__0_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.OptionsValidator%601.Microsoft%23Extensions%23Options%23IValidateOptions%7BT%7D%23Validate(System.String%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L103">View Source</a>
-  </span>
-  <a id="wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_" data-uid="wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate*"></a>
-  <h4 id="wan24_ObjectValidation_OptionsValidator_1_Microsoft_Extensions_Options_IValidateOptions_T__Validate_System_String__0_" data-uid="wan24.ObjectValidation.OptionsValidator`1.Microsoft#Extensions#Options#IValidateOptions{T}#Validate(System.String,`0)">IValidateOptions&lt;T&gt;.Validate(String, T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ValidateOptionsResult IValidateOptions&lt;T&gt;.Validate(string name, T options)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.Options.ValidateOptionsResult</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">Microsoft.Extensions.Options.IValidateOptions&lt;TOptions&gt;</span>
-  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="wan24.ObjectValidation.ValidateObject.html#wan24_ObjectValidation_ValidateObject_TryValidateNullableObject_System_Object_List_System_ComponentModel_DataAnnotations_ValidationResult___System_String_System_Boolean_System_Nullable_IEnumerable_System_String___System_Nullable_IServiceProvider__">ValidateObject.TryValidateNullableObject(Object, out List&lt;ValidationResult&gt;, String, Boolean, Nullable&lt;IEnumerable&lt;String&gt;&gt;, Nullable&lt;IServiceProvider&gt;)</a>
@@ -403,7 +238,7 @@
                     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_OptionsValidator_1.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.OptionsValidator%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L79" class="contribution-link">View Source</a>
+                    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/OptionsValidator.cs/#L84" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
