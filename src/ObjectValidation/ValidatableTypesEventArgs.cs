@@ -3,18 +3,16 @@
     /// <summary>
     /// Event arguments for the <see cref="ValidatableTypes.OnIsTypeValidatable"/> event
     /// </summary>
-    public sealed class ValidatableTypesEventArgs : EventArgs
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="type">Type</param>
+    public sealed class ValidatableTypesEventArgs(Type type) : EventArgs()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="type">Type</param>
-        public ValidatableTypesEventArgs(Type type) : base() => Type = type;
-
         /// <summary>
         /// Type
         /// </summary>
-        public Type Type { get; }
+        public Type Type { get; } = type;
 
         /// <summary>
         /// Is validatable?

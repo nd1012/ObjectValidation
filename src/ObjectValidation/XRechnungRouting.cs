@@ -5,7 +5,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// XRechnung route validation
     /// </summary>
-    public static class XRechnungRouting
+    public static partial class XRechnungRouting
     {
         /// <summary>
         /// Checksum characters
@@ -15,19 +15,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        private static readonly Regex Normalizing = new(@"[^\d|A-Z|-]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex Normalizing = Normalizing_Generated();
         /// <summary>
         /// Syntax regular expression
         /// </summary>
-        private static readonly Regex Syntax = new(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex Syntax = Syntax_Generated();
         /// <summary>
         /// Checksum calculation regular expression
         /// </summary>
-        private static readonly Regex ChecksumCalculation = new(@"[A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex ChecksumCalculation = ChecksumCalculation_Generated();
         /// <summary>
         /// Checksum normalizing regular expression
         /// </summary>
-        private static readonly Regex ChecksumNormalizing = new(@"[^\d|A-Z]", RegexOptions.Singleline | RegexOptions.Compiled);
+        private static readonly Regex ChecksumNormalizing = ChecksumNormalizing_Generated();
 
         /// <summary>
         /// Validate a XRechnung route
@@ -44,5 +44,29 @@ namespace wan24.ObjectValidation
         /// <param name="route">Route</param>
         /// <returns>Normalized route</returns>
         public static string Normalize(string route) => Normalizing.Replace(route.ToUpper(), string.Empty);
+
+        /// <summary>
+        /// Normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[^\d|A-Z|-]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex Normalizing_Generated();
+
+        /// <summary>
+        /// Syntax regular expression
+        /// </summary>
+        [GeneratedRegex(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex Syntax_Generated();
+
+        /// <summary>
+        /// Checksum calculation regular expression
+        /// </summary>
+        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex ChecksumCalculation_Generated();
+
+        /// <summary>
+        /// Checksum normalizing regular expression
+        /// </summary>
+        [GeneratedRegex(@"[^\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        private static partial Regex ChecksumNormalizing_Generated();
     }
 }

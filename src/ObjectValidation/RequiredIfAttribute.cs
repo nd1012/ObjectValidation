@@ -6,7 +6,13 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Attribute for a conditional value requirement validation
     /// </summary>
-    public class RequiredIfAttribute : RequiredAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="propertyName">Checked property name</param>
+    /// <param name="values">Values (one of the value is required in order to match this condition; if not given, the value is required if the checked property has a non-
+    /// <see langword="null"/> value)</param>
+    public class RequiredIfAttribute(string propertyName, params object?[] values) : RequiredAttribute()
     {
         /// <summary>
         /// Property
@@ -18,27 +24,15 @@ namespace wan24.ObjectValidation
         protected ReflectionHelper.PropertyGetter_Delegate? PropertyGetter = null;
 
         /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="propertyName">Checked property name</param>
-        /// <param name="values">Values (one of the value is required in order to match this condition; if not given, the value is required if the checked property has a non-
-        /// <see langword="null"/> value)</param>
-        public RequiredIfAttribute(string propertyName, params object?[] values) : base()
-        {
-            PropertyName = propertyName;
-            Values = values;
-        }
-
-        /// <summary>
         /// Checked property name
         /// </summary>
-        public string PropertyName { get; }
+        public string PropertyName { get; } = propertyName;
 
         /// <summary>
         /// Checked property values (one of the value is required in order to match this condition; if not given, the value is required if the checked property has a non-
         /// <see langword="null"/> value)
         /// </summary>
-        public object?[] Values { get; }
+        public object?[] Values { get; } = values;
 
         /// <summary>
         /// Invert the checked property values meaning (this property needs to have a value, if the checked property value is NOT in the value list)

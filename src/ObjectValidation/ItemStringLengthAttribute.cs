@@ -5,13 +5,12 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Item string length attribute
     /// </summary>
-    public class ItemStringLengthAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="maxLen">Maximum length</param>
+    /// <param name="target">Validation target</param>
+    public class ItemStringLengthAttribute(int maxLen, ItemValidationTargets target = ItemValidationTargets.Item) : ItemValidationAttribute(target, new StringLengthAttribute(maxLen))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="maxLen">Maximum length</param>
-        /// <param name="target">Validation target</param>
-        public ItemStringLengthAttribute(int maxLen, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new StringLengthAttribute(maxLen)) { }
     }
 }

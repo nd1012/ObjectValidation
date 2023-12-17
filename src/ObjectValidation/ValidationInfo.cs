@@ -14,7 +14,7 @@
         /// Constructor
         /// </summary>
         /// <param name="seen">Seen objects</param>
-        internal ValidationInfo(List<object>? seen = null) => Seen = seen ?? new();
+        internal ValidationInfo(List<object>? seen = null) => Seen = seen ?? [];
 
         /// <inheritdoc/>
         public List<object> Seen { get; }

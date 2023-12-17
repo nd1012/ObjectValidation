@@ -5,12 +5,11 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Credit card item attribute
     /// </summary>
-    public class ItemCreditCardAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="target">Validation target</param>
+    public class ItemCreditCardAttribute(ItemValidationTargets target = ItemValidationTargets.Item) : ItemValidationAttribute(target, new CreditCardAttribute())
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="target">Validation target</param>
-        public ItemCreditCardAttribute(ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new CreditCardAttribute()) { }
     }
 }

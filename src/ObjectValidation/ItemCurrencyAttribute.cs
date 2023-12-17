@@ -3,15 +3,13 @@
     /// <summary>
     /// Item currency ISO 4217 code validation attribute
     /// </summary>
-    public class ItemCurrencyAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="format">Format</param>
+    /// <param name="target">Validation target</param>
+    public class ItemCurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new CurrencyAttribute(format))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="format">Format</param>
-        /// <param name="target">Validation target</param>
-        public ItemCurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode, ItemValidationTargets target = ItemValidationTargets.Item)
-            : base(target, new CurrencyAttribute(format))
-            { }
     }
 }

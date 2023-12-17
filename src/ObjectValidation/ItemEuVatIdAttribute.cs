@@ -3,13 +3,12 @@
     /// <summary>
     /// Item European VAT ID validation attribute
     /// </summary>
-    public class ItemEuVatIdAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    /// <param name="target">Validation target</param>
+    public class ItemEuVatIdAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item) : ItemValidationAttribute(target, new EuVatIdAttribute(normalize))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        /// <param name="target">Validation target</param>
-        public ItemEuVatIdAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new EuVatIdAttribute(normalize)) { }
     }
 }

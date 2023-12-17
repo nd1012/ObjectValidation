@@ -5,18 +5,16 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Amount validation attribute
     /// </summary>
-    public class AmountAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="currency">Currency ISO 4217 code</param>
+    public class AmountAttribute(string currency) : ValidationAttribute()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="currency">Currency ISO 4217 code</param>
-        public AmountAttribute(string currency) : base() => Currency = currency;
-
         /// <summary>
         /// Currency ISO 4217 code
         /// </summary>
-        public string Currency { get; }
+        public string Currency { get; } = currency;
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
@@ -27,12 +25,12 @@ namespace wan24.ObjectValidation
                     ErrorMessage ?? (validationContext.MemberName is null ? $"Amount value as {typeof(decimal)} expected" : $"{validationContext.MemberName}: Amount value as {typeof(decimal)} expected"),
                     validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
-            if (!CurrencyCodes.Known.ContainsKey(Currency))
+            if (!CurrencyCodes.Known.TryGetValue(Currency, out CurrencyCodes.Currency? v))
                 return new(
                     ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency configured" : $"{validationContext.MemberName}: Invalid currency configured"),
                     validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                     );
-            if (!CurrencyCodes.Known[Currency].Validate(amount))
+            if (!v.Validate(amount))
                 return new(
                     ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid amount value" : $"{validationContext.MemberName}: Invalid amount value"),
                     validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }

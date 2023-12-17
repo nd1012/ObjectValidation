@@ -3,15 +3,13 @@
     /// <summary>
     /// Item XRechnung route validation attribute
     /// </summary>
-    public class ItemXRechnungRouteAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    /// <param name="target">Validation target</param>
+    public class ItemXRechnungRouteAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new XRechnungRouteAttribute(normalize))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        /// <param name="target">Validation target</param>
-        public ItemXRechnungRouteAttribute(bool normalize = true, ItemValidationTargets target = ItemValidationTargets.Item)
-            : base(target, new XRechnungRouteAttribute(normalize))
-            { }
     }
 }

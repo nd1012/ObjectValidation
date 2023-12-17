@@ -6,7 +6,14 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Conditional template validation attribute
     /// </summary>
-    public class ValidationTemplateIfAttribute : ValidationTemplateAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="template">Template key</param>
+    /// <param name="propertyName">Checked property name</param>
+    /// <param name="values">Values (one of the value is required in order to match this condition; if not given, the template will be applied if the checked property has a non-
+    /// <see langword="null"/> value)</param>
+    public class ValidationTemplateIfAttribute(string template, string propertyName, params object?[] values) : ValidationTemplateAttribute(template)
     {
         /// <summary>
         /// Property
@@ -18,27 +25,14 @@ namespace wan24.ObjectValidation
         protected ReflectionHelper.PropertyGetter_Delegate? PropertyGetter = null;
 
         /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="template">Template key</param>
-        /// <param name="propertyName">Checked property name</param>
-        /// <param name="values">Values (one of the value is required in order to match this condition; if not given, the temlate will be applied if the checked property has a non-
-        /// <see langword="null"/> value)</param>
-        public ValidationTemplateIfAttribute(string template, string propertyName, params object?[] values) : base(template)
-        {
-            PropertyName = propertyName;
-            Values = values;
-        }
-
-        /// <summary>
         /// Checked property name
         /// </summary>
-        public string PropertyName { get; }
+        public string PropertyName { get; } = propertyName;
 
         /// <summary>
         /// Expected values
         /// </summary>
-        public object?[] Values { get; }
+        public object?[] Values { get; } = values;
 
         /// <summary>
         /// Invert the checked property values meaning (the template will be applied, if the checked property value is NOT in the value list)

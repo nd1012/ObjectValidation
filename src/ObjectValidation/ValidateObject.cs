@@ -31,7 +31,7 @@ namespace wan24.ObjectValidation
             IServiceProvider? serviceProvider = null
             )
         {
-            TryValidateNullableObject(obj, results = new(), member, throwOnError: true, members, serviceProvider);
+            TryValidateNullableObject(obj, results = [], member, throwOnError: true, members, serviceProvider);
             return obj;
         }
 
@@ -70,7 +70,7 @@ namespace wan24.ObjectValidation
             IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
-            => TryValidateNullableObject(obj, results = new(), member, throwOnError, members, serviceProvider);
+            => TryValidateNullableObject(obj, results = [], member, throwOnError, members, serviceProvider);
 
         /// <summary>
         /// Validate an object

@@ -22,13 +22,13 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Item ZIP code validation attribute
     /// </summary>
-    public class ItemZipCodeAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="country">Country</param>
+    /// <param name="target">Validation target</param>
+    public class ItemZipCodeAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new ZipCodeAttribute(country))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="country">Country</param>
-        /// <param name="target">Validation target</param>
-        public ItemZipCodeAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new ZipCodeAttribute(country)) { }
     }
 }

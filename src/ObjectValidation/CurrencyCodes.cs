@@ -291,7 +291,14 @@
         /// <summary>
         /// Currency
         /// </summary>
-        public class Currency
+        /// <remarks>
+        /// Constructor
+        /// </remarks>
+        /// <param name="code">Code</param>
+        /// <param name="numericCode">Numeric code</param>
+        /// <param name="name">Name</param>
+        /// <param name="minorUnit">Minor unit</param>
+        public class Currency(string code, string numericCode, string name, int minorUnit = 2)
         {
             /// <summary>
             /// Factor
@@ -299,38 +306,24 @@
             protected int? _Factor = null;
 
             /// <summary>
-            /// Constructor
-            /// </summary>
-            /// <param name="code">Code</param>
-            /// <param name="numericCode">Numeric code</param>
-            /// <param name="name">Name</param>
-            /// <param name="minorUnit">Minor unit</param>
-            public Currency(string code, string numericCode, string name, int minorUnit = 2)
-            {
-                Code = code;
-                NumericCode = numericCode;
-                Name = name;
-            }
-
-            /// <summary>
             /// Code
             /// </summary>
-            public string Code { get; set; }
+            public string Code { get; set; } = code;
 
             /// <summary>
             /// Numeric code
             /// </summary>
-            public string NumericCode { get; set; }
+            public string NumericCode { get; set; } = numericCode;
 
             /// <summary>
             /// Name
             /// </summary>
-            public string Name { get; set; }
+            public string Name { get; set; } = name;
 
             /// <summary>
             /// Minor unit
             /// </summary>
-            public int MinorUnit { get; set; }
+            public int MinorUnit { get; set; } = minorUnit;
 
             /// <summary>
             /// Factor

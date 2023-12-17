@@ -22,13 +22,13 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Item VAT validation attribute
     /// </summary>
-    public class ItemVATAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="country">Country</param>
+    /// <param name="target">Validation target</param>
+    public class ItemVATAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new VATAttribute(country))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="country">Country</param>
-        /// <param name="target">Validation target</param>
-        public ItemVATAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new VATAttribute(country)) { }
     }
 }

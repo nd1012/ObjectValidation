@@ -2,25 +2,21 @@
 using System.Net;
 using System.Net.Sockets;
 
-//TODO Support IPAddress type
-
 namespace wan24.ObjectValidation
 {
     /// <summary>
     /// IP address validation attribute
     /// </summary>
-    public class IpAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="family">Address family</param>
+    public class IpAttribute(AddressFamily family = AddressFamily.InterNetwork) : ValidationAttribute
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="family">Address family</param>
-        public IpAttribute(AddressFamily family = AddressFamily.InterNetwork) => AddressFamily = family;
-
         /// <summary>
         /// Address family
         /// </summary>
-        public AddressFamily AddressFamily { get; }
+        public AddressFamily AddressFamily { get; } = family;
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)

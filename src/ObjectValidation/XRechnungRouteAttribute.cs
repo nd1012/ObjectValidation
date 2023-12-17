@@ -5,18 +5,16 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// XRechnung route validation attribute
     /// </summary>
-    public class XRechnungRouteAttribute : ValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="normalize">Normalize?</param>
+    public class XRechnungRouteAttribute(bool normalize = true) : ValidationAttribute()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="normalize">Normalize?</param>
-        public XRechnungRouteAttribute(bool normalize = true) : base() => Normalize = normalize;
-
         /// <summary>
         /// Normalize?
         /// </summary>
-        public bool Normalize { get; }
+        public bool Normalize { get; } = normalize;
 
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)

@@ -22,13 +22,13 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Item company TIN validation attribute
     /// </summary>
-    public class ItemCompanyTINAttribute : ItemValidationAttribute
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="country">Country</param>
+    /// <param name="target">Validation target</param>
+    public class ItemCompanyTINAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item)
+        : ItemValidationAttribute(target, new CompanyTINAttribute(country))
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="country">Country</param>
-        /// <param name="target">Validation target</param>
-        public ItemCompanyTINAttribute(Country country = Country.XX, ItemValidationTargets target = ItemValidationTargets.Item) : base(target, new CompanyTINAttribute(country)) { }
     }
 }

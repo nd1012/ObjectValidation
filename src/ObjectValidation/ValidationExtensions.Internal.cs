@@ -18,7 +18,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Unsigned numeric enum types
         /// </summary>
-        private static readonly Type[] UnsignedNumericEnumTypes = new Type[] { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+        private static readonly Type[] UnsignedNumericEnumTypes = [typeof(byte), typeof(ushort), typeof(uint), typeof(ulong)];
 
         /// <summary>
         /// Validate an object
@@ -60,8 +60,8 @@ namespace wan24.ObjectValidation
                 seenIndex = info.Seen.Count;
                 info.Seen.Add(obj);
                 // Prepare the results
-                List<ValidationResult> validationResults = new(),// Single validation results (will be added to all validation results after a validation)
-                    allResults = new();// All validation results (will be added to the given results list, if any)
+                List<ValidationResult> validationResults = [],// Single validation results (will be added to all validation results after a validation)
+                    allResults = [];// All validation results (will be added to the given results list, if any)
                 bool res = true,// Overall result
                     cancelled,// If an event was cancelled
                     failed = false,// If the object validation failed during event handling
@@ -162,7 +162,7 @@ namespace wan24.ObjectValidation
                     Type? itemType,// Property item type
                         keyType;// Property dictionary value key type
 #pragma warning restore IDE0018 // Can be declared inline
-                    ValidationAttribute[] validationAttrs;// Validation attributes
+                    ValidationAttribute[] validationAttributes;// Validation attributes
                     ValidationResult[] multiValidationResults;// Multiple validation results
                     bool propFailed = true,// If the property validation failed
                         loopCancelled = false,// If the property validation loop was cancelled
@@ -221,8 +221,8 @@ namespace wan24.ObjectValidation
                                 continue;
                             }
                             // Default property validation
-                            validationAttrs = pi.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
-                            noValidationAttr = (NoValidationAttribute?)validationAttrs.FirstOrDefault(a => a is NoValidationAttribute);
+                            validationAttributes = pi.GetCustomAttributes<ValidationAttribute>(inherit: true).ToArray();
+                            noValidationAttr = (NoValidationAttribute?)validationAttributes.FirstOrDefault(a => a is NoValidationAttribute);
                             noValidation = noValidationAttr is not null;
                             if (isObjectValidatable)
                             {
@@ -247,7 +247,7 @@ namespace wan24.ObjectValidation
                                 validationContext = null;
                             }
                             // Multiple validation attributes
-                            foreach (IMultipleValidations attr in validationAttrs.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
+                            foreach (IMultipleValidations attr in validationAttributes.Where(a => a is not IItemValidationAttribute && a is IMultipleValidations).Cast<IMultipleValidations>())
                             {
                                 validationContext ??= new(obj, serviceProvider, items: null)
                                 {
