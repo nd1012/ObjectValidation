@@ -48,9 +48,29 @@ namespace wan24.ObjectValidation
         /// Constructor
         /// </summary>
         /// <param name="maxGetter">Maximum getter static property</param>
+        public CountLimitAttribute(string maxGetter) : this(maxGetter, minGetter: null, min: null) { }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="maxGetter">Maximum getter static property</param>
+        /// <param name="minGetter">Minimum getter static property</param>
+        public CountLimitAttribute(string maxGetter, string minGetter) : this(maxGetter, minGetter, min: null) { }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="maxGetter">Maximum getter static property</param>
+        /// <param name="min">Minimum</param>
+        public CountLimitAttribute(string maxGetter, long min) : this(maxGetter, minGetter: null, min) { }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="maxGetter">Maximum getter static property</param>
         /// <param name="minGetter">Minimum getter static property</param>
         /// <param name="min">Minimum</param>
-        public CountLimitAttribute(string maxGetter, string? minGetter = null, long? min = null) : base()
+        protected CountLimitAttribute(in string maxGetter, in string? minGetter, in long? min) : base()
         {
             _Min = min;
             MinGetter = minGetter;
@@ -82,10 +102,8 @@ namespace wan24.ObjectValidation
         {
             get
             {
-                if (_MinGetter is null) return _Min;
-                object? value = _MinGetter.GetValue(obj: null);
-                if (value is null) return null;
-                return (long)Convert.ChangeType(value, typeof(long));
+                object? value = _MinGetter?.GetValue(obj: null);
+                return value is null ? null : (long)Convert.ChangeType(value, typeof(long));
             }
         }
 
