@@ -19,7 +19,7 @@ jobs:
     - name: Setup docfx
       run: dotnet tool update -g docfx
     - name: Copy README
-      run: cp README.md "./src/ObjectValidation Docs/"
+      run: cp README.md "./src/ObjectValidation Docs/index.md"
     - name: Build docs
       run: docfx "./src/ObjectValidation Docs/docfx.json"
     - name: Commit
