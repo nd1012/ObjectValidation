@@ -220,7 +220,9 @@ want to profit from the included general validation attributes for SWIFT etc.</p
 <h2 id="lengthcount-validation">Length/count validation</h2>
 <p>The length/count of dictionaries, lists, arrays and enumerables can be
 validated using the <code>CountLimitAttribute</code> (which may not work for enumerables,
-if not used trough ObjectValidation methods!).</p>
+if not used trough ObjectValidation methods!). This attribute provides a
+constructor which allows giving the name (including namespace and class) of a
+public static property, which provides a minimum/maximum limit at runtime.</p>
 <h3 id="limiting-countables">Limiting countables</h3>
 <p>By implementing the <code>ICountable</code> or <code>ILongCountable</code> interfaces you can use
 the <code>CountLimitAttribute</code> for limiting the minimum/maximum count of an object.</p>

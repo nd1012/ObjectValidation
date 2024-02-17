@@ -290,6 +290,42 @@ references:
   fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New(Long, Long)
   nameWithType: CountLimitAttribute.CountLimitAttribute(long, long)
   nameWithType.vb: CountLimitAttribute.New(Long, Long)
+- uid: wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String)
+  name: CountLimitAttribute(string)
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__ctor_System_String_
+  commentId: M:wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String)
+  name.vb: New(String)
+  fullName: wan24.ObjectValidation.CountLimitAttribute.CountLimitAttribute(string)
+  fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New(String)
+  nameWithType: CountLimitAttribute.CountLimitAttribute(string)
+  nameWithType.vb: CountLimitAttribute.New(String)
+- uid: wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String,System.Int64)
+  name: CountLimitAttribute(string, long)
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__ctor_System_String_System_Int64_
+  commentId: M:wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String,System.Int64)
+  name.vb: New(String, Long)
+  fullName: wan24.ObjectValidation.CountLimitAttribute.CountLimitAttribute(string, long)
+  fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New(String, Long)
+  nameWithType: CountLimitAttribute.CountLimitAttribute(string, long)
+  nameWithType.vb: CountLimitAttribute.New(String, Long)
+- uid: wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String,System.String)
+  name: CountLimitAttribute(string, string)
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__ctor_System_String_System_String_
+  commentId: M:wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: wan24.ObjectValidation.CountLimitAttribute.CountLimitAttribute(string, string)
+  fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New(String, String)
+  nameWithType: CountLimitAttribute.CountLimitAttribute(string, string)
+  nameWithType.vb: CountLimitAttribute.New(String, String)
+- uid: wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String@,System.String@,System.Nullable{System.Int64}@)
+  name: CountLimitAttribute(in string, in string?, in long?)
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__ctor_System_String__System_String__System_Nullable_System_Int64___
+  commentId: M:wan24.ObjectValidation.CountLimitAttribute.#ctor(System.String@,System.String@,System.Nullable{System.Int64}@)
+  name.vb: New(String, String, Long?)
+  fullName: wan24.ObjectValidation.CountLimitAttribute.CountLimitAttribute(in string, in string?, in long?)
+  fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New(String, String, Long?)
+  nameWithType: CountLimitAttribute.CountLimitAttribute(in string, in string?, in long?)
+  nameWithType.vb: CountLimitAttribute.New(String, String, Long?)
 - uid: wan24.ObjectValidation.CountLimitAttribute.#ctor*
   name: CountLimitAttribute
   href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__ctor_
@@ -345,6 +381,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.CountLimitAttribute.Max
   nameWithType: CountLimitAttribute.Max
+- uid: wan24.ObjectValidation.CountLimitAttribute.MaxGetter
+  name: MaxGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_MaxGetter
+  commentId: P:wan24.ObjectValidation.CountLimitAttribute.MaxGetter
+  fullName: wan24.ObjectValidation.CountLimitAttribute.MaxGetter
+  nameWithType: CountLimitAttribute.MaxGetter
+- uid: wan24.ObjectValidation.CountLimitAttribute.MaxGetter*
+  name: MaxGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_MaxGetter_
+  commentId: Overload:wan24.ObjectValidation.CountLimitAttribute.MaxGetter
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CountLimitAttribute.MaxGetter
+  nameWithType: CountLimitAttribute.MaxGetter
 - uid: wan24.ObjectValidation.CountLimitAttribute.Min
   name: Min
   href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_Min
@@ -358,6 +407,43 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.CountLimitAttribute.Min
   nameWithType: CountLimitAttribute.Min
+- uid: wan24.ObjectValidation.CountLimitAttribute.MinGetter
+  name: MinGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_MinGetter
+  commentId: P:wan24.ObjectValidation.CountLimitAttribute.MinGetter
+  fullName: wan24.ObjectValidation.CountLimitAttribute.MinGetter
+  nameWithType: CountLimitAttribute.MinGetter
+- uid: wan24.ObjectValidation.CountLimitAttribute.MinGetter*
+  name: MinGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_MinGetter_
+  commentId: Overload:wan24.ObjectValidation.CountLimitAttribute.MinGetter
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CountLimitAttribute.MinGetter
+  nameWithType: CountLimitAttribute.MinGetter
+- uid: wan24.ObjectValidation.CountLimitAttribute._Max
+  name: _Max
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__Max
+  commentId: F:wan24.ObjectValidation.CountLimitAttribute._Max
+  fullName: wan24.ObjectValidation.CountLimitAttribute._Max
+  nameWithType: CountLimitAttribute._Max
+- uid: wan24.ObjectValidation.CountLimitAttribute._MaxGetter
+  name: _MaxGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__MaxGetter
+  commentId: F:wan24.ObjectValidation.CountLimitAttribute._MaxGetter
+  fullName: wan24.ObjectValidation.CountLimitAttribute._MaxGetter
+  nameWithType: CountLimitAttribute._MaxGetter
+- uid: wan24.ObjectValidation.CountLimitAttribute._Min
+  name: _Min
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__Min
+  commentId: F:wan24.ObjectValidation.CountLimitAttribute._Min
+  fullName: wan24.ObjectValidation.CountLimitAttribute._Min
+  nameWithType: CountLimitAttribute._Min
+- uid: wan24.ObjectValidation.CountLimitAttribute._MinGetter
+  name: _MinGetter
+  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute__MinGetter
+  commentId: F:wan24.ObjectValidation.CountLimitAttribute._MinGetter
+  fullName: wan24.ObjectValidation.CountLimitAttribute._MinGetter
+  nameWithType: CountLimitAttribute._MinGetter
 - uid: wan24.ObjectValidation.CountryAttribute
   name: CountryAttribute
   href: api/wan24.ObjectValidation.CountryAttribute.html
