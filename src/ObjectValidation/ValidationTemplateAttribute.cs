@@ -21,10 +21,7 @@ namespace wan24.ObjectValidation
         {
             if (!ValidationTemplates.PropertyValidations.TryGetValue(Template, out List<ValidationAttribute>? attributes))
             {
-                yield return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Validation template \"{Template}\" not found" : $"{validationContext.MemberName}: Validation template \"{Template}\" not found"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+                yield return this.CreateValidationResult($"Validation template \"{Template}\" not found", validationContext);
             }
             else
             {

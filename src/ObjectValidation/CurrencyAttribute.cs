@@ -20,32 +20,17 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is null) return null;
-            if (value is not string currency)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Currency code value as {typeof(string)} expected" : $"{validationContext.MemberName}: Currency code value as {typeof(string)} expected"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+            if (value is not string currency) return this.CreateValidationResult($"Currency code value as {typeof(string)} expected", validationContext);
             switch (Format)
             {
                 case CurrencyFormats.AlphabeticCode:
-                    if (!CurrencyCodes.Known.ContainsKey(currency))
-                        return new(
-                            ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency code value" : $"{validationContext.MemberName}: Invalid currency code value"),
-                            validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                            );
+                    if (!CurrencyCodes.Known.ContainsKey(currency)) return this.CreateValidationResult("Invalid currency code value", validationContext);
                     break;
                 case CurrencyFormats.NumericCode:
-                    if (!CurrencyCodes.Known.Values.Any(c => c.NumericCode == currency))
-                        return new(
-                            ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency code value" : $"{validationContext.MemberName}: Invalid currency code value"),
-                            validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                            );
+                    if (!CurrencyCodes.Known.Values.Any(c => c.NumericCode == currency)) return this.CreateValidationResult("Invalid currency code value", validationContext);
                     break;
                 default:
-                    return new(
-                        ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency format configured" : $"{validationContext.MemberName}: Invalid currency format configured"),
-                        validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                        );
+                    return this.CreateValidationResult("Invalid currency format configured", validationContext);
             }
             return null;
         }

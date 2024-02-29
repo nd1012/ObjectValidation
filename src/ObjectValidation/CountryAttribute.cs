@@ -16,16 +16,8 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is null) return null;
-            if (value is not string country)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Country code value as {typeof(string)} expected" : $"{validationContext.MemberName}: Country code value as {typeof(string)} expected"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (!CountryCodes.Known.ContainsKey(country))
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid country code value" : $"{validationContext.MemberName}: Invalid country code value"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+            if (value is not string country) return this.CreateValidationResult($"Country code value as {typeof(string)} expected", validationContext);
+            if (!CountryCodes.Known.ContainsKey(country)) return this.CreateValidationResult("Invalid country code value", validationContext);
             return null;
         }
     }

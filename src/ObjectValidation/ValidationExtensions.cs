@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace wan24.ObjectValidation
 {
@@ -163,5 +164,18 @@ namespace wan24.ObjectValidation
         /// <param name="results">Results</param>
         /// <returns>Contains a validation exception?</returns>
         public static bool HasValidationException(this IEnumerable<ValidationResult> results) => results.Any(r => r.ErrorMessage?.StartsWith(VALIDATION_EXCEPTION_PREFIX) ?? false);
+
+        /// <summary>
+        /// Create a validation result
+        /// </summary>
+        /// <param name="attr">Attribute</param>
+        /// <param name="message">Error message</param>
+        /// <param name="validationContext">Context</param>
+        /// <returns><see cref="ValidationResult"/></returns>
+        public static ValidationResult CreateValidationResult(this ValidationAttribute attr, in string message, in ValidationContext validationContext)
+            => new(
+                attr.ErrorMessage ?? (validationContext.MemberName is null ? message : $"{validationContext.MemberName}: {message}"),
+                validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
+                );
     }
 }
