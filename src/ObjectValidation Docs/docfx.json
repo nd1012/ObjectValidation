@@ -66,7 +66,6 @@
     },
     "fileMetadataFiles": [],
     "template": [
-	  "default",
       "singulinkfx"
     ],
     "postProcessors": [],
