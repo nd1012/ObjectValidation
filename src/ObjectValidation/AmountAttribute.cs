@@ -20,21 +20,9 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is null) return null;
-            if (value is not decimal amount)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Amount value as {typeof(decimal)} expected" : $"{validationContext.MemberName}: Amount value as {typeof(decimal)} expected"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (!CurrencyCodes.Known.TryGetValue(Currency, out CurrencyCodes.Currency? v))
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid currency configured" : $"{validationContext.MemberName}: Invalid currency configured"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (!v.Validate(amount))
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid amount value" : $"{validationContext.MemberName}: Invalid amount value"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+            if (value is not decimal amount) return this.CreateValidationResult($"Amount value as {typeof(decimal)} expected", validationContext);
+            if (!CurrencyCodes.Known.TryGetValue(Currency, out CurrencyCodes.Currency? v)) return this.CreateValidationResult("Invalid currency configured", validationContext);
+            if (!v.Validate(amount)) return this.CreateValidationResult("Invalid amount value", validationContext);
             return null;
         }
     }

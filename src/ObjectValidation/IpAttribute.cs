@@ -22,21 +22,9 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is null) return null;
-            if (value is not string ipStr)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"IP address value is not a {typeof(string)}" : $"{validationContext.MemberName}: IP address value is not a {typeof(string)}"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (!IPAddress.TryParse(ipStr, out IPAddress? ip))
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid IP address" : $"{validationContext.MemberName}: Invalid IP address"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (ip.AddressFamily != AddressFamily)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid IP address family ({AddressFamily} expected)" : $"{validationContext.MemberName}: Invalid IP address family ({AddressFamily} expected)"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+            if (value is not string ipStr) return this.CreateValidationResult("IP address value is not a {typeof(string)}", validationContext);
+            if (!IPAddress.TryParse(ipStr, out IPAddress? ip)) return this.CreateValidationResult("Invalid IP address", validationContext);
+            if (ip.AddressFamily != AddressFamily) return this.CreateValidationResult($"Invalid IP address family ({AddressFamily} expected)", validationContext);
             return null;
         }
     }

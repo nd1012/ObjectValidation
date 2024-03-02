@@ -122,43 +122,23 @@ namespace wan24.ObjectValidation
         /// </summary>
         public string? MaxGetter { get; }
 
-        /// <summary>
-        /// Get the error message
-        /// </summary>
-        /// <param name="count">Count</param>
-        /// <param name="member">Member</param>
-        /// <returns>Error message</returns>
-        public string? GetErrorMessage(long? count, string? member)
-            => count is null || ((Min is null || count >= Min) && count <= Max)
-                ? null
-                : member is null
-                        ? (Min is null
-                            ? ErrorMessage ?? $"Maximum count is {Max} ({count})"
-                            : ErrorMessage ?? $"Count must be between {Min} and {Max} ({count})")
-                        : (Min is null
-                            ? (ErrorMessage is null
-                                ? $"Maximum count of the property {member} is {Max} ({count})"
-                                : $"{member}: {ErrorMessage}")
-                            : (ErrorMessage is null
-                                ? $"Count of the property {member} must be between {Min} and {Max} ({count})"
-                                : $"{member}: {ErrorMessage}"));
-
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
-            => GetErrorMessage(
-                    value switch
-                    {
-                        ILongCountable lca => lca.LongCount,
-                        ICountable ca => ca.Count,
-                        IDictionary dict => dict.Count,
-                        Array arr => arr.LongLength,
-                        IList list => list.Count,
-                        ICollection col => col.Count,
-                        _ => null
-                    },
-                    validationContext.MemberName
-                    ) is string error
-                ? new ValidationResult(error, validationContext.MemberName is null ? null : new string[] { validationContext.MemberName })
+        {
+            if (value is null) return null;
+            long? count = value switch
+            {
+                ILongCountable lca => lca.LongCount,
+                ICountable ca => ca.Count,
+                IDictionary dict => dict.Count,
+                Array arr => arr.LongLength,
+                IList list => list.Count,
+                ICollection col => col.Count,
+                _ => null
+            };
+            return count.HasValue && ((Min is not null && count < Min) || count > Max)
+                ? this.CreateValidationResult(Min is null ? $"Maximum count is {Max} ({count})" : $"Count must be between {Min} and {Max} ({count})", validationContext)
                 : null;
+        }
     }
 }

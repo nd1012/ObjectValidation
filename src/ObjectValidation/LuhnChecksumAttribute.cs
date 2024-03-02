@@ -20,16 +20,8 @@ namespace wan24.ObjectValidation
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is null) return null;
-            if (value is not string luhn)
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Luhn value as {typeof(string)} expected" : $"{validationContext.MemberName}: Luhn value as {typeof(string)} expected"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
-            if (!LuhnChecksum.Validate(Normalize ? LuhnChecksum.Normalize(luhn) : luhn))
-                return new(
-                    ErrorMessage ?? (validationContext.MemberName is null ? $"Invalid Luhn value" : $"{validationContext.MemberName}: Invalid Luhn value"),
-                    validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
-                    );
+            if (value is not string luhn) return this.CreateValidationResult($"Luhn value as {typeof(string)} expected", validationContext);
+            if (!LuhnChecksum.Validate(Normalize ? LuhnChecksum.Normalize(luhn) : luhn)) return this.CreateValidationResult("Invalid Luhn value", validationContext);
             return null;
         }
     }
