@@ -21,6 +21,6 @@ jobs:
     - name: Copy README
       run: cp README.md "./src/ObjectValidation Docs/index.md"
     - name: Build docs
-      run: docfx "./src/ObjectValidation Docs/docfx.json"
+      run: docfx "./src/ObjectValidation Docs/docfx.json" -t default,templates/singulinkfx
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v5
