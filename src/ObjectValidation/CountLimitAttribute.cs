@@ -136,9 +136,9 @@ namespace wan24.ObjectValidation
                 ICollection col => col.Count,
                 _ => null
             };
-            if (count.HasValue && (Min is null || count >= Min) && count <= Max)
-                return this.CreateValidationResult(Min is null ? $"Maximum count is {Max} ({count})" : $"Count must be between {Min} and {Max} ({count})", validationContext);
-            return null;
+            return count.HasValue && ((Min is not null && count < Min) || count > Max)
+                ? this.CreateValidationResult(Min is null ? $"Maximum count is {Max} ({count})" : $"Count must be between {Min} and {Max} ({count})", validationContext)
+                : null;
         }
     }
 }
