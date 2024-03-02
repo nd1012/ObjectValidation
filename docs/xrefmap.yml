@@ -336,22 +336,6 @@ references:
   fullName.vb: wan24.ObjectValidation.CountLimitAttribute.New
   nameWithType: CountLimitAttribute.CountLimitAttribute
   nameWithType.vb: CountLimitAttribute.New
-- uid: wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage(System.Nullable{System.Int64},System.String)
-  name: GetErrorMessage(long?, string?)
-  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_GetErrorMessage_System_Nullable_System_Int64__System_String_
-  commentId: M:wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage(System.Nullable{System.Int64},System.String)
-  name.vb: GetErrorMessage(Long?, String)
-  fullName: wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage(long?, string?)
-  fullName.vb: wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage(Long?, String)
-  nameWithType: CountLimitAttribute.GetErrorMessage(long?, string?)
-  nameWithType.vb: CountLimitAttribute.GetErrorMessage(Long?, String)
-- uid: wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage*
-  name: GetErrorMessage
-  href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_GetErrorMessage_
-  commentId: Overload:wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage
-  isSpec: "True"
-  fullName: wan24.ObjectValidation.CountLimitAttribute.GetErrorMessage
-  nameWithType: CountLimitAttribute.GetErrorMessage
 - uid: wan24.ObjectValidation.CountLimitAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   name: IsValid(object?, ValidationContext)
   href: api/wan24.ObjectValidation.CountLimitAttribute.html#wan24_ObjectValidation_CountLimitAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
@@ -3679,6 +3663,22 @@ references:
   commentId: T:wan24.ObjectValidation.ValidationExtensions
   fullName: wan24.ObjectValidation.ValidationExtensions
   nameWithType: ValidationExtensions
+- uid: wan24.ObjectValidation.ValidationExtensions.CreateValidationResult(System.ComponentModel.DataAnnotations.ValidationAttribute,System.String@,System.ComponentModel.DataAnnotations.ValidationContext@)
+  name: CreateValidationResult(ValidationAttribute, in string, in ValidationContext)
+  href: api/wan24.ObjectValidation.ValidationExtensions.html#wan24_ObjectValidation_ValidationExtensions_CreateValidationResult_System_ComponentModel_DataAnnotations_ValidationAttribute_System_String__System_ComponentModel_DataAnnotations_ValidationContext__
+  commentId: M:wan24.ObjectValidation.ValidationExtensions.CreateValidationResult(System.ComponentModel.DataAnnotations.ValidationAttribute,System.String@,System.ComponentModel.DataAnnotations.ValidationContext@)
+  name.vb: CreateValidationResult(ValidationAttribute, String, ValidationContext)
+  fullName: wan24.ObjectValidation.ValidationExtensions.CreateValidationResult(System.ComponentModel.DataAnnotations.ValidationAttribute, in string, in System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: wan24.ObjectValidation.ValidationExtensions.CreateValidationResult(System.ComponentModel.DataAnnotations.ValidationAttribute, String, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidationExtensions.CreateValidationResult(ValidationAttribute, in string, in ValidationContext)
+  nameWithType.vb: ValidationExtensions.CreateValidationResult(ValidationAttribute, String, ValidationContext)
+- uid: wan24.ObjectValidation.ValidationExtensions.CreateValidationResult*
+  name: CreateValidationResult
+  href: api/wan24.ObjectValidation.ValidationExtensions.html#wan24_ObjectValidation_ValidationExtensions_CreateValidationResult_
+  commentId: Overload:wan24.ObjectValidation.ValidationExtensions.CreateValidationResult
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidationExtensions.CreateValidationResult
+  nameWithType: ValidationExtensions.CreateValidationResult
 - uid: wan24.ObjectValidation.ValidationExtensions.EnsureValidObject(System.Object,System.Func{System.Object,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult},System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.IServiceProvider)
   name: EnsureValidObject(object, Func<object, List<ValidationResult>, bool>, IEnumerable<string>?, IServiceProvider?)
   href: api/wan24.ObjectValidation.ValidationExtensions.html#wan24_ObjectValidation_ValidationExtensions_EnsureValidObject_System_Object_System_Func_System_Object_System_Collections_Generic_List_System_ComponentModel_DataAnnotations_ValidationResult__System_Boolean__System_Collections_Generic_IEnumerable_System_String__System_IServiceProvider_
