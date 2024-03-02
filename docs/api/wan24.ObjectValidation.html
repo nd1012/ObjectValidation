@@ -2,81 +2,100 @@
 <!--[if IE]><![endif]-->
 <html>
 
-  <head>
-    <meta charset="utf-8">
+    <head>
+      <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Namespace wan24.ObjectValidation | ObjectValidation </title>
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Namespace wan24.ObjectValidation | ObjectValidation ">
-    
-    
+      <meta name="generator" content="docfx ">
+  
       <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
       <link rel="stylesheet" href="../styles/main.css">
       <meta property="docfx:navrel" content="../toc.html">
       <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    <meta property="docfx:newtab" content="true">
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <!-- Header required for docfx anchor scroll to work -->
+        <header id="head"></header>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+            <a class="brand" href="../index.html">
+              <img src="../logo.svg" alt="" class="logomark">
+              <span class="brand-title"></span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../logo.svg" alt="" class="logomark">
+                          <span class="brand-title"></span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </nav>
+                <div class="footer">
+  (c) 2023 Andreas Zimmermann, wan24.de
+  
+                </div>            </nav>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div class="container body-content">
+            <main class="main-panel">
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-        </div>
-      </div>
-      <div role="main" class="container body-content hide-when-search">
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="wan24.ObjectValidation">
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="wan24.ObjectValidation">
 
   <h1 id="wan24_ObjectValidation" data-uid="wan24.ObjectValidation" class="text-break">Namespace wan24.ObjectValidation</h1>
   <div class="markdown level0 summary"></div>
@@ -85,324 +104,309 @@
     <h3 id="classes">
 Classes
 </h3>
-      <h4><a class="xref" href="wan24.ObjectValidation.AbaRtnAttribute.html">AbaRtnAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.AbaRtnAttribute.html">AbaRtnAttribute</a></h5>
       <section><p>ABA RTN validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.AbaValidation.html">AbaValidation</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.AbaValidation.html">AbaValidation</a></h5>
       <section><p>ABA RTN validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.AmountAttribute.html">AmountAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.AmountAttribute.html">AmountAttribute</a></h5>
       <section><p>Amount validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.BicAttribute.html">BicAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.BicAttribute.html">BicAttribute</a></h5>
       <section><p>BIC validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CountLimitAttribute.html">CountLimitAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CountLimitAttribute.html">CountLimitAttribute</a></h5>
       <section><p>Count limitation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CountryAttribute.html">CountryAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CountryAttribute.html">CountryAttribute</a></h5>
       <section><p>Country code validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CountryCodes.html">CountryCodes</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CountryCodes.html">CountryCodes</a></h5>
       <section><p>Country ISO 3166-1 alpha-2 codes</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CurrencyAttribute.html">CurrencyAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CurrencyAttribute.html">CurrencyAttribute</a></h5>
       <section><p>Currency ISO 4217 code validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CurrencyCodes.html">CurrencyCodes</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CurrencyCodes.html">CurrencyCodes</a></h5>
       <section><p>Currency ISO 4217 codes</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CurrencyCodes.Currency.html">CurrencyCodes.Currency</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CurrencyCodes.Currency.html">CurrencyCodes.Currency</a></h5>
       <section><p>Currency</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.EuVatId.html">EuVatId</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.EuVatId.html">EuVatId</a></h5>
       <section><p>European VAT ID validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.EuVatIdAttribute.html">EuVatIdAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.EuVatIdAttribute.html">EuVatIdAttribute</a></h5>
       <section><p>European VAT ID validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IbanAttribute.html">IbanAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IbanAttribute.html">IbanAttribute</a></h5>
       <section><p>IBAN validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IpAttribute.html">IpAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IpAttribute.html">IpAttribute</a></h5>
       <section><p>IP address validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemAbaRtnAttribute.html">ItemAbaRtnAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemAbaRtnAttribute.html">ItemAbaRtnAttribute</a></h5>
       <section><p>ABA RTN item validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemAllowedValuesAttribute.html">ItemAllowedValuesAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemAllowedValuesAttribute.html">ItemAllowedValuesAttribute</a></h5>
       <section><p>Attribute for validating allowed item values</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemAmountAttribute.html">ItemAmountAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemAmountAttribute.html">ItemAmountAttribute</a></h5>
       <section><p>Item amount validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemBase64StringAttribute.html">ItemBase64StringAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemBase64StringAttribute.html">ItemBase64StringAttribute</a></h5>
       <section><p>Item base64 string validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemBicAttribute.html">ItemBicAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemBicAttribute.html">ItemBicAttribute</a></h5>
       <section><p>BIC item validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCompanyTINAttribute.html">ItemCompanyTINAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCompanyTINAttribute.html">ItemCompanyTINAttribute</a></h5>
       <section><p>Item company TIN validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCompareAttribute.html">ItemCompareAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCompareAttribute.html">ItemCompareAttribute</a></h5>
       <section><p>Item property compare attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCountLimitAttribute.html">ItemCountLimitAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCountLimitAttribute.html">ItemCountLimitAttribute</a></h5>
       <section><p>Count limitation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCountryAttribute.html">ItemCountryAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCountryAttribute.html">ItemCountryAttribute</a></h5>
       <section><p>Item country code validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCreditCardAttribute.html">ItemCreditCardAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCreditCardAttribute.html">ItemCreditCardAttribute</a></h5>
       <section><p>Credit card item attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCurrencyAttribute.html">ItemCurrencyAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCurrencyAttribute.html">ItemCurrencyAttribute</a></h5>
       <section><p>Item currency ISO 4217 code validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemCustomValidationAttribute.html">ItemCustomValidationAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemCustomValidationAttribute.html">ItemCustomValidationAttribute</a></h5>
       <section><p>Attribute for custom item validation using a public static method</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemDataTypeAttribute.html">ItemDataTypeAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemDataTypeAttribute.html">ItemDataTypeAttribute</a></h5>
       <section><p>Item data type validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemDeniedValuesAttribute.html">ItemDeniedValuesAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemDeniedValuesAttribute.html">ItemDeniedValuesAttribute</a></h5>
       <section><p>Attribute for validating against denied item values</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemEmailAddressAttribute.html">ItemEmailAddressAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemEmailAddressAttribute.html">ItemEmailAddressAttribute</a></h5>
       <section><p>Item email address attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemEuVatIdAttribute.html">ItemEuVatIdAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemEuVatIdAttribute.html">ItemEuVatIdAttribute</a></h5>
       <section><p>Item European VAT ID validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemIbanAttribute.html">ItemIbanAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemIbanAttribute.html">ItemIbanAttribute</a></h5>
       <section><p>IBAN item validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemIpAttribute.html">ItemIpAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemIpAttribute.html">ItemIpAttribute</a></h5>
       <section><p>Item IP address validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemLengthAttribute.html">ItemLengthAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemLengthAttribute.html">ItemLengthAttribute</a></h5>
       <section><p>Item length validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemLuhnChecksumAttribute.html">ItemLuhnChecksumAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemLuhnChecksumAttribute.html">ItemLuhnChecksumAttribute</a></h5>
       <section><p>Item Luhn checksum validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemMaxLengthAttribute.html">ItemMaxLengthAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemMaxLengthAttribute.html">ItemMaxLengthAttribute</a></h5>
       <section><p>Maximum item length attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemMinLengthAttribute.html">ItemMinLengthAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemMinLengthAttribute.html">ItemMinLengthAttribute</a></h5>
       <section><p>Minimum item length attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemNoValidationAttribute.html">ItemNoValidationAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemNoValidationAttribute.html">ItemNoValidationAttribute</a></h5>
       <section><p>Attribute for properties which serves dictionaries or lists, but items shouldn't be validated (optional completely)</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemNullableAttribute.html">ItemNullableAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemNullableAttribute.html">ItemNullableAttribute</a></h5>
       <section><p>Attribute for nullable items</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemPersonTINAttribute.html">ItemPersonTINAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemPersonTINAttribute.html">ItemPersonTINAttribute</a></h5>
       <section><p>Item person TIN validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemPhoneAttribute.html">ItemPhoneAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemPhoneAttribute.html">ItemPhoneAttribute</a></h5>
       <section><p>Item phone number attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemRangeAttribute.html">ItemRangeAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemRangeAttribute.html">ItemRangeAttribute</a></h5>
       <section><p>Item range attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemRegularExpressionAttribute.html">ItemRegularExpressionAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemRegularExpressionAttribute.html">ItemRegularExpressionAttribute</a></h5>
       <section><p>Item regular expression attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemRequiredAttribute.html">ItemRequiredAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemRequiredAttribute.html">ItemRequiredAttribute</a></h5>
       <section><p>Item required attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemSSNAttribute.html">ItemSSNAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemSSNAttribute.html">ItemSSNAttribute</a></h5>
       <section><p>Item SSN validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemStringLengthAttribute.html">ItemStringLengthAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemStringLengthAttribute.html">ItemStringLengthAttribute</a></h5>
       <section><p>Item string length attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemUrlAttribute.html">ItemUrlAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemUrlAttribute.html">ItemUrlAttribute</a></h5>
       <section><p>Item URL attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemVATAttribute.html">ItemVATAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemVATAttribute.html">ItemVATAttribute</a></h5>
       <section><p>Item VAT validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemValidationAttribute.html">ItemValidationAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemValidationAttribute.html">ItemValidationAttribute</a></h5>
       <section><p>Item validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemValidationReferenceAttribute.html">ItemValidationReferenceAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemValidationReferenceAttribute.html">ItemValidationReferenceAttribute</a></h5>
       <section><p>Attribute to reference another property for inheriting its validation attributes during an item validation is being executed</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemValidationTemplateAttribute.html">ItemValidationTemplateAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemValidationTemplateAttribute.html">ItemValidationTemplateAttribute</a></h5>
       <section><p>Item template validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html">ItemValidationTemplateIfAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemValidationTemplateIfAttribute.html">ItemValidationTemplateIfAttribute</a></h5>
       <section><p>Conditional item template validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemXRechnungRouteAttribute.html">ItemXRechnungRouteAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemXRechnungRouteAttribute.html">ItemXRechnungRouteAttribute</a></h5>
       <section><p>Item XRechnung route validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemXmlAttribute.html">ItemXmlAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemXmlAttribute.html">ItemXmlAttribute</a></h5>
       <section><p>Item XML validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemZipCodeAttribute.html">ItemZipCodeAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemZipCodeAttribute.html">ItemZipCodeAttribute</a></h5>
       <section><p>Item ZIP code validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.LuhnChecksum.html">LuhnChecksum</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.LuhnChecksum.html">LuhnChecksum</a></h5>
       <section><p>Luhn checksum validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.LuhnChecksumAttribute.html">LuhnChecksumAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.LuhnChecksumAttribute.html">LuhnChecksumAttribute</a></h5>
       <section><p>Luhn checksum validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.NoValidationAttribute.html">NoValidationAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.NoValidationAttribute.html">NoValidationAttribute</a></h5>
       <section><p>Attribute for types or properties which shouldn't be validated (optional completely)</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ObjectValidationEventArgs.html">ObjectValidationEventArgs</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ObjectValidationEventArgs.html">ObjectValidationEventArgs</a></h5>
       <section><p>Object validation event arguments</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ObjectValidationException.html">ObjectValidationException</a></h5>
       <section><p>Thrown on error during an object validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.OptionsValidator.html">OptionsValidator</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.OptionsValidator.html">OptionsValidator</a></h5>
       <section><p>Options validator helper</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.OptionsValidator-1.html">OptionsValidator&lt;T&gt;</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.OptionsValidator-1.html">OptionsValidator&lt;T&gt;</a></h5>
       <section><p>Options validator</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ReflectionHelper.html">ReflectionHelper</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ReflectionHelper.html">ReflectionHelper</a></h5>
       <section><p>Reflection helper</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.RequiredIfAttribute.html">RequiredIfAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.RequiredIfAttribute.html">RequiredIfAttribute</a></h5>
       <section><p>Attribute for a conditional value requirement validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.SwiftValidation.html">SwiftValidation</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.SwiftValidation.html">SwiftValidation</a></h5>
       <section><p>SWIFT (ISO 13616/9362) validation helper</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidatableObjectBase.html">ValidatableObjectBase</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidatableObjectBase.html">ValidatableObjectBase</a></h5>
       <section><p>Base class for an object validatable object</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidatableRecordBase.html">ValidatableRecordBase</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidatableRecordBase.html">ValidatableRecordBase</a></h5>
       <section><p>Base class for an object validatable object</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidatableTypes.html">ValidatableTypes</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidatableTypes.html">ValidatableTypes</a></h5>
       <section><p>Validatable types</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidatableTypesEventArgs.html">ValidatableTypesEventArgs</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidatableTypesEventArgs.html">ValidatableTypesEventArgs</a></h5>
       <section><p>Event arguments for the <a class="xref" href="wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_OnIsTypeValidatable">OnIsTypeValidatable</a> event</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidateObject.html">ValidateObject</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidateObject.html">ValidateObject</a></h5>
       <section><p>Object validation methods</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.html">ValidationExtensions</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.html">ValidationExtensions</a></h5>
       <section><p>Validation extensions</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationReferenceAttribute.html">ValidationReferenceAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationReferenceAttribute.html">ValidationReferenceAttribute</a></h5>
       <section><p>Attribute to reference another property for inheriting its validation attributes during a validation is being executed</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationTemplateAttribute.html">ValidationTemplateAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationTemplateAttribute.html">ValidationTemplateAttribute</a></h5>
       <section><p>Template validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationTemplateIfAttribute.html">ValidationTemplateIfAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationTemplateIfAttribute.html">ValidationTemplateIfAttribute</a></h5>
       <section><p>Conditional template validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationTemplates.html">ValidationTemplates</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationTemplates.html">ValidationTemplates</a></h5>
       <section><p>Object validation templates</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValueValidation.html">ValueValidation</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValueValidation.html">ValueValidation</a></h5>
       <section><p>Direct value validation using validation attributes</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.XRechnungRouteAttribute.html">XRechnungRouteAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.XRechnungRouteAttribute.html">XRechnungRouteAttribute</a></h5>
       <section><p>XRechnung route validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.XRechnungRouting.html">XRechnungRouting</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.XRechnungRouting.html">XRechnungRouting</a></h5>
       <section><p>XRechnung route validation</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.XmlAttribute.html">XmlAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.XmlAttribute.html">XmlAttribute</a></h5>
       <section><p>XML validation attribute</p>
 </section>
     <h3 id="interfaces">
 Interfaces
 </h3>
-      <h4><a class="xref" href="wan24.ObjectValidation.ICountable.html">ICountable</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ICountable.html">ICountable</a></h5>
       <section><p>Countable</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IItemValidationAttribute.html">IItemValidationAttribute</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IItemValidationAttribute.html">IItemValidationAttribute</a></h5>
       <section><p>Interface for an item validation attribute</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ILongCountable.html">ILongCountable</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ILongCountable.html">ILongCountable</a></h5>
       <section><p>Long countable</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IMultipleValidations.html">IMultipleValidations</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IMultipleValidations.html">IMultipleValidations</a></h5>
       <section><p>Interface for validation attributes which perform multiple validations (and therefor may return multiple validation results)</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IObjectValidatable.html">IObjectValidatable</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IObjectValidatable.html">IObjectValidatable</a></h5>
       <section><p>Interface for an object validatable object</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.IValidationInfo.html">IValidationInfo</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.IValidationInfo.html">IValidationInfo</a></h5>
       <section><p>Interface for the validation information object</p>
 </section>
     <h3 id="enums">
 Enums
 </h3>
-      <h4><a class="xref" href="wan24.ObjectValidation.AbaFormats.html">AbaFormats</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.AbaFormats.html">AbaFormats</a></h5>
       <section><p>ABA RTN formats</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.CurrencyFormats.html">CurrencyFormats</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.CurrencyFormats.html">CurrencyFormats</a></h5>
       <section><p>Currency formats</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ItemValidationTargets.html">ItemValidationTargets</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ItemValidationTargets.html">ItemValidationTargets</a></h5>
       <section><p>Item validation targets</p>
 </section>
     <h3 id="delegates">
 Delegates
 </h3>
-      <h4><a class="xref" href="wan24.ObjectValidation.ReflectionHelper.PropertyGetter_Delegate.html">ReflectionHelper.PropertyGetter_Delegate</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ReflectionHelper.PropertyGetter_Delegate.html">ReflectionHelper.PropertyGetter_Delegate</a></h5>
       <section><p>Property getter delegate</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidatableTypes.TypeValidatable_Delegate.html">ValidatableTypes.TypeValidatable_Delegate</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidatableTypes.TypeValidatable_Delegate.html">ValidatableTypes.TypeValidatable_Delegate</a></h5>
       <section><p>Delegate for a <a class="xref" href="wan24.ObjectValidation.ValidatableTypes.html#wan24_ObjectValidation_ValidatableTypes_OnIsTypeValidatable">OnIsTypeValidatable</a> event</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidateObject.Logger_Delegate.html">ValidateObject.Logger_Delegate</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidateObject.Logger_Delegate.html">ValidateObject.Logger_Delegate</a></h5>
       <section><p>Delegate for a logger handler</p>
 </section>
-      <h4><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></h4>
+      <h5><a class="xref" href="wan24.ObjectValidation.ValidationExtensions.ObjectValidation_Delegate.html">ValidationExtensions.ObjectValidation_Delegate</a></h5>
       <section><p>Delegate for object validation event handlers</p>
 </section>
 
 
 </article>
-          </div>
+                </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+                <div class="copyright-footer">
+                    <span>(c) 2023 Andreas Zimmermann, wan24.de</span>
+                </div>
+            </main>
         </div>
-      </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      (c) 2023 Andreas Zimmermann, wan24.de
-      
-          </div>
-        </div>
-      </footer>
-    </div>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
-  </body>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
 </html>
