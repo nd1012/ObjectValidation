@@ -5,7 +5,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Country code validation attribute
     /// </summary>
-    public class CountryAttribute : ValidationAttribute
+    public class CountryAttribute : ValidationAttributeBase
     {
         /// <summary>
         /// Constructor

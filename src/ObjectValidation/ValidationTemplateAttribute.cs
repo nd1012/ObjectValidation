@@ -9,7 +9,7 @@ namespace wan24.ObjectValidation
     /// Constructor
     /// </remarks>
     /// <param name="template">Template key</param>
-    public class ValidationTemplateAttribute(string template) : ValidationAttribute(), IMultipleValidations
+    public class ValidationTemplateAttribute(string template) : ValidationAttributeBase(), IMultipleValidations
     {
         /// <summary>
         /// Template key

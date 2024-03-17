@@ -9,7 +9,7 @@ namespace wan24.ObjectValidation
     /// Constructor
     /// </remarks>
     /// <param name="format">Format</param>
-    public class CurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode) : ValidationAttribute()
+    public class CurrencyAttribute(CurrencyFormats format = CurrencyFormats.AlphabeticCode) : ValidationAttributeBase()
     {
         /// <summary>
         /// Format

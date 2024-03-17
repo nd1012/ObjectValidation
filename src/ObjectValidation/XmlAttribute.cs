@@ -6,7 +6,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// XML validation attribute
     /// </summary>
-    public class XmlAttribute : ValidationAttribute
+    public class XmlAttribute : ValidationAttributeBase
     {
         /// <summary>
         /// Constructor
