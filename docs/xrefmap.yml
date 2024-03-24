@@ -3657,6 +3657,84 @@ references:
   fullName.vb: wan24.ObjectValidation.ValidateObject.ValidateNullableObject(Of T)(T, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult), String, System.Collections.Generic.IEnumerable(Of String), System.IServiceProvider)
   nameWithType: ValidateObject.ValidateNullableObject<T>(T?, out List<ValidationResult>, string?, IEnumerable<string>?, IServiceProvider?)
   nameWithType.vb: ValidateObject.ValidateNullableObject(Of T)(T, List(Of ValidationResult), String, IEnumerable(Of String), IServiceProvider)
+- uid: wan24.ObjectValidation.ValidationAttributeBase
+  name: ValidationAttributeBase
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html
+  commentId: T:wan24.ObjectValidation.ValidationAttributeBase
+  fullName: wan24.ObjectValidation.ValidationAttributeBase
+  nameWithType: ValidationAttributeBase
+- uid: wan24.ObjectValidation.ValidationAttributeBase.#ctor
+  name: ValidationAttributeBase()
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase__ctor
+  commentId: M:wan24.ObjectValidation.ValidationAttributeBase.#ctor
+  name.vb: New()
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ValidationAttributeBase()
+  fullName.vb: wan24.ObjectValidation.ValidationAttributeBase.New()
+  nameWithType: ValidationAttributeBase.ValidationAttributeBase()
+  nameWithType.vb: ValidationAttributeBase.New()
+- uid: wan24.ObjectValidation.ValidationAttributeBase.#ctor(System.Func{System.String}@)
+  name: ValidationAttributeBase(in Func<string>)
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase__ctor_System_Func_System_String___
+  commentId: M:wan24.ObjectValidation.ValidationAttributeBase.#ctor(System.Func{System.String}@)
+  name.vb: New(Func(Of String))
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ValidationAttributeBase(in System.Func<string>)
+  fullName.vb: wan24.ObjectValidation.ValidationAttributeBase.New(System.Func(Of String))
+  nameWithType: ValidationAttributeBase.ValidationAttributeBase(in Func<string>)
+  nameWithType.vb: ValidationAttributeBase.New(Func(Of String))
+- uid: wan24.ObjectValidation.ValidationAttributeBase.#ctor(System.String@)
+  name: ValidationAttributeBase(in string)
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase__ctor_System_String__
+  commentId: M:wan24.ObjectValidation.ValidationAttributeBase.#ctor(System.String@)
+  name.vb: New(String)
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ValidationAttributeBase(in string)
+  fullName.vb: wan24.ObjectValidation.ValidationAttributeBase.New(String)
+  nameWithType: ValidationAttributeBase.ValidationAttributeBase(in string)
+  nameWithType.vb: ValidationAttributeBase.New(String)
+- uid: wan24.ObjectValidation.ValidationAttributeBase.#ctor*
+  name: ValidationAttributeBase
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase__ctor_
+  commentId: Overload:wan24.ObjectValidation.ValidationAttributeBase.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ValidationAttributeBase
+  fullName.vb: wan24.ObjectValidation.ValidationAttributeBase.New
+  nameWithType: ValidationAttributeBase.ValidationAttributeBase
+  nameWithType.vb: ValidationAttributeBase.New
+- uid: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter
+  name: ErrorMessageFormatter
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase_ErrorMessageFormatter
+  commentId: P:wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter
+  nameWithType: ValidationAttributeBase.ErrorMessageFormatter
+- uid: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter*
+  name: ErrorMessageFormatter
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase_ErrorMessageFormatter_
+  commentId: Overload:wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessageFormatter
+  nameWithType: ValidationAttributeBase.ErrorMessageFormatter
+- uid: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessage_Delegate
+  name: ValidationAttributeBase.ErrorMessage_Delegate
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.ErrorMessage_Delegate.html
+  commentId: T:wan24.ObjectValidation.ValidationAttributeBase.ErrorMessage_Delegate
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.ErrorMessage_Delegate
+  nameWithType: ValidationAttributeBase.ErrorMessage_Delegate
+- uid: wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage(System.ComponentModel.DataAnnotations.ValidationContext@,System.String@)
+  name: GetErrorMessage(in ValidationContext, in string)
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase_GetErrorMessage_System_ComponentModel_DataAnnotations_ValidationContext__System_String__
+  commentId: M:wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage(System.ComponentModel.DataAnnotations.ValidationContext@,System.String@)
+  name.vb: GetErrorMessage(ValidationContext, String)
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage(in System.ComponentModel.DataAnnotations.ValidationContext, in string)
+  fullName.vb: wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage(System.ComponentModel.DataAnnotations.ValidationContext, String)
+  nameWithType: ValidationAttributeBase.GetErrorMessage(in ValidationContext, in string)
+  nameWithType.vb: ValidationAttributeBase.GetErrorMessage(ValidationContext, String)
+- uid: wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage*
+  name: GetErrorMessage
+  href: api/wan24.ObjectValidation.ValidationAttributeBase.html#wan24_ObjectValidation_ValidationAttributeBase_GetErrorMessage_
+  commentId: Overload:wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidationAttributeBase.GetErrorMessage
+  nameWithType: ValidationAttributeBase.GetErrorMessage
 - uid: wan24.ObjectValidation.ValidationExtensions
   name: ValidationExtensions
   href: api/wan24.ObjectValidation.ValidationExtensions.html
