@@ -11,7 +11,7 @@ namespace wan24.ObjectValidation
     /// Constructor
     /// </remarks>
     /// <param name="family">Address family</param>
-    public class IpAttribute(AddressFamily family = AddressFamily.InterNetwork) : ValidationAttribute
+    public class IpAttribute(AddressFamily family = AddressFamily.InterNetwork) : ValidationAttributeBase()
     {
         /// <summary>
         /// Address family

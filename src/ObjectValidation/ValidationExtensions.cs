@@ -39,9 +39,9 @@ namespace wan24.ObjectValidation
         /// <returns>Object</returns>
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation</exception>
         public static T ValidateObject<T>(
-            this T obj, out List<ValidationResult> results, 
-            string? member = null, 
-            IEnumerable<string>? members = null, 
+            this T obj, out List<ValidationResult> results,
+            string? member = null,
+            IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
             where T : notnull
@@ -61,9 +61,9 @@ namespace wan24.ObjectValidation
         /// <returns>Object</returns>
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation</exception>
         public static T ValidateObject<T>(
-            this T obj, List<ValidationResult> results, 
-            string? member = null, 
-            IEnumerable<string>? members = null, 
+            this T obj, List<ValidationResult> results,
+            string? member = null,
+            IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
             where T : notnull
@@ -85,11 +85,11 @@ namespace wan24.ObjectValidation
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, 
         /// which is the default)</exception>
         public static bool TryValidateObject(
-            this object obj, 
-            out List<ValidationResult> results, 
-            string? member = null, 
-            bool throwOnError = false, 
-            IEnumerable<string>? members = null, 
+            this object obj,
+            out List<ValidationResult> results,
+            string? member = null,
+            bool throwOnError = false,
+            IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
             => TryValidateObject(obj, results = [], member, throwOnError, members, serviceProvider);
@@ -107,10 +107,10 @@ namespace wan24.ObjectValidation
         /// <exception cref="ObjectValidationException">Thrown on error during an object validation (won't be thrown, if <paramref name="throwOnError"/> is <see langword="false"/>, 
         /// which is the default)</exception>
         public static bool TryValidateObject(
-            this object obj, 
-            List<ValidationResult>? results = null, 
-            string? member = null, 
-            bool throwOnError = false, 
+            this object obj,
+            List<ValidationResult>? results = null,
+            string? member = null,
+            bool throwOnError = false,
             IEnumerable<string>? members = null,
             IServiceProvider? serviceProvider = null
             )
@@ -174,7 +174,8 @@ namespace wan24.ObjectValidation
         /// <returns><see cref="ValidationResult"/></returns>
         public static ValidationResult CreateValidationResult(this ValidationAttribute attr, in string message, in ValidationContext validationContext)
             => new(
-                attr.ErrorMessage ?? (validationContext.MemberName is null ? message : $"{validationContext.MemberName}: {message}"),
+                (attr as ValidationAttributeBase)?.GetErrorMessage(validationContext, message)
+                    ?? ValidationAttributeBase.ErrorMessageFormatter(attr, validationContext, message),
                 validationContext.MemberName is null ? null : new string[] { validationContext.MemberName }
                 );
     }

@@ -8,7 +8,7 @@ namespace wan24.ObjectValidation
     /// Count limitation attribute
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
-    public class CountLimitAttribute : ValidationAttribute
+    public class CountLimitAttribute : ValidationAttributeBase
     {
         /// <summary>
         /// Minimum

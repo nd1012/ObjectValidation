@@ -9,7 +9,7 @@ namespace wan24.ObjectValidation
     /// Constructor
     /// </remarks>
     /// <param name="currency">Currency ISO 4217 code</param>
-    public class AmountAttribute(string currency) : ValidationAttribute()
+    public class AmountAttribute(string currency) : ValidationAttributeBase()
     {
         /// <summary>
         /// Currency ISO 4217 code

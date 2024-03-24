@@ -9,7 +9,7 @@ namespace wan24.ObjectValidation
     /// Constructor
     /// </remarks>
     /// <param name="normalize">Normalize?</param>
-    public class LuhnChecksumAttribute(bool normalize = true) : ValidationAttribute()
+    public class LuhnChecksumAttribute(bool normalize = true) : ValidationAttributeBase()
     {
         /// <summary>
         /// Normalize?

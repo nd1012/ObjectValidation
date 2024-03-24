@@ -6,7 +6,7 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Attribute to reference another property for inheriting its validation attributes during a validation is being executed
     /// </summary>
-    public class ValidationReferenceAttribute : ValidationAttribute, IMultipleValidations
+    public class ValidationReferenceAttribute : ValidationAttributeBase, IMultipleValidations
     {
         /// <summary>
         /// Validation attributes

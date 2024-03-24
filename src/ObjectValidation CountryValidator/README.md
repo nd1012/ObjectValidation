@@ -102,7 +102,9 @@ Nested property object value validation is supported for:
 
 The length/count of dictionaries, lists, arrays and enumerables can be 
 validated using the `CountLimitAttribute` (which may not work for enumerables, 
-if not used trough ObjectValidation methods!).
+if not used trough ObjectValidation methods!). This attribute provides a 
+constructor which allows giving the name (including namespace and class) of a 
+public static property, which provides a minimum/maximum limit at runtime.
 
 ### Limiting countables
 
