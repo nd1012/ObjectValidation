@@ -38,6 +38,9 @@
       <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="ObjectValidation-CountryValidator licenses\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ObjectValidation-CountryValidator licenses\Microsoft.Extensions.Diagnostics.Abstractions.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
