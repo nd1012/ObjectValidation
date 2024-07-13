@@ -38,6 +38,21 @@
       <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="ObjectValidation-CountryValidator licenses\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation-CountryValidator licenses\Microsoft.Extensions.Diagnostics.Abstractions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation-CountryValidator licenses\Microsoft.Extensions.Options.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation-CountryValidator licenses\Microsoft.Extensions.Primitives.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation-CountryValidator licenses\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

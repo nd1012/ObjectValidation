@@ -404,3 +404,4 @@ nuget-publish.bat
 # Others
 **/log.txt
 src/ObjectValidation Docs/log.txt
+**/TestResults/**/*

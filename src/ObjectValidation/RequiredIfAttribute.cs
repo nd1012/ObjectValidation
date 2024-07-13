@@ -12,6 +12,7 @@ namespace wan24.ObjectValidation
     /// <param name="propertyName">Checked property name</param>
     /// <param name="values">Values (one of the value is required in order to match this condition; if not given, the value is required if the checked property has a non-
     /// <see langword="null"/> value)</param>
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
     public class RequiredIfAttribute(string propertyName, params object?[] values) : RequiredAttribute()
     {
         /// <summary>

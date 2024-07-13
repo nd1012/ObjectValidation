@@ -22,10 +22,11 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>2.5.0</Version>
+    <Version>2.6.0</Version>
     <DebugType>embedded</DebugType>
     <EmbedAllSources>true</EmbedAllSources>
     <Configurations>Debug;Release;Trunk</Configurations>
+    <EnablePreviewFeatures Condition="'$(Configuration)' != 'Release'">True</EnablePreviewFeatures>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +38,21 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+    </None>
+    <None Update="ObjectValidation licenses\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation licenses\Microsoft.Extensions.Diagnostics.Abstractions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation licenses\Microsoft.Extensions.Options.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation licenses\Microsoft.Extensions.Primitives.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ObjectValidation licenses\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="README.md">
       <Pack>True</Pack>
