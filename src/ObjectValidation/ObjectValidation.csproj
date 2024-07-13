@@ -22,7 +22,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>2.6.1</Version>
+    <Version>2.6.0</Version>
     <DebugType>embedded</DebugType>
     <EmbedAllSources>true</EmbedAllSources>
     <Configurations>Debug;Release;Trunk</Configurations>
