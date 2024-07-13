@@ -3930,6 +3930,28 @@ references:
   fullName.vb: wan24.ObjectValidation.ValidationExtensions.ValidateObject(Of T)(T, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult), String, System.Collections.Generic.IEnumerable(Of String), System.IServiceProvider)
   nameWithType: ValidationExtensions.ValidateObject<T>(T, out List<ValidationResult>, string?, IEnumerable<string>?, IServiceProvider?)
   nameWithType.vb: ValidationExtensions.ValidateObject(Of T)(T, List(Of ValidationResult), String, IEnumerable(Of String), IServiceProvider)
+- uid: wan24.ObjectValidation.ValidationHelper
+  name: ValidationHelper
+  href: api/wan24.ObjectValidation.ValidationHelper.html
+  commentId: T:wan24.ObjectValidation.ValidationHelper
+  fullName: wan24.ObjectValidation.ValidationHelper
+  nameWithType: ValidationHelper
+- uid: wan24.ObjectValidation.ValidationHelper.CreateValidationResult(System.String@,System.ComponentModel.DataAnnotations.ValidationContext@)
+  name: CreateValidationResult(in string, in ValidationContext)
+  href: api/wan24.ObjectValidation.ValidationHelper.html#wan24_ObjectValidation_ValidationHelper_CreateValidationResult_System_String__System_ComponentModel_DataAnnotations_ValidationContext__
+  commentId: M:wan24.ObjectValidation.ValidationHelper.CreateValidationResult(System.String@,System.ComponentModel.DataAnnotations.ValidationContext@)
+  name.vb: CreateValidationResult(String, ValidationContext)
+  fullName: wan24.ObjectValidation.ValidationHelper.CreateValidationResult(in string, in System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: wan24.ObjectValidation.ValidationHelper.CreateValidationResult(String, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: ValidationHelper.CreateValidationResult(in string, in ValidationContext)
+  nameWithType.vb: ValidationHelper.CreateValidationResult(String, ValidationContext)
+- uid: wan24.ObjectValidation.ValidationHelper.CreateValidationResult*
+  name: CreateValidationResult
+  href: api/wan24.ObjectValidation.ValidationHelper.html#wan24_ObjectValidation_ValidationHelper_CreateValidationResult_
+  commentId: Overload:wan24.ObjectValidation.ValidationHelper.CreateValidationResult
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ValidationHelper.CreateValidationResult
+  nameWithType: ValidationHelper.CreateValidationResult
 - uid: wan24.ObjectValidation.ValidationReferenceAttribute
   name: ValidationReferenceAttribute
   href: api/wan24.ObjectValidation.ValidationReferenceAttribute.html
