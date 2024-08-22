@@ -1,9 +1,10 @@
 ﻿using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class EuVatId_Tests
+    public class EuVatId_Tests : TestBase
     {
         [TestMethod]
         public void VatId_Tests()

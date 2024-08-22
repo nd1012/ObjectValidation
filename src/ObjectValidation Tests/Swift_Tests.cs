@@ -1,9 +1,10 @@
 ﻿using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class Swift_Tests
+    public class Swift_Tests : TestBase
     {
         [TestMethod]
         public void Bic_Tests()

@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class ObjectValidation_Tests
+    public class ObjectValidation_Tests : TestBase
     {
         public ObjectValidation_Tests()
         {

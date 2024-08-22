@@ -1,9 +1,10 @@
 ﻿using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class XRechnung_Tests
+    public class XRechnung_Tests : TestBase
     {
         [TestMethod]
         public void XRechnung_Route_Tests()

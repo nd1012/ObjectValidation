@@ -1,9 +1,10 @@
 ﻿using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class Aba_Tests
+    public class Aba_Tests : TestBase
     {
         [TestMethod]
         public void AbaRtn_Tests()
