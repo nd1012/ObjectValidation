@@ -1,4 +1,6 @@
-﻿namespace wan24.ObjectValidation
+﻿using System.Collections.Frozen;
+
+namespace wan24.ObjectValidation
 {
     /// <summary>
     /// Currency ISO 4217 codes
@@ -298,7 +300,7 @@
         /// <param name="numericCode">Numeric code</param>
         /// <param name="name">Name</param>
         /// <param name="minorUnit">Minor unit</param>
-        public class Currency(string code, string numericCode, string name, int minorUnit = 2)
+        public record class Currency(string code, string numericCode, string name, int minorUnit = 2)
         {
             /// <summary>
             /// Factor
@@ -328,14 +330,14 @@
             /// <summary>
             /// Factor
             /// </summary>
-            public int Factor => _Factor ??= (int)Math.Pow(10, MinorUnit);
+            public virtual int Factor => _Factor ??= (int)Math.Pow(10, MinorUnit);
 
             /// <summary>
             /// Validate a value
             /// </summary>
             /// <param name="value">Value</param>
             /// <returns>Valid?</returns>
-            public bool Validate(decimal value) => Factor < 1 ? Math.Round(value) == value : Math.Round(value * Factor) / Factor == value;
+            public virtual bool Validate(decimal value) => Factor < 1 ? Math.Round(value) == value : Math.Round(value * Factor) / Factor == value;
         }
     }
 }

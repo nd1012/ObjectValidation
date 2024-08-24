@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Frozen;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Diagnostics;
@@ -11,14 +12,9 @@ namespace wan24.ObjectValidation
     public static partial class ValidationExtensions
     {
         /// <summary>
-        /// Never validate attribute full type (ASP.NET)
-        /// </summary>
-        private const string VALIDATENEVER_ATTRIBUTE_TYPE = "Microsoft.AspNetCore.Mvc.ModelBinding.Validation.NeverValidateAttribute";
-
-        /// <summary>
         /// Unsigned numeric enum types
         /// </summary>
-        private static readonly Type[] UnsignedNumericEnumTypes = [typeof(byte), typeof(ushort), typeof(uint), typeof(ulong)];
+        private static readonly FrozenSet<Type> UnsignedNumericEnumTypes = new Type[] { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) }.ToFrozenSet();
 
         /// <summary>
         /// Validate an object
@@ -39,9 +35,10 @@ namespace wan24.ObjectValidation
             string? member,
             bool throwOnError,
             IEnumerable<string>? members = null,
-            IServiceProvider? serviceProvider = null)
+            IServiceProvider? serviceProvider = null
+            )
         {
-            // Update array level and recursion informations
+            // Update array level and recursion information
             if (info.ArrayLevel != 0)
             {
                 info = info.GetClone();
@@ -56,9 +53,8 @@ namespace wan24.ObjectValidation
                 // Skip object that disabled the validation or which has a not supported type
                 if (!ValidatableTypes.IsTypeValidatable(type)) return true;
                 // Avoid an endless recursion
-                if (info.Seen.Contains(obj)) return true;
                 seenIndex = info.Seen.Count;
-                info.Seen.Add(obj);
+                if (!info.Seen.Add(obj)) return true;
                 // Prepare the results
                 List<ValidationResult> validationResults = [],// Single validation results (will be added to all validation results after a validation)
                     allResults = [];// All validation results (will be added to the given results list, if any)
@@ -123,7 +119,7 @@ namespace wan24.ObjectValidation
                     if (type.IsEnum)
                     {
                         Type numericType = type.GetEnumUnderlyingType() ?? throw new InvalidProgramException($"Enumeration {type} {contextInfo} without underlying numeric type");
-                        if (type.GetCustomAttribute<FlagsAttribute>() is not null)
+                        if (type.GetCustomAttributesCached().Any(a => a is FlagsAttribute))
                         {
                             bool err;
                             object number,
@@ -131,7 +127,9 @@ namespace wan24.ObjectValidation
                             if (UnsignedNumericEnumTypes.Contains(numericType))
                             {
                                 ulong allValues = 0,
-                                    numericValue = (ulong)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(ulong));
+                                    numericValue = numericType == typeof(ulong)
+                                        ? (ulong)Convert.ChangeType(obj, numericType)
+                                        : (ulong)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(ulong));
                                 number = numericValue;
                                 foreach (object v in Enum.GetValues(type)) allValues |= (ulong)Convert.ChangeType(Convert.ChangeType(v, numericType), typeof(ulong));
                                 err = (numericValue & ~allValues) != 0;
@@ -140,7 +138,9 @@ namespace wan24.ObjectValidation
                             else
                             {
                                 long allValues = 0,
-                                    numericValue = (long)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(long));
+                                    numericValue = numericType == typeof(long)
+                                        ? (long)Convert.ChangeType(obj, numericType)
+                                        : (long)Convert.ChangeType(Convert.ChangeType(obj, numericType), typeof(long));
                                 number = numericValue;
                                 foreach (object v in Enum.GetValues(type)) allValues |= (long)Convert.ChangeType(Convert.ChangeType(v, numericType), typeof(long));
                                 err = (numericValue & ~allValues) != 0;
@@ -174,14 +174,12 @@ namespace wan24.ObjectValidation
                     NullabilityInfoContext nullabilityContext = new();// Context for nullable validation
                     NullabilityInfo nullabilityInfo;// Nullability info
                     NoValidationAttribute? noValidationAttr;// No validation attribute
-                    foreach (PropertyInfo pi in from pi in type.GetPropertiesCached()
-                                                    // Included
-                                                where (members?.Contains(pi.Name) ?? true) &&
-                                                    // Not excluded
-                                                    !pi.GetCustomAttributesCached().Any(a => a is NoValidationAttribute) &&
-                                                    !pi.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
-                                                orderby pi.Name
-                                                select pi)
+                    foreach (PropertyInfo pi in members is null 
+                        ? type.GetPropertiesCached() 
+                        : from pi in type.GetPropertiesCached()
+                          where members.Contains(pi.Name)
+                          select pi
+                        )
                     {
                         // Break the loop, if requested
                         if (loopCancelled)
@@ -267,20 +265,19 @@ namespace wan24.ObjectValidation
                                     res = false;
                                     validationResults.Add(new(
                                         $"Property {pi.Name} value is NULL, but the property type {pi.PropertyType} isn't nullable (or a non-NULL value is required)",
-                                        new string[] { pi.Name }
+                                        [pi.Name]
                                         ));
                                     (_, res, _) = RaiseEvent(OnObjectPropertyValidationFailed, info.Seen, obj, validationResults, allResults, member, throwOnError, members, res);
                                 }
                                 continue;
                             }
-                            //if (isObjectValidatable) continue;// WTH?
                             // Deep object validation
                             valueType = value.GetType();
                             noValidationAttr = (NoValidationAttribute?)valueType.GetCustomAttributesCached().FirstOrDefault(a => a is NoValidationAttribute);
                             onlyItemNullValueChecks = noValidationAttr is not null && !noValidationAttr.SkipNullValueCheck;
                             if (
                                 !(noValidationAttr?.SkipNullValueCheck ?? false) &&
-                                valueType.GetCustomAttributesCached().Any(a => a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
+                                valueType.GetCustomAttributesCached().Any(a => a.GetType().FullName == ReflectionHelper.VALIDATENEVER_ATTRIBUTE_TYPE)
                                 )
                             {
 #if DEBUG
@@ -372,12 +369,12 @@ namespace wan24.ObjectValidation
                         {
                             if (throwOnError) throw;
                             res = false;
-                            validationResults.Add(new($"{VALIDATION_EXCEPTION_PREFIX}{pi.Name}: {ex}", new string[] { pi.Name }));
+                            validationResults.Add(new($"{VALIDATION_EXCEPTION_PREFIX}{pi.Name}: {ex}", [pi.Name]));
                         }
                         catch (Exception ex)
                         {
                             res = false;
-                            validationResults.Add(new($"{VALIDATION_EXCEPTION_PREFIX}{pi.Name}: {ex}", new string[] { pi.Name }));
+                            validationResults.Add(new($"{VALIDATION_EXCEPTION_PREFIX}{pi.Name}: {ex}", [pi.Name]));
                         }
                         finally
                         {
@@ -397,7 +394,7 @@ namespace wan24.ObjectValidation
             finally
             {
                 info.CurrentDepth--;
-                if (seenIndex > 0) info.Seen.RemoveAt(seenIndex);
+                if (seenIndex > 0) info.Seen.Remove(obj);
                 if (results is not null)
                     foreach (ValidationResult result in results)
                         ObjectValidation.ValidateObject.Logger(
@@ -422,7 +419,7 @@ namespace wan24.ObjectValidation
                     validationResults[i] = new(
                         validationResults[i].ErrorMessage,
                         !validationResults[i].MemberNames.Any()
-                            ? new string[] { member }
+                            ? [member]
                             : from m in validationResults[i].MemberNames
                               select $"{member}.{m}"
                         );
@@ -448,7 +445,7 @@ namespace wan24.ObjectValidation
         /// <returns>Is nullable?</returns>
         internal static bool IsNullable(ICustomAttributeProvider obj, NullabilityInfo? ni = null, bool isItem = false, int arrayLevel = 0)
         {
-            Attribute[] attributes = obj.GetCustomAttributesCached();
+            FrozenSet<Attribute> attributes = obj.GetCustomAttributesCached();
             if (!isItem)
             {
                 if (attributes.Any(a => a is DisallowNullAttribute)) return false;

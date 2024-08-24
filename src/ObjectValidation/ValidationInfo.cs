@@ -3,21 +3,19 @@
     /// <summary>
     /// Validation depth
     /// </summary>
-    internal sealed class ValidationInfo : IValidationInfo
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    /// <param name="seen">Seen objects</param>
+    internal sealed class ValidationInfo(HashSet<object>? seen = null) : IValidationInfo
     {
         /// <summary>
         /// Current validation depth
         /// </summary>
         private int _CurrentDepth = -1;
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="seen">Seen objects</param>
-        internal ValidationInfo(List<object>? seen = null) => Seen = seen ?? [];
-
         /// <inheritdoc/>
-        public List<object> Seen { get; }
+        public HashSet<object> Seen { get; } = seen ?? [];
 
         /// <inheritdoc/>
         public int CurrentDepth

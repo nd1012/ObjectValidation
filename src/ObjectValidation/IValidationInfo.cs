@@ -8,7 +8,7 @@
         /// <summary>
         /// Seen objects
         /// </summary>
-        List<object> Seen { get; }
+        HashSet<object> Seen { get; }
         /// <summary>
         /// Current validation depth
         /// </summary>

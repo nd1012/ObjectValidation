@@ -89,7 +89,7 @@ namespace wan24.ObjectValidation
                         res = false;
                         validationResults.Add(new(
                             $"Property {GetMemberName(info, pi, count, member, isDict: true)} value is NULL, but the value type {itemType} isn't nullable (or a non-NULL value is required)",
-                            new string[] { GetMemberName(info, pi, count, member, isDict: true) }
+                            [GetMemberName(info, pi, count, member, isDict: true)]
                             ));
                     }
                     else if (valueValidations.Length != 0)
@@ -183,7 +183,7 @@ namespace wan24.ObjectValidation
                         res = false;
                         validationResults.Add(new(
                             $"Property {GetMemberName(info, pi, count, member)} value is NULL, but the item type {itemType} isn't nullable (or a non-NULL value is required)",
-                            new string[] { GetMemberName(info, pi, count, member) }
+                            [GetMemberName(info, pi, count, member)]
                             ));
                     }
                     else if (itemValidations.Length != 0)
@@ -262,15 +262,11 @@ namespace wan24.ObjectValidation
                 Type? keyType,// Dictionary key type
                     itemType;// Item type
 #pragma warning restore IDE0018 // Declare inline
-                int seenIndex;// Seen index
-                if (AsDictionary(value, out keyType, out itemType) is IDictionary dict)
-                {
-                    seenIndex = info.Seen.Count;
-                    info.Seen.Add(dict);
-                    try
+                if (!info.Seen.Add(value))
+                    if (AsDictionary(value, out keyType, out itemType) is IDictionary dict)
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateDictionary(
+                        return res && ValidateDictionary(
                             nestedInfo,
                             pi,
                             dict,
@@ -285,19 +281,10 @@ namespace wan24.ObjectValidation
                             member
                             );
                     }
-                    finally
-                    {
-                        info.Seen.RemoveAt(seenIndex);
-                    }
-                }
-                else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() is not null)
-                {
-                    seenIndex = info.Seen.Count;
-                    info.Seen.Add(arr);
-                    try
+                    else if (value is not string && value is Array arr && valueType.IsArray && valueType.GetElementType() is not null)
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(
+                        return res && ValidateList(
                             nestedInfo,
                             pi,
                             arr,
@@ -311,47 +298,44 @@ namespace wan24.ObjectValidation
                             member
                             );
                     }
-                    finally
-                    {
-                        info.Seen.RemoveAt(seenIndex);
-                    }
-                }
-                else if (AsList(value, out itemType) is IList list)
-                {
-                    seenIndex = info.Seen.Count;
-                    info.Seen.Add(list);
-                    try
+                    else if (AsList(value, out itemType) is IList list)
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, list, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, onlyNullCheck: false, throwOnError, member);
+                        return res && ValidateList(
+                            nestedInfo, 
+                            pi, 
+                            list, 
+                            valueType, 
+                            itemType, 
+                            nullabilityInfo: null, 
+                            validationResults, 
+                            serviceProvider, 
+                            onlyNullCheck: false, 
+                            throwOnError, 
+                            member
+                            );
                     }
-                    finally
-                    {
-                        info.Seen.RemoveAt(seenIndex);
-                    }
-                }
-                else if (valueValidatable && value is ICollection col)
-                {
-                    seenIndex = info.Seen.Count;
-                    info.Seen.Add(col);
-                    try
-                    {
-                        nestedInfo.CurrentDepth++;
-                        res &= ValidateList(nestedInfo, pi, col, valueType, itemType, nullabilityInfo: null, validationResults, serviceProvider, onlyNullCheck: false, throwOnError, member);
-                    }
-                    finally
-                    {
-                        info.Seen.RemoveAt(seenIndex);
-                    }
-                }
-                else if (valueValidatable && value is IEnumerable enumerable)
-                {
-                    seenIndex = info.Seen.Count;
-                    info.Seen.Add(enumerable);
-                    try
+                    else if (valueValidatable && value is ICollection col)
                     {
                         nestedInfo.CurrentDepth++;
-                        res &= ValidateList(
+                        return res && ValidateList(
+                            nestedInfo, 
+                            pi, 
+                            col, 
+                            valueType, 
+                            itemType, 
+                            nullabilityInfo: null, 
+                            validationResults, 
+                            serviceProvider, 
+                            onlyNullCheck: false, 
+                            throwOnError, 
+                            member
+                            );
+                    }
+                    else if (valueValidatable && value is IEnumerable enumerable)
+                    {
+                        nestedInfo.CurrentDepth++;
+                        return res && ValidateList(
                             nestedInfo,
                             pi,
                             enumerable,
@@ -365,18 +349,10 @@ namespace wan24.ObjectValidation
                             member
                             );
                     }
-                    finally
-                    {
-                        info.Seen.RemoveAt(seenIndex);
-                    }
-                }
 #if DEBUG
-                else
-                {
-                    ObjectValidation.ValidateObject.Logger(
-                        $"Can't validate item {member} type {valueType} of property {pi.DeclaringType}.{pi.Name} value (not validatable {pi.PropertyType} value)"
-                        );
-                }
+                ObjectValidation.ValidateObject.Logger(
+                    $"Can't validate item {member} type {valueType} of property {pi.DeclaringType}.{pi.Name} value (not validatable {pi.PropertyType} value)"
+                    );
 #endif
             }
             return res;
@@ -430,11 +406,11 @@ namespace wan24.ObjectValidation
             => info.ArrayLevel switch
             {
                 0 => isDict
-                        ? $"{pi.Name}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
-                        : $"{pi.Name}[{item}]",
+                    ? $"{pi.Name}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
+                    : $"{pi.Name}[{item}]",
                 _ => isDict
-                        ? $"{member ?? throw new ArgumentNullException(nameof(member))}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
-                        : $"{member ?? throw new ArgumentNullException(nameof(member))}[{item}]"
+                    ? $"{member ?? throw new ArgumentNullException(nameof(member))}[{(target == ItemValidationTargets.Item ? "value" : "key")}#{item}]"
+                    : $"{member ?? throw new ArgumentNullException(nameof(member))}[{item}]"
             };
     }
 }
