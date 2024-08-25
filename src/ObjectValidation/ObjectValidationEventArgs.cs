@@ -22,7 +22,7 @@ namespace wan24.ObjectValidation
         /// <param name="res">Current result</param>
         /// <param name="pi">Current property</param>
         public ObjectValidationEventArgs(
-            List<object> seen, 
+            HashSet<object> seen, 
             object obj,
             List<ValidationResult> validationResults,
             IReadOnlyList<ValidationResult> allResults,
@@ -47,7 +47,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Seen objects
         /// </summary>
-        public List<object> Seen { get; }
+        public HashSet<object> Seen { get; }
 
         /// <summary>
         /// Object

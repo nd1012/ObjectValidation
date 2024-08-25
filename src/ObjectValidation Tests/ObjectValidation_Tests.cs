@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class ObjectValidation_Tests
+    public class ObjectValidation_Tests : TestBase
     {
         public ObjectValidation_Tests()
         {
@@ -84,6 +85,7 @@ namespace ObjectValidation_Tests
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.RequiredProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.EnumProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.Enum2Property)));
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.HostProperty)));
             Assert.AreEqual(54, results.Count);
 
             // Validation exception

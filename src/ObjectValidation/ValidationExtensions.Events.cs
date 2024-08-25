@@ -22,7 +22,7 @@ namespace wan24.ObjectValidation
         /// <returns>If the event was cancelled, the new result, and if the validation failed during the event</returns>
         internal static (bool Cancelled, bool NewResult, bool Failed) RaiseEvent(
             ObjectValidation_Delegate? delegates,
-            List<object> seen,
+            HashSet<object> seen,
             object obj,
             List<ValidationResult> validationResults,
             IReadOnlyList<ValidationResult> allResults,

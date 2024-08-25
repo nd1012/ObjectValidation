@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections.Frozen;
+using System.Text.RegularExpressions;
 
 namespace wan24.ObjectValidation
 {
@@ -15,7 +16,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// VAT ID syntax regular expressions
         /// </summary>
-        private static readonly Dictionary<string, Regex> Syntax = new()
+        private static readonly FrozenDictionary<string, Regex> Syntax = new Dictionary<string, Regex>()
         {
             {"AT", AT_Generated()},
             {"BE", BE_Generated()},
@@ -45,7 +46,7 @@ namespace wan24.ObjectValidation
             {"SI", SI_Generated()},
             {"SK", SK_Generated()},
             {"XI", XI_Generated()}// North Ireland, since Brexit
-        };
+        }.ToFrozenDictionary();
 
         /// <summary>
         /// Validate a European VAT ID

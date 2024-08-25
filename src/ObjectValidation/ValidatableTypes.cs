@@ -1,7 +1,4 @@
-﻿using System.Collections.Concurrent;
-using System.Reflection;
-
-namespace wan24.ObjectValidation
+﻿namespace wan24.ObjectValidation
 {
     /// <summary>
     /// Validatable types
@@ -11,19 +8,19 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Types which are forced to be validated
         /// </summary>
-        public static readonly ConcurrentBag<Type> ForcedTypes;
+        public static readonly HashSet<Type> ForcedTypes;
         /// <summary>
         /// Types (also inherited) which are forced to be validated
         /// </summary>
-        public static readonly ConcurrentBag<Type> ForcedTypesInheritable;
+        public static readonly HashSet<Type> ForcedTypesInheritable;
         /// <summary>
         /// Types which are denied to be validated
         /// </summary>
-        public static readonly ConcurrentBag<Type> DeniedTypes;
+        public static readonly HashSet<Type> DeniedTypes;
         /// <summary>
         /// Types (also inherited) which are denied to be validated
         /// </summary>
-        public static readonly ConcurrentBag<Type> DeniedTypesInheritable;
+        public static readonly HashSet<Type> DeniedTypesInheritable;
 
         /// <summary>
         /// Constructor
@@ -32,8 +29,8 @@ namespace wan24.ObjectValidation
         {
             ForcedTypes = [];
             ForcedTypesInheritable = [];
-            DeniedTypes = new(new Type[] { typeof(string), typeof(object), typeof(IQueryable<>) });
-            DeniedTypesInheritable = new(new Type[] { typeof(Type), typeof(Stream) });
+            DeniedTypes = new([typeof(string), typeof(object), typeof(IQueryable<>)]);
+            DeniedTypesInheritable = new([typeof(Type), typeof(Stream)]);
         }
 
         /// <summary>
@@ -49,28 +46,28 @@ namespace wan24.ObjectValidation
             {
                 Type? gtd = type.IsGenericType ? type.GetGenericTypeDefinition() : null;// Generic type definition
                 res = ForcedTypes.Contains(type) || // Forced
-                    ForcedTypesInheritable.Any(t=>t.IsAssignableFrom(type)) ||
+                    ForcedTypesInheritable.Any(t => t.IsAssignableFrom(type)) ||
                     ( // Forced generic type definition
                         gtd is not null &&
                         (
                             ForcedTypes.Contains(gtd) ||
-                            ForcedTypesInheritable.Any(t=>t.IsAssignableFrom(gtd))
+                            ForcedTypesInheritable.Any(t => t.IsAssignableFrom(gtd))
                         )
                     ) ||
                     (
                         !DeniedTypes.Contains(type) && // Not denied
-                        !DeniedTypesInheritable.Any(t=>t.IsAssignableFrom(type)) && 
+                        !DeniedTypesInheritable.Any(t => t.IsAssignableFrom(type)) &&
                         ( // Not denied generic type definition
                             gtd is null ||
                             (
                                 !DeniedTypes.Contains(gtd) &&
-                                !DeniedTypesInheritable.Any(t=>t.IsAssignableFrom(gtd))
+                                !DeniedTypesInheritable.Any(t => t.IsAssignableFrom(gtd))
                             )
                         ) &&
                         !( // Other type restrictions
                             (type.IsValueType && !type.IsEnum) || // Not a non-enum value type
                             type.IsArray || // Not an array
-                            type.GetCustomAttribute<NoValidationAttribute>(inherit: true) is not null // Not ignored
+                            type.GetCustomAttributesCached().Any(a => a is NoValidationAttribute)// Not ignored
                         )
                     );
                 if (res) return res;// Validate, if validatable in this moment

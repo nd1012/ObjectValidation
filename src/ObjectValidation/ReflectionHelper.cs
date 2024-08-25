@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Collections.Frozen;
 using System.Reflection;
 
 namespace wan24.ObjectValidation
@@ -8,6 +9,11 @@ namespace wan24.ObjectValidation
     /// </summary>
     public static class ReflectionHelper
     {
+        /// <summary>
+        /// Never validate attribute full type (ASP.NET)
+        /// </summary>
+        internal const string VALIDATENEVER_ATTRIBUTE_TYPE = "Microsoft.AspNetCore.Mvc.ModelBinding.Validation.NeverValidateAttribute";
+
         /// <summary>
         /// CreateGetterDelegate method
         /// </summary>
@@ -19,15 +25,15 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Item validation attribute cache
         /// </summary>
-        private static readonly ConcurrentDictionary<int, IItemValidationAttribute[]> ItemValidationAttributeCache;
+        private static readonly ConcurrentDictionary<int, FrozenSet<IItemValidationAttribute>> ItemValidationAttributeCache;
         /// <summary>
         /// <see cref="PropertyInfo"/> cache
         /// </summary>
-        private static readonly ConcurrentDictionary<int, PropertyInfo[]> PropertyInfoCache;
+        private static readonly ConcurrentDictionary<int, FrozenSet<PropertyInfo>> PropertyInfoCache;
         /// <summary>
         /// <see cref="Attribute"/> cache
         /// </summary>
-        private static readonly ConcurrentDictionary<int, Attribute[]> AttributeCache;
+        private static readonly ConcurrentDictionary<int, FrozenSet<Attribute>> AttributeCache;
 
         /// <summary>
         /// Static constructor
@@ -61,10 +67,10 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="cap">Object</param>
         /// <returns>Attributes</returns>
-        public static IItemValidationAttribute[] GetItemValidationAttributes(this ICustomAttributeProvider cap)
+        public static FrozenSet<IItemValidationAttribute> GetItemValidationAttributes(this ICustomAttributeProvider cap)
             => ItemValidationAttributeCache.GetOrAdd(
                 cap.GetHashCode(),
-                (key) => GetCustomAttributesCached(cap).Where(a => a is IItemValidationAttribute).Cast<IItemValidationAttribute>().ToArray()
+                (key) => GetCustomAttributesCached(cap).Where(a => a is IItemValidationAttribute).Cast<IItemValidationAttribute>().ToFrozenSet()
                 );
 
         /// <summary>
@@ -72,10 +78,18 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="type">Type</param>
         /// <returns>Properties</returns>
-        public static PropertyInfo[] GetPropertiesCached(this Type type)
+        public static FrozenSet<PropertyInfo> GetPropertiesCached(this Type type)
             => PropertyInfoCache.GetOrAdd(
                 type.GetHashCode(),
-                (key) => type.GetProperties(BindingFlags.Instance | BindingFlags.Public).Where(p => p.CanRead && p.GetMethod!.IsPublic && p.GetIndexParameters().Length == 0).ToArray()
+                (key) => type.GetProperties(BindingFlags.Instance | BindingFlags.Public)
+                    .Where(
+                        p => (p.GetMethod?.IsPublic ?? false) && 
+                            !p.PropertyType.IsByRef && 
+                            !p.PropertyType.IsByRefLike && 
+                            p.GetIndexParameters().Length == 0 &&
+                            !p.GetCustomAttributesCached().Any(a => (a is NoValidationAttribute attr && attr.SkipNullValueCheck) || a.GetType().FullName == VALIDATENEVER_ATTRIBUTE_TYPE)
+                        )
+                    .ToFrozenSet()
                 );
 
         /// <summary>
@@ -83,10 +97,10 @@ namespace wan24.ObjectValidation
         /// </summary>
         /// <param name="cap">Object</param>
         /// <returns>Attributes</returns>
-        public static Attribute[] GetCustomAttributesCached(this ICustomAttributeProvider cap)
+        public static FrozenSet<Attribute> GetCustomAttributesCached(this ICustomAttributeProvider cap)
             => AttributeCache.GetOrAdd(
                 cap.GetHashCode(),
-                (key) => cap.GetCustomAttributes(inherit: true).Cast<Attribute>().ToArray()
+                (key) => cap.GetCustomAttributes(inherit: true).Cast<Attribute>().ToFrozenSet()
                 );
 
         /// <summary>

@@ -1,9 +1,10 @@
 ﻿using wan24.ObjectValidation;
+using wan24.Tests;
 
 namespace ObjectValidation_Tests
 {
     [TestClass]
-    public class Luhn_Tests
+    public class Luhn_Tests : TestBase
     {
         [TestMethod]
         public void Luhn_Checksum_Tests()

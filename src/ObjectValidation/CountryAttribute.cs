@@ -5,13 +5,11 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Country code validation attribute
     /// </summary>
-    public class CountryAttribute : ValidationAttributeBase
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    public class CountryAttribute() : ValidationAttributeBase()
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public CountryAttribute() : base() { }
-
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {

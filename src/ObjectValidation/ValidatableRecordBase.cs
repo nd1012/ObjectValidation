@@ -5,13 +5,11 @@ namespace wan24.ObjectValidation
     /// <summary>
     /// Base class for an object validatable object
     /// </summary>
-    public abstract record class ValidatableRecordBase : IObjectValidatable
+    /// <remarks>
+    /// Constructor
+    /// </remarks>
+    public abstract record class ValidatableRecordBase() : IObjectValidatable
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        protected ValidatableRecordBase() { }
-
         /// <summary>
         /// Validate the object
         /// </summary>
