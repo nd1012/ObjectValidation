@@ -85,7 +85,8 @@ namespace ObjectValidation_Tests
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.RequiredProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.EnumProperty)));
             Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.Enum2Property)));
-            Assert.AreEqual(53, results.Count);
+            Assert.IsTrue(failedMembers.Contains(nameof(ValidTestObject.HostProperty)));
+            Assert.AreEqual(54, results.Count);
 
             // Validation exception
             Assert.IsFalse(results.HasValidationException());

@@ -151,6 +151,9 @@ namespace ObjectValidation_Tests
 
         public TestEnum Enum2Property { get; set; } = TestEnum.Valid;
 
+        [Host(CheckIfExists = true)]
+        public string HostProperty { get; set; } = "localhost";
+
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             List<ValidationResult> results = new();

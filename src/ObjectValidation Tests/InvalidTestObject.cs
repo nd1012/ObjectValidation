@@ -41,6 +41,7 @@
             RequiredIfConditional = true;
             EnumProperty = TestEnum.Invalid;
             Enum2Property = (TestEnum)3;
+            HostProperty = "test 123";
         }
     }
 }
