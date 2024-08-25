@@ -146,7 +146,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_DeniedTypes.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.DeniedTypes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L22">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L19">View Source</a>
   </span>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_DeniedTypes" data-uid="wan24.ObjectValidation.ValidatableTypes.DeniedTypes">DeniedTypes</h4>
   <div class="markdown level1 summary"><p>Types which are denied to be validated</p>
@@ -154,7 +154,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly ConcurrentBag&lt;Type&gt; DeniedTypes</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly HashSet&lt;Type&gt; DeniedTypes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -166,7 +166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentbag-1">ConcurrentBag</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -176,7 +176,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_DeniedTypesInheritable.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.DeniedTypesInheritable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L26">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L23">View Source</a>
   </span>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_DeniedTypesInheritable" data-uid="wan24.ObjectValidation.ValidatableTypes.DeniedTypesInheritable">DeniedTypesInheritable</h4>
   <div class="markdown level1 summary"><p>Types (also inherited) which are denied to be validated</p>
@@ -184,7 +184,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly ConcurrentBag&lt;Type&gt; DeniedTypesInheritable</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly HashSet&lt;Type&gt; DeniedTypesInheritable</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -196,7 +196,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentbag-1">ConcurrentBag</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -206,7 +206,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_ForcedTypes.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.ForcedTypes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L14">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L11">View Source</a>
   </span>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_ForcedTypes" data-uid="wan24.ObjectValidation.ValidatableTypes.ForcedTypes">ForcedTypes</h4>
   <div class="markdown level1 summary"><p>Types which are forced to be validated</p>
@@ -214,7 +214,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly ConcurrentBag&lt;Type&gt; ForcedTypes</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly HashSet&lt;Type&gt; ForcedTypes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -226,7 +226,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentbag-1">ConcurrentBag</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -236,7 +236,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_ForcedTypesInheritable.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.ForcedTypesInheritable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L18">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L15">View Source</a>
   </span>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_ForcedTypesInheritable" data-uid="wan24.ObjectValidation.ValidatableTypes.ForcedTypesInheritable">ForcedTypesInheritable</h4>
   <div class="markdown level1 summary"><p>Types (also inherited) which are forced to be validated</p>
@@ -244,7 +244,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly ConcurrentBag&lt;Type&gt; ForcedTypesInheritable</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly HashSet&lt;Type&gt; ForcedTypesInheritable</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
@@ -256,7 +256,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.concurrent.concurrentbag-1">ConcurrentBag</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -268,7 +268,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_IsTypeValidatable_System_Type_.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.IsTypeValidatable(System.Type)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L44">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L41">View Source</a>
   </span>
   <a id="wan24_ObjectValidation_ValidatableTypes_IsTypeValidatable_" data-uid="wan24.ObjectValidation.ValidatableTypes.IsTypeValidatable*"></a>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_IsTypeValidatable_System_Type_" data-uid="wan24.ObjectValidation.ValidatableTypes.IsTypeValidatable(System.Type)">IsTypeValidatable(Type)</h4>
@@ -320,7 +320,7 @@
     <a href="https://github.com/nd1012/ObjectValidation/new/main/apiSpec/new?filename=wan24_ObjectValidation_ValidatableTypes_OnIsTypeValidatable.md&amp;value=---%0Auid%3A%20wan24.ObjectValidation.ValidatableTypes.OnIsTypeValidatable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L96">View Source</a>
+    <a href="https://github.com/nd1012/ObjectValidation/blob/main/src/ObjectValidation/ValidatableTypes.cs/#L93">View Source</a>
   </span>
   <h4 id="wan24_ObjectValidation_ValidatableTypes_OnIsTypeValidatable" data-uid="wan24.ObjectValidation.ValidatableTypes.OnIsTypeValidatable">OnIsTypeValidatable</h4>
   <div class="markdown level1 summary"><p>Raised when determining if a type is validatable (to make a conditional exception for otherwise not validated types)</p>

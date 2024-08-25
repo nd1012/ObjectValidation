@@ -653,6 +653,58 @@ references:
   commentId: F:wan24.ObjectValidation.CurrencyCodes.Currency._Factor
   fullName: wan24.ObjectValidation.CurrencyCodes.Currency._Factor
   nameWithType: CurrencyCodes.Currency._Factor
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.code
+  name: code
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_code
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.code
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.code
+  nameWithType: CurrencyCodes.Currency.code
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.code*
+  name: code
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_code_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.code
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.code
+  nameWithType: CurrencyCodes.Currency.code
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit
+  name: minorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_minorUnit
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit
+  nameWithType: CurrencyCodes.Currency.minorUnit
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit*
+  name: minorUnit
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_minorUnit_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.minorUnit
+  nameWithType: CurrencyCodes.Currency.minorUnit
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.name
+  name: name
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_name
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.name
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.name
+  nameWithType: CurrencyCodes.Currency.name
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.name*
+  name: name
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_name_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.name
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.name
+  nameWithType: CurrencyCodes.Currency.name
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.numericCode
+  name: numericCode
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_numericCode
+  commentId: P:wan24.ObjectValidation.CurrencyCodes.Currency.numericCode
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.numericCode
+  nameWithType: CurrencyCodes.Currency.numericCode
+- uid: wan24.ObjectValidation.CurrencyCodes.Currency.numericCode*
+  name: numericCode
+  href: api/wan24.ObjectValidation.CurrencyCodes.Currency.html#wan24_ObjectValidation_CurrencyCodes_Currency_numericCode_
+  commentId: Overload:wan24.ObjectValidation.CurrencyCodes.Currency.numericCode
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.CurrencyCodes.Currency.numericCode
+  nameWithType: CurrencyCodes.Currency.numericCode
 - uid: wan24.ObjectValidation.CurrencyCodes.Known
   name: Known
   href: api/wan24.ObjectValidation.CurrencyCodes.html#wan24_ObjectValidation_CurrencyCodes_Known
@@ -769,6 +821,99 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.EuVatIdAttribute.Normalize
   nameWithType: EuVatIdAttribute.Normalize
+- uid: wan24.ObjectValidation.HostAttribute
+  name: HostAttribute
+  href: api/wan24.ObjectValidation.HostAttribute.html
+  commentId: T:wan24.ObjectValidation.HostAttribute
+  fullName: wan24.ObjectValidation.HostAttribute
+  nameWithType: HostAttribute
+- uid: wan24.ObjectValidation.HostAttribute.#ctor
+  name: HostAttribute()
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute__ctor
+  commentId: M:wan24.ObjectValidation.HostAttribute.#ctor
+  name.vb: New()
+  fullName: wan24.ObjectValidation.HostAttribute.HostAttribute()
+  fullName.vb: wan24.ObjectValidation.HostAttribute.New()
+  nameWithType: HostAttribute.HostAttribute()
+  nameWithType.vb: HostAttribute.New()
+- uid: wan24.ObjectValidation.HostAttribute.#ctor*
+  name: HostAttribute
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: wan24.ObjectValidation.HostAttribute.HostAttribute
+  fullName.vb: wan24.ObjectValidation.HostAttribute.New
+  nameWithType: HostAttribute.HostAttribute
+  nameWithType.vb: HostAttribute.New
+- uid: wan24.ObjectValidation.HostAttribute.AllowIPv4
+  name: AllowIPv4
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_AllowIPv4
+  commentId: P:wan24.ObjectValidation.HostAttribute.AllowIPv4
+  fullName: wan24.ObjectValidation.HostAttribute.AllowIPv4
+  nameWithType: HostAttribute.AllowIPv4
+- uid: wan24.ObjectValidation.HostAttribute.AllowIPv4*
+  name: AllowIPv4
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_AllowIPv4_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.AllowIPv4
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.AllowIPv4
+  nameWithType: HostAttribute.AllowIPv4
+- uid: wan24.ObjectValidation.HostAttribute.AllowIPv6
+  name: AllowIPv6
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_AllowIPv6
+  commentId: P:wan24.ObjectValidation.HostAttribute.AllowIPv6
+  fullName: wan24.ObjectValidation.HostAttribute.AllowIPv6
+  nameWithType: HostAttribute.AllowIPv6
+- uid: wan24.ObjectValidation.HostAttribute.AllowIPv6*
+  name: AllowIPv6
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_AllowIPv6_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.AllowIPv6
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.AllowIPv6
+  nameWithType: HostAttribute.AllowIPv6
+- uid: wan24.ObjectValidation.HostAttribute.CheckIfExists
+  name: CheckIfExists
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_CheckIfExists
+  commentId: P:wan24.ObjectValidation.HostAttribute.CheckIfExists
+  fullName: wan24.ObjectValidation.HostAttribute.CheckIfExists
+  nameWithType: HostAttribute.CheckIfExists
+- uid: wan24.ObjectValidation.HostAttribute.CheckIfExists*
+  name: CheckIfExists
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_CheckIfExists_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.CheckIfExists
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.CheckIfExists
+  nameWithType: HostAttribute.CheckIfExists
+- uid: wan24.ObjectValidation.HostAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name: IsValid(object?, ValidationContext)
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
+  commentId: M:wan24.ObjectValidation.HostAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+  name.vb: IsValid(Object, ValidationContext)
+  fullName: wan24.ObjectValidation.HostAttribute.IsValid(object?, System.ComponentModel.DataAnnotations.ValidationContext)
+  fullName.vb: wan24.ObjectValidation.HostAttribute.IsValid(Object, System.ComponentModel.DataAnnotations.ValidationContext)
+  nameWithType: HostAttribute.IsValid(object?, ValidationContext)
+  nameWithType.vb: HostAttribute.IsValid(Object, ValidationContext)
+- uid: wan24.ObjectValidation.HostAttribute.IsValid*
+  name: IsValid
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_IsValid_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.IsValid
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.IsValid
+  nameWithType: HostAttribute.IsValid
+- uid: wan24.ObjectValidation.HostAttribute.PingTimeout
+  name: PingTimeout
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_PingTimeout
+  commentId: P:wan24.ObjectValidation.HostAttribute.PingTimeout
+  fullName: wan24.ObjectValidation.HostAttribute.PingTimeout
+  nameWithType: HostAttribute.PingTimeout
+- uid: wan24.ObjectValidation.HostAttribute.PingTimeout*
+  name: PingTimeout
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_PingTimeout_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.PingTimeout
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.PingTimeout
+  nameWithType: HostAttribute.PingTimeout
 - uid: wan24.ObjectValidation.ICountable
   name: ICountable
   href: api/wan24.ObjectValidation.ICountable.html
@@ -1530,6 +1675,83 @@ references:
   fullName.vb: wan24.ObjectValidation.ItemEuVatIdAttribute.New
   nameWithType: ItemEuVatIdAttribute.ItemEuVatIdAttribute
   nameWithType.vb: ItemEuVatIdAttribute.New
+- uid: wan24.ObjectValidation.ItemHostAttribute
+  name: ItemHostAttribute
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html
+  commentId: T:wan24.ObjectValidation.ItemHostAttribute
+  fullName: wan24.ObjectValidation.ItemHostAttribute
+  nameWithType: ItemHostAttribute
+- uid: wan24.ObjectValidation.ItemHostAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
+  name: ItemHostAttribute(ItemValidationTargets)
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute__ctor_wan24_ObjectValidation_ItemValidationTargets_
+  commentId: M:wan24.ObjectValidation.ItemHostAttribute.#ctor(wan24.ObjectValidation.ItemValidationTargets)
+  name.vb: New(ItemValidationTargets)
+  fullName: wan24.ObjectValidation.ItemHostAttribute.ItemHostAttribute(wan24.ObjectValidation.ItemValidationTargets)
+  fullName.vb: wan24.ObjectValidation.ItemHostAttribute.New(wan24.ObjectValidation.ItemValidationTargets)
+  nameWithType: ItemHostAttribute.ItemHostAttribute(ItemValidationTargets)
+  nameWithType.vb: ItemHostAttribute.New(ItemValidationTargets)
+- uid: wan24.ObjectValidation.ItemHostAttribute.#ctor*
+  name: ItemHostAttribute
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute__ctor_
+  commentId: Overload:wan24.ObjectValidation.ItemHostAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: wan24.ObjectValidation.ItemHostAttribute.ItemHostAttribute
+  fullName.vb: wan24.ObjectValidation.ItemHostAttribute.New
+  nameWithType: ItemHostAttribute.ItemHostAttribute
+  nameWithType.vb: ItemHostAttribute.New
+- uid: wan24.ObjectValidation.ItemHostAttribute.AllowIPv4
+  name: AllowIPv4
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_AllowIPv4
+  commentId: P:wan24.ObjectValidation.ItemHostAttribute.AllowIPv4
+  fullName: wan24.ObjectValidation.ItemHostAttribute.AllowIPv4
+  nameWithType: ItemHostAttribute.AllowIPv4
+- uid: wan24.ObjectValidation.ItemHostAttribute.AllowIPv4*
+  name: AllowIPv4
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_AllowIPv4_
+  commentId: Overload:wan24.ObjectValidation.ItemHostAttribute.AllowIPv4
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemHostAttribute.AllowIPv4
+  nameWithType: ItemHostAttribute.AllowIPv4
+- uid: wan24.ObjectValidation.ItemHostAttribute.AllowIPv6
+  name: AllowIPv6
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_AllowIPv6
+  commentId: P:wan24.ObjectValidation.ItemHostAttribute.AllowIPv6
+  fullName: wan24.ObjectValidation.ItemHostAttribute.AllowIPv6
+  nameWithType: ItemHostAttribute.AllowIPv6
+- uid: wan24.ObjectValidation.ItemHostAttribute.AllowIPv6*
+  name: AllowIPv6
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_AllowIPv6_
+  commentId: Overload:wan24.ObjectValidation.ItemHostAttribute.AllowIPv6
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemHostAttribute.AllowIPv6
+  nameWithType: ItemHostAttribute.AllowIPv6
+- uid: wan24.ObjectValidation.ItemHostAttribute.CheckIfExists
+  name: CheckIfExists
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_CheckIfExists
+  commentId: P:wan24.ObjectValidation.ItemHostAttribute.CheckIfExists
+  fullName: wan24.ObjectValidation.ItemHostAttribute.CheckIfExists
+  nameWithType: ItemHostAttribute.CheckIfExists
+- uid: wan24.ObjectValidation.ItemHostAttribute.CheckIfExists*
+  name: CheckIfExists
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_CheckIfExists_
+  commentId: Overload:wan24.ObjectValidation.ItemHostAttribute.CheckIfExists
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemHostAttribute.CheckIfExists
+  nameWithType: ItemHostAttribute.CheckIfExists
+- uid: wan24.ObjectValidation.ItemHostAttribute.PingTimeout
+  name: PingTimeout
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_PingTimeout
+  commentId: P:wan24.ObjectValidation.ItemHostAttribute.PingTimeout
+  fullName: wan24.ObjectValidation.ItemHostAttribute.PingTimeout
+  nameWithType: ItemHostAttribute.PingTimeout
+- uid: wan24.ObjectValidation.ItemHostAttribute.PingTimeout*
+  name: PingTimeout
+  href: api/wan24.ObjectValidation.ItemHostAttribute.html#wan24_ObjectValidation_ItemHostAttribute_PingTimeout_
+  commentId: Overload:wan24.ObjectValidation.ItemHostAttribute.PingTimeout
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.ItemHostAttribute.PingTimeout
+  nameWithType: ItemHostAttribute.PingTimeout
 - uid: wan24.ObjectValidation.ItemIbanAttribute
   name: ItemIbanAttribute
   href: api/wan24.ObjectValidation.ItemIbanAttribute.html
@@ -2731,15 +2953,15 @@ references:
   commentId: T:wan24.ObjectValidation.ObjectValidationEventArgs
   fullName: wan24.ObjectValidation.ObjectValidationEventArgs
   nameWithType: ObjectValidationEventArgs
-- uid: wan24.ObjectValidation.ObjectValidationEventArgs.#ctor(System.Collections.Generic.List{System.Object},System.Object,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult},System.Collections.Generic.IReadOnlyList{System.ComponentModel.DataAnnotations.ValidationResult},System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Reflection.PropertyInfo)
-  name: ObjectValidationEventArgs(List<object>, object, List<ValidationResult>, IReadOnlyList<ValidationResult>, string?, bool, IEnumerable<string>?, bool, PropertyInfo?)
-  href: api/wan24.ObjectValidation.ObjectValidationEventArgs.html#wan24_ObjectValidation_ObjectValidationEventArgs__ctor_System_Collections_Generic_List_System_Object__System_Object_System_Collections_Generic_List_System_ComponentModel_DataAnnotations_ValidationResult__System_Collections_Generic_IReadOnlyList_System_ComponentModel_DataAnnotations_ValidationResult__System_String_System_Boolean_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Reflection_PropertyInfo_
-  commentId: M:wan24.ObjectValidation.ObjectValidationEventArgs.#ctor(System.Collections.Generic.List{System.Object},System.Object,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult},System.Collections.Generic.IReadOnlyList{System.ComponentModel.DataAnnotations.ValidationResult},System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Reflection.PropertyInfo)
-  name.vb: New(List(Of Object), Object, List(Of ValidationResult), IReadOnlyList(Of ValidationResult), String, Boolean, IEnumerable(Of String), Boolean, PropertyInfo)
-  fullName: wan24.ObjectValidation.ObjectValidationEventArgs.ObjectValidationEventArgs(System.Collections.Generic.List<object>, object, System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>, System.Collections.Generic.IReadOnlyList<System.ComponentModel.DataAnnotations.ValidationResult>, string?, bool, System.Collections.Generic.IEnumerable<string>?, bool, System.Reflection.PropertyInfo?)
-  fullName.vb: wan24.ObjectValidation.ObjectValidationEventArgs.New(System.Collections.Generic.List(Of Object), Object, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Collections.Generic.IReadOnlyList(Of System.ComponentModel.DataAnnotations.ValidationResult), String, Boolean, System.Collections.Generic.IEnumerable(Of String), Boolean, System.Reflection.PropertyInfo)
-  nameWithType: ObjectValidationEventArgs.ObjectValidationEventArgs(List<object>, object, List<ValidationResult>, IReadOnlyList<ValidationResult>, string?, bool, IEnumerable<string>?, bool, PropertyInfo?)
-  nameWithType.vb: ObjectValidationEventArgs.New(List(Of Object), Object, List(Of ValidationResult), IReadOnlyList(Of ValidationResult), String, Boolean, IEnumerable(Of String), Boolean, PropertyInfo)
+- uid: wan24.ObjectValidation.ObjectValidationEventArgs.#ctor(System.Collections.Generic.HashSet{System.Object},System.Object,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult},System.Collections.Generic.IReadOnlyList{System.ComponentModel.DataAnnotations.ValidationResult},System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Reflection.PropertyInfo)
+  name: ObjectValidationEventArgs(HashSet<object>, object, List<ValidationResult>, IReadOnlyList<ValidationResult>, string?, bool, IEnumerable<string>?, bool, PropertyInfo?)
+  href: api/wan24.ObjectValidation.ObjectValidationEventArgs.html#wan24_ObjectValidation_ObjectValidationEventArgs__ctor_System_Collections_Generic_HashSet_System_Object__System_Object_System_Collections_Generic_List_System_ComponentModel_DataAnnotations_ValidationResult__System_Collections_Generic_IReadOnlyList_System_ComponentModel_DataAnnotations_ValidationResult__System_String_System_Boolean_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Reflection_PropertyInfo_
+  commentId: M:wan24.ObjectValidation.ObjectValidationEventArgs.#ctor(System.Collections.Generic.HashSet{System.Object},System.Object,System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult},System.Collections.Generic.IReadOnlyList{System.ComponentModel.DataAnnotations.ValidationResult},System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Reflection.PropertyInfo)
+  name.vb: New(HashSet(Of Object), Object, List(Of ValidationResult), IReadOnlyList(Of ValidationResult), String, Boolean, IEnumerable(Of String), Boolean, PropertyInfo)
+  fullName: wan24.ObjectValidation.ObjectValidationEventArgs.ObjectValidationEventArgs(System.Collections.Generic.HashSet<object>, object, System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>, System.Collections.Generic.IReadOnlyList<System.ComponentModel.DataAnnotations.ValidationResult>, string?, bool, System.Collections.Generic.IEnumerable<string>?, bool, System.Reflection.PropertyInfo?)
+  fullName.vb: wan24.ObjectValidation.ObjectValidationEventArgs.New(System.Collections.Generic.HashSet(Of Object), Object, System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult), System.Collections.Generic.IReadOnlyList(Of System.ComponentModel.DataAnnotations.ValidationResult), String, Boolean, System.Collections.Generic.IEnumerable(Of String), Boolean, System.Reflection.PropertyInfo)
+  nameWithType: ObjectValidationEventArgs.ObjectValidationEventArgs(HashSet<object>, object, List<ValidationResult>, IReadOnlyList<ValidationResult>, string?, bool, IEnumerable<string>?, bool, PropertyInfo?)
+  nameWithType.vb: ObjectValidationEventArgs.New(HashSet(Of Object), Object, List(Of ValidationResult), IReadOnlyList(Of ValidationResult), String, Boolean, IEnumerable(Of String), Boolean, PropertyInfo)
 - uid: wan24.ObjectValidation.ObjectValidationEventArgs.#ctor*
   name: ObjectValidationEventArgs
   href: api/wan24.ObjectValidation.ObjectValidationEventArgs.html#wan24_ObjectValidation_ObjectValidationEventArgs__ctor_
