@@ -885,6 +885,22 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.HostAttribute.CheckIfExists
   nameWithType: HostAttribute.CheckIfExists
+- uid: wan24.ObjectValidation.HostAttribute.CheckIfExistsCache(System.String,System.Net.IPAddress,System.Net.NetworkInformation.IPStatus@)
+  name: CheckIfExistsCache(string?, IPAddress?, out IPStatus)
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_CheckIfExistsCache_System_String_System_Net_IPAddress_System_Net_NetworkInformation_IPStatus__
+  commentId: M:wan24.ObjectValidation.HostAttribute.CheckIfExistsCache(System.String,System.Net.IPAddress,System.Net.NetworkInformation.IPStatus@)
+  name.vb: CheckIfExistsCache(String, IPAddress, IPStatus)
+  fullName: wan24.ObjectValidation.HostAttribute.CheckIfExistsCache(string?, System.Net.IPAddress?, out System.Net.NetworkInformation.IPStatus)
+  fullName.vb: wan24.ObjectValidation.HostAttribute.CheckIfExistsCache(String, System.Net.IPAddress, System.Net.NetworkInformation.IPStatus)
+  nameWithType: HostAttribute.CheckIfExistsCache(string?, IPAddress?, out IPStatus)
+  nameWithType.vb: HostAttribute.CheckIfExistsCache(String, IPAddress, IPStatus)
+- uid: wan24.ObjectValidation.HostAttribute.CheckIfExistsCache*
+  name: CheckIfExistsCache
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_CheckIfExistsCache_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.CheckIfExistsCache
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.CheckIfExistsCache
+  nameWithType: HostAttribute.CheckIfExistsCache
 - uid: wan24.ObjectValidation.HostAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
   name: IsValid(object?, ValidationContext)
   href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_IsValid_System_Object_System_ComponentModel_DataAnnotations_ValidationContext_
@@ -914,6 +930,19 @@ references:
   isSpec: "True"
   fullName: wan24.ObjectValidation.HostAttribute.PingTimeout
   nameWithType: HostAttribute.PingTimeout
+- uid: wan24.ObjectValidation.HostAttribute.UseCache
+  name: UseCache
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_UseCache
+  commentId: P:wan24.ObjectValidation.HostAttribute.UseCache
+  fullName: wan24.ObjectValidation.HostAttribute.UseCache
+  nameWithType: HostAttribute.UseCache
+- uid: wan24.ObjectValidation.HostAttribute.UseCache*
+  name: UseCache
+  href: api/wan24.ObjectValidation.HostAttribute.html#wan24_ObjectValidation_HostAttribute_UseCache_
+  commentId: Overload:wan24.ObjectValidation.HostAttribute.UseCache
+  isSpec: "True"
+  fullName: wan24.ObjectValidation.HostAttribute.UseCache
+  nameWithType: HostAttribute.UseCache
 - uid: wan24.ObjectValidation.ICountable
   name: ICountable
   href: api/wan24.ObjectValidation.ICountable.html
