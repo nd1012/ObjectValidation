@@ -1,6 +1,4 @@
-﻿using System.Collections.Frozen;
-
-namespace wan24.ObjectValidation
+﻿namespace wan24.ObjectValidation
 {
     /// <summary>
     /// Currency ISO 4217 codes

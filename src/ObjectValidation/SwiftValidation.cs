@@ -79,25 +79,25 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex Normalizing_Generated();
 
         /// <summary>
         /// IBAN syntax regular expression (<c>$1</c> is the country, <c>$2</c> the checksum, <c>$3</c> the bank ID and <c>$4</c> the account ID)
         /// </summary>
-        [GeneratedRegex(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"^([A-Z]{2})(\d{2})(\d{8})(\d{10})$", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex IbanSyntax_Generated();
 
         /// <summary>
         /// IBAN checksum calculation regular expression
         /// </summary>
-        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex IbanChecksum_Generated();
 
         /// <summary>
         /// BIC syntax regular expression
         /// </summary>
-        [GeneratedRegex(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"^[A-Z|\d]{4}[A-Z]{2}[A-Z|\d]{2}([A-Z|\d]{3})?$", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex BicSyntax_Generated();
     }
 }

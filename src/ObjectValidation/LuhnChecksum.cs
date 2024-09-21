@@ -30,7 +30,7 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex Normalizing_Generated();
     }
 }

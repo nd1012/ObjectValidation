@@ -1,6 +1,4 @@
-﻿using System.Collections.Frozen;
-
-namespace wan24.ObjectValidation
+﻿namespace wan24.ObjectValidation
 {
     /// <summary>
     /// Country ISO 3166-1 alpha-2 codes

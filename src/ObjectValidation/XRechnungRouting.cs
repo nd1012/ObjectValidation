@@ -48,25 +48,25 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// Normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[^\d|A-Z|-]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[^\d|A-Z|-]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex Normalizing_Generated();
 
         /// <summary>
         /// Syntax regular expression
         /// </summary>
-        [GeneratedRegex(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"^\d{2}(\d(\d{2}(\d{3})?)?)?-[A-Z|\d]{1,30}-\d{2}$", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex Syntax_Generated();
 
         /// <summary>
         /// Checksum calculation regular expression
         /// </summary>
-        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[A-Z]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex ChecksumCalculation_Generated();
 
         /// <summary>
         /// Checksum normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[^\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[^\d|A-Z]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex ChecksumNormalizing_Generated();
     }
 }

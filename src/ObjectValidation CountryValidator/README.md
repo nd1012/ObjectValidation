@@ -24,6 +24,7 @@ enumerable lengths
 - XRechnung routing validation
 - European VAT ID validation
 - XML validation
+- Hostname or IP address validation
 - Conditional value requirements
 - Enumeration value validation
 - Validation references
@@ -81,6 +82,7 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | XRechnung routing validation | `XRechnungRouteAttribute` |
 | European VAT ID validation | `EuVatIdAttribute` |
 | XML validation | `XmlAttribute` |
+| Hostname or IP address validation | `HostAttribute` |
 | Conditional value requirement | `RequiredIfAttribute` |
 | Allowed/denied values | `AllowedValuesAttribute`, `DeniedValuesAttribute` |
 | Enumeration value | (none - using the type) |
@@ -298,6 +300,7 @@ These item validation adapters exist:
 | `CompareAttribute` | `ItemCompareAttribute` |
 | `CreditCardAttribute` | `ItemCreditCardAttribute` |
 | `EmailAddressAttribute` | `ItemEmailAddressAttribute` |
+| `HostAttribute` | `ItemHostAttribute` |
 | `MaxLengthAttribute` | `ItemMaxLengthAttribute` |
 | `MinLengthAttribute` | `ItemMinLengthAttribute` |
 | `NoValidationAttribute` | `ItemNoValidationAttribute` |

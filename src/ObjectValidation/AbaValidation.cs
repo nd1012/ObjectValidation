@@ -93,25 +93,25 @@ namespace wan24.ObjectValidation
         /// <summary>
         /// MICR format normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[^\d]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex NormalizingMicr_Generated();
 
         /// <summary>
         /// Fraction format normalizing regular expression
         /// </summary>
-        [GeneratedRegex(@"[^\d|\-|/]", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"[^\d|\-|/]", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex NormalizingFraction_Generated();
 
         /// <summary>
         /// MICR syntax validating regular expression (<c>$1</c> is the FED routing symbol, <c>$2</c> the ABA institution identifier, and <c>$3</c> the check digit)
         /// </summary>
-        [GeneratedRegex(@"^(\d{4})(\d{4})(\d)$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"^(\d{4})(\d{4})(\d)$", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex MicrSyntax_Generated();
 
         /// <summary>
         /// Fraction syntax validating regular expression (<c>$1</c> is the ABA prefix, <c>$2</c> the ABA institution identifier, and <c>$3</c> the FED routing symbol)
         /// </summary>
-        [GeneratedRegex(@"^(\d{1,2})\-(\d{4})/?(\d{4})$", RegexOptions.Compiled | RegexOptions.Singleline)]
+        [GeneratedRegex(@"^(\d{1,2})\-(\d{4})/?(\d{4})$", RegexOptions.Compiled | RegexOptions.Singleline, 3000)]
         private static partial Regex FractionSyntax_Generated();
     }
 }

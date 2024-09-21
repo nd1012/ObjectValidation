@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
@@ -34,6 +35,36 @@ namespace wan24.ObjectValidation
         /// </summary>
         public int PingTimeout { get; set; } = 300;
 
+        /// <summary>
+        /// Use a cache for <see cref="CheckIfExists"/> results?
+        /// </summary>
+        public bool UseCache { get; set; } = true;
+
+        /// <summary>
+        /// Check if a hostname/IP exists using a cache (may throw; for implementing a cache, this method needs to be overridden)
+        /// </summary>
+        /// <param name="hostName">Hostname</param>
+        /// <param name="ip">IP address</param>
+        /// <param name="status">IP status</param>
+        /// <returns>If exists</returns>
+        protected virtual bool CheckIfExistsCache(string? hostName, IPAddress? ip, out IPStatus status)
+        {
+            if (hostName is not null)
+            {
+                IPHostEntry hostEntry = Dns.GetHostEntry(hostName);
+                status = IPStatus.Unknown;
+                return hostEntry.AddressList.Length > 0 || hostEntry.Aliases.Length > 0;
+            }
+            Contract.Assert(ip is not null);
+            using Ping ping = new();
+            PingReply pong = ping.Send(ip, PingTimeout, RandomNumberGenerator.GetBytes(count: 32), new()
+            {
+                DontFragment = true
+            });
+            status = pong.Status;
+            return pong.Status == IPStatus.Success;
+        }
+
         /// <inheritdoc/>
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
@@ -47,15 +78,16 @@ namespace wan24.ObjectValidation
                     if (!CheckIfExists) return null;
                     try
                     {
-                        Dns.GetHostEntry(str);
-                        return null;
+                        return CheckIfExistsCache(str, ip: null, out _)
+                            ? null
+                            : this.CreateValidationResult($"Hostname DNS lookup failed", validationContext);
                     }
                     catch (Exception ex)
                     {
                         return this.CreateValidationResult($"Hostname DNS lookup failed: {ex.Message ?? ex.GetType().ToString()}", validationContext);
                     }
                 case UriHostNameType.IPv4:
-                    if(!IPAddress.TryParse(str, out ip)) return this.CreateValidationResult($"Host IPv4 address parsing failed", validationContext);
+                    if (!IPAddress.TryParse(str, out ip)) return this.CreateValidationResult($"Host IPv4 address parsing failed", validationContext);
                     if (ip.AddressFamily != AddressFamily.InterNetwork) return this.CreateValidationResult($"Detected host IPv4 address parsed to IPv6", validationContext);
                     break;
                 case UriHostNameType.IPv6:
@@ -66,18 +98,13 @@ namespace wan24.ObjectValidation
                     return this.CreateValidationResult($"Hostname or IP address value invalid ({type})", validationContext);
             }
             if (!CheckIfExists) return null;
-            using Ping ping = new();
             try
             {
-                PingReply pong = ping.Send(ip, PingTimeout, RandomNumberGenerator.GetBytes(count: 32), new()
-                {
-                    DontFragment = true
-                });
-                return pong.Status == IPStatus.Success
+                return CheckIfExistsCache(hostName: null, ip, out IPStatus status)
                     ? null
-                    : this.CreateValidationResult($"Ping to {ip} failed: {pong.Status}", validationContext);
+                    : this.CreateValidationResult($"Ping to {ip} failed: {status}", validationContext);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return this.CreateValidationResult($"Ping to {ip} failed exceptional: {ex.Message ?? ex.GetType().ToString()}", validationContext);
             }
