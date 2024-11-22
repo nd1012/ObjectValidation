@@ -17,6 +17,8 @@ enumerable lengths
 - SWIFT validation attributes for ISO 13616 IBAN and ISO 9362 BIC (SWIFT codes)
 - ABA RTN validation attributes (MICR and fraction formats are supported)
 - IP address validation attribute for IPv4 and IPv6
+- Character exclusion/validation
+- Single line string validation
 - Country ISO 3166-1 alpha-2 code validation
 - Currency ISO 4217 code validation
 - Money amount validation
@@ -85,6 +87,8 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | Hostname or IP address validation | `HostAttribute` |
 | Conditional value requirement | `RequiredIfAttribute` |
 | Allowed/denied values | `AllowedValuesAttribute`, `DeniedValuesAttribute` |
+| Denied characters | `DenyCharactersAttribute` |
+| Single line string validation | `SingleLineAttribute` |
 | Enumeration value | (none - using the type) |
 | Validation references | `ValidationReferenceAttribute` |
 | Validation templates | `ValidationTemplateAttribute`, `ValidationTemplateIfAttribute` |
@@ -322,6 +326,8 @@ These item validation adapters exist:
 | `EuVatIdAttribute` | `ItemEuVatIdAttribute` |
 | `AllowedValuesAttribute` | `ItemAllowedValuesAttribute` |
 | `DeniedValuesAttribute` | `ItemDeniedValuesAttribute` |
+| `DenyCharactersAttribute` | `ItemDenyCharactersAttribute` |
+| `SingleLineAttribute` | `ItemSingleLineAttribute` |
 | `CustomValidationAttribute` | `ItemCustomValidationAttribute` |
 | `ValidationReferenceAttribute` | `ItemValidationReferenceAttribute` |
 | `ValidationReferenceIfAttribute` | `ItemValidationReferenceIfAttribute` |
