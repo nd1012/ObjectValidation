@@ -25,6 +25,7 @@ enumerable lengths
 - Luhn checksum validation
 - XRechnung routing validation
 - European VAT ID validation
+- D-U-N-S number validation
 - XML validation
 - Hostname or IP address validation
 - Conditional value requirements
@@ -83,6 +84,7 @@ The **ObjectValidation-CountryValidator** extension is licensed using the
 | Luhn checksum validation | `LuhnChecksumAttribute` |
 | XRechnung routing validation | `XRechnungRouteAttribute` |
 | European VAT ID validation | `EuVatIdAttribute` |
+| D-U-N-S number validation | `DunsAttribute` |
 | XML validation | `XmlAttribute` |
 | Hostname or IP address validation | `HostAttribute` |
 | Conditional value requirement | `RequiredIfAttribute` |
@@ -324,6 +326,7 @@ These item validation adapters exist:
 | `LuhnChecksumAttribute` | `ItemLuhnChecksumAttribute` |
 | `XRechnungRouteAttribute` | `ItemXRechnungRouteAttribute` |
 | `EuVatIdAttribute` | `ItemEuVatIdAttribute` |
+| `DunsAttribute` | `ItemDunsAttribute` |
 | `AllowedValuesAttribute` | `ItemAllowedValuesAttribute` |
 | `DeniedValuesAttribute` | `ItemDeniedValuesAttribute` |
 | `DenyCharactersAttribute` | `ItemDenyCharactersAttribute` |
@@ -742,9 +745,3 @@ object, which contains some validation context information:
 
 Since array item validations don't call event handlers, the `ArrayLevel` 
 property will always be `0`.
-
-## Upcoming changes with .NET 8
-
-Some object validations which I've implemented in the ObjectValidation library 
-are now part of the .NET 8 preview. I won't remove them in v1.x, but in v2.x, 
-which will target .NET 8.
